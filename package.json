@@ -31,5 +31,8 @@
     "gulp-connect": "^5.6.1",
     "gulp-sass": "^4.0.1",
     "gulp-util": "^3.0.8"
+  },
+  "dependencies": {
+    "gulp-wait": "0.0.2"
   }
 }

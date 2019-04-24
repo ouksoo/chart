@@ -5,8 +5,16 @@ div.wrapper {
     position: relative;
     margin: 0 auto;
     
+    @include breakpointmax(max) {
+        width: 1280px;
+        border:1px solid red;
+    }
+    
     section {
-
+        @include breakpointmax(max) {
+            width: 1200px;
+            border:1px solid blue;
+        }
     }
 }
 
