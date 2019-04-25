@@ -4,6 +4,7 @@ import gulp     from 'gulp';
 import gutil    from 'gulp-util';
 import connect  from 'gulp-connect';
 import concat   from 'gulp-concat';
+import sourcemaps from 'gulp-sourcemaps';
 import sass     from 'gulp-sass';
 import babel    from 'gulp-babel';
 import wait     from 'gulp-wait';
@@ -43,11 +44,18 @@ gulp.task('image', () => gulp.src(SRC.IMAGE)
 );
 
 // scss 변환
-gulp.task('sass', () => gulp.src(['src/scss/common.scss'])
-    .pipe(wait(500))
-	.pipe(sass())
-	// .pipe(concat('master.css'))
-	.pipe(gulp.dest(DEST.CSS))
+gulp.task('sass', () => {
+        return gulp
+        .src(['src/scss/common.scss'])
+        .pipe(wait(500))
+        .pipe(sourcemaps.init())
+        .pipe(sass())
+        .pipe(sourcemaps.write({includeContent: false}))
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(sourcemaps.write('.'))
+        // .pipe(concat('master.css'))
+        .pipe(gulp.dest(DEST.CSS))
+    }
 );
 
 // js

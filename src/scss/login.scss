@@ -103,7 +103,7 @@ html, body {
         @include prefix(transition, bottom .5s ease-in-out, webkit ms);
 
         &.on {
-            bottom: 0;
+            bottom: 0; 
         }
 
         span.f {

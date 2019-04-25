@@ -30,6 +30,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.6.1",
     "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-util": "^3.0.8"
   },
   "dependencies": {
