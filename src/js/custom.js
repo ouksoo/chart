@@ -24,17 +24,21 @@ let PJT = {
         }, interval);
     },
     loadImageRandom: function() {
-        var imageClass = ['type-1', 'type-2', 'type-3'];
+        var imageClass = ['type-1'];
         $('.image-bg').addClass(imageClass[Math.floor(Math.random() * imageClass.length)]).addClass('on');
-        $('.login-wrap').fadeIn('slow', function() {
+        $('.login-wrap').fadeIn(1500, function() {
             $('header, footer').addClass('on');
+            $('.login-wrap input#userId').focus();
             PJT.loginKeyCheck();
         });
     },
     loginKeyCheck: function() {
-        $('.login-wrap input').on('keydown', function(e) {
-            if($('#userid').val() !== '' && $('#passwd').val() !== '') {
-                $('.login-wrap a.login-button').fadeIn('slow');
+        $('.login-wrap input').on('keyup', function(e) {
+            if($('#userId').val() !== '' && $('#passWd').val() !== '') {
+                $('.login-wrap .form-wrap, a.login-button').addClass('on');
+            }
+            else {
+                $('.login-wrap .form-wrap, a.login-button').removeClass('on');
             }
         });
     }
