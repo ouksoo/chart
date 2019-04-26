@@ -1,5 +1,8 @@
 let PJT = {
-    init: function() {
+    /**
+     * Intro & login
+     */
+    loginInit: function() {
         this.introAnimationStart();
     },
     introAnimationStart: function() {
@@ -47,6 +50,5 @@ let PJT = {
 
 // after loaded execute
 window.onload = function() {
-    PJT.init(); 
-    PJT.loginKeyCheck();
+    PJT.loginInit(); 
 };

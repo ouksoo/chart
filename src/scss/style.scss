@@ -9,27 +9,38 @@ div.wrapper {
         width: 1280px;
         border:1px solid red;
     }
+
+    header {
+        height: 80px;
+    
+        @include prefix(box-shadow, 0 0 5px 0 #ccc, webkit ms);
+    }
     
     section {
+        
+        div.lnb-wrap {
+            width: 80px;
+            border-right: 1px solid #c8d3df;
+            background: #fff;
+        }
+        div.content-wrap {
+
+        }
+        div.device-wrap {
+            width: 305px;
+            border-left: 1px solid #c8d3df;
+            background: #fff;
+        }
+
         @include breakpointmax(max) {
-            width: 1200px;
+            width: 1600px;
             border:1px solid blue;
         }
     }
-}
 
-/********************** 
-* header
-***********************/
-header {
+    footer {
 
-}
-
-/********************** 
-* footer
-***********************/
-footer {
-
+    }
 }
 
 /********************** 

@@ -1,7 +1,10 @@
 'use strict';
 
 var PJT = {
-    init: function init() {
+    /**
+     * Intro & login
+     */
+    loginInit: function loginInit() {
         this.introAnimationStart();
     },
     introAnimationStart: function introAnimationStart() {
@@ -45,6 +48,5 @@ var PJT = {
 
     // after loaded execute
 };window.onload = function () {
-    PJT.init();
-    PJT.loginKeyCheck();
+    PJT.loginInit();
 };
