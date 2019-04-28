@@ -25,14 +25,14 @@ html, body {
             position: absolute;
             top: 50px; left: 70px;
             width: 246px; height: 47px;
-            background: url('../img/login_logo.png') 0 0 no-repeat;
+            background: url('../img/login/login_logo.png') 0 0 no-repeat;
             @include prefix(background-size, cover, webkit ms);
         }
         span.f {
             position: absolute;
             top: 50px; right: 70px;
             width: 207px; height: 47px;
-            background: url('../img/login_right.png') 0 0 no-repeat;
+            background: url('../img/login/login_right.png') 0 0 no-repeat;
             @include prefix(background-size, cover, webkit ms);
         }
     }
@@ -45,31 +45,32 @@ html, body {
         div.login-wrap {
             display: none;
             position: absolute;
-            width: 700px; height: 500px;
+            width: 900px; height: 500px;
             left: 50%; top: 50%;
-            margin: -250px 0 0 -350px;
+            margin: -200px 0 0 -450px;
             z-index: 5;
 
-            span.round-ed {
+            span.login-center-txt {
                 position: absolute;
-                width: 207px; height: 207px;
-                background: #000;
-                opacity: 0.3;
+                width: 558px; height: 73px;
                 left: 50%;
-                margin: 0 0 0 -103px;
-                @include prefix(border-radius, 50%, webkit ms);
+                margin: 0 0 0 -279px;
+                background: url('../img/login/login_force_text.png') 50% 50% no-repeat;
+                @include prefix(background-size, 100% auto, webkit ms)
             }
             p.login-text {
-                font-size: 48px; color: #fff;
+                font-size: 24px; color: rgba(255, 255, 255, 0.8);
                 font-weight: bold;
                 text-align: center;
-                margin: 270px 0 0 0;
+                margin: 110px 0 0 0;
+                line-height: 32px;
+                text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
                 @include prefix(text-shadow, 0 0 0 6px rgba(0,0,0,0.2), webkit ms);
             }
             div.form-wrap {
                 position:absolute;
-                bottom: 80px;
-                left: 130px;
+                bottom: 150px;
+                left: 230px;
                 z-index: 5;
                 text-align: center;
                 @include prefix(transition, left .5s ease-in-out, webkit ms);
@@ -85,24 +86,31 @@ html, body {
                 }
 
                 &.on {
-                    left: 80px;
+                    left: 180px;
                 }
             }
             a.login-button {
                 position: absolute;
-                top: 374px; left: 500px;
+                top: 304px; left: 580px;
                 width: 46px; height: 46px;
-                background: #000;
+                background: #eee url('../img/login/login_button_off.png') 50% 50% no-repeat;
                 opacity: 0;
                 z-index: 4;
-                font-size: 12px; color: #fff; text-align: center;
-                @include prefix(border-radius, 50%, webkit ms);
-                -webkit-transition: left .5s, opacity 1s;
-                transition: left .5s, opacity 1s;
+                font-size: 12px; color: #fff; text-align: center; text-indent: -9999px;
+                overflow: hidden;
+                @include prefix(border-radius, 23px, webkit ms);
+                @include prefix(background-size, 24px 24px, webkit ms);
+                -webkit-transition: left .5s, width 1s, opacity 1s, background-color .3s;
+                transition: left .5s, width .7s, opacity 1s, background-color .3s;
 
                 &.on {
                     opacity: 1;
-                    left: 525px;
+                    left: 630px;
+                    width: 80px;                    
+                }
+                &:hover {
+                    background: #7850ff url('../img/login/login_button_on.png') 50% 50% no-repeat;
+                    @include prefix(background-size, 24px 24px, webkit ms);
                 }
             }
         }
@@ -123,7 +131,7 @@ html, body {
                 left: 50%; top: 50%;
                 margin: -125px 0 0 -125px;
                 z-index: 5;
-                background:url('../img/intro-sequence.png') 0 0 no-repeat;
+                background:url('../img/login/intro-sequence.png') 0 0 no-repeat;
             }
         }
         div.image-bg {
@@ -137,15 +145,15 @@ html, body {
                 transform: scale(1);
             }
             &.type-1 {
-                background: url('../img/type1.png') 0 0 no-repeat;
+                background: url('../img/login/type1.png') 0 0 no-repeat;
                 @include prefix(background-size, cover, webkit ms);
             }
             &.type-2 {
-                background: url('../img/type2.png') 0 0 no-repeat;
+                background: url('../img/login/type2.png') 0 0 no-repeat;
                 @include prefix(background-size, cover, webkit ms);
             }
             &.type-3 {
-                background: url('../img/type3.png') 0 0 no-repeat;
+                background: url('../img/login/type3.png') 0 0 no-repeat;
                 @include prefix(background-size, cover, webkit ms);
             }
         }
@@ -164,6 +172,14 @@ html, body {
             bottom: 0; 
         }
 
+        a {
+            color: #fff;
+            opacity: .7;
+            &:hover {
+                opacity: 1;
+            }
+        }
+
         span.f {
             position: absolute;
             bottom: 45px; left: 70px;
@@ -175,9 +191,6 @@ html, body {
             width: 400px;
             text-align: center;
 
-            a {
-                color: #fff;
-            }
             span {
                 margin: 0 25px;
             }
@@ -185,6 +198,9 @@ html, body {
         span.t {
             position: absolute;
             bottom: 45px; right: 70px;
+            padding: 0 0 0 40px;
+            background: url('../img/login/login_headset.png') 0 0 no-repeat;
+            @include prefix(background-size, 30px 30px, webkit ms);
         }
     }
 

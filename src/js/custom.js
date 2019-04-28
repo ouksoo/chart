@@ -27,7 +27,7 @@ let PJT = {
         }, interval);
     },
     loadImageRandom: function() {
-        var imageClass = ['type-1'];
+        var imageClass = ['type-1', 'type-2', 'type-3'];
         $('.image-bg').addClass(imageClass[Math.floor(Math.random() * imageClass.length)]).addClass('on');
         $('.login-wrap').fadeIn(1500, function() {
             $('header, footer').addClass('on');
