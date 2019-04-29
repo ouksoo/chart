@@ -44,11 +44,26 @@ let PJT = {
                 $('.login-wrap .form-wrap, a.login-button').removeClass('on');
             }
         });
+    },
+
+    /**
+     * global
+     */
+    siteResizeResponse: function() {
+        let winWidth = $(window).width();
+        $('.content-wrap').css('width', winWidth-385);
+
+        $(window).on('resize', function() {
+            let winWidth = $(window).width();
+            let realSize = winWidth - 385;
+            $('.content-wrap').css('width', realSize);
+            console.log(realSize);
+        });
     }
 }
 
 
 // after loaded execute
 window.onload = function() {
-    PJT.loginInit(); 
+    PJT.siteResizeResponse();
 };

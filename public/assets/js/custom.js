@@ -44,9 +44,24 @@ var PJT = {
                 $('.login-wrap .form-wrap, a.login-button').removeClass('on');
             }
         });
+    },
+
+    /**
+     * global
+     */
+    siteResizeResponse: function siteResizeResponse() {
+        var winWidth = $(window).width();
+        $('.content-wrap').css('width', winWidth - 385);
+
+        $(window).on('resize', function () {
+            var winWidth = $(window).width();
+            var realSize = winWidth - 385;
+            $('.content-wrap').css('width', realSize);
+            console.log(realSize);
+        });
     }
 
     // after loaded execute
 };window.onload = function () {
-    PJT.loginInit();
+    PJT.siteResizeResponse();
 };

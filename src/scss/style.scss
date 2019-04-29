@@ -4,38 +4,163 @@
 div.wrapper {
     position: relative;
     margin: 0 auto;
-    
+    min-height: 100%;
+
     @include breakpointmax(max) {
-        width: 1280px;
-        border:1px solid red;
+        width: 1600px !important;
     }
 
     header {
-        height: 80px;
-    
+        position: absolute;
+        z-index: 5;
+        top: 0; left: 0;
+        height: 80px; width: 100%;
+        background: #fff;
         @include prefix(box-shadow, 0 0 5px 0 #ccc, webkit ms);
+
+        a.monitor {
+            position: absolute;
+            left: 0; top: 0;
+            width: 80px; height: 80px;
+            background: #9678ff url('../img/layout/header_monitor.png') 50% 50% no-repeat;
+            @include prefix(background-size, 28px 26px, webkit ms);
+        }
+        h1.logo {
+            position: absolute;
+            top: 25px; left: 107px;
+            font-size: 20px;
+            color: #000;
+        }
+        span.loading {
+            position: absolute;
+            width: 160px; height: 80px;
+            left: 50%; top: 0;
+            margin: 0 0 0 -80px;
+            text-align: center;
+        }
+        div.header-info {
+            position: absolute;
+            top: 0; right: 0;
+
+            ul {
+                li {
+                    float: left;
+
+                    a {
+                        display: inline-block;
+                        width: 22px; height: 22px;
+                        margin: 29px 0 0 32px;
+
+                        &.a {
+                            background: url('../img/layout/header_search.png') 50% 50% no-repeat;
+                            @include prefix(background-size, 100% auto, webkit ms);
+                        }
+                        &.b {
+                            background: url('../img/layout/header_layers.png') 50% 50% no-repeat;
+                            @include prefix(background-size, 100% auto, webkit ms);
+                        }
+                        &.c {
+                            background: url('../img/layout/header_bell.png') 50% 50% no-repeat;
+                            @include prefix(background-size, 100% auto, webkit ms);
+                        }
+                        &.d {
+                            background: url('../img/layout/header_settings.png') 50% 50% no-repeat;
+                            @include prefix(background-size, 100% auto, webkit ms);
+                        }
+                    }
+
+                    &:last-child a {
+                        width: 46px; height: 46px;
+                        border: 1px solid #dfe5eb;
+                        margin: 17px 28px 0 48px;
+                        background: #eee;
+                        @include prefix(border-radius, 50%, webkit ms);
+                    }
+                }
+            }
+        }
     }
     
     section {
+        min-height: 100%;
         
         div.lnb-wrap {
+            position: absolute;
+            z-index: 2;
+            top: 0; left: 0;
             width: 80px;
+            height: 100%;
             border-right: 1px solid #c8d3df;
             background: #fff;
+
+            ul {
+                margin-top: 80px; 
+
+                li {
+                    margin: 0; padding: 0;
+                    text-align: center;
+                    line-height: 10px;
+
+                    a {
+                        display: inline-block;
+                        margin: 20px 0;
+                        width: 22px; height: 22px;
+                    }
+
+                    &:nth-child(1) a {
+                        width: 79px; height: 80px;
+                        margin: 0;
+                        background: #97a4b1 url('../img/layout/lnb_activity.png') 50% 50% no-repeat;
+                        @include prefix(background-size, 22px 22px, webkit ms);
+                        border-bottom: 1px solid #c8d3df;
+                    }
+                    &:nth-child(2) a {
+                        width: 79px; height: 80px;
+                        margin: 0 0 20px 0;
+                        background: #eef2f5 url('../img/layout/lnb_zap.png') 50% 50% no-repeat;
+                        @include prefix(background-size, 22px 22px, webkit ms);
+                        border-bottom: 1px solid #c8d3df;
+                    }
+                    &:nth-child(3) a {
+                        background: #eef2f5 url('../img/layout/lnb_calendar.png') 50% 50% no-repeat;
+                        @include prefix(background-size, 22px 22px, webkit ms);
+                    }
+                    &:nth-child(4) a {
+                        background: #eef2f5 url('../img/layout/lnb_file.png') 50% 50% no-repeat;
+                        @include prefix(background-size, 22px 22px, webkit ms);
+                    }
+                    &:nth-child(5) a {
+                        background: #eef2f5 url('../img/layout/lnb_instagram.png') 50% 50% no-repeat;
+                        @include prefix(background-size, 22px 22px, webkit ms);
+                    }
+                    &:nth-child(6) a {
+                        background: #eef2f5 url('../img/layout/lnb_piechart.png') 50% 50% no-repeat;
+                        @include prefix(background-size, 22px 22px, webkit ms);
+                    }
+                    &:nth-child(7) a {
+                        background: #eef2f5 url('../img/layout/lnb_info.png') 50% 50% no-repeat;
+                        @include prefix(background-size, 22px 22px, webkit ms);
+                    }
+                }
+            }
         }
         div.content-wrap {
-
+            margin-left: 80px;
+            height: 400px;
+            @include breakpointmax(max) {
+                width: 1215px !important;
+            }
         }
         div.device-wrap {
+            position: absolute;
+            z-index: 2;
+            top: 0; right: 0;
             width: 305px;
+            height: 100%;
             border-left: 1px solid #c8d3df;
             background: #fff;
         }
 
-        @include breakpointmax(max) {
-            width: 1600px;
-            border:1px solid blue;
-        }
     }
 
     footer {
