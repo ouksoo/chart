@@ -97,7 +97,7 @@ gulp.task('watch', () => {
     let notify = (event) => {
 		gutil.log('File', gutil.colors.yellow(event.path), 'was', gutil.colors.magenta(event.type));
     };
- 
+
     for(let key in watcher) {
         watcher[key].on('change', notify);
 	}

@@ -20,11 +20,20 @@ div.wrapper {
 
         a.monitor {
             position: absolute;
+            z-index: 3;
             left: 0; top: 0;
             width: 80px; height: 80px;
             background: #9678ff url('../img/layout/header_monitor.png') 50% 50% no-repeat;
             @include prefix(background-size, 28px 26px, webkit ms);
             text-indent: -9999px;
+        }
+        div.product-btn {
+            position: absolute;
+            top: 0; left: 80px;
+            z-index: 2;
+            width: 245px; height: 80px;
+            background: #eef2f5;
+            border-right: 1px solid #c8d3df;
         }
         h1.logo {
             position: absolute;
@@ -84,6 +93,7 @@ div.wrapper {
                         border: 1px solid #dfe5eb;
                         margin: 17px 28px 0 48px;
                         background: #eee;
+                        overflow: hidden;
                         @include prefix(border-radius, 50%, webkit ms);
                     }
                 }
@@ -103,6 +113,15 @@ div.wrapper {
             border-right: 1px solid #c8d3df;
             background: #fff;
 
+            span.tooltip-text {
+                position: absolute;
+                top: 100px; left: 100px;
+                width: 87px;
+                height: 30px;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+                border: solid 1px #bccad7;
+                background-image: linear-gradient(to bottom, #fafafb, var(--gray-light));
+            }
             ul {
                 margin-top: 80px; 
 
@@ -127,29 +146,36 @@ div.wrapper {
                     }
                     &:nth-child(2) a {
                         width: 79px; height: 80px;
-                        margin: 0 0 20px 0;
+                        margin: 0;
                         background: #eef2f5 url('../img/layout/lnb_zap.png') 50% 50% no-repeat;
                         @include prefix(background-size, 22px 22px, webkit ms);
                         border-bottom: 1px solid #c8d3df;
                     }
                     &:nth-child(3) a {
-                        background: #eef2f5 url('../img/layout/lnb_calendar.png') 50% 50% no-repeat;
+                        width: 79px; height: 80px;
+                        margin: 0 0 20px 0;
+                        background: #eef2f5 url('../img/layout/lnb_file_minus.png') 50% 50% no-repeat;
                         @include prefix(background-size, 22px 22px, webkit ms);
+                        border-bottom: 1px solid #c8d3df;
                     }
                     &:nth-child(4) a {
-                        background: #eef2f5 url('../img/layout/lnb_file.png') 50% 50% no-repeat;
+                        background: url('../img/layout/lnb_calendar.png') 50% 50% no-repeat;
                         @include prefix(background-size, 22px 22px, webkit ms);
                     }
                     &:nth-child(5) a {
-                        background: #eef2f5 url('../img/layout/lnb_instagram.png') 50% 50% no-repeat;
+                        background: url('../img/layout/lnb_file_plus.png') 50% 50% no-repeat;
                         @include prefix(background-size, 22px 22px, webkit ms);
                     }
                     &:nth-child(6) a {
-                        background: #eef2f5 url('../img/layout/lnb_piechart.png') 50% 50% no-repeat;
+                        background: url('../img/layout/lnb_instagram.png') 50% 50% no-repeat;
                         @include prefix(background-size, 22px 22px, webkit ms);
                     }
                     &:nth-child(7) a {
-                        background: #eef2f5 url('../img/layout/lnb_info.png') 50% 50% no-repeat;
+                        background: url('../img/layout/lnb_piechart.png') 50% 50% no-repeat;
+                        @include prefix(background-size, 22px 22px, webkit ms);
+                    }
+                    &:nth-child(8) a {
+                        background: url('../img/layout/lnb_info.png') 50% 50% no-repeat;
                         @include prefix(background-size, 22px 22px, webkit ms);
                     }
                 }
