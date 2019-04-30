@@ -45,23 +45,30 @@ var PJT = {
             }
         });
     },
+    scrollPlugIn: function scrollPlugIn() {
+        $("div.device-list-scroll").mCustomScrollbar();
+    },
 
     /**
      * global
      */
     siteResizeResponse: function siteResizeResponse() {
         var winWidth = $(window).width();
+        var winHeight = $(window).height();
         $('.content-wrap').css('width', winWidth - 385);
+        $('.device-list').css('height', winHeight - 169);
 
         $(window).on('resize', function () {
             var winWidth = $(window).width();
+            var winHeight = $(window).height();
             var realSize = winWidth - 385;
             $('.content-wrap').css('width', realSize);
-            console.log(realSize);
+            $('.device-list').css('height', winHeight - 169);
         });
     }
 
     // after loaded execute
 };window.onload = function () {
     PJT.siteResizeResponse();
+    PJT.scrollPlugIn();
 };

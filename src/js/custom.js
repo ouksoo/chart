@@ -45,19 +45,25 @@ let PJT = {
             }
         });
     },
+    scrollPlugIn: function() {
+        $("div.device-list-scroll").mCustomScrollbar();
+    },
 
     /**
      * global
      */
     siteResizeResponse: function() {
         let winWidth = $(window).width();
+        let winHeight = $(window).height();
         $('.content-wrap').css('width', winWidth-385);
+        $('.device-list').css('height', winHeight-169);
 
         $(window).on('resize', function() {
             let winWidth = $(window).width();
+            let winHeight = $(window).height();
             let realSize = winWidth - 385;
             $('.content-wrap').css('width', realSize);
-            console.log(realSize);
+            $('.device-list').css('height', winHeight-169);
         });
     }
 }
@@ -66,4 +72,5 @@ let PJT = {
 // after loaded execute
 window.onload = function() {
     PJT.siteResizeResponse();
+    PJT.scrollPlugIn();
 };
