@@ -72,6 +72,26 @@ let PJT = {
         $('a.notice-show-hide, div.notice-list-wrap').on('mouseleave', function() {
             $('div.notice-list-wrap').stop().fadeOut('fast');
         });
+
+        // lnb navigation tooltip
+        $('ul.lnb-nav li').on('mouseenter', function() {
+            var thisName = $(this).data('name');
+            var toolTipDiv = '<div class="tiny-tooltip" style="display: none">';
+                toolTipDiv += '<div class="tooltip-container">';
+                toolTipDiv += '<div class="tooltip-text animated">';
+                toolTipDiv += thisName;
+                toolTipDiv += '</div>';
+                toolTipDiv += '<div class="tooltip-tip animated"></div>';
+                toolTipDiv += '</div>';
+                toolTipDiv += '</div>';
+            $(this).append(toolTipDiv).delay(500).queue(function(next){
+                $('.tiny-tooltip').fadeIn('fast');
+                next();
+            });
+        });
+        $('ul.lnb-nav li').on('mouseleave', function() {
+            $('div.tiny-tooltip').remove();
+        });
     },
 
     /**
