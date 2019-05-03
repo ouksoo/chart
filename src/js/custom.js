@@ -6,25 +6,30 @@ let PJT = {
         this.introAnimationStart();
     },
     introAnimationStart: function() {
+        $('#sequenceArea').on('click', function() {
+            PJT.loadImageRandom();
+            $('.intro-bg').fadeOut('slow');
+        });
+
         let sequenceStart;
         let position = 250;
         const interval = 25;
         const diff = 250;
         const sequencesize = 2500;
-        sequenceStart = setInterval(() => {
-            document.getElementById('sequenceArea').style.backgroundPosition = `-${position}px 0px`;
-            if(position < sequencesize) {
-                position = position + diff;
-            }
-            else {
-                position = 250;
-                clearInterval(sequenceStart);
-                $('#sequenceArea').on('click', function() {
-                    PJT.loadImageRandom();
-                    $('.intro-bg').fadeOut('slow');
-                });
-            }
-        }, interval);
+        // sequenceStart = setInterval(() => {
+        //     document.getElementById('sequenceArea').style.backgroundPosition = `-${position}px 0px`;
+        //     if(position < sequencesize) {
+        //         position = position + diff;
+        //     }
+        //     else {
+        //         position = 250;
+        //         clearInterval(sequenceStart);
+        //         $('#sequenceArea').on('click', function() {
+        //             PJT.loadImageRandom();
+        //             $('.intro-bg').fadeOut('slow');
+        //         });
+        //     }
+        // }, interval);
     },
     loadImageRandom: function() {
         var imageClass = ['type-1', 'type-2', 'type-3'];
@@ -76,7 +81,7 @@ let PJT = {
         // lnb navigation tooltip
         $('ul.lnb-nav li').on('mouseenter', function() {
             var thisName = $(this).data('name');
-            var toolTipDiv = '<div class="tiny-tooltip" style="display: none">';
+            var toolTipDiv = '<div class="tiny-tooltip" style="display: none;">';
                 toolTipDiv += '<div class="tooltip-container">';
                 toolTipDiv += '<div class="tooltip-text animated">';
                 toolTipDiv += thisName;
@@ -116,6 +121,7 @@ let PJT = {
 
 // after loaded execute
 window.onload = function() {
+    PJT.loginInit();
     PJT.siteResizeResponse();
     PJT.utilsAliveLinks();
     PJT.scrollPlugIn();

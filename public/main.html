@@ -13,7 +13,7 @@
 <!--background film for layer popup-->
 <!-- <div class="popup-film"></div> -->
 
-<div class="wrapper">
+<div class="wrapper" style="display: none">
     <!-- header -->
     <header class="clearfix">
         <a href="#" class="monitor header-monitor" data-toggle="modal" data-target="#exampleModal">Monitoring Graph</a>
@@ -192,22 +192,32 @@
     </section>
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Save changes</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
+<div class="modal" style="display: block" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-wrap modal-search">
+        <div class="search-header">
+
+        </div>
+        <div class="search-typeword">
+
+        </div>
+        <ul class="search-list">
+            <li>
+                <p class="f">
+                    <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Entire Devices</span>
+                </p>
+                <p class="s"><strong>Great - 02</strong> event - Suwon</p>
+                <span class="status stat-1"></span>
+            </li>
+            <li>
+                <p class="f">
+                    <span class="box cloud"></span><span class="box os-linux"></span><span class="dvc">Entire Devices</span>
+                </p>
+                <p class="s"><strong>Great - 02</strong> event - Suwon</p>
+                <span class="status stat-2"></span>
+            </li>
+        </ul>
+        <div class="search-result">
+
         </div>
     </div>
 </div>

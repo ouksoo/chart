@@ -127,12 +127,13 @@ html, body {
             div.intro-image {
                 cursor: pointer;
                 position: absolute;
-                width: 250px; height: 250px;
+                width: 320px; height: 320px;
                 overflow: hidden;
                 left: 50%; top: 50%;
-                margin: -125px 0 0 -125px;
+                margin: -160px 0 0 -160px;
                 z-index: 5;
-                background:url('../img/login/intro-sequence.png') 0 0 no-repeat;
+                background: #edeff1;
+                // background:url('../img/login/intro-sequence.png') 0 0 no-repeat;
             }
         }
         div.image-bg {

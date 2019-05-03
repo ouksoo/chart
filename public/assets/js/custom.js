@@ -8,24 +8,30 @@ var PJT = {
         this.introAnimationStart();
     },
     introAnimationStart: function introAnimationStart() {
+        $('#sequenceArea').on('click', function () {
+            PJT.loadImageRandom();
+            $('.intro-bg').fadeOut('slow');
+        });
+
         var sequenceStart = void 0;
         var position = 250;
         var interval = 25;
         var diff = 250;
         var sequencesize = 2500;
-        sequenceStart = setInterval(function () {
-            document.getElementById('sequenceArea').style.backgroundPosition = '-' + position + 'px 0px';
-            if (position < sequencesize) {
-                position = position + diff;
-            } else {
-                position = 250;
-                clearInterval(sequenceStart);
-                $('#sequenceArea').on('click', function () {
-                    PJT.loadImageRandom();
-                    $('.intro-bg').fadeOut('slow');
-                });
-            }
-        }, interval);
+        // sequenceStart = setInterval(() => {
+        //     document.getElementById('sequenceArea').style.backgroundPosition = `-${position}px 0px`;
+        //     if(position < sequencesize) {
+        //         position = position + diff;
+        //     }
+        //     else {
+        //         position = 250;
+        //         clearInterval(sequenceStart);
+        //         $('#sequenceArea').on('click', function() {
+        //             PJT.loadImageRandom();
+        //             $('.intro-bg').fadeOut('slow');
+        //         });
+        //     }
+        // }, interval);
     },
     loadImageRandom: function loadImageRandom() {
         var imageClass = ['type-1', 'type-2', 'type-3'];
@@ -74,7 +80,7 @@ var PJT = {
         // lnb navigation tooltip
         $('ul.lnb-nav li').on('mouseenter', function () {
             var thisName = $(this).data('name');
-            var toolTipDiv = '<div class="tiny-tooltip" style="display: none">';
+            var toolTipDiv = '<div class="tiny-tooltip" style="display: none;">';
             toolTipDiv += '<div class="tooltip-container">';
             toolTipDiv += '<div class="tooltip-text animated">';
             toolTipDiv += thisName;
@@ -112,6 +118,7 @@ var PJT = {
 
     // after loaded execute
 };window.onload = function () {
+    PJT.loginInit();
     PJT.siteResizeResponse();
     PJT.utilsAliveLinks();
     PJT.scrollPlugIn();
