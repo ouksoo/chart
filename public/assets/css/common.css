@@ -737,8 +737,8 @@ div.modal-wrap {
         line-height: 23px; }
         .modal-search ul.search-list li p.f span.box {
           display: inline-block;
-          width: 14px;
-          height: 14px;
+          width: 18px;
+          height: 18px;
           margin-right: 7px; }
           .modal-search ul.search-list li p.f span.box.disk {
             background: url("../img/icons/icon_server.png") 50% 50% no-repeat;
