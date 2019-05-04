@@ -32,6 +32,7 @@ var PJT = {
         //         });
         //     }
         // }, interval);
+        document.getElementById('playintro').play();
     },
     loadImageRandom: function loadImageRandom() {
         var imageClass = ['type-1', 'type-2', 'type-3'];

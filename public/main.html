@@ -13,10 +13,10 @@
 <!--background film for layer popup-->
 <!-- <div class="popup-film"></div> -->
 
-<div class="wrapper" style="display: none">
+<div class="wrapper">
     <!-- header -->
     <header class="clearfix">
-        <a href="#" class="monitor header-monitor" data-toggle="modal" data-target="#exampleModal">Monitoring Graph</a>
+        <a href="#" class="monitor header-monitor">Monitoring Graph</a>
 
         <div class="product-btn clearfix">
             <span class="refresh"></span>
@@ -30,10 +30,10 @@
         <span class="loading"><img src="assets/img/layout/loading.gif" alt="" /></span>
         <div class="header-info">
             <ul class="clearfix">
-                <li><a href="#" class="a"></a></li>
+                <li><a href="#" class="a" data-toggle="modal" data-target="#modalTempSearch">search</a></li>
                 <li><a href="#" class="b"></a></li>
-                <li><a href="#" class="c notice-show-hide"><span class="alram-round"></span></a></li>
-                <li><a href="#" class="d"></a></li>
+                <li><a href="#" class="c notice-show-hide">notice<span class="alram-round"></span></a></li>
+                <li><a href="#" class="d">control</a></li>
                 <li><a href="#" class="profile-show-hide"><img src="assets/img/temp/picture.png" width="100%" /></a></li>
             </ul>
         </div>
@@ -192,32 +192,69 @@
     </section>
 </div>
 
-<div class="modal" style="display: block" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-wrap modal-search">
-        <div class="search-header">
-
-        </div>
-        <div class="search-typeword">
-
-        </div>
-        <ul class="search-list">
-            <li>
-                <p class="f">
-                    <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Entire Devices</span>
+<div class="modal fade" id="modalTempSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-wrap modal-search modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="search-header clearfix">
+                <span class="zoom"></span>
+                <p class="f">ALL</p>
+                <p class="s">Use tab to switch or type devices, events, reports</p>
+            </div>
+            <div class="search-typeword">
+                    <p>Use <strong>Tab Key</strong> to switch categories <span>|</span> Type words - device name & type, event title&type, report title, date, user name etc.</p>
+            </div>
+            <ul class="search-list">
+                <li>
+                    <p class="f">
+                        <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Web Server - Dream</span>
+                    </p>
+                    <span class="etcs">
+                        <a href="#" class="add">add device</a><a href="#" class="warn">information</a>
+                    </span>
+                </li>
+                <li>
+                    <p class="f">
+                        <span class="box cloud"></span><span class="box os-linux"></span><span class="dvc">Web Server - Dream</span>
+                    </p>
+                    <span class="etcs">
+                        <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                    </span>
+                </li>
+                <li>
+                    <p class="f">
+                        <span class="box copy"></span><span class="box os-mark"></span><span class="dvc">Web Server - Dream</span>
+                    </p>
+                    <span class="etcs">
+                        <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                    </span>
+                </li>
+                <li>
+                    <div class="clearfix">
+                        <span class="icon zap"></span>
+                        <p class="paragraph">
+                            <span class="up"><strong>Cloud Server</strong> CPU performance is getting up to 70%</span>
+                            <span class="down">From <strong>Dream</strong>&nbsp; - &nbsp;20 Mar 2019</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="clearfix">
+                        <span class="icon minus"></span>
+                        <p class="paragraph">
+                            <span class="up"><strong>Cloud Server</strong> CPU performance is getting up to 70%</span>
+                            <span class="down">From <strong>Dream</strong>&nbsp; - &nbsp;20 Mar 2019</span>
+                        </p>
+                    </div>
+                    <span class="etcs">
+                        <a href="#" class="down on">download</a><a href="#" class="email">email</a>
+                    </span>
+                </li>
+            </ul>
+            <div class="search-result">
+                <p>
+                    <strong>Search Result</strong><span>120 devices</span><span>24 events</span><span>38 reports</span>
                 </p>
-                <p class="s"><strong>Great - 02</strong> event - Suwon</p>
-                <span class="status stat-1"></span>
-            </li>
-            <li>
-                <p class="f">
-                    <span class="box cloud"></span><span class="box os-linux"></span><span class="dvc">Entire Devices</span>
-                </p>
-                <p class="s"><strong>Great - 02</strong> event - Suwon</p>
-                <span class="status stat-2"></span>
-            </li>
-        </ul>
-        <div class="search-result">
-
+            </div>
         </div>
     </div>
 </div>

@@ -44,8 +44,8 @@
             left: 0%;
             top: 8px;
             transform: translateX(-50%) rotate(45deg);
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-            border: 1px solid #bccad7;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+            border: 1px solid #9dabb8;
             background: rgb(248,250,252);
             background: linear-gradient(0deg, rgba(248,250,252,1) 0%, rgba(238,242,245,1) 100%);
         }
@@ -58,6 +58,13 @@
 */
 div.modal-wrap {
     min-width: 500px;
+    max-width: none;
     left: auto;
     margin: 3.75rem auto;
+
+    div.modal-content {
+        background-color: transparent;
+        background-clip: none;
+        border: 0;
+    }
 }
