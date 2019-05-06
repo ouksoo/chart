@@ -49,3 +49,9 @@ $screen-breakpoint: 1600px;
     }
     #{$property}: $value;
 }
+
+@mixin ellips {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title></title>
+<meta name=”viewport” content=”width=device-width, initial-scale=1.0" />
 <meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 <link href="assets/css/common.css" rel="stylesheet">
 </head>
@@ -27,7 +27,7 @@
         </div>
 
         <h1 class="logo">Monitoring.Force</h1>
-        <span class="loading"><img src="assets/img/layout/loading.gif" alt="" /></span>
+        <span class="loading"><img src="assets/img/layout/_loading.gif" alt="" /></span>
         <div class="header-info">
             <ul class="clearfix">
                 <li><a href="#" class="a" data-toggle="modal" data-target="#modalTempSearch">search</a></li>
@@ -125,8 +125,8 @@
                 <li data-name="Monitoring"><a href="#">monitoring</a></li>
                 <li data-name="Event"><a href="#">event</a></li>
                 <li data-name="Report"><a href="#">report</a></li>
-                <li data-name="Calendar"><a href="#">calendar</a></li>
-                <li data-name="Create a report"><a href="#">create a report</a></li>
+                <li data-name="Calendar"><a href="#" class="lnb-calendar">calendar</a></li>
+                <li data-name="Create a report"><a href="#" class="lnb-createreport">create a report</a></li>
                 <li data-name="Snapshot"><a href="#">snapshot</a></li>
                 <li data-name="Add charts"><a href="#">add charts</a></li>
                 <li data-name="Information"><a href="#">information</a></li>
@@ -192,13 +192,119 @@
     </section>
 </div>
 
+<!--Carlendar-->
+<div class="lnb-tools-wrap calendar lnb-content_popup" style="display: none">
+    <div class="tools-container">
+        <div class="tools-content">
+            <p class="title">Calendar</p>
+            <div class="period">
+                <p class="progress"><span></span></p>
+                <div class="p-time">
+                    <span>Present</span>
+                    <span>30m</span>
+                    <span class="on">1h</span>
+                    <span>3h</span>
+                    <span>6h</span>
+                    <span>12h</span>
+                    <span>1D</span>
+                    <span>1W</span>
+                    <span>1M</span>
+                    <span>3M</span>
+                    <span>6M</span>
+                </div>
+            </div>
+            <span class="double--line"></span>
+            <div class="from-to clearfix">
+                <div class="from-date floatl">
+                    <span class="tt">From</span>
+                    <p class="date">YYYY / MM / DD <span class="time">hh:mm</span></p>
+                </div>
+                <div class="to-date floatl">
+                    <span class="tt">To</span>
+                    <p class="date">Present <span class="bar">-</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="tools-tip"></div>
+    </div>
+</div>
+
+<!--Create a report-->
+<div class="lnb-tools-wrap create-report lnb-content_popup" style="display: none">
+    <div class="tools-container">
+        <div class="tools-content">
+            <p class="title">CREATE A REPORT</p>
+            <div class="type-comment">
+                <textarea class="formdata" maxlength="100" placeholder="Type your comment for this report"></textarea>
+                <p>You can put your comment in the report document<br />when it’s created.</p>
+            </div>
+            <span class="double--line"></span>
+            <div class="email clearfix">
+                <span>E-mail</span>
+                <input type="text" class="formdata create-report-email" />
+            </div>
+            <span class="double--line"></span>
+            <div class="btns">
+                <a href="#" class="cs-btn purple a">CREATE</a><a href="#" class="cs-btn purple b">CREATE & DOWNLOAD</a><a href="#" class="cs-btn purple c" style="display: none">CREATE & SENT EMAIL</a>
+            </div>
+        </div>
+        <div class="tools-tip"></div>
+    </div>
+</div>
+
+<!--Add Charts-->
+<div class="lnb-tools-wrap add-charts lnb-content_popup" style="display: none">
+    <div class="tools-container">
+        <div class="tools-content">
+            <p class="title">Add Charts</p>
+            <ul class="charts-list">
+                <li class="clearfix">
+                    <span class="ico trend">trending up</span>
+                    <p>Realtime Monitoring Chart</p>
+                    <span class="radio-wrap">
+                        <label class="checkbox-switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                    </span>
+                </li>
+                <li class="clearfix">
+                    <span class="ico bar">trending up</span>
+                    <p>Memory Perfomance Chart</p>
+                    <span class="radio-wrap">
+                        <label class="checkbox-switch">
+                            <input type="checkbox" checked />
+                            <span class="slider round"></span>
+                        </label>
+                    </span>
+                </li>
+                <li class="clearfix">
+                    <span class="ico pie">trending up</span>
+                    <p>CPU Performace Chart</p>
+                    <span class="radio-wrap">
+                        <label class="checkbox-switch">
+                            <input type="checkbox" />
+                            <span class="slider round"></span>
+                        </label>
+                    </span>
+                </li>
+            </ul>
+            <div class="btns">
+                <a href="#" class="cs-btn purple save-chart">SAVE CHARTS</a>
+            </div>
+        </div>
+        <div class="tools-tip"></div>
+    </div>
+</div>
+
+<!--SEARCH-->
 <div class="modal fade" id="modalTempSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-wrap modal-search modal-dialog" role="document">
         <div class="modal-content">
             <div class="search-header clearfix">
                 <span class="zoom"></span>
                 <p class="f">ALL</p>
-                <p class="s">Use tab to switch or type devices, events, reports</p>
+                <input type="text" class="s" id="deviceSearchInput" placeholder="Use tab to switch or type devices, events, reports" /></p>
             </div>
             <div class="search-typeword">
                     <p>Use <strong>Tab Key</strong> to switch categories <span>|</span> Type words - device name & type, event title&type, report title, date, user name etc.</p>

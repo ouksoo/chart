@@ -44,12 +44,33 @@ html, body {
         width: 100%;
         height: 100%;
 
+        div.line-login-left {
+            position: absolute;
+            z-index: 6;
+            height: 1px;
+            width: 278px;
+            top: 49%; left: 70px;
+            margin: -20px 0 0 0px;
+            background: #fff;
+            opacity: .3;
+        }
+        div.line-login-right {
+            position: absolute;
+            z-index: 6;
+            height: 1px;
+            width: 278px;
+            top: 49%; right: 70px;
+            margin: -20px 0 0 0px;
+            background: #fff;
+            opacity: .3;
+        }
+
         div.login-wrap {
             display: none;
             position: absolute;
             width: 900px; height: 500px;
             left: 50%; top: 50%;
-            margin: -200px 0 0 -450px;
+            margin: -246px 0 0 -450px;
             z-index: 5;
 
             span.login-center-txt {
@@ -61,39 +82,44 @@ html, body {
                 @include prefix(background-size, 100% auto, webkit ms)
             }
             p.login-text {
+                // font-family: $inter-l;
                 font-size: 24px; color: rgba(255, 255, 255, 0.8);
-                font-weight: bold;
                 text-align: center;
-                margin: 110px 0 0 0;
-                line-height: 32px;
+                margin: 102px 0 0 0;
+                line-height: 1.25;
                 text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
                 @include prefix(text-shadow, 0 0 0 6px rgba(0,0,0,0.2), webkit ms);
             }
             div.form-wrap {
                 position:absolute;
-                bottom: 150px;
-                left: 230px;
+                bottom: 178px;
+                left: 211px;
                 z-index: 5;
                 text-align: center;
                 @include prefix(transition, left .5s ease-in-out, webkit ms);
 
                 input {
-                    width: 200px; height: 46px;
+                    width: 230px; height: 46px;
                     border: 0;
                     background: #eee;
-                    margin: 0 9px;
+                    margin: 0 3px;
                     padding: 0 25px;
                     font-size: 20px; color: #777;
+                    color: #97a4b1;
                     @include prefix(border-radius, 23px, webkit ms);
+
+                    &::placeholder {
+                        color: #97a4b1; 
+                    }
                 }
 
                 &.on {
-                    left: 180px;
+                    left: 211px;
                 }
             }
             a.login-button {
                 position: absolute;
-                top: 304px; left: 580px;
+                top: 276px; left: 580px;
                 width: 46px; height: 46px;
                 background: #eee url('../img/login/login_button_off.png') 50% 50% no-repeat;
                 opacity: 0;
@@ -107,7 +133,7 @@ html, body {
 
                 &.on {
                     opacity: 1;
-                    left: 630px;
+                    left: 695px;
                     width: 80px;                    
                 }
                 &:hover {
@@ -121,20 +147,27 @@ html, body {
             // display: none;
             position: absolute;
             width: 100%; height: 100%;
-            background: #edeff1;
-            z-index: 4;
+            background: #ebecee;
+            z-index: 5;
 
             div.intro-image {
                 cursor: pointer;
                 position: absolute;
-                width: 320px; height: 320px;
+                width: 600px; height: 203px;
                 overflow: hidden;
                 left: 50%; top: 50%;
-                margin: -160px 0 0 -160px;
+                margin: -101px 0 0 -300px;
                 z-index: 5;
                 background: #edeff1;
                 // background:url('../img/login/intro-sequence.png') 0 0 no-repeat;
             }
+        }
+        div.image-dimmed  {
+            position: absolute;
+            width: 100%; height: 100%;
+            left: 0; top: 0;
+            z-index: 4;
+            background: rgba(0,0,0,0.2);
         }
         div.image-bg {
             position: absolute;
@@ -184,12 +217,12 @@ html, body {
 
         span.f {
             position: absolute;
-            bottom: 45px; left: 70px;
+            bottom: 41px; left: 70px;
         }
         span.s {
             position: absolute;
-            bottom: 45px; left: 50%;
-            margin: 0 0 0 -200px;
+            bottom: 41px; left: 50%;
+            margin: 0 0 0 -195px;
             width: 400px;
             text-align: center;
 
@@ -199,7 +232,7 @@ html, body {
         }
         span.t {
             position: absolute;
-            bottom: 45px; right: 70px;
+            bottom: 41px; right: 70px;
             padding: 0 0 0 40px;
             background: url('../img/login/login_headset.png') 0 0 no-repeat;
             @include prefix(background-size, 30px 30px, webkit ms);
