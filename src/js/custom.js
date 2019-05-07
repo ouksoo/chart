@@ -101,6 +101,11 @@ let PJT = {
             });
         });
 
+        // lnb > add charts click
+        $('a.lnb-addcharts').on('click', function() {
+            $('.lnb-tools-wrap.add-charts').fadeIn('fast');
+        });
+
         // lnb > navigation tooltip
         $('ul.lnb-nav li').on('mouseenter', function() {
             var thisName = $(this).data('name');
@@ -136,13 +141,13 @@ let PJT = {
     siteResizeResponse: function() {
         let winWidth = $(window).width();
         let winHeight = $(window).height();
-        $('.content-wrap').css('width', winWidth-385);
+        $('.content-wrap').css('width', winWidth-375);
         $('.device-list').css('height', winHeight-169);
 
         $(window).on('resize', function() {
             let winWidth = $(window).width();
             let winHeight = $(window).height();
-            let realSize = winWidth - 385;
+            let realSize = winWidth - 375;
             $('.content-wrap').css('width', realSize);
             $('.device-list').css('height', winHeight-169);
         });

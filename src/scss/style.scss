@@ -5,6 +5,7 @@ div.wrapper {
     position: relative;
     margin: 0 auto;
     min-height: 100%;
+    background: #f8fafc;
 
     @include breakpointmax(max) {
         width: 1600px !important;
@@ -14,7 +15,7 @@ div.wrapper {
         position: absolute;
         z-index: 5;
         top: 0; left: 0;
-        height: 80px; width: 100%;
+        height: 70px; width: 100%;
         background: #fff;
         @include prefix(box-shadow, 0 0 6px 0 #ccc, webkit ms);
 
@@ -29,33 +30,34 @@ div.wrapper {
             position: absolute;
             z-index: 3;
             left: 0; top: 0;
-            width: 80px; height: 80px;
+            width: 70px; height: 70px;
             background: #9678ff url('../img/layout/header_monitor.png') 50% 50% no-repeat;
-            @include prefix(background-size, 26px 24px, webkit ms);
+            @include prefix(background-size, 21px 19px, webkit ms);
             text-indent: -9999px;
         }
         div.product-btn {
             position: absolute;
-            top: 0; left: -245px;
+            top: 0; 
+            left: -245px;
             z-index: 2;
-            width: 245px; height: 80px;
+            width: 245px; height: 70px;
             background: #eef2f5;
             border-right: 1px solid #c8d3df;
             @include prefix(transition, left .3s ease-in-out, webkit ms);
 
             &.on {
-                left: 80px;
+                left: 70px;
             }
             span.refresh {
                 float: left;
-                width: 26px; height: 26px;
-                margin: 27px 0 0 25px;
+                width: 22px; height: 22px;
+                margin: 22px 0 0 24px;
                 background: url('../img/layout/header_repeat.png') 50% 50% no-repeat;
-                @include prefix(background-size, 26px 26px, webkit ms);
+                @include prefix(background-size, 22px 22px, webkit ms);
             }
             div.texts {
                 float: left;
-                margin: 20px 0 0 20px;
+                margin: 12px 0 0 18px;
 
                 p.f {
                     font-size: 16px;
@@ -69,7 +71,7 @@ div.wrapper {
         }
         h1.logo {
             position: absolute;
-            top: 28px; left: 107px;
+            top: 23px; left: 96px;
             font-family: $raleway;
             font-weight: 500;
             font-size: 20px;
@@ -93,7 +95,7 @@ div.wrapper {
                     a {
                         display: inline-block;
                         width: 22px; height: 22px;
-                        margin: 29px 0 0 32px;
+                        margin: 23px 0 0 32px;
                         text-indent: -9999px;
 
                         &.a {
@@ -124,9 +126,9 @@ div.wrapper {
                     }
 
                     &:last-child a {
-                        width: 46px; height: 46px;
+                        width: 42px; height: 42px;
                         border: 1px solid #dfe5eb;
-                        margin: 17px 28px 0 48px;
+                        margin: 17px 23px 0 42px;
                         background: #eee;
                         overflow: hidden;
                         text-indent: 0;
@@ -144,13 +146,13 @@ div.wrapper {
             position: absolute;
             z-index: 2;
             top: 0; left: 0;
-            width: 80px;
+            width: 70px;
             height: 100%;
             border-right: 1px solid #c8d3df;
             background: #fff;
         }
         div.content-wrap {
-            margin-left: 80px;
+            margin-left: 70px;
             height: 400px;
             @include breakpointmax(max) {
                 width: 1215px !important;
@@ -168,7 +170,7 @@ div.wrapper {
             div.device-top {
                 height: 53px;
                 background: #97a4b1;
-                margin-top: 80px;
+                margin-top: 70px;
 
                 span.f {
                     float: left;

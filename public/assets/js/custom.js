@@ -98,6 +98,11 @@ var PJT = {
             });
         });
 
+        // lnb > add charts click
+        $('a.lnb-addcharts').on('click', function () {
+            $('.lnb-tools-wrap.add-charts').fadeIn('fast');
+        });
+
         // lnb > navigation tooltip
         $('ul.lnb-nav li').on('mouseenter', function () {
             var thisName = $(this).data('name');
@@ -133,13 +138,13 @@ var PJT = {
     siteResizeResponse: function siteResizeResponse() {
         var winWidth = $(window).width();
         var winHeight = $(window).height();
-        $('.content-wrap').css('width', winWidth - 385);
+        $('.content-wrap').css('width', winWidth - 375);
         $('.device-list').css('height', winHeight - 169);
 
         $(window).on('resize', function () {
             var winWidth = $(window).width();
             var winHeight = $(window).height();
-            var realSize = winWidth - 385;
+            var realSize = winWidth - 375;
             $('.content-wrap').css('width', realSize);
             $('.device-list').css('height', winHeight - 169);
         });

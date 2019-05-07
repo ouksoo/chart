@@ -1,7 +1,7 @@
 .lnb-wrap {
     
     ul {
-        margin-top: 80px; 
+        margin-top: 70px; 
 
         li {
             position: relative;
@@ -12,53 +12,53 @@
             a {
                 display: inline-block;
                 margin: 20px 0;
-                width: 22px; height: 22px;
+                width: 20px; height: 20px;
                 text-indent: -9999px;
             }
 
             &:nth-child(1) a {
-                width: 79px; height: 80px;
+                width: 69px; height: 70px;
                 margin: 0;
                 background: #97a4b1 url('../img/layout/lnb_activity.png') 50% 50% no-repeat;
-                @include prefix(background-size, 22px 22px, webkit ms);
+                @include prefix(background-size, 20px 20px, webkit ms);
                 border-bottom: 1px solid #c8d3df;
             }
             &:nth-child(2) a {
-                width: 79px; height: 80px;
+                width: 69px; height: 70px;
                 margin: 0;
                 background: #eef2f5 url('../img/layout/lnb_zap.png') 50% 50% no-repeat;
-                @include prefix(background-size, 22px 22px, webkit ms);
-                border-bottom: 1px solid #c8d3df;
+                @include prefix(background-size, 20px 20px, webkit ms);
+                // border-bottom: 1px solid #c8d3df;
             }
             &:nth-child(3) a {
-                width: 79px; height: 80px;
+                width: 69px; height: 70px;
                 margin: 0 0 0px 0;
                 background: #eef2f5 url('../img/layout/lnb_file_minus.png') 50% 50% no-repeat;
-                @include prefix(background-size, 22px 22px, webkit ms);
+                @include prefix(background-size, 20px 20px, webkit ms);
                 border-bottom: 1px solid #c8d3df;
             }
             &:nth-child(4) {
-                margin-top: 20px;
+                margin-top: 10px;
             }
             &:nth-child(4) a {
                 background: url('../img/layout/lnb_calendar.png') 50% 50% no-repeat;
-                @include prefix(background-size, 22px 22px, webkit ms);
+                @include prefix(background-size, 20px 20px, webkit ms);
             }
             &:nth-child(5) a {
                 background: url('../img/layout/lnb_file_plus.png') 50% 50% no-repeat;
-                @include prefix(background-size, 22px 22px, webkit ms);
+                @include prefix(background-size, 20px 20px, webkit ms);
             }
             &:nth-child(6) a {
                 background: url('../img/layout/lnb_instagram.png') 50% 50% no-repeat;
-                @include prefix(background-size, 22px 22px, webkit ms);
+                @include prefix(background-size, 20px 20px, webkit ms);
             }
             &:nth-child(7) a {
                 background: url('../img/layout/lnb_piechart.png') 50% 50% no-repeat;
-                @include prefix(background-size, 22px 22px, webkit ms);
+                @include prefix(background-size, 20px 20px, webkit ms);
             }
             &:nth-child(8) a {
                 background: url('../img/layout/lnb_info.png') 50% 50% no-repeat;
-                @include prefix(background-size, 22px 22px, webkit ms);
+                @include prefix(background-size, 20px 20px, webkit ms);
             }
         }
     }
@@ -67,7 +67,7 @@
 div.lnb-tools-wrap {
     //calendar
     &.calendar {
-        left: 70px; top: 349px;
+        left: 60px; top: 300px;
         
         div.tools-container {
             
@@ -154,7 +154,7 @@ div.lnb-tools-wrap {
 
     // create a report
     &.create-report {
-        left: 70px; top: 412px;
+        left: 60px; top: 357px;
         
         div.tools-container {
             
@@ -227,7 +227,7 @@ div.lnb-tools-wrap {
 
     // Add charts
     &.add-charts {
-        left: 70px; top: 282px;
+        left: 60px; top: 282px;
         
         div.tools-container {
             
