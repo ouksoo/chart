@@ -1,51 +1,69 @@
 /* search */
 .modal-search {
     width: 970px;
-    height: 655px;
+    height: 607px;
     border-radius: 8px;
     box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
     background-color: #ffffff;    
     
     div.search-header {
-        height: 90px; 
+        height: 70px; 
         background: #97a4b1;
         @include prefix(border-radius, 8px 8px 0 0, webkit ms);
 
         span.zoom {
             float: left;
-            width: 28px; height: 28px;
-            margin: 30px 0 0 30px;
+            width: 24px; height: 24px;
+            margin: 23px 0 0 30px;
             background: url('../img/icons/icon_zoom.png') 0 0 no-repeat;
-            @include prefix($bgs, 28px 28px, webkit ms);
-        }
-        p.f {
-            float: left;
-            font-family: $inter-m;
-            font-size: 20px;
-            color: #fff;
-            margin: 30px 0 0 20px;
-            width: 125px;
-            background: url('../img/icons/icon_arrow_right.png') 100% 50% no-repeat;
             @include prefix($bgs, 24px 24px, webkit ms);
         }
         input.s {
             float: left;
             font-family: $inter-r;
-            font-size: 20px;
+            font-size: 22px;
             color: #fff;
             opacity: .5;
-            margin: 30px 0 0 15px;
+            margin: 17px 0 0 15px;
             background: #97a4b1;
             border: 0;
-            width: 70%;
+            width: 73%;
 
             &::placeholder {
                 color: #fff; 
             }
         }
+        p.f {
+            float: left;
+            margin: 18px 0 0 20px;
+            width: 144px;
+
+            a {
+                display: inline-block;
+                text-indent: -9999px;
+                width: 22px; height: 22px;
+
+                &.left {
+                    background: url('../img/icons/icon_search_left.png') 50% 50% no-repeat;
+                    @include prefix($bgs, 22px 22px, webkit ms);
+                }
+                &.right {
+                    background: url('../img/icons/icon_search_right.png') 50% 50% no-repeat;
+                    @include prefix($bgs, 22px 22px, webkit ms);
+                }
+            }
+            span {
+                display: inline-block;
+                font-family: $inter-r;
+                font-size: 22px;
+                color: #fff;
+                width: 100px;
+                text-align: center;
+            }
+        }
     }
     div.search-typeword {
-        height: 50px;
+        height: 42px;
         background: #eef2f5;
         border-bottom: 1px solid #c8d3df;
 
@@ -53,7 +71,7 @@
             font-family: $inter-r;
             font-size: 13px;
             color: #97a4b1;
-            padding: 14px 0 0 33px;
+            padding: 12px 0 0 33px;
 
             strong {
                 font-family: $inter-b;
@@ -66,13 +84,14 @@
     ul.search-list {
         overflow-y: auto;
         overflow-x: hidden;
-        height: 469px;
+        height: 449px;
+        @include prefix(box-shadow, inset 1px 4px 9px -6px #ccc, webkit ms);
 
         li {
             position: relative;
-            height: 68px;
+            height: 62px;
             border-bottom: 1px solid #dfe5eb;
-            padding: 12px 0 0 17px;
+            padding: 8px 0 0 17px;
 
             &:hover::before {
                 content: ' ';
@@ -90,31 +109,31 @@
 
                 span.box {
                     display: inline-block;
-                    width: 18px; height: 18px;
+                    width: 18px; height: 20px;
                     margin-right: 12px;
 
                     &.disk {
-                        background: url('../img/icons/icon_server.png') 50% 50% no-repeat;
+                        background: url('../img/icons/icon_server.png') 50% 100% no-repeat;
                         @include prefix(background-size, 18px 18px, webkit ms);
                     }
                     &.cloud {
-                        background: url('../img/icons/icon_cloud.png') 50% 50% no-repeat;
+                        background: url('../img/icons/icon_cloud.png') 50% 100% no-repeat;
                         @include prefix(background-size, 18px 18px, webkit ms);
                     }
                     &.copy {
-                        background: url('../img/icons/icon_copy.png') 50% 50% no-repeat;
+                        background: url('../img/icons/icon_copy.png') 50% 100% no-repeat;
                         @include prefix(background-size, 18px 18px, webkit ms);
                     }
                     &.os-win {
-                        background: url('../img/icons/icon_os_window.png') 50% 50% no-repeat;
+                        background: url('../img/icons/icon_os_window.png') 50% 100% no-repeat;
                         @include prefix(background-size, 18px 18px, webkit ms);
                     }
                     &.os-linux {
-                        background: url('../img/icons/icon_os_linux.png') 50% 50% no-repeat;
+                        background: url('../img/icons/icon_os_linux.png') 50% 100% no-repeat;
                         @include prefix(background-size, 18px 18px, webkit ms);
                     }
                     &.os-mark {
-                        background: url('../img/icons/icon_os_mark.png') 50% 50% no-repeat;
+                        background: url('../img/icons/icon_os_mark.png') 50% 100% no-repeat;
                         @include prefix(background-size, 18px 18px, webkit ms);
                     }
                 }
@@ -165,7 +184,7 @@
 
             span.etcs {
                 position: absolute;
-                top: 23px; right: 30px;
+                top: 20px; right: 30px;
 
                 a {
                     display: inline-block;
@@ -206,7 +225,7 @@
             font-size: 13px;
             font-family: $inter-r;
             color: #97a4b1;
-            padding: 12px 0 0 33px;
+            padding: 13px 0 0 33px;
 
             strong {
                 font-family: $inter-b;

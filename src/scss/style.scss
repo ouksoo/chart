@@ -17,20 +17,21 @@ div.wrapper {
         top: 0; left: 0;
         height: 70px; width: 100%;
         background: #fff;
-        @include prefix(box-shadow, 0 0 6px 0 #ccc, webkit ms);
+        // @include prefix(box-shadow, 0 0 6px 0 #ccc, webkit ms);
 
-        // div.header-shadow {
-        //     position: absolute; bottom: 0;
-        //     width: 100%; height: 8px;
-        //     mix-blend-mode: multiply;
-        //     background-image: linear-gradient(to top, rgba(223, 229, 235, 0), rgba(223, 229, 235, 0.7));
-        // }
+        div.header-shadow {
+            position: absolute; top: 70px;
+            width: 100%; height: 8px;
+            opacity: .15;
+            background-image: linear-gradient(to top, rgba(31, 44, 58, 0), rgba(31, 44, 58, 0.7));
+        }
 
         a.monitor {
             position: absolute;
             z-index: 3;
             left: 0; top: 0;
             width: 70px; height: 70px;
+            border-right: 1px solid #c8d3df;
             background: #9678ff url('../img/layout/header_monitor.png') 50% 50% no-repeat;
             @include prefix(background-size, 21px 19px, webkit ms);
             text-indent: -9999px;
@@ -128,7 +129,7 @@ div.wrapper {
                     &:last-child a {
                         width: 42px; height: 42px;
                         border: 1px solid #dfe5eb;
-                        margin: 17px 23px 0 42px;
+                        margin: 14px 23px 0 34px;
                         background: #eee;
                         overflow: hidden;
                         text-indent: 0;
@@ -168,7 +169,7 @@ div.wrapper {
             background: #fff;
 
             div.device-top {
-                height: 53px;
+                height: 48px;
                 background: #97a4b1;
                 margin-top: 70px;
 
@@ -177,24 +178,24 @@ div.wrapper {
                     font-family: $inter-b;
                     font-size: 16px;
                     color: #fff;
-                    padding: 16px 0 0 20px;
+                    padding: 12px 0 0 20px;
                 }
                 span.s {
                     float: right;
-                    padding: 16px 17px 0 0;
+                    padding: 14px 17px 0 0;
 
                     a {
                         display: inline-block; 
-                        width: 20px; height: 20px;
+                        width: 18px; height: 18px;
                         text-indent: -9999px; 
 
                         &.plus {
                             background: url('../img/icons/icon_plus.png') 50% 50% no-repeat;
-                            @include prefix(background-size, 20px 20px, webkit ms);   
+                            @include prefix(background-size, 18px 18px, webkit ms);   
                         }
                         &.minus {
                             background: url('../img/icons/icon_minus.png') 50% 50% no-repeat;
-                            @include prefix(background-size, 20px 20px, webkit ms);
+                            @include prefix(background-size, 18px 18px, webkit ms);
                             margin-left: 9px;
                         }
                     }
@@ -203,15 +204,15 @@ div.wrapper {
             }
 
             div.device-filter {
-                height: 36px;
+                height: 32px;
                 border-bottom: 1px solid #c8d3df;
                 text-align: center;
-                padding-top: 5px;
+                padding-top: 2px;
                 background: #eef2f5;
 
                 a {
                     display: inline-block;
-                    font-size: 14px;
+                    font-size: 12px;
                     color: #97a4b1;
                     padding-left: 20px; 
                     background: url('../img/icons/icon_filter.png') 0% 50% no-repeat;
@@ -225,9 +226,9 @@ div.wrapper {
 
                 li {
                     position: relative;
-                    height: 68px;
+                    height: 62px;
                     border-bottom: 1px solid #c8d3df;
-                    padding: 12px 0 0 17px;
+                    padding: 9px 0 0 15px;
 
                     &:hover::before {
                         content: ' ';
