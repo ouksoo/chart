@@ -21,7 +21,7 @@
                 margin: 0;
                 background: #97a4b1 url('../img/layout/lnb_activity.png') 50% 50% no-repeat;
                 @include prefix(background-size, 20px 20px, webkit ms);
-                border-bottom: 1px solid #c8d3df;
+                // border-bottom: 1px solid #c8d3df;
 
                 &:hover {
                     background: #eef2f5 url('../img/layout/lnb_activity_on.png') 50% 50% no-repeat;
