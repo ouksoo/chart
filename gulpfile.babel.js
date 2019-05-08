@@ -49,7 +49,9 @@ gulp.task('sass', () => {
         .src(['src/scss/common.scss'])
         .pipe(wait(500))
         .pipe(sourcemaps.init())
-        .pipe(sass())
+        .pipe(sass({
+            outputStyle: 'expanded'
+        }))
         .pipe(sourcemaps.write({includeContent: false}))
         .pipe(sourcemaps.init({loadMaps: true}))
         .pipe(sourcemaps.write('.'))

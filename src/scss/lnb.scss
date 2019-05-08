@@ -22,6 +22,11 @@
                 background: #97a4b1 url('../img/layout/lnb_activity.png') 50% 50% no-repeat;
                 @include prefix(background-size, 20px 20px, webkit ms);
                 border-bottom: 1px solid #c8d3df;
+
+                &:hover {
+                    background: #eef2f5 url('../img/layout/lnb_activity_on.png') 50% 50% no-repeat;
+                    @include prefix(background-size, 20px 20px, webkit ms);
+                }
             }
             &:nth-child(2) a {
                 width: 69px; height: 70px;
@@ -29,6 +34,11 @@
                 background: #eef2f5 url('../img/layout/lnb_zap.png') 50% 50% no-repeat;
                 @include prefix(background-size, 20px 20px, webkit ms);
                 // border-bottom: 1px solid #c8d3df;
+
+                &:hover {
+                    background: #97a4b1 url('../img/layout/lnb_zap_on.png') 50% 50% no-repeat;
+                    @include prefix(background-size, 20px 20px, webkit ms);
+                }
             }
             &:nth-child(3) a {
                 width: 69px; height: 70px;
@@ -36,6 +46,11 @@
                 background: #eef2f5 url('../img/layout/lnb_file_minus.png') 50% 50% no-repeat;
                 @include prefix(background-size, 20px 20px, webkit ms);
                 border-bottom: 1px solid #c8d3df;
+
+                &:hover {
+                    background: #97a4b1 url('../img/layout/lnb_file_minus_on.png') 50% 50% no-repeat;
+                    @include prefix(background-size, 20px 20px, webkit ms);
+                }
             }
             &:nth-child(4) {
                 margin-top: 10px;
@@ -43,22 +58,47 @@
             &:nth-child(4) a {
                 background: url('../img/layout/lnb_calendar.png') 50% 50% no-repeat;
                 @include prefix(background-size, 20px 20px, webkit ms);
+
+                &:hover {
+                    background: url('../img/layout/lnb_calendar_on.png') 50% 50% no-repeat;
+                    @include prefix(background-size, 20px 20px, webkit ms);
+                }
             }
             &:nth-child(5) a {
                 background: url('../img/layout/lnb_file_plus.png') 50% 50% no-repeat;
                 @include prefix(background-size, 20px 20px, webkit ms);
+
+                &:hover {
+                    background: url('../img/layout/lnb_file_plus_on.png') 50% 50% no-repeat;
+                    @include prefix(background-size, 20px 20px, webkit ms);
+                }
             }
             &:nth-child(6) a {
                 background: url('../img/layout/lnb_instagram.png') 50% 50% no-repeat;
                 @include prefix(background-size, 20px 20px, webkit ms);
+
+                &:hover {
+                    background: url('../img/layout/lnb_instagram_on.png') 50% 50% no-repeat;
+                    @include prefix(background-size, 20px 20px, webkit ms);
+                }
             }
             &:nth-child(7) a {
                 background: url('../img/layout/lnb_piechart.png') 50% 50% no-repeat;
                 @include prefix(background-size, 20px 20px, webkit ms);
+
+                &:hover {
+                    background: url('../img/layout/lnb_piechart_on.png') 50% 50% no-repeat;
+                    @include prefix(background-size, 20px 20px, webkit ms);
+                }
             }
             &:nth-child(8) a {
                 background: url('../img/layout/lnb_info.png') 50% 50% no-repeat;
                 @include prefix(background-size, 20px 20px, webkit ms);
+
+                &:hover {
+                    background: url('../img/layout/lnb_info_on.png') 50% 50% no-repeat;
+                    @include prefix(background-size, 20px 20px, webkit ms);
+                }
             }
         }
     }

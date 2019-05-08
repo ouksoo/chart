@@ -2,8 +2,9 @@ header {
     
     div.personal-list-wrap {
         position: absolute;
-        top: 57px; right: 8px;
-        padding-top: 10px;
+        z-index: 6;
+        top: 42px; right: 8px;
+        padding-top: 15px;
 
         div.personal-information {
             width: 209px;
@@ -50,8 +51,9 @@ header {
 
     div.notice-list-wrap {
         position: absolute;
-        top: 57px; right: 8px;
-        padding-top: 10px;
+        z-index: 6;
+        top: 42px; right: 8px;
+        padding-top: 15px;
 
         div.notice-list {
             width: 370px;

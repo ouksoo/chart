@@ -21,6 +21,7 @@ div.wrapper {
 
         div.header-shadow {
             position: absolute; top: 70px;
+            z-index: 5;
             width: 100%; height: 8px;
             opacity: .15;
             background-image: linear-gradient(to top, rgba(31, 44, 58, 0), rgba(31, 44, 58, 0.7));
@@ -102,15 +103,30 @@ div.wrapper {
                         &.a {
                             background: url('../img/layout/header_search.png') 50% 50% no-repeat;
                             @include prefix(background-size, 100% auto, webkit ms);
+
+                            &:hover {
+                                background: url('../img/layout/header_search_on.png') 50% 50% no-repeat;
+                                @include prefix(background-size, 100% auto, webkit ms);
+                            }
                         }
                         &.b {
                             background: url('../img/layout/header_layers.png') 50% 50% no-repeat;
                             @include prefix(background-size, 100% auto, webkit ms);
+
+                            &:hover {
+                                background: url('../img/layout/header_layers_on.png') 50% 50% no-repeat;
+                                @include prefix(background-size, 100% auto, webkit ms);
+                            }
                         }
                         &.c {
                             position: relative;
                             background: url('../img/layout/header_bell.png') 50% 50% no-repeat;
                             @include prefix(background-size, 100% auto, webkit ms);
+
+                            &:hover {
+                                background: url('../img/layout/header_bell_on.png') 50% 50% no-repeat;
+                                @include prefix(background-size, 100% auto, webkit ms);
+                            }
 
                             span.alram-round {
                                 position: absolute;
@@ -123,6 +139,11 @@ div.wrapper {
                         &.d {
                             background: url('../img/layout/header_settings.png') 50% 50% no-repeat;
                             @include prefix(background-size, 100% auto, webkit ms);
+
+                            &:hover {
+                                background: url('../img/layout/header_settings_on.png') 50% 50% no-repeat;
+                                @include prefix(background-size, 100% auto, webkit ms);
+                            }
                         }
                     }
 

@@ -72,10 +72,10 @@ var PJT = {
 
         // header > notice show hide
         $('a.notice-show-hide, div.notice-list-wrap').on('mouseenter', function () {
-            $('div.notice-list-wrap').stop().fadeIn('fast');
+            $('div.notice-list-wrap').stop().fadeIn(300);
         });
         $('a.notice-show-hide, div.notice-list-wrap').on('mouseleave', function () {
-            $('div.notice-list-wrap').stop().fadeOut('fast');
+            $('div.notice-list-wrap').stop().fadeOut(300);
         });
 
         // lnb > calendar click
