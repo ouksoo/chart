@@ -34,7 +34,7 @@ div.wrapper {
             width: 70px; height: 70px;
             border-right: 1px solid #c8d3df;
             background: #9678ff url('../img/layout/header_monitor.png') 50% 50% no-repeat;
-            @include prefix(background-size, 21px 19px, webkit ms);
+            @include prefix(background-size, 24px 24px, webkit ms);
             text-indent: -9999px;
         }
         div.product-btn {

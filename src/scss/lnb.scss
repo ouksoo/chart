@@ -19,12 +19,15 @@
             &:nth-child(1) a {
                 width: 69px; height: 70px;
                 margin: 0;
-                background: #97a4b1 url('../img/layout/lnb_activity.png') 50% 50% no-repeat;
+                background: #eef2f5 url('../img/layout/lnb_activity.png') 50% 50% no-repeat;
                 @include prefix(background-size, 20px 20px, webkit ms);
-                // border-bottom: 1px solid #c8d3df;
 
                 &:hover {
-                    background: #eef2f5 url('../img/layout/lnb_activity_on.png') 50% 50% no-repeat;
+                    background: #97a4b1 url('../img/layout/lnb_activity_on.png') 50% 50% no-repeat;
+                    @include prefix(background-size, 20px 20px, webkit ms);
+                }
+                &.on {
+                    background: #97a4b1 url('../img/layout/lnb_activity_on.png') 50% 50% no-repeat;
                     @include prefix(background-size, 20px 20px, webkit ms);
                 }
             }
@@ -33,9 +36,12 @@
                 margin: 0;
                 background: #eef2f5 url('../img/layout/lnb_zap.png') 50% 50% no-repeat;
                 @include prefix(background-size, 20px 20px, webkit ms);
-                // border-bottom: 1px solid #c8d3df;
 
                 &:hover {
+                    background: #97a4b1 url('../img/layout/lnb_zap_on.png') 50% 50% no-repeat;
+                    @include prefix(background-size, 20px 20px, webkit ms);
+                }
+                &.on {
                     background: #97a4b1 url('../img/layout/lnb_zap_on.png') 50% 50% no-repeat;
                     @include prefix(background-size, 20px 20px, webkit ms);
                 }
@@ -48,6 +54,10 @@
                 border-bottom: 1px solid #c8d3df;
 
                 &:hover {
+                    background: #97a4b1 url('../img/layout/lnb_file_minus_on.png') 50% 50% no-repeat;
+                    @include prefix(background-size, 20px 20px, webkit ms);
+                }
+                &.on {
                     background: #97a4b1 url('../img/layout/lnb_file_minus_on.png') 50% 50% no-repeat;
                     @include prefix(background-size, 20px 20px, webkit ms);
                 }
