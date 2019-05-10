@@ -275,6 +275,83 @@ div.lnb-tools-wrap {
         }
     }
 
+    // Snapshot
+    &.snap-shot {
+        left: 60px; top: 225px;
+        
+        div.tools-container {
+            
+            div.tools-content {
+                width: 454px; height: 450px;
+                padding: 12px 15px;
+
+                p.title {
+                    font-family: $inter-m;
+                    font-size: 13px;
+                    color: #28313b;
+                    padding-bottom: 18px;
+                    text-align: center;
+                    border-bottom: 1px solid #dfe5eb;
+                }
+                ul.snapshot-list {
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    height: 320px;
+            
+                    li {
+                        position: relative;
+                        height: 53px;
+                        border-bottom: 1px solid #dfe5eb;
+                        padding: 12px 0 0 17px;
+
+                        span.ico {
+                            float: left;
+                            width: 24px; height: 24px;
+                            text-indent: -9999px;
+
+                            &.trend {
+                                background: url('../img/icons/icon_trending_up.png') 50% 50% no-repeat;
+                                @include prefix($bgs, 24px 24px, webkit ms);
+                            }
+                            &.bar {
+                                background: url('../img/icons/icon_bar_chart.png') 50% 50% no-repeat;
+                                @include prefix($bgs, 24px 24px, webkit ms);
+                            }
+                            &.pie {
+                                background: url('../img/icons/icon_pie_chart.png') 50% 50% no-repeat;
+                                @include prefix($bgs, 24px 24px, webkit ms);
+                            }
+                        }
+                        p {
+                            float: left;
+                            width: 358px;
+                            font-family: $inter-m;
+                            font-size: 16px;
+                            color: #28313b;
+                            padding-left: 17px;
+                            @include ellips;
+                        }
+                        span.checkbox-default {
+                            margin-top: 3px;
+                        }
+                    }
+                }
+                div.btns {
+                    text-align: center;
+                    padding-top: 18px;
+
+                    a.save-chart {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .tools-tip {
+                top: 210px;
+            }
+        }
+    }
+
     // Add charts
     &.add-charts {
         left: 60px; top: 282px;

@@ -128,7 +128,7 @@
                 <li data-name="Report"><a href="#">report</a></li>
                 <li data-name="Calendar"><a href="#" class="lnb-calendar">calendar</a></li>
                 <li data-name="Create a report"><a href="#" class="lnb-createreport">create a report</a></li>
-                <li data-name="Snapshot"><a href="#">snapshot</a></li>
+                <li data-name="Snapshot"><a href="#" class="lnb-snapshot">snapshot</a></li>
                 <li data-name="Add charts"><a href="#" class="lnb-addcharts">add charts</a></li>
                 <li data-name="Information"><a href="#">information</a></li>
             </ul>
@@ -247,6 +247,42 @@
             <span class="double--line"></span>
             <div class="btns">
                 <a href="#" class="cs-btn purple a">CREATE</a><a href="#" class="cs-btn purple b">CREATE & DOWNLOAD</a><a href="#" class="cs-btn purple c" style="display: none">CREATE & SENT EMAIL</a>
+            </div>
+        </div>
+        <div class="tools-tip"></div>
+    </div>
+</div>
+
+<!--Snapshot-->
+<div class="lnb-tools-wrap snap-shot lnb-content_popup" style="display: none">
+    <div class="tools-container">
+        <div class="tools-content">
+            <p class="title">SNAPSHOT</p>
+            <ul class="snapshot-list">
+                <li class="clearfix">
+                    <span class="ico trend">trending up</span>
+                    <p>Realtime Monitoring Chart</p>
+                    <span class="checkbox-default">
+                        <input type="checkbox" id="a1" name="a1" /><label for="a1"><span></span></label>
+                    </span>
+                </li>
+                <li class="clearfix">
+                    <span class="ico bar">trending up</span>
+                    <p>Memory Perfomance Chart</p>
+                    <span class="checkbox-default">
+                        <input type="checkbox" id="a2" name="a2" checked /><label for="a2"><span></span></label>
+                    </span>
+                </li>
+                <li class="clearfix">
+                    <span class="ico pie">trending up</span>
+                    <p>CPU Performace Chart</p>
+                    <span class="checkbox-default">
+                        <input type="checkbox" id="a3" name="a3" /><label for="a3"><span></span></label>
+                    </span>
+                </li>
+            </ul>
+            <div class="btns">
+                <a href="#" class="cs-btn purple save-chart">DOWNLOAD SNAPSHOT</a>
             </div>
         </div>
         <div class="tools-tip"></div>

@@ -98,6 +98,11 @@ var PJT = {
             });
         });
 
+        // lnb > snapshot
+        $('a.lnb-snapshot').on('click', function () {
+            $('.lnb-tools-wrap.snap-shot').fadeIn('fast');
+        });
+
         // lnb > add charts click
         $('a.lnb-addcharts').on('click', function () {
             $('.lnb-tools-wrap.add-charts').fadeIn('fast');

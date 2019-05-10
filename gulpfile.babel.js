@@ -21,7 +21,7 @@ const SRC = {
     JS: DIR.SRC + '/js/*.js',
     CSS: DIR.SRC + '/css/*.css',
     SCSS: DIR.SRC + '/scss/**/*.scss',
-	HTML: DIR.SRC + '/*.html',
+	HTML: DIR.SRC + '/**/*.html',
 	IMAGE: DIR.SRC + '/img/**/*',
 };
 
