@@ -234,3 +234,165 @@
         }
     }
 }
+
+/* calenda popup date */
+div.calendar-popup-date {
+    position: absolute;
+    z-index:10;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    @include breakpointmax(max) {
+        width: 1600px !important;
+    }
+
+    div.film {
+        width: 100%; height: 100%;
+        opacity: 0.9;
+        background-color: #1a1e22;
+    }
+    div.inner {
+        position: absolute;
+        width: 100%; height: 100%;
+        top: 0; left: 0;
+        padding: 16px 20px 0 20px;
+
+        h2 {
+            width: 100%; height: 50px;
+            border-radius: 25px;
+            background-color: #9678ff;
+            text-align: center;
+            padding-top: 15px;
+            font-size: 16px; font-family: $inter-b; color: #fff;
+        }
+        a.close {
+            position: absolute;
+            top: 21px; right: 26px;
+            text-indent: -9999px;
+            width: 70px; height: 40px;
+            opacity: 0.4;
+            border-radius: 25px;
+            background: #f2f4f5 url('../img/icons/icon_calendar_x.png') 50% 50% no-repeat;
+            @include prefix($bgs, 24px 24px, webkit ms);
+        }
+        div.select-wrap {
+            font-family: $inter-m; color: #fff;
+
+            div.selected-date {
+                float: left;
+                width: 415px;
+                padding: 165px 0 0 40px;
+
+                span.from {
+                    font-size: 24px; 
+                    line-height: 29px;
+                }
+                p.date {
+                    font-size: 60px; 
+                    line-height: 72px;
+                    padding: 16px 0;
+
+                    span {
+                        margin: 0 10px;
+
+                        &:first-child {
+                            margin: 0 10px 0 0;
+                        }
+                    }
+                }
+                p.time {
+                    font-size: 40px; 
+                    line-height: 49px;
+
+                    span {
+                        margin: 0 10px;
+
+                        &:first-child {
+                            margin: 0 10px 0 0;
+                        }
+                    }
+                }
+                span.v-bar {
+                    display: block;
+                    width: 2px; height: 60px;
+                    background: #fff;
+                    opacity: .5;
+                    margin: 30px 0;
+                }
+                span.to {
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+                p.present {
+                    font-size: 60px;
+                    line-height: 72px;
+                    padding: 16px 0;
+                }
+                span.h-bar {
+                    display: block;
+                    width: 40px; height: 4px;
+                    background: #fff;
+                    opacity: .5;
+                    margin: 30px 0;
+                }
+                div.btns {
+                    padding-top: 100px;
+                }
+            }
+            div.select-area {
+                float: left;
+                width: 860px;
+                padding: 165px 0 0 0;
+                margin-left: 200px;
+
+                span.set-date {
+                    display: block;
+                    font-size: 24px; 
+                    line-height: 29px;
+                    padding-bottom: 30px;
+                }
+                span.set-time {
+                    display: block;
+                    font-size: 24px; 
+                    line-height: 29px;
+                    padding: 10px 0 30px 0;
+                }
+
+                table {
+
+                    td {
+                        font-size: 16px;
+                        font-family: $inter-b;
+                        color: #fff;
+                        vertical-align: top;
+                        padding-bottom: 30px;
+
+                        &.t {
+                            padding-top: 3px;
+                        }
+                        a {
+                            display: inline-block;
+                            line-height: 30px;
+                            padding: 0 11px;
+                            font-family: $inter-r;
+                            color: #fff;
+                            margin: 0 2px 5px 2px;
+                            text-align: center;
+
+                            &.on {
+                                border-radius: 17px;
+                                background: #9678ff;
+                            }
+                        }
+                        &.dates {
+                            a {
+                                width: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+  

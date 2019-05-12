@@ -9,26 +9,38 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 <link href="assets/css/common.css" rel="stylesheet">
 <style>
-body {padding: 40px 60px; font-family: 'Raleway'}
-h2 {color:#28313B; font-size: 20px; font-weight: bold; border-top: 2px dashed #97A4B1; border-bottom: 2px solid #97A4B1; padding: 20px 0;}
-div.area {padding: 40px 0 100px 0;}
+body {padding: 40px; color: #28313B}
+h2 {font-size: 22px; border-top: 2px dashed #28313B; border-bottom: 2px solid #28313B; padding: 20px; background: #e8eef4;}
+div.cnt {padding: 30px 0 80px 0;}
 </style>
 </head>
 <body>
-
-<h2>INPUTS</h2>
-<div class="area">
-    <a href="#" class="cs-btn purple">ITMSG</a> <a href="#" class="cs-btn green">ITMSG</a>
+<h2>BUTTON</h2>
+<div class="cnt">
+    <a href="#" class="cs-btn purple">button</a> <a href="#" class="cs-btn green">button</a>
 </div>
 
-<h2>BUTTONS</h2>
-<div class="area">
-    <a href="#" class="cs-btn purple">ITMSG</a> <a href="#" class="cs-btn green">ITMSG</a>
+<h2>INPUT / TEXTAREA</h2>
+<div class="cnt">
+    <input type="text" class="formdata" placeholder="Type text" /><br /><br />
+    <textarea class="formdata" style="width: 100%;" placeholder="Type your comment"></textarea>
 </div>
 
-<h2>TABLES</h2>
-<div class="area">
-    <a href="#" class="cs-btn purple">ITMSG</a> <a href="#" class="cs-btn green">ITMSG</a>
+<h2>CHECKBOX / RADIO / CHECKBOX TOGGLE</h2>
+<div class="cnt">
+    Checkbox : 
+    <span class="checkbox-default">
+        <input type="checkbox" id="a1" name="a1" /><label for="a1"><span></span></label>
+    </span>
+
+    <br /><br />
+    Checkbox toggle : 
+    <span class="radio-wrap">
+        <label class="checkbox-switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+        </label>
+    </span>
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

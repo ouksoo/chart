@@ -80,7 +80,15 @@ var PJT = {
 
         // lnb > calendar click
         $('a.lnb-calendar').on('click', function () {
-            $('.lnb-tools-wrap.calendar').fadeIn('fast');
+            $('.lnb-tools-wrap.calendar').fadeIn('fast', function () {
+                $('.lnb-tools-wrap.calendar div.from-date p.date').on('click', function () {
+                    $('div.calendar-popup-date').fadeIn('fast');
+                    PJT.calendarPopupDate();
+                    $('div.calendar-popup-date div.inner a.close').on('click', function () {
+                        $('div.calendar-popup-date').fadeOut();
+                    });
+                });
+            });
         });
 
         // lnb > create a report
@@ -134,6 +142,32 @@ var PJT = {
         });
         $('.lnb-wrap li, .lnb-content_popup').on('click', function (e) {
             e.stopPropagation();
+        });
+    },
+    // calendar popup date
+    calendarPopupDate: function calendarPopupDate() {
+        $('.select-area a').on('click', function (e) {
+            var optionValues = [];
+            var thisOption = $(this).data();
+            $(this).siblings().removeClass('on');
+            $(this).addClass('on');
+
+            for (var key in thisOption) {
+                optionValues.push([key, thisOption[key]]);
+            }
+            var opt = optionValues[0][0];
+            var optv = optionValues[0][1];
+            if (opt === 'year') {
+                $('div.selected-date p.date > span.year').text(optv);
+            } else if (opt === 'month') {
+                $('div.selected-date p.date > span.month').text(optv);
+            } else if (opt === 'date') {
+                $('div.selected-date p.date > span.date').text(optv);
+            } else if (opt === 'hour') {
+                $('div.selected-date p.time > span.hour').text(optv);
+            } else if (opt === 'minute') {
+                $('div.selected-date p.time > span.minute').text(optv);
+            }
         });
     },
 

@@ -246,8 +246,8 @@ html, body {
         }
     }
 
-    // @include breakpointmax(max) {
-    //     width: 1600px;
-    //     border: 1px solid red;
-    // }
+    @include breakpointmax(max) {
+        width: 1600px;
+        border: 1px solid red;
+    }
 }

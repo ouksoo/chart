@@ -129,6 +129,26 @@ span.double--line {
     border: solid 1px #bccad7;
     background-color: #f7f9fb;
     padding: 10px 16px;
+    color: #97a4b1;
+    @include prefix(transition, box-shadow .5s ease-in-out, webkit ms);
+    
+    &::placeholder {
+        color: #97a4b1;
+        font-family: $inter-r;
+    }
+    &:hover {
+        border: 1px solid #9678ff;
+    }
+    &:focus {
+        border: 1px solid #9678ff;
+        box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.09);
+        background: #fff;
+    }
+    &:disabled {
+        border: solid 1px #e4eaf1;
+        background-color: #f7f9fb;
+        color: #dae3ea;
+    }
 }
 span.radio-wrap {
     display: inline-block;
