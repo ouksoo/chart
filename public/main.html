@@ -13,7 +13,7 @@
 <!--background film for layer popup-->
 <!-- <div class="popup-film"></div> -->
 
-<div class="wrapper">
+<div id="app" class="wrapper">
     <!-- header -->
     <header class="clearfix">
         <a href="#" class="monitor header-monitor">Monitoring Graph</a>
@@ -136,7 +136,51 @@
 
         <!-- content -->
         <div class="content-wrap">
-                
+            
+            <div class="gate-wrapper">
+                <!-- gate header -->
+                <div class="login-header clearfix">
+                    <h1></h1>
+                    <span class="f"></span>
+                </div>
+                <!-- gate section -->
+                <div class="login-section">
+                    <div class="line-login-left"></div>
+                    <div class="line-login-right"></div>
+                    <div class="login-wrap">
+                        <span class="login-center-txt"></span>
+                        <p class="login-text">
+                            Sony laptops are among the most well known laptops on today's<br />
+                            market. Sony is a name that over time has established itself<br />
+                            creating a solid product with a stellar reputation. In addition to all the good<br />
+                            press that Sony has, Sony is known for making the best 'small' laptops. 
+                        </p> 
+                        <div class="form-wrap">
+                            <input type="text" id="userId" class="form-nude" placeholder="ID" />
+                            <input type="password" id="passWd" class="form-nude" placeholder="Password" />
+                        </div>
+                        <a href="#" class="login-button">LOGIN</a>
+                    </div>
+                    <div class="intro-bg">
+                        <div id="sequenceArea" class="intro-image">
+                            <video width="540" height="181" autoplay id="playintro">
+                                <source src="assets/img/login/intro.mp4" type="video/mp4">
+                                <source src="assets/img/login/intro.ogg" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="image-dimmed"></div>
+                    <div class="image-bg"></div>
+                </div>
+                <!-- gate footer -->
+                <div class="login-footer">
+                    <span class="f"><a href="#">episode v2.0</a></span>
+                    <span class="s"><a href="#">Apply ID</a><span>|</span><a href="#">Find ID / Password</a></span>
+                    <span class="t"><a href="#">Inquiry</a></span>
+                </div>
+            </div>
+
         </div>
 
         <!--device list-->
@@ -603,7 +647,7 @@
     </div>
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="assets/js/custom.js"></script>

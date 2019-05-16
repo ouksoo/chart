@@ -6,248 +6,251 @@ html, body {
     height: 100%;
 }
 
-.login-wrapper {
-    position: relative;
-    min-height: 100%;
-    height: 100%;
-    overflow: hidden;
+div.wrapper {
 
-    > header {
-        position: absolute;
-        width: 100%; height: 100px;
-        top: -100px;
-        z-index: 10;
-        @include prefix(transition, top .5s ease-in-out, webkit ms);
-
-        &.on {
-            top: 0;    
-        }
-
-        h1 {
-            position: absolute;
-            top: 50px; left: 70px;
-            width: 246px; height: 47px;
-            background: url('../img/login/login_logo.png') 0 0 no-repeat;
-            @include prefix(background-size, cover, webkit ms);
-        }
-        span.f {
-            position: absolute;
-            top: 50px; right: 70px;
-            width: 207px; height: 47px;
-            background: url('../img/login/login_right.png') 0 0 no-repeat;
-            @include prefix(background-size, cover, webkit ms);
-        }
-    }
-
-    > section {
-        position: relative;
-        width: 100%;
+    div.gate-wrapper {
+        position: fixed;
+        width: 100%; 
         height: 100%;
+        z-index: 100;
+        left: 0; top: 0;
 
-        div.line-login-left {
+        div.login-header {
             position: absolute;
-            z-index: 6;
-            height: 1px;
-            width: 278px;
-            top: 49%; left: 70px;
-            margin: -20px 0 0 0px;
-            background: #fff;
-            opacity: .3;
-        }
-        div.line-login-right {
-            position: absolute;
-            z-index: 6;
-            height: 1px;
-            width: 278px;
-            top: 49%; right: 70px;
-            margin: -20px 0 0 0px;
-            background: #fff;
-            opacity: .3;
-        }
+            width: 100%; height: 100px;
+            top: -100px;
+            z-index: 10;
+            @include prefix(transition, top .5s ease-in-out, webkit ms);
 
-        div.login-wrap {
-            display: none;
-            position: absolute;
-            width: 900px; height: 500px;
-            left: 50%; top: 50%;
-            margin: -246px 0 0 -450px;
-            z-index: 5;
+            &.on {
+                top: 0;    
+            }
 
-            span.login-center-txt {
+            h1 {
                 position: absolute;
-                width: 558px; height: 73px;
-                left: 50%;
-                margin: 0 0 0 -279px;
-                background: url('../img/login/login_force_text.png') 50% 50% no-repeat;
-                @include prefix(background-size, 100% auto, webkit ms)
+                top: 50px; left: 70px;
+                width: 246px; height: 47px;
+                background: url('../img/login/login_logo.png') 0 0 no-repeat;
+                @include prefix(background-size, cover, webkit ms);
             }
-            p.login-text {
-                // font-family: $inter-l;
-                font-size: 24px; color: rgba(255, 255, 255, 0.8);
-                text-align: center;
-                margin: 102px 0 0 0;
-                line-height: 1.25;
-                text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-                @include prefix(text-shadow, 0 0 0 6px rgba(0,0,0,0.2), webkit ms);
+            span.f {
+                position: absolute;
+                top: 50px; right: 70px;
+                width: 207px; height: 47px;
+                background: url('../img/login/login_right.png') 0 0 no-repeat;
+                @include prefix(background-size, cover, webkit ms);
             }
-            div.form-wrap {
-                position:absolute;
-                bottom: 178px;
-                left: 211px;
+        }
+
+        div.login-section {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            div.line-login-left {
+                position: absolute;
+                z-index: 6;
+                height: 1px;
+                width: 278px;
+                top: 49%; left: 70px;
+                margin: -20px 0 0 0px;
+                background: #fff;
+                opacity: .3;
+            }
+            div.line-login-right {
+                position: absolute;
+                z-index: 6;
+                height: 1px;
+                width: 278px;
+                top: 49%; right: 70px;
+                margin: -20px 0 0 0px;
+                background: #fff;
+                opacity: .3;
+            }
+
+            div.login-wrap {
+                display: none;
+                position: absolute;
+                width: 900px; height: 500px;
+                left: 50%; top: 50%;
+                margin: -246px 0 0 -450px;
                 z-index: 5;
-                text-align: center;
-                @include prefix(transition, left .5s ease-in-out, webkit ms);
 
-                input {
-                    width: 230px; height: 46px;
-                    border: 0;
-                    background: #eee;
-                    margin: 0 3px;
-                    padding: 0 25px;
-                    font-size: 20px; color: #777;
-                    color: #97a4b1;
-                    @include prefix(border-radius, 23px, webkit ms);
+                span.login-center-txt {
+                    position: absolute;
+                    width: 558px; height: 73px;
+                    left: 50%;
+                    margin: 0 0 0 -279px;
+                    background: url('../img/login/login_force_text.png') 50% 50% no-repeat;
+                    @include prefix(background-size, 100% auto, webkit ms)
+                }
+                p.login-text {
+                    // font-family: $inter-l;
+                    font-size: 24px; color: rgba(255, 255, 255, 0.8);
+                    text-align: center;
+                    margin: 102px 0 0 0;
+                    line-height: 1.25;
+                    text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+                    @include prefix(text-shadow, 0 0 0 6px rgba(0,0,0,0.2), webkit ms);
+                }
+                div.form-wrap {
+                    position:absolute;
+                    bottom: 178px;
+                    left: 211px;
+                    z-index: 5;
+                    text-align: center;
+                    @include prefix(transition, left .5s ease-in-out, webkit ms);
 
-                    &::placeholder {
-                        color: #97a4b1; 
+                    input {
+                        width: 230px; height: 46px;
+                        border: 0;
+                        background: #eee;
+                        margin: 0 3px;
+                        padding: 0 25px;
+                        font-size: 20px; color: #28313b;
+                        @include prefix(border-radius, 23px, webkit ms);
+
+                        &::placeholder {
+                            color: #97a4b1; 
+                        }
+                    }
+
+                    &.on {
+                        left: 211px;
                     }
                 }
-
-                &.on {
-                    left: 211px;
-                }
-            }
-            a.login-button {
-                position: absolute;
-                top: 276px; left: 580px;
-                width: 46px; height: 46px;
-                background: #eee url('../img/login/login_button_off.png') 50% 50% no-repeat;
-                opacity: 0;
-                z-index: 4;
-                font-size: 12px; color: #fff; text-align: center; text-indent: -9999px;
-                overflow: hidden;
-                @include prefix(border-radius, 23px, webkit ms);
-                @include prefix(background-size, 24px 24px, webkit ms);
-                -webkit-transition: left .5s, width 1s, opacity 1s, background-color .3s;
-                transition: left .5s, width .7s, opacity 1s, background-color .3s;
-
-                &.on {
-                    opacity: 1;
-                    left: 695px;
-                    width: 80px;                    
-                }
-                &:hover {
-                    background: #7850ff url('../img/login/login_button_on.png') 50% 50% no-repeat;
+                a.login-button {
+                    position: absolute;
+                    top: 276px; left: 580px;
+                    width: 46px; height: 46px;
+                    background: #eee url('../img/login/login_button_off.png') 50% 50% no-repeat;
+                    opacity: 0;
+                    z-index: 4;
+                    font-size: 12px; color: #fff; text-align: center; text-indent: -9999px;
+                    overflow: hidden;
+                    @include prefix(border-radius, 23px, webkit ms);
                     @include prefix(background-size, 24px 24px, webkit ms);
+                    -webkit-transition: left .5s, width 1s, opacity 1s, background-color .3s;
+                    transition: left .5s, width .7s, opacity 1s, background-color .3s;
+
+                    &.on {
+                        opacity: 1;
+                        left: 695px;
+                        width: 80px;                    
+                    }
+                    &:hover {
+                        background: #7850ff url('../img/login/login_button_on.png') 50% 50% no-repeat;
+                        @include prefix(background-size, 24px 24px, webkit ms);
+                    }
+                }
+            }
+
+            div.intro-bg {
+                // display: none;
+                position: absolute;
+                width: 100%; height: 100%;
+                // background: #ebecee;
+                background: #f1f2f4;
+                z-index: 5;
+                opacity: 1;
+                @include prefix(transition, opacity .5s ease-in-out, webkit ms);
+
+                &.on {
+                    opacity: 0;
+                }
+
+                div.intro-image {
+                    cursor: pointer;
+                    position: absolute;
+                    width: 540px; height: 181px;
+                    overflow: hidden;
+                    left: 50%; top: 50%;
+                    margin: -130px 0 0 -270px;
+                    z-index: 5;
+                    background: #edeff1;
+                    // background:url('../img/login/intro-sequence.png') 0 0 no-repeat;
+                }
+            }
+            div.image-dimmed  {
+                position: absolute;
+                width: 100%; height: 100%;
+                left: 0; top: 0;
+                z-index: 4;
+                background: rgba(0,0,0,0.2);
+            }
+            div.image-bg {
+                position: absolute;
+                width: 100%; height: 100%;
+                @include prefix(transform, scale(1.15), webkit ms);
+                @include prefix(transition, transform 1s ease-in-out, webkit ms);
+                z-index: 3;
+
+                &.on {
+                    transform: scale(1);
+                }
+                &.type-1 {
+                    background: url('../img/login/type1.png') 0 0 no-repeat;
+                    @include prefix(background-size, cover, webkit ms);
+                }
+                &.type-2 {
+                    background: url('../img/login/type2.png') 0 0 no-repeat;
+                    @include prefix(background-size, cover, webkit ms);
+                }
+                &.type-3 {
+                    background: url('../img/login/type3.png') 0 0 no-repeat;
+                    @include prefix(background-size, cover, webkit ms);
                 }
             }
         }
 
-        div.intro-bg {
-            // display: none;
+        div.login-footer {
             position: absolute;
-            width: 100%; height: 100%;
-            // background: #ebecee;
-            background: #f1f2f4;
-            z-index: 5;
-            opacity: 1;
-            @include prefix(transition, opacity .5s ease-in-out, webkit ms);
-
-            &.on {
-                opacity: 0;
-            }
-
-            div.intro-image {
-                cursor: pointer;
-                position: absolute;
-                width: 540px; height: 181px;
-                overflow: hidden;
-                left: 50%; top: 50%;
-                margin: -130px 0 0 -270px;
-                z-index: 5;
-                background: #edeff1;
-                // background:url('../img/login/intro-sequence.png') 0 0 no-repeat;
-            }
-        }
-        div.image-dimmed  {
-            position: absolute;
-            width: 100%; height: 100%;
-            left: 0; top: 0;
-            z-index: 4;
-            background: rgba(0,0,0,0.2);
-        }
-        div.image-bg {
-            position: absolute;
-            width: 100%; height: 100%;
-            @include prefix(transform, scale(1.15), webkit ms);
-            @include prefix(transition, transform 1s ease-in-out, webkit ms);
-            z-index: 3;
-
-            &.on {
-                transform: scale(1);
-            }
-            &.type-1 {
-                background: url('../img/login/type1.png') 0 0 no-repeat;
-                @include prefix(background-size, cover, webkit ms);
-            }
-            &.type-2 {
-                background: url('../img/login/type2.png') 0 0 no-repeat;
-                @include prefix(background-size, cover, webkit ms);
-            }
-            &.type-3 {
-                background: url('../img/login/type3.png') 0 0 no-repeat;
-                @include prefix(background-size, cover, webkit ms);
-            }
-        }
-    }
-
-    > footer {
-        position: absolute;
-        width: 100%; height: 100px;
-        bottom: -100px;
-        z-index: 10;
-        font-size: 20px;
-        color: #fff;
-        @include prefix(transition, bottom .5s ease-in-out, webkit ms);
-
-        &.on {
-            bottom: 0; 
-        }
-
-        a {
+            width: 100%; height: 100px;
+            bottom: -100px;
+            z-index: 10;
+            font-size: 20px;
             color: #fff;
-            opacity: .7;
-            &:hover {
-                opacity: 1;
+            @include prefix(transition, bottom .5s ease-in-out, webkit ms);
+
+            &.on {
+                bottom: 0; 
+            }
+
+            a {
+                color: #fff;
+                opacity: .7;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            span.f {
+                position: absolute;
+                bottom: 41px; left: 70px;
+            }
+            span.s {
+                position: absolute;
+                bottom: 41px; left: 50%;
+                margin: 0 0 0 -195px;
+                width: 400px;
+                text-align: center;
+
+                span {
+                    margin: 0 25px;
+                }
+            }
+            span.t {
+                position: absolute;
+                bottom: 41px; right: 70px;
+                padding: 0 0 0 40px;
+                background: url('../img/login/login_headset.png') 0 0 no-repeat;
+                @include prefix(background-size, 30px 30px, webkit ms);
             }
         }
 
-        span.f {
-            position: absolute;
-            bottom: 41px; left: 70px;
-        }
-        span.s {
-            position: absolute;
-            bottom: 41px; left: 50%;
-            margin: 0 0 0 -195px;
-            width: 400px;
-            text-align: center;
-
-            span {
-                margin: 0 25px;
-            }
-        }
-        span.t {
-            position: absolute;
-            bottom: 41px; right: 70px;
-            padding: 0 0 0 40px;
-            background: url('../img/login/login_headset.png') 0 0 no-repeat;
-            @include prefix(background-size, 30px 30px, webkit ms);
-        }
     }
 
     @include breakpointmax(max) {
         width: 1600px;
-        border: 1px solid red;
     }
 }

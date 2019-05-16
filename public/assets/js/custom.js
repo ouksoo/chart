@@ -38,7 +38,7 @@ var PJT = {
         var imageClass = ['type-1'];
         $('.image-bg').addClass(imageClass[Math.floor(Math.random() * imageClass.length)]).addClass('on');
         $('.login-wrap').fadeIn(1500, function () {
-            $('header, footer').addClass('on');
+            $('.login-header, .login-footer').addClass('on');
             $('.login-wrap input#userId').focus();
             PJT.loginKeyCheck();
         });
@@ -54,6 +54,12 @@ var PJT = {
     },
     scrollPlugIn: function scrollPlugIn() {},
     utilsAliveLinks: function utilsAliveLinks() {
+        // login button 
+        $('a.login-button').on('click', function () {
+            $('div.gate-wrapper').fadeOut('fast');
+            return false;
+        });
+
         // header > monitoring link
         $('a.header-monitor, header .product-btn').on('mouseenter', function () {
             $('header .product-btn').addClass('on');

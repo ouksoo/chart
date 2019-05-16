@@ -12,9 +12,67 @@
 body {padding: 40px; color: #28313B; font-family: 'Raleway'}
 h2 {font-size: 22px; border-top: 2px dashed #28313B; border-bottom: 2px solid #28313B; padding: 20px; background: #e8eef4;}
 div.cnt {padding: 30px 0 80px 0;}
+
+
+
+.select_wrapper {
+    position: relative;
+    background: #ccc;
+    line-height: 36px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.select_wrapper:hover { 
+    background: #eee
+}
+.select_wrapper span {
+    display: block;
+    margin: 0 30px 0 15px;
+}
+.select_wrapper .select_inner {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    color: #687278;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    z-index: 3;
+}
+.select_wrapper .select_inner li {
+    border-bottom: 1px solid #eee;
+    padding: 0 15px;
+}
+.select_wrapper .select_inner li:hover { background: #eee; }
+.select_wrapper .select_inner li:last-child {
+    border: none;
+    border-radius: 0 0 5px 5px;
+}
+.select_wrapper .select_inner li:first-child { border-radius: 5px 5px 0 0; }
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline
+}
+
 </style>
 </head>
 <body>
+<!--
+<select id="combo" name="combo">
+    <option value="a">a</option>
+    <option value="b">b</option>
+    <option value="c">c</option>
+    <option value="d">d</option>
+    <option value="e">e</option>
+    <option value="f">f</option>
+</select>
+-->
+
 <h2>BUTTON</h2>
 <div class="cnt">
     <a href="#" class="cs-btn purple">button</a> <a href="#" class="cs-btn green">button</a>
@@ -22,7 +80,11 @@ div.cnt {padding: 30px 0 80px 0;}
 
 <h2>INPUT / TEXTAREA</h2>
 <div class="cnt">
-    <input type="text" class="formdata" placeholder="Type text" /> <input type="text" class="formdata" placeholder="Type text" disabled /><br /><br />
+    <input type="text" class="formdata" style="width: 100%;" placeholder="Type text" />
+    <p class="form_some-copy">Some info copy here</p>
+    <br />
+    <input type="text" class="formdata" style="width: 100%;" placeholder="Type text" disabled />
+    <br /><br />
     <textarea class="formdata" style="width: 100%;" placeholder="Type your comment"></textarea>
 </div>
 
@@ -41,13 +103,45 @@ div.cnt {padding: 30px 0 80px 0;}
             <span class="slider round"></span>
         </label>
     </span>
+
+    <br /><br />
+    Radio : 
+    <span class="radiobox-default">
+        <input type="radio" id="b1" name="b1" /><label for="b1"><span></span></label>
+    </span>
 </div>
 
 <h2>TABLE</h2>
+
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="assets/js/custom.js"></script>
+<script>
+$(document).ready(function (){
+    $('select').wrap('<div class="select_wrapper"></div>')
+    $('select').parent().prepend('<span>'+ $(this).find(':selected').text() +'</span>');
+    $('select').parent().children('span').width($('select').width());	
+    $('select').css('display', 'none');					
+    $('select').parent().append('<ul class="select_inner"></ul>');
+    $('select').children().each(function(){
+        var opttext = $(this).text();
+        var optval = $(this).val();
+        $('select').parent().children('.select_inner').append('<li id="' + optval + '">' + opttext + '</li>');
+    });
+
+    $('select').parent().find('li').on('click', function (){
+        var cur = $(this).attr('id');
+        $('select').parent().children('span').text($(this).text());
+        $('select').children().removeAttr('selected');
+        $('select').children('[value="'+cur+'"]').attr('selected','selected');					
+        console.log($('select').children('[value="'+cur+'"]').text());
+    });
+    $('select').parent().on('click', function (){
+        $(this).find('ul').slideToggle('fast');
+    });
+});
+</script>
 </body>
 </html>
