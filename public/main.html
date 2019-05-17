@@ -7,6 +7,7 @@
 <meta name=”viewport” content=”width=device-width, initial-scale=1.0" />
 <meta name="description" content="">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
 <link href="assets/css/common.css" rel="stylesheet">
 </head>
 <body>
@@ -30,7 +31,7 @@
         <span class="loading"><img src="assets/img/layout/_loading.gif" alt="" height="70" /></span>
         <div class="header-info">
             <ul class="clearfix">
-                <li><a href="#" class="a" data-toggle="modal" data-target="#modalTempSearch">search</a></li>
+                <li><a href="#" class="a" v-b-modal.modalTempSearch>search</a></li><!-- data-toggle="modal" data-target="#modalTempSearch"-->
                 <li><a href="#" class="b"></a></li>
                 <li><a href="#" class="c notice-show-hide">notice<span class="alram-round"></span></a></li>
                 <li><a href="#" class="d">control</a></li>
@@ -137,7 +138,7 @@
         <!-- content -->
         <div class="content-wrap">
             
-            <div class="gate-wrapper">
+            <div class="gate-wrapper" style="display: none">
                 <!-- gate header -->
                 <div class="login-header clearfix">
                     <h1></h1>
@@ -377,6 +378,12 @@
         <div class="tools-tip"></div>
     </div>
 </div>
+
+<b-modal id="modalTempSearch" hide-header="true" hide-footer="true" dialog-class="modal-search">
+    <div>
+        test
+    </div>
+</b-modal>
 
 <!--SEARCH-->
 <div class="modal fade" id="modalTempSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -647,9 +654,23 @@
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
 <script src="assets/js/custom.js"></script>
+<script>
+window.app = new Vue({
+    el: '#app',
+    data: {
+    name: ''
+    },
+    computed: {
+        showAlert() {
+            return this.name.length > 4 ? true : false
+        }
+    }
+})
+</script>
 </body>
 </html>
