@@ -62,30 +62,45 @@ ul {
 </style>
 </head>
 <body>
-<!--
-<select id="combo" name="combo">
-    <option value="a">a</option>
-    <option value="b">b</option>
-    <option value="c">c</option>
-    <option value="d">d</option>
-    <option value="e">e</option>
-    <option value="f">f</option>
-</select>
--->
+
 
 <h2>BUTTON</h2>
 <div class="cnt">
-    <a href="#" class="cs-btn purple">button</a> <a href="#" class="cs-btn green">button</a>
+    <a href="#" class="cs-btn purple">button</a> <a href="#" class="cs-btn green">button</a> <a href="#" class="cb-btn green">button</a> <br /><br />
+    <a href="#" class="cs-btn purple sm">button</a> <a href="#" class="cs-btn green sm">button</a> <a href="#" class="cb-btn green sm">button</a>
 </div>
 
 <h2>INPUT / TEXTAREA</h2>
 <div class="cnt">
+    <strong>Big</strong>
     <input type="text" class="formdata" style="width: 100%;" placeholder="Type text" />
     <p class="form_some-copy">Some info copy here</p>
     <br />
     <input type="text" class="formdata" style="width: 100%;" placeholder="Type text" disabled />
     <br /><br />
     <textarea class="formdata" style="width: 100%;" placeholder="Type your comment"></textarea>
+    <br /><br />
+    <strong>Small</strong>
+    <input type="text" class="formdata sm" style="width: 100%;" placeholder="Type text" />
+    <p class="form_some-copy">Some info copy here</p>
+    <br />
+    <input type="text" class="formdata sm" style="width: 100%;" placeholder="Type text" disabled />
+    <br /><br />
+    <textarea class="formdata sm" style="width: 100%;" placeholder="Type your comment"></textarea>
+    <br /><br /><br />
+
+    <strong>State Big</strong>
+    <input type="text" class="formdata error" style="width: 100%;" value="Type text" />
+    <p class="form_some-copy error">Some info copy here</p>
+    <br />
+    <input type="text" class="formdata good" style="width: 100%;" value="Type text" />
+    
+    <br /><br />
+    <strong>State Small</strong>
+    <input type="text" class="formdata sm error" style="width: 100%;" value="Type text" />
+    <p class="form_some-copy sm error">Some info copy here</p>
+    <br />
+    <input type="text" class="formdata sm good" style="width: 100%;" value="Type text" />
 </div>
 
 <h2>CHECKBOX / RADIO / CHECKBOX TOGGLE</h2>
@@ -93,6 +108,9 @@ ul {
     Checkbox : 
     <span class="checkbox-default">
         <input type="checkbox" id="a1" name="a1" /><label for="a1"><span></span></label>
+    </span>
+    <span class="checkbox-default sm">
+        <input type="checkbox" id="c1" name="c1" /><label for="c1"><span></span></label>
     </span>
 
     <br /><br />
@@ -109,7 +127,46 @@ ul {
     <span class="radiobox-default">
         <input type="radio" id="b1" name="b1" /><label for="b1"><span></span></label>
     </span>
+    <span class="radiobox-default sm">
+        <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+    </span>
 </div>
+
+<h2>SELECT BOX</h2>
+<div class="cnt">
+    <div class="select-wrap" style="width: 300px">
+        <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+        <div class="options">
+            <ul>
+                <li><a href="#" data-value="1">New Nadia</a></li>
+                <li><a href="#" data-value="2">North Eviemouth</a></li>
+                <li><a href="#" data-value="3">Robeltown</a></li>
+                <li><a href="#" data-value="4">Framiville</a></li>
+                <li><a href="#" data-value="5">South Virgil</a></li>
+                <li><a href="#" data-value="6">Robeltown</a></li>
+                <li><a href="#" data-value="7">Framiville</a></li>
+                <li><a href="#" data-value="8">South Virgil</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="select-wrap sm" style="width: 300px">
+        <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+        <div class="options">
+            <ul>
+                <li><a href="#" data-value="1">New Nadia</a></li>
+                <li><a href="#" data-value="2">North Eviemouth</a></li>
+                <li><a href="#" data-value="3">Robeltown</a></li>
+                <li><a href="#" data-value="4">Framiville</a></li>
+                <li><a href="#" data-value="5">South Virgil</a></li>
+                <li><a href="#" data-value="6">Robeltown</a></li>
+                <li><a href="#" data-value="7">Framiville</a></li>
+                <li><a href="#" data-value="8">South Virgil</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 
 <h2>TABLE</h2>
 

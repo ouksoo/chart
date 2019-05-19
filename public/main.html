@@ -7,7 +7,6 @@
 <meta name=”viewport” content=”width=device-width, initial-scale=1.0" />
 <meta name="description" content="">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-<link rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
 <link href="assets/css/common.css" rel="stylesheet">
 </head>
 <body>
@@ -31,7 +30,7 @@
         <span class="loading"><img src="assets/img/layout/_loading.gif" alt="" height="70" /></span>
         <div class="header-info">
             <ul class="clearfix">
-                <li><a href="#" class="a" v-b-modal.modalTempSearch>search</a></li><!-- data-toggle="modal" data-target="#modalTempSearch"-->
+                <li><a href="#" class="a" v-b-modal.modalTempSearch>search</a></li>
                 <li><a href="#" class="b"></a></li>
                 <li><a href="#" class="c notice-show-hide">notice<span class="alram-round"></span></a></li>
                 <li><a href="#" class="d">control</a></li>
@@ -120,7 +119,6 @@
 
     <!-- section -->
     <section>
-
         <!--left navigation bar-->
         <div class="lnb-wrap">
             <ul class="lnb-nav clearfix">
@@ -236,441 +234,426 @@
             </div>
         </div>
     </section>
-</div>
 
-<!--Carlendar-->
-<div class="lnb-tools-wrap calendar lnb-content_popup" style="display: none">
-    <div class="tools-container">
-        <div class="tools-content">
-            <p class="title">CALENDAR</p>
-            <div class="period">
-                <p class="progress"><span></span></p>
-                <div class="p-time">
-                    <span>Present</span>
-                    <span>30m</span>
-                    <span class="on">1h</span>
-                    <span>3h</span>
-                    <span>6h</span>
-                    <span>12h</span>
-                    <span>1D</span>
-                    <span>1W</span>
-                    <span>1M</span>
-                    <span>3M</span>
-                    <span>6M</span>
+
+
+    <!--Carlendar-->
+    <div class="lnb-tools-wrap calendar lnb-content_popup" style="display: none">
+        <div class="tools-container">
+            <div class="tools-content">
+                <p class="title">CALENDAR</p>
+                <div class="period">
+                    <p class="progress"><span></span></p>
+                    <div class="p-time">
+                        <span>Present</span>
+                        <span>30m</span>
+                        <span class="on">1h</span>
+                        <span>3h</span>
+                        <span>6h</span>
+                        <span>12h</span>
+                        <span>1D</span>
+                        <span>1W</span>
+                        <span>1M</span>
+                        <span>3M</span>
+                        <span>6M</span>
+                    </div>
+                </div>
+                <span class="double--line"></span>
+                <div class="from-to clearfix">
+                    <div class="from-date floatl">
+                        <span class="tt">From</span>
+                        <p class="date"><span class="dates">YYYY / MM / DD</span> <span class="time">hh:mm</span></p>
+                    </div>
+                    <div class="to-date floatl">
+                        <span class="tt">To</span>
+                        <p class="date">Present <span class="bar">-</span></p>
+                    </div>
                 </div>
             </div>
-            <span class="double--line"></span>
-            <div class="from-to clearfix">
-                <div class="from-date floatl">
-                    <span class="tt">From</span>
-                    <p class="date"><span class="dates">YYYY / MM / DD</span> <span class="time">hh:mm</span></p>
+            <div class="tools-tip"></div>
+        </div>
+    </div>
+
+    <!--Create a report-->
+    <div class="lnb-tools-wrap create-report lnb-content_popup" style="display: none">
+        <div class="tools-container">
+            <div class="tools-content">
+                <p class="title">CREATE A REPORT</p>
+                <div class="type-comment">
+                    <textarea class="formdata" maxlength="100" placeholder="Type your comment for this report"></textarea>
+                    <p>You can put your comment in the report document<br />when it’s created.</p>
                 </div>
-                <div class="to-date floatl">
-                    <span class="tt">To</span>
-                    <p class="date">Present <span class="bar">-</span></p>
+                <span class="double--line"></span>
+                <div class="email clearfix">
+                    <span>E-mail</span>
+                    <input type="text" class="formdata create-report-email" />
                 </div>
-            </div>
-        </div>
-        <div class="tools-tip"></div>
-    </div>
-</div>
-
-<!--Create a report-->
-<div class="lnb-tools-wrap create-report lnb-content_popup" style="display: none">
-    <div class="tools-container">
-        <div class="tools-content">
-            <p class="title">CREATE A REPORT</p>
-            <div class="type-comment">
-                <textarea class="formdata" maxlength="100" placeholder="Type your comment for this report"></textarea>
-                <p>You can put your comment in the report document<br />when it’s created.</p>
-            </div>
-            <span class="double--line"></span>
-            <div class="email clearfix">
-                <span>E-mail</span>
-                <input type="text" class="formdata create-report-email" />
-            </div>
-            <span class="double--line"></span>
-            <div class="btns">
-                <a href="#" class="cs-btn purple a">CREATE</a><a href="#" class="cs-btn purple b">CREATE & DOWNLOAD</a><a href="#" class="cs-btn purple c" style="display: none">CREATE & SENT EMAIL</a>
-            </div>
-        </div>
-        <div class="tools-tip"></div>
-    </div>
-</div>
-
-<!--Snapshot-->
-<div class="lnb-tools-wrap snap-shot lnb-content_popup" style="display: none">
-    <div class="tools-container">
-        <div class="tools-content">
-            <p class="title">SNAPSHOT</p>
-            <ul class="snapshot-list">
-                <li class="clearfix">
-                    <span class="ico trend">trending up</span>
-                    <p>Realtime Monitoring Chart</p>
-                    <span class="checkbox-default">
-                        <input type="checkbox" id="a1" name="a1" /><label for="a1"><span></span></label>
-                    </span>
-                </li>
-                <li class="clearfix">
-                    <span class="ico bar">trending up</span>
-                    <p>Memory Perfomance Chart</p>
-                    <span class="checkbox-default">
-                        <input type="checkbox" id="a2" name="a2" checked /><label for="a2"><span></span></label>
-                    </span>
-                </li>
-                <li class="clearfix">
-                    <span class="ico pie">trending up</span>
-                    <p>CPU Performace Chart</p>
-                    <span class="checkbox-default">
-                        <input type="checkbox" id="a3" name="a3" /><label for="a3"><span></span></label>
-                    </span>
-                </li>
-            </ul>
-            <div class="btns">
-                <a href="#" class="cs-btn purple save-chart">DOWNLOAD SNAPSHOT</a>
-            </div>
-        </div>
-        <div class="tools-tip"></div>
-    </div>
-</div>
-
-<!--Add Charts-->
-<div class="lnb-tools-wrap add-charts lnb-content_popup" style="display: none">
-    <div class="tools-container">
-        <div class="tools-content">
-            <p class="title">ADD CHARTS</p>
-            <ul class="charts-list">
-                <li class="clearfix">
-                    <span class="ico trend">trending up</span>
-                    <p>Realtime Monitoring Chart</p>
-                    <span class="radio-wrap">
-                        <label class="checkbox-switch">
-                            <input type="checkbox" />
-                            <span class="slider round"></span>
-                        </label>
-                    </span>
-                </li>
-                <li class="clearfix">
-                    <span class="ico bar">trending up</span>
-                    <p>Memory Perfomance Chart</p>
-                    <span class="radio-wrap">
-                        <label class="checkbox-switch">
-                            <input type="checkbox" checked />
-                            <span class="slider round"></span>
-                        </label>
-                    </span>
-                </li>
-                <li class="clearfix">
-                    <span class="ico pie">trending up</span>
-                    <p>CPU Performace Chart</p>
-                    <span class="radio-wrap">
-                        <label class="checkbox-switch">
-                            <input type="checkbox" />
-                            <span class="slider round"></span>
-                        </label>
-                    </span>
-                </li>
-            </ul>
-            <div class="btns">
-                <a href="#" class="cs-btn purple save-chart">SAVE CHARTS</a>
-            </div>
-        </div>
-        <div class="tools-tip"></div>
-    </div>
-</div>
-
-<b-modal id="modalTempSearch" hide-header="true" hide-footer="true" dialog-class="modal-search">
-    <div>
-        test
-    </div>
-</b-modal>
-
-<!--SEARCH-->
-<div class="modal fade" id="modalTempSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-wrap modal-search modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="search-header clearfix">
-                <span class="zoom"></span>
-                <input type="text" class="s" id="deviceSearchInput" placeholder="Use tab to switch or type devices, events, reports" /></p>
-                <p class="f">
-                    <a href="#" class="left">preview</a><span>ALL</span><a href="#" class="right">next</a>
-                </p>
-            </div>
-            <div class="search-typeword">
-                    <p>Use <strong>Tab Key</strong> to switch categories <span>|</span> Type words - device name & type, event title&type, report title, date, user name etc.</p>
-            </div>
-            <ul class="search-list">
-                <li>
-                    <p class="f">
-                        <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Web Server - Dream</span>
-                    </p>
-                    <span class="etcs">
-                        <a href="#" class="add">add device</a><a href="#" class="warn">information</a>
-                    </span>
-                </li>
-                <li>
-                    <p class="f">
-                        <span class="box cloud"></span><span class="box os-linux"></span><span class="dvc">Cloud Server - Stone</span>
-                    </p>
-                    <span class="etcs">
-                        <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
-                    </span>
-                </li>
-                <li>
-                    <p class="f">
-                        <span class="box copy"></span><span class="box os-mark"></span><span class="dvc">Oracle DB Server</span>
-                    </p>
-                    <span class="etcs">
-                        <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
-                    </span>
-                </li>
-                <li>
-                    <div class="clearfix">
-                        <span class="icon zap"></span>
-                        <p class="paragraph">
-                            <span class="up"><strong>Cloud Server</strong> CPU performance is getting up to 70%</span>
-                            <span class="down">From <strong>Dream</strong>&nbsp; - &nbsp;20 Mar 2019</span>
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="clearfix">
-                        <span class="icon minus"></span>
-                        <p class="paragraph">
-                            <span class="up"><strong>Day Report</strong> Daily report of web server - dream</span>
-                            <span class="down">Create by <strong>System</strong>&nbsp; - &nbsp;20 Mar 2019</span>
-                        </p>
-                    </div>
-                    <span class="etcs">
-                        <a href="#" class="down on">download</a><a href="#" class="email">email</a>
-                    </span>
-                </li>
-                <li>
-                    <div class="clearfix">
-                        <span class="icon minus"></span>
-                        <p class="paragraph">
-                            <span class="up"><strong>User Report</strong> Web Server - Sky (20 Mar 2019 - 29 Mar 2019)</span>
-                            <span class="down">Create by <strong>BrianPark</strong>&nbsp; - &nbsp;20 Mar 2019</span>
-                        </p>
-                    </div>
-                    <span class="etcs">    
-                        <a href="#" class="down on">download</a><a href="#" class="email">email</a>
-                    </span>
-                </li>
-                <li>
-                    <div class="clearfix">
-                        <span class="icon minus"></span>
-                        <p class="paragraph">
-                            <span class="up"><strong>Day Report</strong> Daily report of web server - dream</span>
-                            <span class="down">Create by <strong>System</strong>&nbsp; - &nbsp;20 Mar 2019</span>
-                        </p>
-                    </div>
-                    <span class="etcs">
-                        <a href="#" class="down on">download</a><a href="#" class="email">email</a>
-                    </span>
-                </li>
-                <li>
-                    <p class="f">
-                        <span class="box cloud"></span><span class="box os-linux"></span><span class="dvc">Cloud Server - Stone</span>
-                    </p>
-                    <span class="etcs">
-                        <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
-                    </span>
-                </li>
-                <li>
-                    <p class="f">
-                        <span class="box copy"></span><span class="box os-mark"></span><span class="dvc">Oracle DB Server</span>
-                    </p>
-                    <span class="etcs">
-                        <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
-                    </span>
-                </li>
-                <li>
-                    <div class="clearfix">
-                        <span class="icon zap"></span>
-                        <p class="paragraph">
-                            <span class="up"><strong>Cloud Server</strong> CPU performance is getting up to 70%</span>
-                            <span class="down">From <strong>Dream</strong>&nbsp; - &nbsp;20 Mar 2019</span>
-                        </p>
-                    </div>
-                </li>
-            </ul>
-            <div class="search-result">
-                <p>
-                    <strong>Search Result</strong><span>120 devices</span><span>24 events</span><span>38 reports</span>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--calendar popup date-->
-<div class="calendar-popup-date" style="display: none">
-    <div class="film"></div>
-    <div class="inner">
-        <h2>CALENDAR</h2>
-        <a href="#" class="close">close</a>
-        <div class="select-wrap clearfix">
-            <div class="selected-date">
-                <span class="from">From</span>
-                <p class="date"><span class="year">2019</span>/<span class="month">05</span>/<span class="date">10</span></p>
-                <p class="time"><span class="hour">00</span>:<span class="minute">00</span></p>
-                <span class="v-bar"></span>
-                <span class="to">To</span>
-                <p class="present">Present</p>
-                <span class="h-bar"></span>
+                <span class="double--line"></span>
                 <div class="btns">
-                    <a href="#" class="cs-btn purple save-chart" style="width: 370px">SAVE DATE & TIME</a>
+                    <a href="#" class="cs-btn purple a">CREATE</a><a href="#" class="cs-btn purple b">CREATE & DOWNLOAD</a><a href="#" class="cs-btn purple c" style="display: none">CREATE & SENT EMAIL</a>
                 </div>
             </div>
-            <div class="select-area">
-                <span class="set-date">Set Date — From</span>
-                <table class="notable" width="100%">
-                <colgroup><col width="80" /><col width="*" /></colgroup>
-                <tr>
-                    <td class="t">Year</td>
-                    <td>
-                        <div class="years">
-                            <a href="#" data-year="2019" class="on">2019</a>
-                            <a href="#" data-year="2018">2018</a>
-                            <a href="#" data-year="2017">2017</a>
-                            <a href="#" data-year="2016">2016</a>
-                            <a href="#" data-year="2015">2015</a>
-                            <a href="#" data-year="2014">2014</a>
-                            <a href="#" data-year="2013">2013</a>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="t">Month</td>
-                    <td>
-                        <div class="months">
-                            <a href="#" data-month="01" class="on">Jan</a>
-                            <a href="#" data-month="02">Feb</a>
-                            <a href="#" data-month="03">Mar</a>
-                            <a href="#" data-month="04">Apr</a>
-                            <a href="#" data-month="05">May</a>
-                            <a href="#" data-month="06">Jun</a>
-                            <a href="#" data-month="07">Jul</a>
-                            <a href="#" data-month="08">Aug</a>
-                            <a href="#" data-month="09">Sep</a>
-                            <a href="#" data-month="10">Oct</a>
-                            <a href="#" data-month="11">Nov</a>
-                            <a href="#" data-month="12">Dec</a>
-                        </div>
+            <div class="tools-tip"></div>
+        </div>
+    </div>
 
-                    </td>
-                </tr>
-                <tr>
-                    <td class="t">Day</td>
-                    <td class="dates">
-                        <div class="dates">
-                            <a href="#" data-date="01" class="on">01</a>
-                            <a href="#" data-date="02">02</a>
-                            <a href="#" data-date="03">03</a>
-                            <a href="#" data-date="04">04</a>
-                            <a href="#" data-date="05">05</a>
-                            <a href="#" data-date="06">06</a>
-                            <a href="#" data-date="07">07</a>
-                            <a href="#" data-date="08">08</a>
-                            <a href="#" data-date="09">09</a>
-                            <a href="#" data-date="10">10</a>
-                            <a href="#" data-date="11">11</a>
-                            <a href="#" data-date="12">12</a>
-                            <a href="#" data-date="13">13</a>
-                            <a href="#" data-date="14">14</a>
-                            <a href="#" data-date="15">15</a>
-                            <a href="#" data-date="16">16</a>
-                            <a href="#" data-date="17">17</a>
-                            <a href="#" data-date="18">18</a>
-                            <a href="#" data-date="19">19</a>
-                            <a href="#" data-date="20">20</a>
-                            <a href="#" data-date="21">21</a>
-                            <a href="#" data-date="22">22</a>
-                            <a href="#" data-date="23">23</a>
-                            <a href="#" data-date="24">24</a>
-                            <a href="#" data-date="25">25</a>
-                            <a href="#" data-date="26">26</a>
-                            <a href="#" data-date="27">27</a>
-                            <a href="#" data-date="28">28</a>
-                            <a href="#" data-date="29">29</a>
-                            <a href="#" data-date="30">30</a>
-                            <a href="#" data-date="31">31</a>
+    <!--Snapshot-->
+    <div class="lnb-tools-wrap snap-shot lnb-content_popup" style="display: none">
+        <div class="tools-container">
+            <div class="tools-content">
+                <p class="title">SNAPSHOT</p>
+                <ul class="snapshot-list">
+                    <li class="clearfix">
+                        <span class="ico trend">trending up</span>
+                        <p>Realtime Monitoring Chart</p>
+                        <span class="checkbox-default">
+                            <input type="checkbox" id="a1" name="a1" /><label for="a1"><span></span></label>
+                        </span>
+                    </li>
+                    <li class="clearfix">
+                        <span class="ico bar">trending up</span>
+                        <p>Memory Perfomance Chart</p>
+                        <span class="checkbox-default">
+                            <input type="checkbox" id="a2" name="a2" checked /><label for="a2"><span></span></label>
+                        </span>
+                    </li>
+                    <li class="clearfix">
+                        <span class="ico pie">trending up</span>
+                        <p>CPU Performace Chart</p>
+                        <span class="checkbox-default">
+                            <input type="checkbox" id="a3" name="a3" /><label for="a3"><span></span></label>
+                        </span>
+                    </li>
+                </ul>
+                <div class="btns">
+                    <a href="#" class="cs-btn purple save-chart">DOWNLOAD SNAPSHOT</a>
+                </div>
+            </div>
+            <div class="tools-tip"></div>
+        </div>
+    </div>
+
+    <!--Add Charts-->
+    <div class="lnb-tools-wrap add-charts lnb-content_popup" style="display: none">
+        <div class="tools-container">
+            <div class="tools-content">
+                <p class="title">ADD CHARTS</p>
+                <ul class="charts-list">
+                    <li class="clearfix">
+                        <span class="ico trend">trending up</span>
+                        <p>Realtime Monitoring Chart</p>
+                        <span class="radio-wrap">
+                            <label class="checkbox-switch">
+                                <input type="checkbox" />
+                                <span class="slider round"></span>
+                            </label>
+                        </span>
+                    </li>
+                    <li class="clearfix">
+                        <span class="ico bar">trending up</span>
+                        <p>Memory Perfomance Chart</p>
+                        <span class="radio-wrap">
+                            <label class="checkbox-switch">
+                                <input type="checkbox" checked />
+                                <span class="slider round"></span>
+                            </label>
+                        </span>
+                    </li>
+                    <li class="clearfix">
+                        <span class="ico pie">trending up</span>
+                        <p>CPU Performace Chart</p>
+                        <span class="radio-wrap">
+                            <label class="checkbox-switch">
+                                <input type="checkbox" />
+                                <span class="slider round"></span>
+                            </label>
+                        </span>
+                    </li>
+                </ul>
+                <div class="btns">
+                    <a href="#" class="cs-btn purple save-chart">SAVE CHARTS</a>
+                </div>
+            </div>
+            <div class="tools-tip"></div>
+        </div>
+    </div>
+
+    <!--SEARCH-->
+    <b-modal id="modalTempSearch" hide-header="true" hide-footer="true" dialog-class="modal-search-wrap">
+        <div class="modal-wrap modal-search modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="search-header clearfix">
+                    <span class="zoom"></span>
+                    <input type="text" class="s" id="deviceSearchInput" placeholder="Use tab to switch or type devices, events, reports" /></p>
+                    <p class="f">
+                        <a href="#" class="left">preview</a><span>ALL</span><a href="#" class="right">next</a>
+                    </p>
+                </div>
+                <div class="search-typeword">
+                        <p>Use <strong>Tab Key</strong> to switch categories <span>|</span> Type words - device name & type, event title&type, report title, date, user name etc.</p>
+                </div>
+                <ul class="search-list">
+                    <li>
+                        <p class="f">
+                            <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Web Server - Dream</span>
+                        </p>
+                        <span class="etcs">
+                            <a href="#" class="add">add device</a><a href="#" class="warn">information</a>
+                        </span>
+                    </li>
+                    <li>
+                        <p class="f">
+                            <span class="box cloud"></span><span class="box os-linux"></span><span class="dvc">Cloud Server - Stone</span>
+                        </p>
+                        <span class="etcs">
+                            <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                        </span>
+                    </li>
+                    <li>
+                        <p class="f">
+                            <span class="box copy"></span><span class="box os-mark"></span><span class="dvc">Oracle DB Server</span>
+                        </p>
+                        <span class="etcs">
+                            <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                        </span>
+                    </li>
+                    <li>
+                        <div class="clearfix">
+                            <span class="icon zap"></span>
+                            <p class="paragraph">
+                                <span class="up"><strong>Cloud Server</strong> CPU performance is getting up to 70%</span>
+                                <span class="down">From <strong>Dream</strong>&nbsp; - &nbsp;20 Mar 2019</span>
+                            </p>
                         </div>
-                    </td>
-                </tr>
-                </table>
-                <span class="set-time">Set Time</span>
-                <table class="notable">
+                    </li>
+                    <li>
+                        <div class="clearfix">
+                            <span class="icon minus"></span>
+                            <p class="paragraph">
+                                <span class="up"><strong>Day Report</strong> Daily report of web server - dream</span>
+                                <span class="down">Create by <strong>System</strong>&nbsp; - &nbsp;20 Mar 2019</span>
+                            </p>
+                        </div>
+                        <span class="etcs">
+                            <a href="#" class="down on">download</a><a href="#" class="email">email</a>
+                        </span>
+                    </li>
+                    <li>
+                        <div class="clearfix">
+                            <span class="icon minus"></span>
+                            <p class="paragraph">
+                                <span class="up"><strong>User Report</strong> Web Server - Sky (20 Mar 2019 - 29 Mar 2019)</span>
+                                <span class="down">Create by <strong>BrianPark</strong>&nbsp; - &nbsp;20 Mar 2019</span>
+                            </p>
+                        </div>
+                        <span class="etcs">    
+                            <a href="#" class="down on">download</a><a href="#" class="email">email</a>
+                        </span>
+                    </li>
+                    <li>
+                        <div class="clearfix">
+                            <span class="icon minus"></span>
+                            <p class="paragraph">
+                                <span class="up"><strong>Day Report</strong> Daily report of web server - dream</span>
+                                <span class="down">Create by <strong>System</strong>&nbsp; - &nbsp;20 Mar 2019</span>
+                            </p>
+                        </div>
+                        <span class="etcs">
+                            <a href="#" class="down on">download</a><a href="#" class="email">email</a>
+                        </span>
+                    </li>
+                    <li>
+                        <p class="f">
+                            <span class="box cloud"></span><span class="box os-linux"></span><span class="dvc">Cloud Server - Stone</span>
+                        </p>
+                        <span class="etcs">
+                            <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                        </span>
+                    </li>
+                    <li>
+                        <p class="f">
+                            <span class="box copy"></span><span class="box os-mark"></span><span class="dvc">Oracle DB Server</span>
+                        </p>
+                        <span class="etcs">
+                            <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                        </span>
+                    </li>
+                    <li>
+                        <div class="clearfix">
+                            <span class="icon zap"></span>
+                            <p class="paragraph">
+                                <span class="up"><strong>Cloud Server</strong> CPU performance is getting up to 70%</span>
+                                <span class="down">From <strong>Dream</strong>&nbsp; - &nbsp;20 Mar 2019</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="search-result">
+                    <p>
+                        <strong>Search Result</strong><span>120 devices</span><span>24 events</span><span>38 reports</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </b-modal>
+
+    <!--calendar popup date-->
+    <div class="calendar-popup-date" style="display: none">
+        <div class="film"></div>
+        <div class="inner">
+            <h2>CALENDAR</h2>
+            <a href="#" class="close">close</a>
+            <div class="select-wrap clearfix">
+                <div class="selected-date">
+                    <span class="from">From</span>
+                    <p class="date"><span class="year">2019</span>/<span class="month">05</span>/<span class="date">10</span></p>
+                    <p class="time"><span class="hour">00</span>:<span class="minute">00</span></p>
+                    <span class="v-bar"></span>
+                    <span class="to">To</span>
+                    <p class="present">Present</p>
+                    <span class="h-bar"></span>
+                    <div class="btns">
+                        <a href="#" class="cs-btn purple save-chart" style="width: 370px">SAVE DATE & TIME</a>
+                    </div>
+                </div>
+                <div class="select-area">
+                    <span class="set-date">Set Date — From</span>
+                    <table class="notable" width="100%">
                     <colgroup><col width="80" /><col width="*" /></colgroup>
                     <tr>
-                        <td class="t">Hour</td>
-                        <td class="dates">
-                            <div class="hours">
-                                <a href="#" data-hour="00" class="on">00</a>
-                                <a href="#" data-hour="01">01</a>
-                                <a href="#" data-hour="02">02</a>
-                                <a href="#" data-hour="03">03</a>
-                                <a href="#" data-hour="04">04</a>
-                                <a href="#" data-hour="05">05</a>
-                                <a href="#" data-hour="06">06</a>
-                                <a href="#" data-hour="07">07</a>
-                                <a href="#" data-hour="08">08</a>
-                                <a href="#" data-hour="09">09</a>
-                                <a href="#" data-hour="10">10</a>
-                                <a href="#" data-hour="11">11</a>
-                                <a href="#" data-hour="12">12</a>
-                                <a href="#" data-hour="13">13</a>
-                                <a href="#" data-hour="14">14</a>
-                                <a href="#" data-hour="15">15</a>
-                                <a href="#" data-hour="16">16</a>
-                                <a href="#" data-hour="17">17</a>
-                                <a href="#" data-hour="18">18</a>
-                                <a href="#" data-hour="19">19</a>
-                                <a href="#" data-hour="20">20</a>
-                                <a href="#" data-hour="21">21</a>
-                                <a href="#" data-hour="22">22</a>
-                                <a href="#" data-hour="03">23</a>
+                        <td class="t">Year</td>
+                        <td>
+                            <div class="years">
+                                <a href="#" data-year="2019" class="on">2019</a>
+                                <a href="#" data-year="2018">2018</a>
+                                <a href="#" data-year="2017">2017</a>
+                                <a href="#" data-year="2016">2016</a>
+                                <a href="#" data-year="2015">2015</a>
+                                <a href="#" data-year="2014">2014</a>
+                                <a href="#" data-year="2013">2013</a>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <td class="t">Minute</td>
+                        <td class="t">Month</td>
                         <td>
-                            <div class="minutes">
-                                <a href="#" data-minute="00" class="on">00</a>
-                                <a href="#" data-minute="10">10</a>
-                                <a href="#" data-minute="20">20</a>
-                                <a href="#" data-minute="30">30</a>
-                                <a href="#" data-minute="40">40</a>
-                                <a href="#" data-minute="50">50</a>
-                                <a href="#" data-minute="60">60</a>
+                            <div class="months">
+                                <a href="#" data-month="01" class="on">Jan</a>
+                                <a href="#" data-month="02">Feb</a>
+                                <a href="#" data-month="03">Mar</a>
+                                <a href="#" data-month="04">Apr</a>
+                                <a href="#" data-month="05">May</a>
+                                <a href="#" data-month="06">Jun</a>
+                                <a href="#" data-month="07">Jul</a>
+                                <a href="#" data-month="08">Aug</a>
+                                <a href="#" data-month="09">Sep</a>
+                                <a href="#" data-month="10">Oct</a>
+                                <a href="#" data-month="11">Nov</a>
+                                <a href="#" data-month="12">Dec</a>
+                            </div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="t">Day</td>
+                        <td class="dates">
+                            <div class="dates">
+                                <a href="#" data-date="01" class="on">01</a>
+                                <a href="#" data-date="02">02</a>
+                                <a href="#" data-date="03">03</a>
+                                <a href="#" data-date="04">04</a>
+                                <a href="#" data-date="05">05</a>
+                                <a href="#" data-date="06">06</a>
+                                <a href="#" data-date="07">07</a>
+                                <a href="#" data-date="08">08</a>
+                                <a href="#" data-date="09">09</a>
+                                <a href="#" data-date="10">10</a>
+                                <a href="#" data-date="11">11</a>
+                                <a href="#" data-date="12">12</a>
+                                <a href="#" data-date="13">13</a>
+                                <a href="#" data-date="14">14</a>
+                                <a href="#" data-date="15">15</a>
+                                <a href="#" data-date="16">16</a>
+                                <a href="#" data-date="17">17</a>
+                                <a href="#" data-date="18">18</a>
+                                <a href="#" data-date="19">19</a>
+                                <a href="#" data-date="20">20</a>
+                                <a href="#" data-date="21">21</a>
+                                <a href="#" data-date="22">22</a>
+                                <a href="#" data-date="23">23</a>
+                                <a href="#" data-date="24">24</a>
+                                <a href="#" data-date="25">25</a>
+                                <a href="#" data-date="26">26</a>
+                                <a href="#" data-date="27">27</a>
+                                <a href="#" data-date="28">28</a>
+                                <a href="#" data-date="29">29</a>
+                                <a href="#" data-date="30">30</a>
+                                <a href="#" data-date="31">31</a>
                             </div>
                         </td>
                     </tr>
                     </table>
+                    <span class="set-time">Set Time</span>
+                    <table class="notable">
+                        <colgroup><col width="80" /><col width="*" /></colgroup>
+                        <tr>
+                            <td class="t">Hour</td>
+                            <td class="dates">
+                                <div class="hours">
+                                    <a href="#" data-hour="00" class="on">00</a>
+                                    <a href="#" data-hour="01">01</a>
+                                    <a href="#" data-hour="02">02</a>
+                                    <a href="#" data-hour="03">03</a>
+                                    <a href="#" data-hour="04">04</a>
+                                    <a href="#" data-hour="05">05</a>
+                                    <a href="#" data-hour="06">06</a>
+                                    <a href="#" data-hour="07">07</a>
+                                    <a href="#" data-hour="08">08</a>
+                                    <a href="#" data-hour="09">09</a>
+                                    <a href="#" data-hour="10">10</a>
+                                    <a href="#" data-hour="11">11</a>
+                                    <a href="#" data-hour="12">12</a>
+                                    <a href="#" data-hour="13">13</a>
+                                    <a href="#" data-hour="14">14</a>
+                                    <a href="#" data-hour="15">15</a>
+                                    <a href="#" data-hour="16">16</a>
+                                    <a href="#" data-hour="17">17</a>
+                                    <a href="#" data-hour="18">18</a>
+                                    <a href="#" data-hour="19">19</a>
+                                    <a href="#" data-hour="20">20</a>
+                                    <a href="#" data-hour="21">21</a>
+                                    <a href="#" data-hour="22">22</a>
+                                    <a href="#" data-hour="03">23</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t">Minute</td>
+                            <td>
+                                <div class="minutes">
+                                    <a href="#" data-minute="00" class="on">00</a>
+                                    <a href="#" data-minute="10">10</a>
+                                    <a href="#" data-minute="20">20</a>
+                                    <a href="#" data-minute="30">30</a>
+                                    <a href="#" data-minute="40">40</a>
+                                    <a href="#" data-minute="50">50</a>
+                                    <a href="#" data-minute="60">60</a>
+                                </div>
+                            </td>
+                        </tr>
+                        </table>
+                </div>
             </div>
         </div>
     </div>
+
+
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
-<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="assets/js/custom.js"></script>
-<script>
-window.app = new Vue({
-    el: '#app',
-    data: {
-    name: ''
-    },
-    computed: {
-        showAlert() {
-            return this.name.length > 4 ? true : false
-        }
-    }
-})
-</script>
+
 </body>
 </html>

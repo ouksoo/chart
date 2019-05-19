@@ -147,9 +147,9 @@ let PJT = {
 
         // document click
         $(document).on('click', function() {
-            $('.lnb-content_popup').fadeOut('fast');
+            $('.lnb-content_popup, .select-wrap div.options').fadeOut('fast');
         });
-        $('.lnb-wrap li, .lnb-content_popup').on('click', function(e) {
+        $('.lnb-wrap li, .lnb-content_popup, .select-wrap, .select-wrap div.options').on('click', function(e) {
             e.stopPropagation();
         });
     },
@@ -181,6 +181,23 @@ let PJT = {
             else if(opt === 'minute') {
                 $('div.selected-date p.time > span.minute').text(optv);
             }
+        });
+    },
+    // selectBox option show
+    selectOptionsForm: function() {
+        $('.select_data-options').on('click', function(e) {
+            $(this).next().fadeIn(function() {
+                const thisOptions = $(e.target).next('.options');
+                let thisValue = $(thisOptions).children().children();
+                thisValue.each(function() {
+                    $(this).children().on('click', function(evt) {
+                        let thisV = $(this).data('value');
+                        $(this).parents('.options').siblings('.select_data-options').val(thisV);
+                        $(this).parents('.options').fadeOut('fast');
+                        evt.preventDefault();
+                    });
+                }); 
+            });
         });
     },
 
@@ -217,4 +234,5 @@ window.onload = function() {
     PJT.loginInit();
     PJT.siteResizeResponse();
     PJT.utilsAliveLinks();
+    PJT.selectOptionsForm();
 };

@@ -127,12 +127,120 @@ span.double--line {
     background: #d5e0ea;
     border-bottom: 1px solid #fff;
 }
+
+.select-wrap {
+    display: inline-block;
+    position: relative;
+
+    .select-data {
+        cursor: pointer;
+        border-radius: 4px;
+        border: solid 1px #bccad7;
+        background-color: #f7f9fb;
+        padding: 10px 16px;
+        font-size: 16px; color: #97a4b1;
+        background: url('../img/icons/icon_select_down.png') 96% 50% no-repeat;
+        @include prefix($bgs, 20px 20px, webkit ms);
+
+        &:hover {
+            border: 1px solid #9678ff;
+            background: url('../img/icons/icon_select_down_on.png') 96% 50% no-repeat;
+            @include prefix($bgs, 20px 20px, webkit ms);
+        }
+        &:disabled {
+            cursor: default;
+            border: solid 1px #e4eaf1;
+            background-color: #f7f9fb;
+            color: #dae3ea;
+            background: url('../img/icons/icon_select_down_disabled.png') 96% 50% no-repeat;
+            @include prefix($bgs, 20px 20px, webkit ms);
+        }
+    }
+    div.options {
+        display: none;
+        position: absolute;
+        left: 0; top: 50%;
+        margin-top: -90px;
+        width: 100%;
+        height: 180px;
+        padding: 15px 17px;
+        border-radius: 4px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+        border: 1px solid #bccad7;
+        background-image: linear-gradient(to bottom, #fbfdfe, #f2f4f5);
+
+        ul {
+            display: block;
+            height: 150px;
+            overflow-y: auto;
+
+            li {
+                a {
+                    display: block;
+                    font-family: $inter-r;
+                    font-size: 16px;
+                    color: #97a4b1;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+    &.sm {
+        font-size: 13px;
+
+        .select-data {
+            padding: 8px 13px;
+            font-size: 13px;
+            background: url('../img/icons/icon_select_down.png') 96% 50% no-repeat;
+            @include prefix($bgs, 16px 16px, webkit ms);
+
+            &:hover {
+                background: url('../img/icons/icon_select_down_on.png') 96% 50% no-repeat;
+                @include prefix($bgs, 16px 16px, webkit ms);
+            }
+            &:disabled {
+                background: url('../img/icons/icon_select_down_disabled.png') 96% 50% no-repeat;
+                @include prefix($bgs, 16px 16px, webkit ms);
+            }
+        }
+        div.options {
+            display: none;
+            position: absolute;
+            left: 0; top: 50%;
+            margin-top: -80px;
+            width: 100%;
+            height: 160px;
+            padding: 15px 17px;
+            border-radius: 4px;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+            border: 1px solid #bccad7;
+            background-image: linear-gradient(to bottom, #fbfdfe, #f2f4f5);
+    
+            ul {
+                display: block;
+                height: 130px;
+                overflow-y: auto;
+    
+                li {
+                    a {
+                        display: block;
+                        font-family: $inter-r;
+                        font-size: 13px;
+                        color: #97a4b1;
+                        line-height: 27px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .formdata {
     border-radius: 4px;
     border: solid 1px #bccad7;
     background-color: #f7f9fb;
     padding: 10px 16px;
-    color: #28313b;
+    font-size: 16px; color: #28313b;
     @include prefix(transition, box-shadow .5s ease-in-out, webkit ms);
     
     &::placeholder {
@@ -152,11 +260,32 @@ span.double--line {
         background-color: #f7f9fb;
         color: #dae3ea;
     }
+    &.sm {
+        padding: 8px 13px;
+        font-size: 13px;
+    }
+    &.error {
+        color: #ea5858;
+        background: url('../img/icons/icon_error_check.png') 96% 50% no-repeat;
+        @include prefix($bgs, 15px 15px, webkit ms);
+    }
+    &.good {
+        background: url('../img/icons/icon_good_check.png') 96% 50% no-repeat;
+        @include prefix($bgs, 15px 15px, webkit ms);
+    }
 }
 p.form_some-copy {
     font-size: 14px;
     color: #97a4b1;
     padding-top: 8px;
+
+    &.error {
+        color: #f54b5e;
+    }
+    &.sm {
+        font-size: 13px; 
+        padding-top: 5px;
+    }
 }
 
 span.radio-wrap {
@@ -243,6 +372,22 @@ span.checkbox-default {
         background:url('../img/icons/icon_checkbox_on.png') 0 0 no-repeat;
         @include prefix(background-size, 18px 18px, webkit ms);
     }
+
+    &.sm {
+        input[type="checkbox"] + label span {
+            display:inline-block;
+            width:15px;
+            height:15px;
+            vertical-align:middle;
+            background:url('../img/icons/icon_checkbox_off.png') 0 0 no-repeat;
+            @include prefix(background-size, 15px 15px, webkit ms);
+            cursor:pointer;
+        }
+        input[type="checkbox"]:checked + label span {
+            background:url('../img/icons/icon_checkbox_on.png') 0 0 no-repeat;
+            @include prefix(background-size, 15px 15px, webkit ms);
+        }
+    }
 }
 
 // default radio
@@ -268,6 +413,22 @@ span.radiobox-default {
     input[type="radio"]:checked + label span {
         background:url('../img/icons/icon_radio_on.png') 0 0 no-repeat;
         @include prefix(background-size, 18px 18px, webkit ms);
+    }
+
+    &.sm {
+        input[type="radio"] + label span {
+            display:inline-block;
+            width:15px;
+            height:15px;
+            vertical-align:middle;
+            background:url('../img/icons/icon_radio_off.png') 0 0 no-repeat;
+            @include prefix(background-size, 15px 15px, webkit ms);
+            cursor:pointer;
+        }
+        input[type="radio"]:checked + label span {
+            background:url('../img/icons/icon_radio_on.png') 0 0 no-repeat;
+            @include prefix(background-size, 15px 15px, webkit ms);
+        }
     }
 }
 
@@ -312,6 +473,37 @@ span.radiobox-default {
             color: #a3a0ae;
         }
     }
+    &.sm {
+        height: 36px;
+        padding: 8px 38px;
+    }
+}
+.cb-btn {
+    display: inline-block;
+    height: 42px;
+    border-radius: 25px;
+    color: #63dbc1;
+    font-family: $inter-m;
+    font-size: 13px;
+    text-align: center;
+    padding: 11px 38px;
+    letter-spacing: 1.2px;
+    border: 1px solid #63dbc1;
+
+    &:hover {
+        color: #53c0a9;
+        border: 1px solid #53c0a9;
+    }
+    &.green {
+        &.disabled {
+            border: solid 1px #b2d3cc;
+            color: #b2d3cc;
+        }
+    }
+    &.sm {
+        height: 36px;
+        padding: 8px 38px;
+    }
 }
 
 /*
@@ -331,5 +523,24 @@ div.modal-wrap {
 }
 
 .modal-backdrop.show {
-    opacity: .2;
+    opacity: .8;
+    background-color: #1a1e22; 
+}
+
+.modal-dialog {
+    max-width: 970px;
+    margin: 0 auto !important;
+
+    &.modal-search-wrap {
+        width: 970px; 
+        margin-top: 100px !important;
+    }
+    .modal-content {
+        background: transparent;
+        border-radius: 0;
+    }
+}
+
+.modal-body {
+    padding: 0;
 }
