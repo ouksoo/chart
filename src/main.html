@@ -15,7 +15,7 @@
 
 <div id="app" class="wrapper">
     <!-- header -->
-    <header class="clearfix" style="display: none">
+    <header class="clearfix">
         <a href="#" class="monitor header-monitor">Monitoring Graph</a>
 
         <div class="product-btn clearfix">
@@ -120,7 +120,7 @@
     <!-- section -->
     <section>
         <!--left navigation bar-->
-        <div class="lnb-wrap" style="display: none">
+        <div class="lnb-wrap">
             <ul class="lnb-nav clearfix">
                 <li data-name="Monitoring"><a href="#" class="on">monitoring</a></li>
                 <li data-name="Event"><a href="#">event</a></li>
@@ -183,7 +183,7 @@
         </div>
 
         <!--device list-->
-        <div class="device-wrap" style="display: none">
+        <div class="device-wrap">
             <div class="device-top clearfix">
                 <span class="f">DEVICES</span>
                 <span class="s">
@@ -198,7 +198,7 @@
                         <li><a href="#" class="opt-btn">Application</a></li>
                         <li><a href="#" class="opt-btn">DB Server</a></li>
                         <li><a href="#" class="opt-btn">Cloud</a></li>
-                        <li><a href="#" class="opt-btn">Clear All</a></li>
+                        <li><a href="#" class="opt-btn clear-all">Clear All</a></li>
                     </ul>
                 </div>
                 <div class="order">
@@ -206,17 +206,17 @@
                         <li>ORDER</li>
                         <li>
                             <span class="radiobox-default sm">
-                                <input type="radio" id="d1" name="d1" checked /><label for="d1"><span></span>Device</label>
+                                <input type="radio" id="m1" name="m1" checked /><label for="m1"><span></span>Device</label>
                             </span>
                         </li>
                         <li>
                             <span class="radiobox-default sm">
-                                <input type="radio" id="d1" name="d1" /><label for="d1"><span></span>State</label>
+                                <input type="radio" id="m2" name="m1" /><label for="m2"><span></span>State</label>
                             </span>
                         </li>
                         <li>
                             <span class="radiobox-default sm">
-                                <input type="radio" id="d1" name="d1" /><label for="d1"><span></span>ABC</label>
+                                <input type="radio" id="m3" name="m1" /><label for="m3"><span></span>ABC</label>
                             </span>
                         </li>
                     </ul>
@@ -292,10 +292,8 @@
         </div>
     </section>
 
-
-
     <!--Carlendar-->
-    <div class="lnb-tools-wrap calendar lnb-content_popup">
+    <div class="lnb-tools-wrap calendar lnb-content_popup" style="display: none">
         <div class="tools-container">
             <div class="tools-content">
                 <p class="title">CALENDAR</p>
@@ -317,13 +315,15 @@
                 </div>
                 <span class="double--line"></span>
                 <div class="from-to clearfix">
-                    <div class="from-date floatl">
+                    <div class="from-date">
                         <span class="tt">From</span>
-                        <p class="date"><span class="dates">YYYY / MM / DD</span> <span class="time">hh:mm</span></p>
+                        <p class="date-time a"><span class="dates">YYYY <span>/</span> MM <span>/</span> DD</span></p>
+                        <p class="date-time b"><span class="time">00 <span>:</span> 00</span></p>
                     </div>
-                    <div class="to-date floatl">
+                    <div class="to-date">
                         <span class="tt">To</span>
-                        <p class="date">Present <span class="bar">-</span></p>
+                        <p class="date-time a"><span class="dates">YYYY <span>/</span> MM <span>/</span> DD</span></p>
+                        <p class="date-time b"><span class="time">00 <span>:</span> 00</span></p>
                     </div>
                 </div>
             </div>

@@ -122,11 +122,11 @@ div.lnb-tools-wrap {
         div.tools-container {
             
             div.tools-content {
-                width: 454px; height: 190px;
+                width: 454px; height: 243px;
                 padding: 12px 15px;
 
                 p.title {
-                    font-family: $inter-m;
+                    font-family: $inter-b;
                     font-size: 13px;
                     color: #28313b;
                     padding-bottom: 18px;
@@ -166,35 +166,49 @@ div.lnb-tools-wrap {
                     }
                 }
                 div.from-to {
-                    padding-top: 8px; 
+                    padding-top: 17px; 
 
+                    & > div {
+                        position: relative;
+                    }
+                    div.from-date {
+                        padding-bottom: 10px;
+                    }
                     span.tt {
-                        display: block;
-                        color: #28313b;
+                        position: absolute;
+                        top: 14px; left: 12px;
+                        color: #97a4b1;
                         font-family: $inter-m;
                         font-size: 12px;
-                        padding-bottom: 2px;
                     }
-                    p.date {
-                        font-family: $inter-r;
-                        font-size: 15px;
-                        color: #97a4b1;
-                        width: 206px;
-                        height: 36px;
+                    p.date-time {
+                        display: inline-block;
+                        font-family: $inter-b;
+                        font-size: 16px;
+                        color: #28313b;
+                        height: 46px;
                         border-radius: 4px;
                         border: solid 1px #bccad7;
                         background-color: #f7f9fb;
-                        padding: 6px 10px;
+                        padding: 9px 10px;
+                        text-align: center;
 
-                        span.time {
-                            margin-left: 10px;
+                        &.a {width: 258px;}
+                        &.b {width: 150px; margin-left: 12px;}
+
+                        span.dates {
+                            
+                            span {
+                                color: #97a4b1;
+                                font-family: $inter-r;
+                            }
                         }
-                    }
-                    div.to-date {
-                        margin-left: 12px;
+                        span.time {
 
-                        span.bar {
-                            margin-left: 100px
+                            span {
+                                color: #97a4b1;
+                                font-family: $inter-r;
+                            }
                         }
                     }
                 }
@@ -213,7 +227,7 @@ div.lnb-tools-wrap {
                 padding: 12px 15px;
 
                 p.title {
-                    font-family: $inter-m;
+                    font-family: $inter-b;
                     font-size: 13px;
                     color: #28313b;
                     padding-bottom: 18px;
@@ -286,7 +300,7 @@ div.lnb-tools-wrap {
                 padding: 12px 15px;
 
                 p.title {
-                    font-family: $inter-m;
+                    font-family: $inter-b;
                     font-size: 13px;
                     color: #28313b;
                     padding-bottom: 18px;
@@ -363,7 +377,7 @@ div.lnb-tools-wrap {
                 padding: 12px 15px;
 
                 p.title {
-                    font-family: $inter-m;
+                    font-family: $inter-b;
                     font-size: 13px;
                     color: #28313b;
                     padding-bottom: 18px;

@@ -151,6 +151,14 @@ var PJT = {
             $('.device-wrap div.filter-options').addClass('on');
             $('.device-list').css('height', deviceListHeight - 121);
             PJT.state.filter = true;
+
+            $('.filter-options > .option a').on('click', function () {
+                if ($(this).hasClass('clear-all')) {
+                    $('.filter-options > .option a').removeClass('on');
+                } else {
+                    $(this).toggleClass('on');
+                }
+            });
         });
 
         // device list
