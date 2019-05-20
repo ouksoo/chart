@@ -180,6 +180,11 @@ div.wrapper {
             @include breakpointmax(max) {
                 width: 1215px !important;
             }
+
+            &.wide-wrapper {
+                width: 100% !important;
+                margin-left: 0;
+            }
         }
         div.device-wrap {
             position: absolute;

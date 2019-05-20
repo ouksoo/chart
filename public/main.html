@@ -120,7 +120,7 @@
     <!-- section -->
     <section>
         <!--left navigation bar-->
-        <div class="lnb-wrap">
+        <div class="lnb-wrap" style="display: none">
             <ul class="lnb-nav clearfix">
                 <li data-name="Monitoring"><a href="#" class="on">monitoring</a></li>
                 <li data-name="Event"><a href="#">event</a></li>
@@ -134,8 +134,9 @@
         </div>
 
         <!-- content -->
-        <div class="content-wrap">
+        <div class="content-wrap wide-wrapper">
             
+            <!-- gate -->
             <div class="gate-wrapper" style="display: none">
                 <!-- gate header -->
                 <div class="login-header clearfix">
@@ -179,11 +180,37 @@
                     <span class="t"><a href="#">Inquiry</a></span>
                 </div>
             </div>
+            <!-- //gate -->
+
+            <!-- device inventory list -->
+            <div class="device-inventory-wrap">
+                <div class="head">
+                    <p class="title">Device Inventory</p>
+                    <p class="middle">All Devices are<span>1480</span>in the inventory</p>
+                    <div class="search">
+                        search
+                    </div>
+                </div>
+                <div class="navigation">
+                    <nav>
+                        <a href="#">All Devices</a>
+                        <a href="#">Physical Server</a>
+                        <a href="#">Virtual Server</a>
+                        <a href="#">Cloud Server</a>
+                        <a href="#">Router</a>
+                        <a href="#">Switch</a>
+                        <a href="#">Bridge</a>
+                        <a href="#">Storage</a>
+                        <a href="#">Application</a>
+                    </nav>
+                </div>
+            </div>
+            <!-- //device inventory list -->
 
         </div>
 
         <!--device list-->
-        <div class="device-wrap">
+        <div class="device-wrap" style="display: none">
             <div class="device-top clearfix">
                 <span class="f">DEVICES</span>
                 <span class="s">
