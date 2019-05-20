@@ -1,6 +1,9 @@
 'use strict';
 
 var PJT = {
+    state: {
+        filter: false
+    },
     /**
      * Intro & login
      */
@@ -142,11 +145,26 @@ var PJT = {
             $('div.tiny-tooltip').remove();
         });
 
+        // device filter
+        $('.device-filter a').on('click', function () {
+            var deviceListHeight = $('.device-list').height();
+            $('.device-wrap div.filter-options').addClass('on');
+            $('.device-list').css('height', deviceListHeight - 121);
+            PJT.state.filter = true;
+        });
+
+        // device list
+        $('.device-wrap a.device-add').on('click', function () {});
+        $('.device-wrap a.device-remove').on('click', function () {
+            $('.device-wrap div.device-inner').addClass('on');
+        });
+
         // document click
         $(document).on('click', function () {
             $('.lnb-content_popup, .select-wrap div.options').fadeOut('fast');
+            $('.device-list div.device-inner').removeClass('on');
         });
-        $('.lnb-wrap li, .lnb-content_popup, .select-wrap, .select-wrap div.options').on('click', function (e) {
+        $('.lnb-wrap li, .lnb-content_popup, .select-wrap, .select-wrap div.options, .device-wrap a.device-remove, .device-wrap a.remove').on('click', function (e) {
             e.stopPropagation();
         });
     },
@@ -208,7 +226,13 @@ var PJT = {
             var winHeight = $(window).height();
             var realSize = winWidth - 375;
             $('.content-wrap').css('width', realSize);
-            $('.device-list').css('height', winHeight - 169);
+
+            if (!PJT.state.filter) {
+                // is filter open
+                $('.device-list').css('height', winHeight - 169);
+            } else {
+                $('.device-list').css('height', winHeight - 290);
+            }
         });
     }
 

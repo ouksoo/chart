@@ -225,6 +225,84 @@ div.wrapper {
                 }
             }
 
+            div.filter-options {
+                background: #eef2f5;
+                height: 0;
+                overflow: hidden;
+                @include prefix(transition, height 0.5s, ease-in-out);
+
+                &.on {
+                    height: 121px;
+                }
+
+                div.option {
+                    height: 86px;
+
+                    ul {
+                        width: 94%;
+                        margin: 0 auto;
+                        padding: 9px 0;
+
+                        li {
+                            float: left;
+                            width: 33%;
+                            text-align: center;
+                            padding: 3px 0;
+
+                            .opt-btn {
+                                display: inline-block;
+                                height: 27px;
+                                width: 89px;
+                                border-radius: 25px;
+                                font-family: $inter-m;
+                                font-size: 12px;
+                                text-align: center;
+                                padding: 4px 0px;
+                                color: #28313b;
+                                background: #fff;
+
+                                &.on {
+                                    color: #fff;
+                                    background: #9678ff;
+                                }
+                            }
+                        }
+                    }
+                }
+                div.order {
+                    height: 33px;
+                    border-top: 1px solid #dfe5eb;
+                    border-bottom: 1px solid #dfe5eb;
+
+                    ul {
+                        margin: 7px 0 0 18px;
+                        li {
+                            float: left;
+                            font-size: 12px;
+                            font-family: $inter-b;
+                            color: #28313b;
+
+                            &:first-child {
+                                padding-right: 40px;
+                            }
+
+                            span.radiobox-default {
+                                margin-right: 15px; 
+                                
+                                label {
+                                    font-family: $inter-m;
+                                    color: #28313b;
+
+                                    span {
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
             div.device-filter {
                 height: 32px;
                 border-bottom: 1px solid #c8d3df;
@@ -235,7 +313,8 @@ div.wrapper {
                 a {
                     display: inline-block;
                     font-size: 12px;
-                    color: #97a4b1;
+                    font-family: $inter-m;
+                    color: #28313b;
                     padding-left: 20px; 
                     background: url('../img/icons/icon_filter.png') 0% 50% no-repeat;
                     @include prefix(background-size, 12px 12px, webkit ms);   
@@ -245,12 +324,14 @@ div.wrapper {
             ul.device-list {
                 overflow-y: auto;
                 overflow-x: hidden;
+                @include prefix(transition, height 0.5s, webkit ms);
 
                 li {
                     position: relative;
                     height: 62px;
                     border-bottom: 1px solid #c8d3df;
                     padding: 9px 0 0 15px;
+                    // overflow: hidden;
 
                     &:hover::before {
                         content: ' ';
@@ -259,66 +340,94 @@ div.wrapper {
                         width: 4px; height: 100%;
                         background: #9678ff;
                     }
-                    p.f {
-                        font-family: $inter-m;
-                        font-size: 16px;
-                        color: #28313b;
-                        line-height: 23px;
+                    
+                    div.device-inner {
+                        margin-left: -46px;
+                        @include prefix(transition, margin-left .3s ease-in-out, webkit ms);
 
-                        span.box {
-                            display: inline-block;
-                            width: 14px; height: 14px;
-                            margin-right: 7px;
+                        &.on {
+                            margin-left: 0;
+                        }
+                        div.re {
+                            position: relative;
+                            float: left;
+                            width: 46px; height: 61px;
 
-                            &.disk {
-                                background: url('../img/icons/icon_server.png') 50% 50% no-repeat;
-                                @include prefix(background-size, 14px 14px, webkit ms);
-                            }
-                            &.cloud {
-                                background: url('../img/icons/icon_cloud.png') 50% 50% no-repeat;
-                                @include prefix(background-size, 14px 14px, webkit ms);
-                            }
-                            &.copy {
-                                background: url('../img/icons/icon_copy.png') 50% 50% no-repeat;
-                                @include prefix(background-size, 14px 14px, webkit ms);
-                            }
-                            &.os-win {
-                                background: url('../img/icons/icon_os_window.png') 50% 50% no-repeat;
-                                @include prefix(background-size, 14px 14px, webkit ms);
-                            }
-                            &.os-linux {
-                                background: url('../img/icons/icon_os_linux.png') 50% 50% no-repeat;
-                                @include prefix(background-size, 14px 14px, webkit ms);
-                            }
-                            &.os-mark {
-                                background: url('../img/icons/icon_os_mark.png') 50% 50% no-repeat;
-                                @include prefix(background-size, 14px 14px, webkit ms);
+                            a.remove {
+                                position: absolute;
+                                left: 0; top: 0;
+                                z-index: 2;
+                                width: 46px; height: 61px;
+                                margin: -9px 18px 0 -15px;
+                                background: #ea5858 url('../img/icons/icon_device_minus.png') 50% 50% no-repeat;
+                                @include prefix($bgs, 18px 18px, webkit ms);
                             }
                         }
-                        span.dvc {
-                            margin-left: 5px;
-                        }
-                    }
-                    p.s {   
-                        font-size: 13px;
-                        color: #97a4b1;
-                        line-height: 23px;
+                        div.inner {
+                            float: left;
 
-                        strong {
-                            font-family: $inter-b;
-                        }
-                    }
-                    span.status {
-                        position: absolute;
-                        top: 12px; right: 10px;
-                        width: 9px; height: 9px;
-                        @include prefix(border-radius, 50%, webkit ms);   
-                        
-                        &.stat-1 {
-                            border: 2px solid #63dbc1;
-                        }
-                        &.stat-2 {
-                            border: 2px solid #9678ff;
+                            p.f {
+                                font-family: $inter-m;
+                                font-size: 16px;
+                                color: #28313b;
+                                line-height: 23px;
+
+                                span.box {
+                                    display: inline-block;
+                                    width: 14px; height: 14px;
+                                    margin-right: 7px;
+
+                                    &.disk {
+                                        background: url('../img/icons/icon_server.png') 50% 50% no-repeat;
+                                        @include prefix(background-size, 14px 14px, webkit ms);
+                                    }
+                                    &.cloud {
+                                        background: url('../img/icons/icon_cloud.png') 50% 50% no-repeat;
+                                        @include prefix(background-size, 14px 14px, webkit ms);
+                                    }
+                                    &.copy {
+                                        background: url('../img/icons/icon_copy.png') 50% 50% no-repeat;
+                                        @include prefix(background-size, 14px 14px, webkit ms);
+                                    }
+                                    &.os-win {
+                                        background: url('../img/icons/icon_os_window.png') 50% 50% no-repeat;
+                                        @include prefix(background-size, 14px 14px, webkit ms);
+                                    }
+                                    &.os-linux {
+                                        background: url('../img/icons/icon_os_linux.png') 50% 50% no-repeat;
+                                        @include prefix(background-size, 14px 14px, webkit ms);
+                                    }
+                                    &.os-mark {
+                                        background: url('../img/icons/icon_os_mark.png') 50% 50% no-repeat;
+                                        @include prefix(background-size, 14px 14px, webkit ms);
+                                    }
+                                }
+                                span.dvc {
+                                    margin-left: 5px;
+                                }
+                            }
+                            p.s {   
+                                font-size: 13px;
+                                color: #97a4b1;
+                                line-height: 23px;
+
+                                strong {
+                                    font-family: $inter-b;
+                                }
+                            }
+                            span.status {
+                                position: absolute;
+                                top: 12px; right: 10px;
+                                width: 9px; height: 9px;
+                                @include prefix(border-radius, 50%, webkit ms);   
+                                
+                                &.stat-1 {
+                                    border: 2px solid #63dbc1;
+                                }
+                                &.stat-2 {
+                                    border: 2px solid #9678ff;
+                                }
+                            }
                         }
                     }
                 }
