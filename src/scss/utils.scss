@@ -510,6 +510,52 @@ span.radiobox-default {
 }
 
 /*
+* table (grid)
+* optimize size : div.custom_table-grid inline width or outside wrapper width (default width 100% : block )
+* table default size : 100%
+*/
+div.custom_table-grid {
+    border-radius: 6px;
+    border: solid 1px #bccad7;
+    background-color: #ffffff;
+    overflow: hidden;
+
+    table {
+        width: 100%;
+
+        thead {
+
+            th {
+                background-color: #e8eef4;
+                height: 69px;
+                text-align: center;
+
+                span.n {
+                    font-family: $inter-b;
+                    font-size: 14px;
+                    letter-spacing: -0.3px;
+                    color: #28313b;
+                }
+            }
+        }
+        tbody {
+
+            td {
+                height: 46px;
+                font-family: $inter-r;
+                font-size: 13px;
+                color: #28313b;
+                text-align: center;
+
+                &.l {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+/*
 * modal
 */
 div.modal-wrap {
