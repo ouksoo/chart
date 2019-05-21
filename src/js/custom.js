@@ -173,6 +173,12 @@ let PJT = {
             $('.device-wrap div.device-inner').addClass('on');
         });
 
+        // device inventory search
+        $('.device-inventory-wrap a.search').on('click', function() {
+            $('.device-inventory-wrap .search-input').addClass('on');
+            $('.device-inventory-wrap .inventory-search').addClass('on').focus();
+        });
+
         // document click
         $(document).on('click', function() {
             $('.lnb-content_popup, .select-wrap div.options').fadeOut('fast');

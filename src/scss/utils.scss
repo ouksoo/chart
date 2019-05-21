@@ -270,7 +270,7 @@ span.double--line {
     &.error {
         color: #ea5858;
         background: url('../img/icons/icon_error_check.png') 96% 50% no-repeat;
-        @include prefix($bgs, 15px 15px, webkit ms);
+        @include prefix($bgs, 13px 13px, webkit ms);
     }
     &.good {
         background: url('../img/icons/icon_good_check.png') 96% 50% no-repeat;
