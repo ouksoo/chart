@@ -117,10 +117,29 @@
             }
         }
     }
+    div.inventory-filter {
+        width: 1240px;
+        height: 87px;
+        margin: 0 auto;
+        border-radius: 4px;
+        border: solid 1px #bccad7;
+        background-color: #f2f4f5;
+
+        span.tit {
+            float: left;
+            font-size: 13px;
+            color: #28313b;
+            font-family: $inter-b;
+            margin: 29px 23px 0 17px;
+        }
+        div.filter-list {
+            float: left;
+        }
+    }
     div.inventory-table-wrap {
         width: 1238px;
         margin: 0 auto;
-        padding-top: 28px;
+        margin-top: 28px;
 
         th {
 

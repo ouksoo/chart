@@ -181,7 +181,7 @@ let PJT = {
 
         // document click
         $(document).on('click', function() {
-            $('.lnb-content_popup, .select-wrap div.options').fadeOut('fast');
+            $('.lnb-content_popup, .select-wrap div.options, .grid_select-option').fadeOut('fast');
             $('.device-list div.device-inner').removeClass('on');
         });
         $('.lnb-wrap li, .lnb-content_popup, .select-wrap, .select-wrap div.options, .device-wrap a.device-remove, .device-wrap a.remove').on('click', function(e) {
@@ -234,6 +234,17 @@ let PJT = {
                 }); 
             });
         });
+
+        // grid options
+        $('a.grid_select-options').on('click', function(e) {
+            $('.grid_select-option').fadeOut();            
+            $(this).next().fadeIn();
+            e.stopPropagation();
+        });
+        $('.grid_select-option').on('click', function(e) {
+            e.stopPropagation();
+        });
+        
     },
 
     /**

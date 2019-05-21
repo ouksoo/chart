@@ -208,20 +208,82 @@
                         <a href="#">Application</a>
                     </nav>
                 </div>
+
+                <div class="inventory-filter clearfix">
+                    <span class="tit">FILTER</span>
+                    <div class="filter-list">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="inventory-table-wrap">
                     <!-- grid table -->
                     <div class="custom_table-grid">
                         <table class="notable">
+                            <cologroup>
+                                <col width="70" />
+                                <col width="120" />
+                                <col width="180" />
+                                <col width="110" />
+                                <col width="150" />
+                                <col width="270" />
+                                <col width="100" />
+                                <col width="100" />
+                                <col width="*" />
+                            </cologroup>
                             <thead>
                             <tr>
-                                <th><span class="n">No.</span></th>
-                                <th><span class="n">TYPE</span></th>
-                                <th><span class="n">NAME</span></th>
+                                <th><span class="n">No.</span><span class="m"><a href="#" class="sort-up" title="Ascend">Ascend</a><a href="#" class="sort-down" title="Descend">Descend</a></span></th>
+                                <th>
+                                    <span class="n">TYPE</span><span class="s">
+                                        <a href="#" class="select-up grid_select-options" title="options">선택</a>
+                                        <div class="options grid_select-option" style="display: none">
+                                            <span class="tit">TYPE</span>
+                                            <ul>
+                                                <li>
+                                                    <span class="checkbox-default sm">
+                                                        <input type="checkbox" id="c1" name="c1" checked /><label for="c1"><span></span>Seoul</label>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </span>
+                                </th>
+                                <th><span class="n">NAME</span><span class="m"><a href="#" class="sort-up" title="Ascend">Ascend</a><a href="#" class="sort-down" title="Descend">Descend</a></span></th>
                                 <th><span class="n">ID</span></th>
-                                <th><span class="n">LOCATION</span></th>
+                                <th>
+                                    <span class="n">LOCATION</span><span class="s">
+                                        <a href="#" class="select-up grid_select-options" title="options">선택</a>
+                                        <div class="options grid_select-option" style="display: none">
+                                            <span class="tit">LOCATION</span>
+                                            <ul>
+                                                <li>
+                                                    <span class="checkbox-default sm">
+                                                        <input type="checkbox" id="c1" name="c1" checked /><label for="c1"><span></span>Seoul</label>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </span>
+                                </th>
                                 <th><span class="n">DESCRIPTION</span></th>
-                                <th><span class="n">DATE</span></th>
-                                <th><span class="n">STATE</span></th>
+                                <th><span class="n">DATE</span><span class="m"><a href="#" class="sort-up" title="Ascend">Ascend</a><a href="#" class="sort-down" title="Descend">Descend</a></span></th>
+                                <th>
+                                    <span class="n">STATE</span><span class="s">
+                                        <a href="#" class="select-up grid_select-options" title="options">선택</a>
+                                        <div class="options grid_select-option" style="display: none">
+                                            <span class="tit">STATE</span>
+                                            <ul>
+                                                <li>
+                                                    <span class="checkbox-default sm">
+                                                        <input type="checkbox" id="c1" name="c1" checked /><label for="c1"><span></span>Seoul</label>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </span>
+                                </th>
                                 <th><span class="n">FUNCTION</span></th>
                             </tr>
                             </thead>

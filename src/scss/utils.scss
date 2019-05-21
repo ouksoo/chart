@@ -359,7 +359,7 @@ span.checkbox-default {
         display:none;
     }
     input[type="checkbox"] + label {
-        color:#f2f2f2;
+        color:#28313b;
         margin-bottom: 0;
     }
     input[type="checkbox"] + label span {
@@ -367,6 +367,7 @@ span.checkbox-default {
         width:18px;
         height:18px;
         vertical-align:middle;
+        margin-right: 6px;
         background:url('../img/icons/icon_checkbox_off.png') 0 0 no-repeat;
         @include prefix(background-size, 18px 18px, webkit ms);
         cursor:pointer;
@@ -401,7 +402,7 @@ span.radiobox-default {
         display:none;
     }
     input[type="radio"] + label {
-        color:#f2f2f2;
+        color:#28313b;
         font-family:Arial, sans-serif;
     }
     input[type="radio"] + label span {
@@ -409,6 +410,7 @@ span.radiobox-default {
         width:18px;
         height:18px;
         vertical-align:middle;
+        margin-right: 6px;
         background:url('../img/icons/icon_radio_off.png') 0 0 no-repeat;
         @include prefix(background-size, 18px 18px, webkit ms);
         cursor:pointer;
@@ -516,25 +518,108 @@ span.radiobox-default {
 */
 div.custom_table-grid {
     border-radius: 6px;
-    border: solid 1px #bccad7;
     background-color: #ffffff;
-    overflow: hidden;
+    border:solid #bccad7 1px;
+    border-radius:6px;
 
     table {
         width: 100%;
+        // border-collapse:separate;
 
         thead {
 
             th {
+                &:first-child {
+                    border-radius:6px 0 0 0;
+                }
+                &:last-child {
+                    border-radius:0 6px 0 0;
+                }
+
                 background-color: #e8eef4;
                 height: 69px;
                 text-align: center;
 
                 span.n {
+                    display: inline-block;
+                    vertical-align: middle;
                     font-family: $inter-b;
                     font-size: 14px;
                     letter-spacing: -0.3px;
                     color: #28313b;
+                }
+                span.m {
+                    display: inline-block;
+                    width: 10px; height: 16px;
+                    vertical-align: middle;
+                    margin-left: 5px;
+                    
+                    a {
+                        display: block;
+                        height: 8px;
+                        text-indent: -9999px;
+
+                        &.sort-up {
+                            background: url('../img/icons/icon_sort_up.png') 50% 50% no-repeat;
+                            @include prefix($bgs, 12px 12px, webkit ms);
+                        }
+                        &.sort-down {
+                            background: url('../img/icons/icon_sort_down.png') 50% 50% no-repeat;
+                            @include prefix($bgs, 12px 12px, webkit ms);
+                        }
+                    }
+                }
+                span.s {
+                    position: relative;
+                    display: inline-block;
+                    width: 10px; height: 16px;
+                    vertical-align: middle;
+                    margin-left: 5px;
+
+                    a {
+                        display: inline-block;
+                        width: 16px; height: 16px;
+                        text-indent: -9999px;
+
+                        &.select-up {
+                            background: url('../img/icons/icon_table_bugger.png') 50% 50% no-repeat;
+                            @include prefix($bgs, 16px 16px, webkit ms);
+                        }
+                    }
+                    div.options {
+                        position: absolute; 
+                        left: 50%; top: 50%;
+                        transform: translate(-70%, -50%);
+                        width: 135px;
+                        height: 170px;
+                        border-radius: 4px;
+                        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+                        border: solid 1px #bccad7;
+                        background-image: linear-gradient(to bottom, #ffffff, #f2f4f5);
+                        
+                        span.tit {
+                            display: block;
+                            padding: 8px 0 6px 0;
+                            font-size: 11px;
+                            font-family: $inter-b;
+                            color: #28313b; 
+                            text-align: center;
+                        }
+                        ul {
+                            width: 92%;
+                            height: 130px; 
+                            overflow-y: auto;
+                            margin: 0 auto;
+
+                            li {
+                                font-size: 14px;
+                                font-family: $inter-r;
+                                color: #28313b;
+                                text-align: left;
+                                padding: 2px 5px;
+                            }
+                        }
+                    }
                 }
             }
         }
