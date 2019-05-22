@@ -179,6 +179,19 @@ let PJT = {
             $('.device-inventory-wrap .inventory-search').addClass('on').focus();
         });
 
+        // device inventory filter clear all
+        $('.inventory-filter li span.clear-all').on('click', function() {
+            $('.inventory-filter li.add-filters').remove();
+        });
+
+        // device inventory navigation
+        $('.device-inventory-wrap .navigation a').on('click', function() {
+            $('.device-inventory-wrap .navigation a').each(function() {
+                $(this).removeClass('on');
+            })
+            $(this).addClass('on');
+        });
+
         // document click
         $(document).on('click', function() {
             $('.lnb-content_popup, .select-wrap div.options, .grid_select-option').fadeOut('fast');
@@ -244,7 +257,12 @@ let PJT = {
         $('.grid_select-option').on('click', function(e) {
             e.stopPropagation();
         });
-        
+    },
+    // device inventory add filter
+    deviceInventoryFilter: function() {
+        $('div.inventory-filter').slideDown();
+        let inner = '<li class="add-filters"><span class="cs-btn"><span>TYPE - Cloud Server</span> <a href="#" class="remove">remove</a></span></li>';
+        $('div.inventory-filter ul').prepend(inner);
     },
 
     /**

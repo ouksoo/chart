@@ -209,11 +209,11 @@
                     </nav>
                 </div>
 
-                <div class="inventory-filter clearfix">
+                <div class="inventory-filter clearfix" style="display: none">
                     <span class="tit">FILTER</span>
                     <div class="filter-list">
-                        <ul>
-                            <li></li>
+                        <ul class="clearfix">
+                            <li><span class="cs-btn clear-all">Clear All</span></li>
                         </ul>
                     </div>
                 </div>
@@ -243,7 +243,7 @@
                                             <ul>
                                                 <li>
                                                     <span class="checkbox-default sm">
-                                                        <input type="checkbox" id="c1" name="c1" checked /><label for="c1"><span></span>Seoul</label>
+                                                        <!-- test event --><input type="checkbox" id="c1" name="c1" checked  onclick="PJT.deviceInventoryFilter()" /><label for="c1"><span></span>Cloud Server</label>
                                                     </span>
                                                 </li>
                                             </ul>
@@ -277,7 +277,7 @@
                                             <ul>
                                                 <li>
                                                     <span class="checkbox-default sm">
-                                                        <input type="checkbox" id="c1" name="c1" checked /><label for="c1"><span></span>Seoul</label>
+                                                        <input type="checkbox" id="c1" name="c1" checked /><label for="c1"><span></span>Active</label>
                                                     </span>
                                                 </li>
                                             </ul>
