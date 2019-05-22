@@ -235,6 +235,184 @@
     }
 }
 
+/* add device list */
+div.full-popup-wrap {
+    position: absolute;
+    z-index:10;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    @include breakpointmax(max) {
+        width: 1600px !important;
+    }
+
+    div.film {
+        width: 100%; height: 100%;
+        opacity: 0.9;
+        background-color: #e8eef4;
+    }
+    div.inner {
+        position: absolute;
+        width: 100%; height: 100%;
+        top: 0; left: 0;
+        padding: 16px 20px 0 20px;
+
+        h2 {
+            width: 100%; height: 50px;
+            border-radius: 25px;
+            background-color: #9678ff;
+            text-align: center;
+            padding-top: 15px;
+            font-size: 16px; font-family: $inter-b; color: #fff;
+        }
+        a.close {
+            position: absolute;
+            top: 21px; right: 26px;
+            text-indent: -9999px;
+            width: 70px; height: 40px;
+            opacity: 0.4;
+            border-radius: 25px;
+            background: #f2f4f5 url('../img/icons/icon_calendar_x.png') 50% 50% no-repeat;
+            @include prefix($bgs, 24px 24px, webkit ms);
+        }
+        div.add-device-wrap {
+            width: 920px;
+            margin: 0 auto;
+
+            div.process {
+                text-align: center;
+                padding: 58px 0;
+
+                span.r {
+                    display: inline-block;
+                    width: 32px; height: 32px;
+                    border-radius: 50%;
+                    background: #97a4b1;
+                    text-align: center;
+                    vertical-align: middle;
+                    font-family: $inter-b;
+                    font-size: 16px;
+                    letter-spacing: -1px;
+                    color: #ffffff;
+                    padding-top: 4px;
+
+                    &.on {
+                        background: #9678ff;
+                    }
+                }
+                span.f {
+                    font-family: $inter-m;
+                    font-size: 24px;
+                    letter-spacing: -0.5px;
+                    color: #97a4b1;
+                    vertical-align: middle;
+                    margin-left: 10px;
+
+                    &.on {
+                        color: #28313b
+                    }
+                }
+                span.line {
+                    display: inline-block;
+                    width: 50px;
+                    border-bottom: 1px solid #28313b;
+                    vertical-align: middle;
+                    margin: 0 25px;
+                }
+            }
+            div.select-adding {
+                width: 920px;
+                padding: 24px 24px 34px 24px;
+                border-radius: 8px;
+                border: solid 1px rgba(0, 0, 0, 0.1);
+                background-color: #ffffff;
+
+                p.para {
+                    font-size: 16px;
+                    color: #28313b;
+                    padding-bottom: 22px;
+                }
+                div.inner-box {
+
+                    div.options {
+                        float: left;
+                        width: 250px;
+                        margin-right: 60px;
+
+                        &:nth-child(3n) {
+                            margin-right: 0;
+                        }
+                        span.tit {
+                            display: block;
+                            font-size: 13px;
+                            font-family: $inter-m;
+                            color: #28313b;
+                            padding-bottom: 2px;
+                            border-bottom: 2px solid #28313b;
+                        }
+                        ul {
+
+                            li {
+                                border-bottom: 1px solid #bccad7;
+                                padding: 10px 5px;
+                                
+                                span.f {
+                                    float: left;
+                                    font-size: 16px;
+                                    color: #28313b;
+
+                                    span.box {
+                                        display: inline-block;
+                                        width: 18px; height: 18px;
+                                        margin-right: 7px;
+                                        vertical-align: middle;
+    
+                                        &.disk {
+                                            background: url('../img/icons/icon_server.png') 50% 50% no-repeat;
+                                            @include prefix(background-size, 18px 18px, webkit ms);
+                                        }
+                                        &.cloud {
+                                            background: url('../img/icons/icon_cloud.png') 50% 50% no-repeat;
+                                            @include prefix(background-size, 18px 18px, webkit ms);
+                                        }
+                                        &.copy {
+                                            background: url('../img/icons/icon_copy.png') 50% 50% no-repeat;
+                                            @include prefix(background-size, 18px 18px, webkit ms);
+                                        }
+                                        &.switch {
+                                            background: url('../img/icons/icon_switch.png') 50% 50% no-repeat;
+                                            @include prefix(background-size, 18px 18px, webkit ms);
+                                        }
+                                        &.router {
+                                            background: url('../img/icons/icon_router.png') 50% 50% no-repeat;
+                                            @include prefix(background-size, 18px 18px, webkit ms);
+                                        }
+                                        &.bridge {
+                                            background: url('../img/icons/icon_bridge.png') 50% 50% no-repeat;
+                                            @include prefix(background-size, 18px 18px, webkit ms);
+                                        }
+                                        &.storage {
+                                            background: url('../img/icons/icon_cube.png') 50% 50% no-repeat;
+                                            @include prefix(background-size, 18px 18px, webkit ms);
+                                        }
+                                        &.application {
+                                            background: url('../img/icons/icon_app.png') 50% 50% no-repeat;
+                                            @include prefix(background-size, 18px 18px, webkit ms);
+                                        }
+                                    }
+                                }
+                                span.radiobox-default {
+                                    float: right;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* calenda popup date */
 div.calendar-popup-date {
     position: absolute;
