@@ -169,7 +169,47 @@ ul {
 
 
 <h2>TABLE</h2>
-
+<div class="cnt">
+    <!-- grid table -->
+    <div class="custom_table-grid">
+        <table class="notable">
+            <cologroup>
+                <col width="*" />
+                <col width="*" />
+                <col width="*" />
+            </cologroup>
+            <thead>
+            <tr>
+                <th><span class="n">THEAD</span><span class="m"><a href="#" class="sort-up" title="Ascend">Ascend</a><a href="#" class="sort-down" title="Descend">Descend</a></span></th>
+                <th>
+                    <span class="n">THEAD</span><span class="s">
+                        <a href="#" class="select-up grid_select-options" title="options">선택</a>
+                        <div class="options grid_select-option" style="display: none">
+                            <span class="tit">TYPE</span>
+                            <ul>
+                                <li>
+                                    <span class="checkbox-default sm">
+                                        <!-- test event --><input type="checkbox" id="c1" name="c1" checked  onclick="PJT.deviceInventoryFilter()" /><label for="c1"><span></span>Cloud Server</label>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </span>
+                </th>
+                <th><span class="n">THEAD</span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>TBODY</td>
+                <td>TBODY</td>
+                <td>TBODY</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //grid table -->
+</div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

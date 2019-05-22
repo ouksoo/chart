@@ -2794,9 +2794,9 @@ div.calendar-popup-date div.inner div.select-wrap div.select-area table td.dates
   background-color: #e8eef4;
   text-align: right;
   overflow: hidden;
-  -webkit-transition: width 0.5s ease-in-out;
-  -ms-transition: width 0.5s ease-in-out;
-  transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+  -ms-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
 .device-inventory-wrap div.head div.search div.search-input.on {
@@ -2812,9 +2812,9 @@ div.calendar-popup-date div.inner div.select-wrap div.select-area table td.dates
   background: transparent;
   font-size: 16px;
   color: #28313b;
-  -webkit-transition: width 0.5s ease-in-out;
-  -ms-transition: width 0.5s ease-in-out;
-  transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+  -ms-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
 .device-inventory-wrap div.head div.search div.search-input input.inventory-search::placeholder {

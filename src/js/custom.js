@@ -253,6 +253,7 @@ let PJT = {
             $('.grid_select-option').fadeOut();            
             $(this).next().fadeIn();
             e.stopPropagation();
+            return false;
         });
         $('.grid_select-option').on('click', function(e) {
             e.stopPropagation();
