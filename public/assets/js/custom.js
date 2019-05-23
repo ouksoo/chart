@@ -162,7 +162,9 @@ var PJT = {
         });
 
         // device list
-        $('.device-wrap a.device-add').on('click', function () {});
+        $('.device-wrap a.device-add').on('click', function () {
+            $('#addDeviceList').fadeIn('fast');
+        });
         $('.device-wrap a.device-remove').on('click', function () {
             $('.device-wrap div.device-inner').addClass('on');
         });
@@ -184,6 +186,11 @@ var PJT = {
                 $(this).removeClass('on');
             });
             $(this).addClass('on');
+        });
+
+        // default full popup close
+        $('.default_full-popup a.close').on('click', function () {
+            $('.default_full-popup').fadeOut('fast');
         });
 
         // document click
@@ -264,12 +271,14 @@ var PJT = {
         var winHeight = $(window).height();
         $('.content-wrap').css('width', winWidth - 375);
         $('.device-list').css('height', winHeight - 169);
+        $('div.full-popup-wrap div.inner h2').css('width', winWidth - 40);
 
         $(window).on('resize', function () {
             var winWidth = $(window).width();
             var winHeight = $(window).height();
             var realSize = winWidth - 375;
             $('.content-wrap').css('width', realSize);
+            $('div.full-popup-wrap div.inner h2').css('width', winWidth - 40);
 
             if (!PJT.state.filter) {
                 // is filter open

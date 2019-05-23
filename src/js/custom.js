@@ -167,7 +167,7 @@ let PJT = {
 
         // device list
         $('.device-wrap a.device-add').on('click', function() {
-
+            $('#addDeviceList').fadeIn('fast');
         });
         $('.device-wrap a.device-remove').on('click', function() {
             $('.device-wrap div.device-inner').addClass('on');
@@ -190,6 +190,11 @@ let PJT = {
                 $(this).removeClass('on');
             })
             $(this).addClass('on');
+        });
+
+        // default full popup close
+        $('.default_full-popup a.close').on('click', function() {
+            $('.default_full-popup').fadeOut('fast');
         });
 
         // document click
@@ -274,12 +279,14 @@ let PJT = {
         let winHeight = $(window).height();
         $('.content-wrap').css('width', winWidth-375);
         $('.device-list').css('height', winHeight-169);
+        $('div.full-popup-wrap div.inner h2').css('width', winWidth-40);
 
         $(window).on('resize', function() {
             let winWidth = $(window).width();
             let winHeight = $(window).height();
             let realSize = winWidth - 375;
             $('.content-wrap').css('width', realSize);
+            $('div.full-popup-wrap div.inner h2').css('width', winWidth-40);
 
             if(!PJT.state.filter) { // is filter open
                 $('.device-list').css('height', winHeight-169);

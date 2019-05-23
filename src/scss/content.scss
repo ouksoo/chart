@@ -255,18 +255,23 @@ div.full-popup-wrap {
         position: absolute;
         width: 100%; height: 100%;
         top: 0; left: 0;
-        padding: 16px 20px 0 20px;
+        padding: 66px 20px 0 20px;
+        overflow-y: auto;
 
         h2 {
-            width: 100%; height: 50px;
+            position: fixed;
+            z-index: 3;
+            height: 50px;
             border-radius: 25px;
             background-color: #9678ff;
             text-align: center;
+            left: 20px; top: 16px;
             padding-top: 15px;
             font-size: 16px; font-family: $inter-b; color: #fff;
         }
         a.close {
-            position: absolute;
+            position: fixed;
+            z-index: 4;
             top: 21px; right: 26px;
             text-indent: -9999px;
             width: 70px; height: 40px;
@@ -427,6 +432,14 @@ div.full-popup-wrap {
                     div.s {
                         float: right;
                         width: 48%;
+                    }
+                    span.radio {
+                        float: left;
+                        padding-bottom: 7px;
+                        font-family: $inter-m;
+                        font-size: 13px;
+                        color: #28313b;
+                        margin-top: 6px;
                     }
                 }
                 div.inner-box-left {

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title></title>
+<meta name=”viewport” content=”width=device-width, initial-scale=1.0" />
+<meta name="description" content="">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<link href="assets/css/common.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+
+
+
+<!-- add device list -->
+<div id="addDeviceList" class="full-popup-wrap default_full-popup" style="display: none">
+    <div class="film"></div>
+    <div class="inner">
+        <h2>ADD A DEVICE</h2>
+        <a href="#" class="close">close</a>
+        <!-- step 1-->
+        <div class="add-device-wrap">
+            <div class="process">
+                <span class="r on">01</span>
+                <span class="f on">Device Type</span>
+                <span class="line"></span>
+                <span class="r">02</span>
+                <span class="f">Basic Information</span>
+                <span class="line"></span>
+                <span class="r">03</span>
+                <span class="f">Device Details</span>
+            </div>
+            <div class="select-adding">
+                <p class="para">Select a adding device type of below list</p>
+                <div class="inner-box clearfix">
+                    <div class="options">
+                        <span class="tit">Server</span>
+                        <ul>
+                            <li class="clearfix">
+                                <span class="f"><span class="box disk"></span> Physical Server</span>
+                                <span class="radiobox-default sm">
+                                    <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                </span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="f"><span class="box copy"></span> Virtual Server</span>
+                                <span class="radiobox-default sm">
+                                    <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                </span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="f"><span class="box cloud"></span> Cloud Server</span>
+                                <span class="radiobox-default sm">
+                                    <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="options">
+                        <span class="tit">Network</span>
+                        <ul>
+                            <li class="clearfix">
+                                <span class="f"><span class="box switch"></span> Switch</span>
+                                <span class="radiobox-default sm">
+                                    <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                </span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="f"><span class="box router"></span> Router</span>
+                                <span class="radiobox-default sm">
+                                    <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                </span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="f"><span class="box bridge"></span> Bridge</span>
+                                <span class="radiobox-default sm">
+                                    <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="options">
+                        <span class="tit">Etc.</span>
+                        <ul>
+                            <li class="clearfix">
+                                <span class="f"><span class="box storage"></span> Storage</span>
+                                <span class="radiobox-default sm">
+                                    <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                </span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="f"><span class="box application"></span> Application</span>
+                                <span class="radiobox-default sm">
+                                    <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-center">
+                <a href="#" class="cs-btn purple">CANCEL</a><a href="#" class="cs-btn purple">NEXT</a>
+            </div>
+        </div>
+        <!-- //step 1-->
+
+        <!-- step 2-->
+        <div class="add-device-wrap" style="display: none">
+            <div class="process">
+                <span class="r">01</span>
+                <span class="f">Device Type</span>
+                <span class="line"></span>
+                <span class="r on">02</span>
+                <span class="f on">Basic Information</span>
+                <span class="line"></span>
+                <span class="r">03</span>
+                <span class="f">Device Details</span>
+            </div>
+            <div class="select-adding clearfix nopd">
+                <div class="inner-box-left">    
+                    <p class="para">Fill out below fields<br />for basic infromation of device</p>
+                    <div class="form-comp">
+                        <span class="tit">Device Name</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Description of Device</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Description" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Organization</span>
+                        <div class="select-wrap" style="width: 100%">
+                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                            <div class="options">
+                                <ul>
+                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                    <li><a href="#" data-value="2">North Eviemouth</a></li>
+                                    <li><a href="#" data-value="3">Robeltown</a></li>
+                                    <li><a href="#" data-value="4">Framiville</a></li>
+                                    <li><a href="#" data-value="5">South Virgil</a></li>
+                                    <li><a href="#" data-value="6">Robeltown</a></li>
+                                    <li><a href="#" data-value="7">Framiville</a></li>
+                                    <li><a href="#" data-value="8">South Virgil</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Biz.</span>
+                        <div class="select-wrap" style="width: 100%">
+                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                            <div class="options">
+                                <ul>
+                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Service</span>
+                        <div class="select-wrap" style="width: 100%">
+                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                            <div class="options">
+                                <ul>
+                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Datasource</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Data source" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Create Time</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="YYYY/MM/DD" />
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <span class="tit">Update Time</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                        </div>
+                        <div class="s">
+                            <span class="tit">Delete Time</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                        </div>
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <span class="tit">Status</span>
+                            <div class="select-wrap" style="width: 100%">
+                                <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                <div class="options">
+                                    <ul>
+                                        <li><a href="#" data-value="1">New Nadia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s">
+                            <span class="tit">Usage</span>
+                            <div class="select-wrap" style="width: 100%">
+                                <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                <div class="options">
+                                    <ul>
+                                        <li><a href="#" data-value="1">New Nadia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Location</span>
+                        <div class="select-wrap" style="width: 100%">
+                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                            <div class="options">
+                                <ul>
+                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <div class="inner-float">
+                                <span class="radio">Inventory - On / Off</span>
+                                <span class="radio-wrap floatr">
+                                    <label class="checkbox-switch">
+                                        <input type="checkbox" />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-box-right" style="padding-top: 84px">
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <span class="tit">Owner (M)</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                        </div>
+                        <div class="s">
+                            <span class="tit">Owner (S)</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                        </div>
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Owner Group</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Group Name" />
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <span class="tit">Manager (M)</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                        </div>
+                        <div class="s">
+                            <span class="tit">Manager (S)</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                        </div>
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <span class="tit">Operator (M)</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                        </div>
+                        <div class="s">
+                            <span class="tit">Operator (S)</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                        </div>
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <span class="tit">Service Manager (M)</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                        </div>
+                        <div class="s">
+                            <span class="tit">Service Manager (S)</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                        </div>
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <span class="tit">Maint. Manager (M)</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                        </div>
+                        <div class="s">
+                            <span class="tit">Maint. Manager (S)</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                        </div>
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Update User</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Group Name" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Description</span>
+                        <textarea class="formdata" style="width: 100%;" placeholder="Type Description About This Device"></textarea>
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Comment</span>
+                        <textarea class="formdata" style="width: 100%;" placeholder="Type Comment"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-center">
+                <a href="#" class="cs-btn purple">CANCEL</a><a href="#" class="cs-btn purple">PREV</a><a href="#" class="cs-btn purple">NEXT</a>
+            </div>
+        </div>
+        <!-- //step 2-->
+
+        <!-- step 3-->
+        <div class="add-device-wrap" style="display: none">
+            <div class="process">
+                <span class="r">01</span>
+                <span class="f">Device Type</span>
+                <span class="line"></span>
+                <span class="r">02</span>
+                <span class="f">Basic Information</span>
+                <span class="line"></span>
+                <span class="r on">03</span>
+                <span class="f on">Device Details</span>
+            </div>
+            <div class="select-adding clearfix nopd">
+                <div class="inner-box-left">    
+                    <p class="para">Fill out below fields<br />for basic infromation of device</p>
+                    <div class="form-comp">
+                        <span class="tit">Serial No.</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Serial Number" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Manufacturer</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Manufacturer" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Model</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Model Name" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Hostname</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Host Name" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Hostname Alias</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Alias" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">DNS Name</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="DNS" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">IP Address (V4)</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="255.255.255.255" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">IP Address (V6)</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="2001:02030:abcd" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">MAC Address</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="MAC Address" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">MAC Address</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="MAC Address" />
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <span class="tit">OS</span>
+                            <div class="select-wrap" style="width: 100%">
+                                <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                <div class="options">
+                                    <ul>
+                                        <li><a href="#" data-value="1">New Nadia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s">
+                            <span class="tit">OS Version</span>
+                            <div class="select-wrap" style="width: 100%">
+                                <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                <div class="options">
+                                    <ul>
+                                        <li><a href="#" data-value="1">New Nadia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">OS Detail</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Group Name" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">OS Description</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Type Description" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Firmware Version</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Version" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Network Interface Info.</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Interface Info." />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Network Interface Num.</span>
+                        <div class="select-wrap" style="width: 100%">
+                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                            <div class="options">
+                                <ul>
+                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner-box-right" style="padding-top: 84px">
+                    <div class="form-comp">
+                        <span class="tit">CPU Type</span>
+                        <div class="select-wrap" style="width: 100%">
+                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                            <div class="options">
+                                <ul>
+                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">CPU Speed</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Speed" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">CPU Description</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Description" />
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <span class="tit">Thread Type</span>
+                            <div class="select-wrap" style="width: 100%">
+                                <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                <div class="options">
+                                    <ul>
+                                        <li><a href="#" data-value="1">New Nadia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s">
+                            <span class="tit">Processor Num.</span>
+                            <div class="select-wrap" style="width: 100%">
+                                <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                <div class="options">
+                                    <ul>
+                                        <li><a href="#" data-value="1">New Nadia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <div class="inner-float">
+                                <span class="radio">Hyperthreading</span>
+                                <span class="radio-wrap floatr">
+                                    <label class="checkbox-switch">
+                                        <input type="checkbox" />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Cores per CPU</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Number of Cores" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Total Cores</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Number of Cores" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Total Logical Processor Num.</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Number of Cores" />
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <span class="tit">Memory Type</span>
+                            <div class="select-wrap" style="width: 100%">
+                                <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                <div class="options">
+                                    <ul>
+                                        <li><a href="#" data-value="1">New Nadia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s">
+                            <span class="tit">Memory Num.</span>
+                            <div class="select-wrap" style="width: 100%">
+                                <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                <div class="options">
+                                    <ul>
+                                        <li><a href="#" data-value="1">New Nadia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <span class="tit">Total Memory (GB)</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="GB" />
+                        </div>
+                        <div class="s">
+                            <span class="tit">Total Swap (GB)</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="GB" />
+                        </div>
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Internal Disk Info.</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Disk Info." />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Internal Disk Num.</span>
+                        <div class="select-wrap" style="width: 100%">
+                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                            <div class="options">
+                                <ul>
+                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Total Internal Disk (GB)</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="GB" />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">External Storage Info.</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Storage Info." />
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">External Storage Num.</span>
+                        <div class="select-wrap" style="width: 100%">
+                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                            <div class="options">
+                                <ul>
+                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-comp">
+                        <span class="tit">Total External Storage (GB)</span>
+                        <input type="text" class="formdata" style="width: 100%;" placeholder="Storage Info." />
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <div class="inner-float">
+                                <span class="radio">DR</span>
+                                <span class="radio-wrap floatr">
+                                    <label class="checkbox-switch">
+                                        <input type="checkbox" />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="s">
+                            <div class="inner-float">
+                                <span class="radio">HA</span>
+                                <span class="radio-wrap floatr">
+                                    <label class="checkbox-switch">
+                                        <input type="checkbox" />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-comp clearfix">
+                        <div class="f">
+                            <div class="inner-float">
+                                <span class="radio">Manage</span>
+                                <span class="radio-wrap floatr">
+                                    <label class="checkbox-switch">
+                                        <input type="checkbox" />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="s">
+                            <div class="inner-float">
+                                <span class="radio">Delete</span>
+                                <span class="radio-wrap floatr">
+                                    <label class="checkbox-switch">
+                                        <input type="checkbox" />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-center">
+                <a href="#" class="cs-btn purple">CANCEL</a><a href="#" class="cs-btn purple">PREV</a><a href="#" class="cs-btn purple">SAVE</a>
+            </div>
+        </div>
+        <!-- //step 3-->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>
