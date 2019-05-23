@@ -331,6 +331,7 @@ div.full-popup-wrap {
                     font-size: 16px;
                     color: #28313b;
                     padding-bottom: 22px;
+                    line-height: 20px;
                 }
                 div.inner-box {
 
@@ -407,6 +408,37 @@ div.full-popup-wrap {
                             }
                         }
                     }
+                }
+
+                div.form-comp {
+                    padding-top: 20px;
+                    
+                    span.tit {
+                        display: block;
+                        padding-bottom: 7px;
+                        font-family: $inter-m;
+                        font-size: 13px;
+                        color: #28313b;
+                    }
+                    div.f {
+                        float: left;
+                        width: 48%;
+                    }
+                    div.s {
+                        float: right;
+                        width: 48%;
+                    }
+                }
+                div.inner-box-left {
+                    float: left;
+                    width: 50%;
+                    border-right: 1px solid rgba(0, 0, 0, 0.1);
+                    padding: 24px 24px 34px 24px;
+                }
+                div.inner-box-right {
+                    float: right;
+                    width: 50%;
+                    padding: 24px 24px 34px 24px;
                 }
             }
         }
