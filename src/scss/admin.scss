@@ -1,0 +1,129 @@
+/********************** 
+* admin
+***********************/
+div.episode_admin-wrap {
+
+    div.admin-lnb {
+        position: fixed;
+        width: 250px; height: 100%;
+        padding-left: 47px;
+        
+        h1 {
+            margin: 75px 0;
+            width: 75px; height: 50px;
+            background: url('../img/admin/admin_logo.png') 0 50% no-repeat;
+            @include prefix($bgs, 75px 50px, webkit ms);
+            text-indent: -9999px;
+        }
+        ul.navigation {
+
+            li {
+
+                a {
+                    font-size: 16px;
+                    color: #97a4b1;
+                    line-height: 33px;
+                }
+            }
+        }
+        div.submenus {
+            padding-top: 33px;
+
+            & > a {
+                display: inline-block;
+                color: #28313b;
+                font-family: $inter-b;
+                font-size: 13px;
+                line-height: 33px;
+                padding-right: 26px;
+                background: url('../img/admin/icon_menu_down.png') 100% 50% no-repeat;
+                @include prefix($bgs, 18px 18px, webkit ms);
+            }
+            div.sub {
+
+                a {
+                    display: block;
+                    font-size: 16px;
+                    color: #97a4b1;
+                    line-height: 33px;
+                }
+            }
+        }
+    }
+
+    div.admin-content {
+        padding: 0px 110px 0 400px;
+
+        h2 {
+            padding: 84px 0 72px 0;
+            font-family: $inter-b;
+            font-size: 42px;
+            color: #28313b;
+            line-height: 32px;
+        }
+        p.paragraph {
+            line-height: 26px;
+            font-size: 16px;
+            color: #28313b;
+        }
+        div.basic-image {
+            padding: 60px 0;
+        }
+        div.col-two-wrap {
+
+            div.one {
+                float: left;
+                width: 47%;
+
+            }
+            div.two {
+                float: left;
+                width: 47%;
+                margin-left: 6%;
+            }
+        }
+        div.col-three-wrap {
+
+            div.one {
+                float: left;
+                width: 32%;
+
+            }
+            div.two {
+                float: left;
+                width: 32%;
+                margin-left: 2%;
+                margin-right: 2%;
+            }
+            div.three {
+                float: left;
+                width: 32%;
+            }
+        }
+        h3.tit {
+            height: 32px;
+            margin-bottom: 18px;
+            font-family: $inter-b;
+            font-size: 28px;
+            color: #28313b;
+        }
+        span.thumb-span-text {
+            display: block;
+            font-size: 16px;
+            color: #28313b;
+            line-height: 26px;
+            padding-top: 15px;
+        }
+        div.search-options {
+
+            div.f {
+                float: left;
+                width: 60%;
+            }
+            div.s {
+                float: right;
+                width: 40%;
+            }
+        }
+    }
+}

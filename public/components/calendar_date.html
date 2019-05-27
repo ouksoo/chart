@@ -178,5 +178,39 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="assets/js/custom.js"></script>
+<script>
+var test = {
+    // calendar popup date
+    calendarPopupDate: function() {
+        $('.select-area a').on('click', function(e) {
+            let optionValues = [];
+            let thisOption = $(this).data();
+            $(this).siblings().removeClass('on');
+            $(this).addClass('on');
+
+            for (var key in thisOption) {
+                optionValues.push([key, thisOption[key]]);
+            }
+            const opt = optionValues[0][0];
+            const optv = optionValues[0][1];
+            if(opt === 'year') {
+                $('div.selected-date p.date > span.year').text(optv);
+            }
+            else if(opt === 'month') {
+                $('div.selected-date p.date > span.month').text(optv);
+            }
+            else if(opt === 'date') {
+                $('div.selected-date p.date > span.date').text(optv);
+            }
+            else if(opt === 'hour') {
+                $('div.selected-date p.time > span.hour').text(optv);
+            }
+            else if(opt === 'minute') {
+                $('div.selected-date p.time > span.minute').text(optv);
+            }
+        });
+    },
+}
+</script>
 </body>
 </html>
