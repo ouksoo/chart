@@ -1,0 +1,146 @@
+<!-- device inventory list -->
+<div class="device-inventory-wrap" style="display: none">
+    <div class="head">
+        <p class="title">Device Inventory</p>
+        <p class="middle">All Devices are<span>1480</span>in the inventory</p>
+        <div class="search clearfix">
+            <a href="#" class="cs-btn purple floatr">ADD DEVICE </a>
+            <div class="search-input">
+                <input type="text" class="inventory-search" placeholder="Search Device" />
+                <a href="#" class="search" onclick="INVENTORY.inventorySearch()">search</a>
+            </div>
+        </div>
+    </div>
+    <div class="navigation">
+        <nav>
+            <a href="#" class="v on">All Devices</a>
+            <a href="#">Physical Server</a>
+            <a href="#">Virtual Server</a>
+            <a href="#" class="v">Cloud Server</a>
+            <a href="#">Router</a>
+            <a href="#">Switch</a>
+            <a href="#">Bridge</a>
+            <a href="#">Storage</a>
+            <a href="#">Application</a>
+        </nav>
+    </div>
+
+    <div class="inventory-filter clearfix" style="display: none">
+        <span class="tit">FILTER</span>
+        <div class="filter-list">
+            <ul class="clearfix">
+                <li><span class="cs-btn clear-all" onclick="INVENTORY.inventoryFilterClear()">Clear All</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="inventory-table-wrap">
+        <!-- grid table -->
+        <div class="custom_table-grid">
+            <table class="notable">
+                <cologroup>
+                    <col width="70" />
+                    <col width="120" />
+                    <col width="180" />
+                    <col width="110" />
+                    <col width="150" />
+                    <col width="270" />
+                    <col width="100" />
+                    <col width="100" />
+                    <col width="*" />
+                </cologroup>
+                <thead>
+                <tr>
+                    <th><span class="n">No.</span><span class="m"><a href="#" class="sort-up" title="Ascend">Ascend</a><a href="#" class="sort-down" title="Descend">Descend</a></span></th>
+                    <th>
+                        <span class="n">TYPE</span><span class="s">
+                            <a href="#" class="select-up grid_select-options" title="options">선택</a>
+                            <div class="options grid_select-option" style="display: none">
+                                <span class="tit">TYPE</span>
+                                <ul>
+                                    <li>
+                                        <span class="checkbox-default sm">
+                                            <!-- test event --><input type="checkbox" id="c1" name="c1" checked  onclick="INVENTORY.deviceInventoryFilter()" /><label for="c1"><span></span>Cloud Server</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+                    </th>
+                    <th><span class="n">NAME</span><span class="m"><a href="#" class="sort-up" title="Ascend">Ascend</a><a href="#" class="sort-down" title="Descend">Descend</a></span></th>
+                    <th><span class="n">ID</span></th>
+                    <th>
+                        <span class="n">LOCATION</span><span class="s">
+                            <a href="#" class="select-up grid_select-options" title="options">선택</a>
+                            <div class="options grid_select-option" style="display: none">
+                                <span class="tit">LOCATION</span>
+                                <ul>
+                                    <li>
+                                        <span class="checkbox-default sm">
+                                            <input type="checkbox" id="c1" name="c1" checked /><label for="c1"><span></span>Seoul</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+                    </th>
+                    <th><span class="n">DESCRIPTION</span></th>
+                    <th><span class="n">DATE</span><span class="m"><a href="#" class="sort-up" title="Ascend">Ascend</a><a href="#" class="sort-down" title="Descend">Descend</a></span></th>
+                    <th>
+                        <span class="n">STATE</span><span class="s">
+                            <a href="#" class="select-up grid_select-options" title="options">선택</a>
+                            <div class="options grid_select-option" style="display: none">
+                                <span class="tit">STATE</span>
+                                <ul>
+                                    <li>
+                                        <span class="checkbox-default sm">
+                                            <input type="checkbox" id="c1" name="c1" checked /><label for="c1"><span></span>Active</label>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+                    </th>
+                    <th><span class="n">FUNCTION</span></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>129</td>
+                    <td>Cloud Server</td>
+                    <td>Compatible Inkjet Cartridge</td>
+                    <td>654-9596-778</td>
+                    <td>Seoul</td>
+                    <td>Advertizing/Marketing Plan</td>
+                    <td>2019/05/22</td>
+                    <td>Active</td>
+                    <td>
+                        <a href="#" class="info">information</a><a href="#" class="edit">edit</a><a href="#" class="delete">delete</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //grid table -->
+    </div>
+</div>
+<!-- //device inventory list -->
+
+
+
+<script>
+let INVENTORY = {
+    inventorySearch: function() {
+        $('.device-inventory-wrap .search-input').addClass('on');
+        $('.device-inventory-wrap .inventory-search').addClass('on').focus();
+    },
+    inventoryFilterClear: function() {
+        $('.inventory-filter li.add-filters').remove();
+    },
+    // device inventory add filter
+    deviceInventoryFilter: function() {
+        $('div.inventory-filter').slideDown();
+        let inner = '<li class="add-filters"><span class="cs-btn"><span>TYPE - Cloud Server</span> <a href="#" class="remove">remove</a></span></li>';
+        $('div.inventory-filter ul').prepend(inner);
+    },
+}
+</script>

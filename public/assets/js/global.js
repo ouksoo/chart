@@ -5,13 +5,12 @@ var GLOBAL = {
         filter: false
     },
     utilsAliveLinks: function utilsAliveLinks() {
-
         // default full popup close
         $('.default_full-popup a.close').on('click', function () {
             $('.default_full-popup').fadeOut('fast');
         });
 
-        // document click
+        // 바탕화면 클릭 시, 열려있는 팝업등에 대한 닫기 처리
         $(document).on('click', function () {
             $('.lnb-content_popup, .select-wrap div.options, .grid_select-option').fadeOut('fast');
             $('.device-list div.device-inner').removeClass('on');
@@ -20,7 +19,8 @@ var GLOBAL = {
             e.stopPropagation();
         });
     },
-    // selectBox option show
+
+    // selectBox option show (셀렉트 박스가 변경된다면 필요 없음)
     selectOptionsForm: function selectOptionsForm() {
         $('.select_data-options').on('click', function (e) {
             $(this).next().fadeIn(function () {

@@ -16,9 +16,9 @@
 <div id="app" class="wrapper">
     <!-- header -->
     <header class="clearfix">
-        <a href="#" class="monitor header-monitor">Monitoring Graph</a>
+        <a href="#" class="monitor header-monitor" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">Monitoring Graph</a>
 
-        <div class="product-btn clearfix">
+        <div class="product-btn clearfix" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">
             <span class="refresh"></span>
             <div class="texts">
                 <p class="f">Ticket.Force</p>
@@ -32,14 +32,14 @@
             <ul class="clearfix">
                 <li><a href="#" class="a" v-b-modal.modalTempSearch>search</a></li>
                 <li><a href="#" class="b"></a></li>
-                <li><a href="#" class="c notice-show-hide">notice<span class="alram-round"></span></a></li>
+                <li><a href="#" class="c notice-show-hide">notice<span class="alram-round" onmouseover="PJT.headerNoticeShow();" onmouseout="PJT.headerNoticeHide()"></span></a></li>
                 <li><a href="#" class="d">control</a></li>
-                <li><a href="#" class="profile-show-hide"><img src="assets/img/temp/picture.png" width="100%" /></a></li>
+                <li><a href="#" class="profile-show-hide" onmouseover="PJT.headerProfileShow();" onmouseout="PJT.headerProfileHide()"><img src="assets/img/temp/picture.png" width="100%" /></a></li>
             </ul>
         </div>
 
         <!--user information-->
-        <div class="personal-list-wrap" style="display: none">
+        <div class="personal-list-wrap" style="display: none" onmouseover="PJT.headerProfileShow();" onmouseout="PJT.headerProfileHide()">
             <div class="personal-information">
                 <span class="f">@brianpark</span>
                 <ul>
@@ -52,7 +52,7 @@
         </div>
 
         <!--notification list-->
-        <div class="notice-list-wrap" style="display: none">
+        <div class="notice-list-wrap" style="display: none" onmouseover="PJT.headerNoticeShow();" onmouseout="PJT.headerNoticeHide()">
             <div class="notice-list">
                 <div class="f clearfix">
                     <span>NOTIFICATION</span>
@@ -122,14 +122,14 @@
         <!--left navigation bar-->
         <div class="lnb-wrap">
             <ul class="lnb-nav clearfix">
-                <li data-name="Monitoring"><a href="#" class="on">monitoring</a></li>
-                <li data-name="Event"><a href="#">event</a></li>
-                <li data-name="Report"><a href="#">report</a></li>
-                <li data-name="Calendar"><a href="#" class="lnb-calendar">calendar</a></li>
-                <li data-name="Create a report"><a href="#" class="lnb-createreport">create a report</a></li>
-                <li data-name="Snapshot"><a href="#" class="lnb-snapshot">snapshot</a></li>
-                <li data-name="Add charts"><a href="#" class="lnb-addcharts">add charts</a></li>
-                <li data-name="Information"><a href="#">information</a></li>
+                <li data-name="Monitoring" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="on">monitoring</a></li>
+                <li data-name="Event" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#">event</a></li>
+                <li data-name="Report" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#">report</a></li>
+                <li data-name="Calendar" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-calendar" onclick="PJT.lnbCalendarShow()">calendar</a></li>
+                <li data-name="Create a report" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-createreport" onclick="PJT.lnbCreateReportShow()">create a report</a></li>
+                <li data-name="Snapshot" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-snapshot" onclick="PJT.lnbSnapShot()">snapshot</a></li>
+                <li data-name="Add charts" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-addcharts" onclick="PJT.lnbAddChart()">add charts</a></li>
+                <li data-name="Information" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#">information</a></li>
             </ul>
         </div>
 
@@ -156,13 +156,13 @@
                             press that Sony has, Sony is known for making the best 'small' laptops. 
                         </p> 
                         <div class="form-wrap">
-                            <input type="text" id="userId" class="form-nude" placeholder="ID" />
-                            <input type="password" id="passWd" class="form-nude" placeholder="Password" />
+                            <input type="text" id="userId" class="form-nude" placeholder="ID" onkeyUp="PJT.loginKeyCheck()" />
+                            <input type="password" id="passWd" class="form-nude" placeholder="Password" onkeyUp="PJT.loginKeyCheck()" />
                         </div>
-                        <a href="#" class="login-button">LOGIN</a>
+                        <a href="#" class="login-button" onclick="PJT.loginButtonSubmit()">LOGIN</a>
                     </div>
                     <div class="intro-bg">
-                        <div id="sequenceArea" class="intro-image">
+                        <div id="sequenceArea" class="intro-image" onclick="PJT.skipIntroAnimation()">
                             <video width="540" height="181" autoplay id="playintro">
                                 <source src="assets/img/login/intro.mp4" type="video/mp4">
                                 <source src="assets/img/login/intro.ogg" type="video/ogg">
@@ -191,7 +191,7 @@
                         <a href="#" class="cs-btn purple floatr">ADD DEVICE </a>
                         <div class="search-input">
                             <input type="text" class="inventory-search" placeholder="Search Device" />
-                            <a href="#" class="search">search</a>
+                            <a href="#" class="search" onclick="PJT.inventorySearch()">search</a>
                         </div>
                     </div>
                 </div>
@@ -213,7 +213,7 @@
                     <span class="tit">FILTER</span>
                     <div class="filter-list">
                         <ul class="clearfix">
-                            <li><span class="cs-btn clear-all">Clear All</span></li>
+                            <li><span class="cs-btn clear-all" onclick="PJT.inventoryFilterClear()">Clear All</span></li>
                         </ul>
                     </div>
                 </div>
@@ -317,7 +317,7 @@
             <div class="device-top clearfix">
                 <span class="f">DEVICES</span>
                 <span class="s">
-                    <a href="#" class="plus device-add">plus</a><a href="#" class="minus device-remove">minus</a>
+                    <a href="#" class="plus device-add" onclick="PJT.deviceAddList()">plus</a><a href="#" class="minus device-remove" onclick="PJT.deviceRemoveList()">minus</a>
                 </span>
             </div>
             <div class="filter-options">
@@ -353,7 +353,7 @@
                 </div>
             </div>
             <div class="device-filter">
-                <a href="#">Filter - 02</a>
+                <a href="#" onclick="PJT.deviceFilterShow()">Filter - 02</a>
             </div>
             <div class="device-list-scroll">
                 <ul class="device-list">
@@ -475,7 +475,7 @@
                 <span class="double--line"></span>
                 <div class="email clearfix">
                     <span>E-mail</span>
-                    <input type="text" class="formdata create-report-email" />
+                    <input type="text" id="reportEmail" class="formdata create-report-email" onkeyUp="PJT.lnbCreateReportEmail()" />
                 </div>
                 <span class="double--line"></span>
                 <div class="btns">

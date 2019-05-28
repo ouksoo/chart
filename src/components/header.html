@@ -1,0 +1,59 @@
+<!-- header -->
+<header class="clearfix">
+    <a href="#" class="monitor header-monitor" onmouseover="HEADER.headerMonitoryShow();" onmouseout="HEADER.headerMonitoryHide()">Monitoring Graph</a>
+
+    <div class="product-btn clearfix" onmouseover="HEADER.headerMonitoryShow();" onmouseout="HEADER.headerMonitoryHide()">
+        <span class="refresh"></span>
+        <div class="texts">
+            <p class="f">Ticket.Force</p>
+            <p class="s">Communcation Product</p>
+        </div>
+    </div>
+
+    <h1 class="logo">Monitoring.Force</h1>
+    <span class="loading"><img src="assets/img/layout/_loading.gif" alt="" height="70" /></span>
+    <div class="header-info">
+        <ul class="clearfix">
+            <li><a href="#" class="a" v-b-modal.modalTempSearch>search</a></li>
+            <li><a href="#" class="b"></a></li>
+            <li><a href="#" class="c notice-show-hide">notice<span class="alram-round" onmouseover="HEADER.headerNoticeShow();" onmouseout="HEADER.headerNoticeHide()"></span></a></li>
+            <li><a href="#" class="d">control</a></li>
+            <li><a href="#" class="profile-show-hide" onmouseover="HEADER.headerProfileShow();" onmouseout="HEADER.headerProfileHide()"><img src="assets/img/temp/picture.png" width="100%" /></a></li>
+        </ul>
+    </div>
+
+    <!--user information-->
+
+
+    <!--notification list-->
+    
+
+
+    <div class="header-shadow"></div>
+</header>
+
+
+
+
+<script>
+let HEADER = {
+    headerMonitoryShow: function() {
+        $('header .product-btn').addClass('on');
+    },
+    headerMonitoryHide: function() {
+        $('header .product-btn').removeClass('on');
+    },
+    headerProfileShow: function() {
+        $('div.personal-list-wrap').stop().fadeIn('fast');
+    },
+    headerProfileHide: function() {
+        $('div.personal-list-wrap').stop().fadeOut('fast');
+    },
+    headerNoticeShow: function() {
+        $('div.notice-list-wrap').stop().fadeIn(300);
+    },
+    headerNoticeHide: function() {
+        $('div.notice-list-wrap').stop().fadeOut(300);
+    },
+}
+</script>

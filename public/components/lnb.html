@@ -1,0 +1,59 @@
+<!--left navigation bar-->
+<div class="lnb-wrap">
+    <ul class="lnb-nav clearfix">
+        <li data-name="Monitoring" onmouseover="LNB.lnbMouseEnter($(this))" onmouseout="LNB.lnbMouseLeave()"><a href="#" class="on">monitoring</a></li>
+        <li data-name="Event" onmouseover="LNB.lnbMouseEnter($(this))" onmouseout="LNB.lnbMouseLeave()"><a href="#">event</a></li>
+        <li data-name="Report" onmouseover="LNB.lnbMouseEnter($(this))" onmouseout="LNB.lnbMouseLeave()"><a href="#">report</a></li>
+        <li data-name="Calendar" onmouseover="LNB.lnbMouseEnter($(this))" onmouseout="LNB.lnbMouseLeave()"><a href="#" class="lnb-calendar" onclick="LNB.lnbCalendarShow()">calendar</a></li>
+        <li data-name="Create a report" onmouseover="LNB.lnbMouseEnter($(this))" onmouseout="LNB.lnbMouseLeave()"><a href="#" class="lnb-createreport" onclick="LNB.lnbCreateReportShow()">create a report</a></li>
+        <li data-name="Snapshot" onmouseover="LNB.lnbMouseEnter($(this))" onmouseout="LNB.lnbMouseLeave()"><a href="#" class="lnb-snapshot" onclick="LNB.lnbSnapShot()">snapshot</a></li>
+        <li data-name="Add charts" onmouseover="LNB.lnbMouseEnter($(this))" onmouseout="LNB.lnbMouseLeave()"><a href="#" class="lnb-addcharts" onclick="LNB.lnbAddChart()">add charts</a></li>
+        <li data-name="Information" onmouseover="LNB.lnbMouseEnter($(this))" onmouseout="LNB.lnbMouseLeave()"><a href="#">information</a></li>
+    </ul>
+</div>
+
+
+<script>
+let LNB = {
+    lnbCalendarShow: function() {
+        $('.lnb-tools-wrap.calendar').fadeIn('fast');
+    },
+    lnbCreateReportShow: function() {
+        $('.lnb-tools-wrap.create-report').fadeIn('fast');
+    },
+    lnbCreateReportEmail: function() {
+        if($('#reportEmail').val() !== '') {
+            $('div.lnb-tools-wrap.create-report a.b').css('display','none');
+            $('div.lnb-tools-wrap.create-report a.c').css('display','inline-block');
+        }
+        else {
+            $('div.lnb-tools-wrap.create-report a.b').css('display','inline-block');
+            $('div.lnb-tools-wrap.create-report a.c').css('display','none');
+        }
+    },
+    lnbSnapShot: function() {
+        $('.lnb-tools-wrap.snap-shot').fadeIn('fast');
+    },
+    lnbAddChart: function() {
+        $('.lnb-tools-wrap.add-charts').fadeIn('fast');
+    },
+    lnbMouseEnter: function(obj) {
+        var thisName = $(obj).data('name');
+        var toolTipDiv = '<div class="tiny-tooltip" style="display: none;">';
+            toolTipDiv += '<div class="tooltip-container">';
+            toolTipDiv += '<div class="tooltip-text animated">';
+            toolTipDiv += thisName;
+            toolTipDiv += '</div>';
+            toolTipDiv += '<div class="tooltip-tip animated"></div>';
+            toolTipDiv += '</div>';
+            toolTipDiv += '</div>';
+        $(obj).append(toolTipDiv).delay(500).queue(function(next){
+            $('.tiny-tooltip').fadeIn('fast');
+            next();
+        });
+    },
+    lnbMouseLeave: function() {
+        $('div.tiny-tooltip').remove();
+    },
+}
+</script>

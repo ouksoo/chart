@@ -1,0 +1,136 @@
+<!--device list-->
+<div class="device-wrap">
+    <div class="device-top clearfix">
+        <span class="f">DEVICES</span>
+        <span class="s">
+            <a href="#" class="plus device-add" onclick="DEVICE.deviceAddList()">plus</a><a href="#" class="minus device-remove" onclick="DEVICE.deviceRemoveList()">minus</a>
+        </span>
+    </div>
+    <div class="filter-options">
+        <div class="option">
+            <ul class="clearfix">
+                <li><a href="#" class="opt-btn on">Server</a></li>
+                <li><a href="#" class="opt-btn">Network</a></li>
+                <li><a href="#" class="opt-btn">Application</a></li>
+                <li><a href="#" class="opt-btn">DB Server</a></li>
+                <li><a href="#" class="opt-btn">Cloud</a></li>
+                <li><a href="#" class="opt-btn clear-all">Clear All</a></li>
+            </ul>
+        </div>
+        <div class="order">
+            <ul class="clearfix">
+                <li>ORDER</li>
+                <li>
+                    <span class="radiobox-default sm">
+                        <input type="radio" id="m1" name="m1" checked /><label for="m1"><span></span>Device</label>
+                    </span>
+                </li>
+                <li>
+                    <span class="radiobox-default sm">
+                        <input type="radio" id="m2" name="m1" /><label for="m2"><span></span>State</label>
+                    </span>
+                </li>
+                <li>
+                    <span class="radiobox-default sm">
+                        <input type="radio" id="m3" name="m1" /><label for="m3"><span></span>ABC</label>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="device-filter">
+        <a href="#" onclick="DEVICE.deviceFilterShow()">Filter - 02</a>
+    </div>
+    <div class="device-list-scroll">
+        <ul class="device-list">
+            <li>
+                <div class="device-inner clearfix">
+                    <div class="re"><a href="#" class="remove"></a></div>
+                    <div class="inner">
+                        <p class="f">
+                            <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Entire Devices</span>
+                        </p>
+                        <p class="s"><strong>Great - 02</strong> event - Suwon</p>
+                        <span class="status stat-1"></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="device-inner clearfix">
+                    <div class="re"><a href="#" class="remove"></a></div>
+                    <div class="inner">
+                        <p class="f">
+                            <span class="box cloud"></span><span class="box os-linux"></span><span class="dvc">Entire Devices</span>
+                        </p>
+                        <p class="s"><strong>Great - 02</strong> event - Suwon</p>
+                        <span class="status stat-2"></span>
+                    </div>
+                </div>
+            </li>
+            <li>   
+                <div class="device-inner clearfix">
+                    <div class="re"><a href="#" class="remove"></a></div>
+                    <div class="inner">
+                        <p class="f">
+                            <span class="box copy"></span><span class="box os-mark"></span><span class="dvc">Entire Devices</span>
+                        </p>
+                        <p class="s"><strong>Great - 02</strong> event - Suwon</p>
+                        <span class="status stat-1"></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="device-inner clearfix">
+                    <div class="re"><a href="#" class="remove"></a></div>
+                    <div class="inner">
+                        <p class="f">
+                            <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Entire Devices</span>
+                        </p>
+                        <p class="s"><strong>Great - 02</strong> event - Suwon</p>
+                        <span class="status stat-2"></span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="device-inner clearfix">
+                    <div class="re"><a href="#" class="remove"></a></div>
+                    <div class="inner">
+                        <p class="f">
+                            <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Entire Devices</span>
+                        </p>
+                        <p class="s"><strong>Great - 02</strong> event - Suwon</p>
+                        <span class="status stat-1"></span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- //device list -->
+
+
+
+<script>
+let DEVICE = {
+    deviceFilterShow: function() {
+        var deviceListHeight = $('.device-list').height();
+        $('.device-wrap div.filter-options').addClass('on');
+        $('.device-list').css('height', deviceListHeight - 121);
+        PJT.state.filter = true;
+        $('.filter-options > .option a').on('click', function() {
+            if($(this).hasClass('clear-all')) {
+                $('.filter-options > .option a').removeClass('on');
+            }
+            else { 
+                $(this).toggleClass('on');
+            } 
+        });
+    },
+    deviceAddList: function() {
+        $('#addDeviceList').fadeIn('fast');
+    },
+    deviceRemoveList: function() {
+        $('.device-wrap div.device-inner').addClass('on');
+    },
+}
+</script>
