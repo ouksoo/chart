@@ -60,8 +60,52 @@ div.tiny-popup-wrap {
             padding: 6px 0;
         }
     }
+    p.paragraph-only {
+        font-size: 16px;
+        color: #29323b;
+        padding: 0 20px;
+    }
     div.popup-btn-center {
         text-align: center;
         padding-top: 20px;
+    }
+}
+
+div.tiny-side-tooltip {
+    position: absolute;
+    right: 50%; top: 50%;
+    transform: translate(50%,-50%);
+
+    width: 400px;
+    padding: 15px 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(40, 49, 59, 0.1);
+    border: solid 1px #e8eef4;
+    background-color: #f2f4f5;
+
+    a.close-btn {
+        position: absolute;
+        width: 16px; height: 16px;
+        right: 8px; top: 8px;
+        background: url('../img/popup/icon_close.png') 50% 50% no-repeat;
+        @include prefix($bgs, 16px 16px, webkit ms);
+        text-indent: -9999px;
+    }
+
+    p.paragraph-tiny {
+        width: 385px;
+        line-height: 20px;
+        font-size: 13px;
+        color: #29323b;
+        padding-left: 64px;
+
+        &.wifi {
+            background: url('../img/popup/icon_wifi.png') 22px 50% no-repeat;
+            @include prefix($bgs, 24px 24px, webkit ms);    
+        }
+        &.some-alert {
+            background: url('../img/popup/icon_alert.png') 22px 50% no-repeat;
+            @include prefix($bgs, 24px 24px, webkit ms);    
+        }
     }
 }
