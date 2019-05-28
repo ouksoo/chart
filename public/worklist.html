@@ -11,6 +11,7 @@
 td {padding: 6px; font-size: 12px;}
 td.a {background: #664892; color: #fff}
 span.red {color: #EB5858}
+div.wrapper {padding-bottom: 50px}
 </style>
 </head>
 <body>
@@ -18,14 +19,14 @@ span.red {color: #EB5858}
 <div class="wrapper">
     <!-- section -->
     <section>
-        <table border="1" style="width: 800px; margin: 0 auto">
+        <table border="1" style="width: 1000px; margin: 0 auto">
             <colgroup>
-                <col width="180px" />
-                <col width="180px" />
+                <col width="200px" />
+                <col width="300px" />
                 <col width="*" />
             </colgroup>
             <tr>
-                <td colspan="3" style="padding: 20px; text-align: center; background: grey; font-weight: bold; font-size: 20px">WORKLIST ( <a href="rounded-download.tar" style="color:white">DOWNLOAD</a> )</td>
+                <td colspan="3" style="padding: 20px; text-align: center; background: grey; font-weight: bold; font-size: 20px">WORKLIST</td>
             </tr>
             <tr>
                 <td>intro / gate</td>
@@ -115,7 +116,27 @@ span.red {color: #EB5858}
                 <td>calendar</td>
                 <td><a href="components/device-add-popup.html">components/device-add-popup.html</a></td>
             </tr>
-
+            <tr>
+                <td colspan="2" class="a">ADMIN</td>
+            </tr>
+            <tr>
+                <td>Administrator (페이지 내, 형태별로 구분되어 있음)</td>
+                <td><a href="admin.html">admin.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="a">POPUP</td>
+            </tr>
+            <tr>
+                <td>일반 경고,정보성 팝업 (중앙위치)</td>
+                <td><a href="components/popup.html">components/popup.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="a">POPUP TINY</td>
+            </tr>
+            <tr>
+                <td>오측상단 작은팝업 (우상단 위치)</td>
+                <td><a href="components/popup_tiny.html">components/popup_tiny.html</a></td>
+            </tr>            
         </table>
     </section>
 </div>
