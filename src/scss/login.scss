@@ -167,8 +167,9 @@ div.wrapper {
                     left: 50%; top: 50%;
                     margin: -130px 0 0 -270px;
                     z-index: 5;
-                    background: #edeff1;
-                    // background:url('../img/login/intro-sequence.png') 0 0 no-repeat;
+                    // background: #edeff1;
+                    background:url('../img/login/intro_seq.png') 0 0 no-repeat;
+                    @include prefix($bgs, 540px auto, webkit ms);
                 }
             }
             div.image-dimmed  {

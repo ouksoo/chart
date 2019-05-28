@@ -72,7 +72,7 @@ div.tiny-popup-wrap {
 }
 
 div.tiny-side-tooltip {
-    position: absolute;
+    position: fixed;
     z-index: 10;
     right: -400px; top: 74px;
     width: 400px;

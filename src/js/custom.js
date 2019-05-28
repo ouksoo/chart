@@ -9,19 +9,19 @@ let PJT = {
         this.introAnimationStart();
     },
     introAnimationStart: function() {
-        let sequenceStart;
-        let position = 250;
+        let sequenceStart = 1;
+        let position = 0;
         const interval = 25;
-        const diff = 250;
-        const sequencesize = 2500;
+        const diff = 181;
+        const sequencesize = 26600;
         if(sequenceStart == 1) {
             sequenceStart = setInterval(() => {
-                document.getElementById('sequenceArea').style.backgroundPosition = `-${position}px 0px`;
+                document.getElementById('sequenceArea').style.backgroundPosition = `0px -${position}px`;
                 if(position < sequencesize) {
                     position = position + diff;
                 }
                 else {
-                    position = 250;
+                    position = 0;
                     clearInterval(sequenceStart);
                 }
             }, interval);

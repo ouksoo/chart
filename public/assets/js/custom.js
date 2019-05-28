@@ -11,18 +11,18 @@ var PJT = {
         this.introAnimationStart();
     },
     introAnimationStart: function introAnimationStart() {
-        var sequenceStart = void 0;
-        var position = 250;
+        var sequenceStart = 1;
+        var position = 0;
         var interval = 25;
-        var diff = 250;
-        var sequencesize = 2500;
+        var diff = 181;
+        var sequencesize = 26600;
         if (sequenceStart == 1) {
             sequenceStart = setInterval(function () {
-                document.getElementById('sequenceArea').style.backgroundPosition = '-' + position + 'px 0px';
+                document.getElementById('sequenceArea').style.backgroundPosition = '0px -' + position + 'px';
                 if (position < sequencesize) {
                     position = position + diff;
                 } else {
-                    position = 250;
+                    position = 0;
                     clearInterval(sequenceStart);
                 }
             }, interval);
