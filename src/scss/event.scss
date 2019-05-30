@@ -5,15 +5,15 @@ div.event-list-wrap {
 
     div.event-period-info {
         height: 79px;
-        border-bottom: #c8d3df;
         background: #e8eef4;
 
         div.period {
             position: relative;
             float: left;
-            width: 22%; height: 79px;
+            width: 22%; height: 80px;
             background: #97a4b1;
             color: #fff;
+            border-bottom: 1px solid #c8d3df;
 
             span.txt {
                 position: absolute;
@@ -47,12 +47,12 @@ div.event-list-wrap {
             width: 78%;
             border-bottom: 1px solid #c8d3df;
 
-            ul {
-
-                li {
+            &>ul {
+                
+                &>li {
                     position: relative;
                     float: left;
-                    width: 14%; height: 79px;
+                    width: 13%; height: 79px;
                     border-right: 1px solid #c8d3df;
 
                     span.txt {
@@ -71,8 +71,9 @@ div.event-list-wrap {
                         padding-top: 5px;
                     }
                     &.l {
-                        width: 16%;
+                        width: 22%;
                         border-right: 0;
+                        padding-top: 18px;
                     }
                 }
             }

@@ -26,22 +26,24 @@
                 <li><a href="#">Code Editor</a></li>
             </ul>
             <div class="submenus">
-                <a href="#">MONITORING.FORCE</a>
-                <div class="sub" style="display: none">
+                <a href="#" class="submenu-btn" onclick="menuShowHide(this);">MONITORING.FORCE</a>
+                <div class="sub-show-hide" style="display: none">
                     <a href="#">Group Manage</a>
                     <a href="#">Chart Organizing</a>
                     <a href="#">Code Editor</a>
                 </div>
             </div>
             <div class="submenus">
-                <a href="#">TICKET.FORCE</a>
+                <a href="#" class="submenu-btn" onclick="menuShowHide(this);">TICKET.FORCE</a>
+                <div class="sub-show-hide" style="display: none">
                 
+                </div>
             </div>
         </div>
         <!-- //admin lnb -->
 
         <!-- admin content -->
-        <div class="admin-content">
+        <div class="admin-content" style="display: none">
 
             <!-- admin content 1 -->
             <div class="admin-content-type1">
@@ -479,9 +481,28 @@
 
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="assets/js/custom.js"></script>
+<script>
+// left menu sub show/hide
+function menuShowHide(e) {
+    var ele = document.getElementsByClassName('submenu-btn');
+    var elems = document.getElementsByClassName('sub-show-hide');
+    for(var i = 0; i < elems.length; i += 1) {
+        ele[i].classList.remove('on');
+        elems[i].style.display = 'none';
+    }
+
+    if(!e.classList.contains('on')) {
+        var thisNext = e.nextSibling.nextSibling;
+        e.classList.add('on');
+        thisNext.style.display = 'block';
+    }
+    else {
+        var thisNext = e.nextSibling.nextSibling;
+        e.classList.remove('on');
+        thisNext.style.display = 'none';
+    }  
+}
+</script>
+
 </body>
 </html>

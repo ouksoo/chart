@@ -49,8 +49,13 @@ div.episode_admin-wrap {
                 padding-right: 26px;
                 background: url('../img/admin/icon_menu_down.png') 100% 50% no-repeat;
                 @include prefix($bgs, 18px 18px, webkit ms);
+
+                &.on {
+                    background: url('../img/admin/icon_menu_up.png') 100% 50% no-repeat;
+                    @include prefix($bgs, 18px 18px, webkit ms);
+                }
             }
-            div.sub {
+            div.sub-show-hide {
 
                 a {
                     display: block;
