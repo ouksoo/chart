@@ -1,0 +1,81 @@
+/********************** 
+* event
+***********************/
+div.event-list-wrap {
+
+    div.event-period-info {
+        height: 79px;
+        border-bottom: #c8d3df;
+        background: #e8eef4;
+
+        div.period {
+            position: relative;
+            float: left;
+            width: 22%; height: 79px;
+            background: #97a4b1;
+            color: #fff;
+
+            span.txt {
+                position: absolute;
+                font-size: 12px;
+                top: 6px; left: 9px;
+            }
+            div.period-input {
+                text-align: center;
+                padding-top: 24px;
+                
+                span.line {
+                    display: inline-block;
+                    width: 20px;
+                    border-top: 1px solid #fff;
+                    vertical-align: middle;
+                }
+                input {
+                    width: 100px;
+                    text-align: center;
+                    font-family: $inter-m;
+                    font-size: 18px; 
+                    color: #fff;
+                    background: transparent;
+                    border: 0;
+                    margin: 0 15px;
+                }
+            }
+        }
+        div.infos {
+            float: left;
+            width: 78%;
+            border-bottom: 1px solid #c8d3df;
+
+            ul {
+
+                li {
+                    position: relative;
+                    float: left;
+                    width: 14%; height: 79px;
+                    border-right: 1px solid #c8d3df;
+
+                    span.txt {
+                        position: absolute;
+                        font-size: 12px;
+                        color: #97a4b1;
+                        top: 6px; left: 9px;
+                    }
+                    p.count {
+                        font-family: $inter-b;
+                        font-size: 32px;
+                        color: #28313b;
+                        text-align: center;
+                        line-height: 74px;
+                        letter-spacing: -1px;
+                        padding-top: 5px;
+                    }
+                    &.l {
+                        width: 16%;
+                        border-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
