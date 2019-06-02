@@ -62,7 +62,7 @@ div.event-list-wrap {
                         top: 6px; left: 9px;
                     }
                     p.count {
-                        font-family: $inter-b;
+                        font-family: $inter-m;
                         font-size: 32px;
                         color: #28313b;
                         text-align: center;
@@ -74,6 +74,78 @@ div.event-list-wrap {
                         width: 22%;
                         border-right: 0;
                         padding-top: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* monitoring force event popup */
+div.full-popup-wrap { // content 의 정책을 기본으로 따릅니다.
+
+    div.inner {
+
+        div.monitoring-event {
+            width: 920px;
+            margin: 60px auto 0 auto;
+            border-radius: 8px;
+            border: solid 1px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            padding: 0 24px 40px 24px;
+
+            p.title {
+                font-family: $inter-m;
+                font-size: 21px;
+                letter-spacing: -0.3px;
+                color: #28313b;
+                padding: 40px 0 27px 0;
+                text-align: center;
+            }
+            p.paragraph {
+                font-size: 14px;
+                line-height: 1.57;
+                color: #28313b;
+            }
+            p.table-title {
+                font-family: $inter-m;
+                font-size: 13px;
+                letter-spacing: -0.3px;
+                color: #28313b;
+                border-bottom: 2px solid #28313b;
+                padding-bottom: 3px;
+            }
+            table.monitoring-table {
+
+                th {
+                    font-family: $inter-m;
+                    text-align: left;
+                    padding: 0 10px;
+                    color: #97a4b1;
+                    font-size: 13px;
+                    border-bottom: 1px solid #bccad7;
+                }
+                td {
+                    padding: 12px 10px;
+                    font-size: 16px;
+                    color: #28313b;
+                    border-bottom: 1px solid #bccad7;
+                }
+                span.s-t {
+                    font-size: 13px;
+                    color: #28313b;
+                }
+                span.severity-level {
+
+                    display: inline-block;
+                    width: 17px; height: 17px;
+                    vertical-align: middle;
+                    border-radius: 50%;
+                    margin-right: 7px;
+
+                    &.critical {
+                        background: #ea5858;
                     }
                 }
             }
