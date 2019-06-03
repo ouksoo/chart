@@ -79,6 +79,30 @@ div.event-list-wrap {
             }
         }
     }
+
+    div.event-date-list {
+        width: 100%;
+        overflow-y: auto;
+
+        section.affix {
+            position: relative;
+            overflow: hidden;
+            padding: 0 20%;
+
+            &h1 {
+                float: left;
+                width: 17%;
+            }
+            &div.summary {
+                float: right;
+                width: 70%;
+            }s
+            &.fixed h1:first-child {
+                position: fixed;
+                top: 0;
+            }
+        }
+    }
 }
 
 

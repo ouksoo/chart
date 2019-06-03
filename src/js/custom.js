@@ -6,7 +6,7 @@ let PJT = {
      * Intro & login
      */
     loginInit: function() {
-        this.introAnimationStart();
+        this.introAnimationStart();        
     },
     introAnimationStart: function() {
         let sequenceStart = 1;
@@ -185,23 +185,48 @@ let PJT = {
         let inner = '<li class="add-filters"><span class="cs-btn"><span>TYPE - Cloud Server</span> <a href="#" class="remove">remove</a></span></li>';
         $('div.inventory-filter ul').prepend(inner);
     },
-
+    // event content fix title
+    eventFixTitle: function() {
+        console.log('scrolled');
+        $('section.affix').each(function () {
+            var $this = $(this);
+            var offset = $this.offset().top;
+            var scrollTop = $(window).scrollTop();
+    
+            if (scrollTop > offset) {
+                $this.addClass('fixed');
+            } else {
+                $this.removeClass('fixed');
+            }
+        });
+    },
     /**
      * global
      */
     siteResizeResponse: function() {
         let winWidth = $(window).width();
         let winHeight = $(window).height();
+        let headerEventHeader = 150; // header 와 event 헤더의 높이
+
+        // $('.event-date-list').scroll(PJT.eventFixTitle());
+        $('.event-date-list').on('scroll', function() {
+            PJT.eventFixTitle();
+        });
+
         $('.content-wrap').css('width', winWidth-375);
         $('.device-list').css('height', winHeight-169);
+        $('.event-date-list').css('height', winHeight - headerEventHeader);
         $('div.full-popup-wrap div.inner h2').css('width', winWidth-40);
 
         $(window).on('resize', function() {
             let winWidth = $(window).width();
             let winHeight = $(window).height();
             let realSize = winWidth - 375;
+            let headerEventHeader = 159; // header 와 event 헤더의 높이
+
             $('.content-wrap').css('width', realSize);
             $('div.full-popup-wrap div.inner h2').css('width', winWidth-40);
+            $('.event-date-list').css('height', winHeight - headerEventHeader);
 
             if(!PJT.state.filter) { // is filter open
                 $('.device-list').css('height', winHeight-169);
