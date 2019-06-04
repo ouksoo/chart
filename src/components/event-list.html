@@ -1,0 +1,175 @@
+<!-- event -->
+<div class="event-list-wrap">
+    <div class="event-period-info clearfix">
+        <div class="period">
+            <span class="txt">Period</span>
+            <div class="period-input">
+                <input type="text" value="2019.05.20" /><span class="line"></span><input type="text" value="Today" />
+            </div>
+        </div>
+        <div class="infos">
+            <ul class="clearfix">
+                <li class="total active">
+                    <span class="txt">Total</span>
+                    <p class="count">32</p>
+                </li>
+                <li class="critical">
+                    <span class="txt">Critical</span>
+                    <p class="count">250</p>
+                </li>
+                <li class="major">
+                    <span class="txt">Major</span>
+                    <p class="count">0</p>
+                </li>
+                <li class="minor">
+                    <span class="txt">Minor</span>
+                    <p class="count">11</p>
+                </li>
+                <li class="warning">
+                    <span class="txt">Warning</span>
+                    <p class="count">96</p>
+                </li>
+                <li class="info">
+                    <span class="txt">Info</span>
+                    <p class="count">30</p>
+                </li>
+                <li class="l">
+                    <div class="select-wrap" style="width: 90%; margin-left: 14px;">
+                        <input type="text" class="select-data select_data-options" style="width: 100%; background: #f7f9fb;" value="Select" readonly />
+                        <div class="options">
+                            <ul>
+                                <li><a href="#" data-value="1">New Nadia</a></li>
+                                <li><a href="#" data-value="2">North Eviemouth</a></li>
+                                <li><a href="#" data-value="3">Robeltown</a></li>
+                                <li><a href="#" data-value="4">Framiville</a></li>
+                                <li><a href="#" data-value="5">South Virgil</a></li>
+                                <li><a href="#" data-value="6">Robeltown</a></li>
+                                <li><a href="#" data-value="7">Framiville</a></li>
+                                <li><a href="#" data-value="8">South Virgil</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="event-date-list">
+        <div class="affix-layout">
+            <span class="times"><span class="time-hour">03</span><span class="hour">hour</span></span>
+            <div class="time-lists">
+                <p class="now-time">
+                    <span class="num">52</span><span class="eng">m</span>&nbsp;&nbsp;<span class="num">52</span><span class="eng">s</span>
+                </p>
+                <ul class="first-time-line"><!-- ui 를 맞추기 위하여 첫번재 타임라인에만 적용되는 클레스 -->
+                    <li>
+                        <span class="min-ago">3m ago</span>
+                        <div class="time-bar green">
+                            <!-- left circle-->
+                            <span class="first-circle green" onclick="PJT.eventDataDetail();"></span>
+                            <!-- right circle-->
+                            <span class="last-circle" onclick="PJT.eventDataToolTip();">
+                                <span class="circle">02</span>
+                            </span>
+
+                            <span class="server-name" onclick="PJT.eventDataDetail();">Cloud Server</span>
+                            <span class="server-status" onclick="PJT.eventDataDetail();">Steps In Installing Rack Mount Lcd Monitors</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="min-ago">12m ago</span>
+                        <div class="time-bar red">
+                            <!-- left circle-->
+                            <span class="first-circle red-play"></span>
+                            <!-- right circle-->
+                            <span class="last-circle">
+                                <span class="circle">02</span>
+                            </span>
+
+                            <span class="server-name">Cloud Server</span>
+                            <span class="server-status">Choosing The Best Audio Player Software For Your Computer</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="min-ago">12m ago</span>
+                        <div class="time-bar purple">
+                            <!-- left circle-->
+                            <span class="first-circle purple-check"></span>
+                            <!-- right circle-->
+                            <span class="last-circle">
+                                <span class="circle">03</span><span class="circle file-minus"></span>
+                            </span>
+
+                            <span class="server-name">Cloud Server</span>
+                            <span class="server-status">Choosing The Best Audio Player Software For Your Computer</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="affix-layout">
+            <span class="times"><span class="time-hour">02</span><span class="hour">hour</span></span>
+            <div class="time-lists">
+                <ul>
+                    <li>
+                        <span class="min-ago">3m ago</span>
+                        <div class="time-bar green">
+                            <!-- left circle-->
+                            <span class="first-circle green"></span>
+                            <!-- right circle-->
+                            <span class="last-circle">
+                                <span class="circle">02</span>
+                            </span>
+
+                            <span class="server-name">Cloud Server</span>
+                            <span class="server-status">Steps In Installing Rack Mount Lcd Monitors</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="min-ago">12m ago</span>
+                        <div class="time-bar red">
+                            <!-- left circle-->
+                            <span class="first-circle red-play"></span>
+                            <!-- right circle-->
+                            <span class="last-circle">
+                                <span class="circle">02</span>
+                            </span>
+
+                            <span class="server-name">Cloud Server</span>
+                            <span class="server-status">Choosing The Best Audio Player Software For Your Computer</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="min-ago">12m ago</span>
+                        <div class="time-bar purple">
+                            <!-- left circle-->
+                            <span class="first-circle purple-check"></span>
+                            <!-- right circle-->
+                            <span class="last-circle">
+                                <span class="circle">03</span><span class="circle file-minus"></span>
+                            </span>
+
+                            <span class="server-name">Cloud Server</span>
+                            <span class="server-status">Choosing The Best Audio Player Software For Your Computer</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            
+    </div>
+
+</div>
+<!-- //event -->
+
+
+<script>
+let EVENTLIST = {
+    eventDataDetail: function() {
+        $('#eventMonitoringForce').fadeIn();
+    },
+    eventDataToolTip: function(e) {
+        
+    },
+}
+</script>

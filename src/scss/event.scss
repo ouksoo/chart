@@ -2,6 +2,7 @@
 * event
 ***********************/
 div.event-list-wrap {
+    background: #f8fafc;
 
     div.event-period-info {
         height: 79px;
@@ -57,11 +58,54 @@ div.event-list-wrap {
                     float: left;
                     width: 13%; height: 79px;
                     border-right: 1px solid #c8d3df;
-
-                    &:hover {
-                        background: #f2f4f5;
-                    }                    
-                    &:hover:before {
+                
+                    &.total:hover:before {
+                        position: absolute;
+                        content: '';
+                        bottom: 0; left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: #63DBC1;
+                        z-index: 1;
+                    }
+                    &.total {
+                        &.active {
+                            background: #f2f4f5;
+                        }
+                        &.active:after {
+                            position: absolute;
+                            content: '';
+                            bottom: 0; left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background: #63DBC1;
+                            z-index: 1;
+                        }
+                    }
+                    &.critical:hover:before {
+                        position: absolute;
+                        content: '';
+                        bottom: 0; left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: #EB5858;
+                        z-index: 1;
+                    }
+                    &.critical {
+                        &.active {
+                            background: #f2f4f5;
+                        }
+                        &.active:after {
+                            position: absolute;
+                            content: '';
+                            bottom: 0; left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background: #EB5858;
+                            z-index: 1;
+                        }
+                    }
+                    &.major:hover:before {
                         position: absolute;
                         content: '';
                         bottom: 0; left: 0;
@@ -69,6 +113,89 @@ div.event-list-wrap {
                         height: 2px;
                         background: #ff957c;
                         z-index: 1;
+                    }
+                    &.major {
+                        &.active {
+                            background: #f2f4f5;
+                        }
+                        &.active:after {
+                            position: absolute;
+                            content: '';
+                            bottom: 0; left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background: #ff957c;
+                            z-index: 1;
+                        }
+                    }
+                    &.minor:hover:before {
+                        position: absolute;
+                        content: '';
+                        bottom: 0; left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: #9678ff;
+                        z-index: 1;
+                    }
+                    &.minor {
+                        &.active {
+                            background: #f2f4f5;
+                        }
+                        &.active:after {
+                            position: absolute;
+                            content: '';
+                            bottom: 0; left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background: #9678ff;
+                            z-index: 1;
+                        }
+                    }
+                    &.warning:hover:before {
+                        position: absolute;
+                        content: '';
+                        bottom: 0; left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: #41cee2;
+                        z-index: 1;
+                    }
+                    &.warning {
+                        &.active {
+                            background: #f2f4f5;
+                        }
+                        &.active:after {
+                            position: absolute;
+                            content: '';
+                            bottom: 0; left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background: #41cee2;
+                            z-index: 1;
+                        }
+                    }
+                    &.info:hover:before {
+                        position: absolute;
+                        content: '';
+                        bottom: 0; left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: #63DBC1;
+                        z-index: 1;
+                    }
+                    &.info {
+                        &.active {
+                            background: #f2f4f5;
+                        }
+                        &.active:after {
+                            position: absolute;
+                            content: '';
+                            bottom: 0; left: 0;
+                            width: 100%;
+                            height: 2px;
+                            background: #63DBC1;
+                            z-index: 1;
+                        }
                     }
                     span.txt {
                         position: absolute;
@@ -106,20 +233,26 @@ div.event-list-wrap {
         width: 100%;
         overflow-y: auto;
 
+        div.blank {
+            height: 30px;
+        }
+
         div.affix-layout {
             position: relative;
             border-bottom: 1px solid #e8eef4;
+            border-top: 1px solid #f8fafc;
+            background: #f8fafc;
 
             &.fixed span.times {
                 position: fixed;
-                top: 150px;
+                top: 180px;
                 left: 105px
             }
             span.times {
                 position: absolute;
-                left: 35px; top: 1px;
+                left: 35px; top: 10px;
                 color: #28313b;
-                background: #fff;
+                background: #f8fafc;
 
                 span.time-hour {
                     display: inline-block; 
@@ -143,8 +276,28 @@ div.event-list-wrap {
                 margin-left: 410px;
                 border-left: 1px solid #bccad7;
 
+                p.now-time {
+                    margin: 20px 0 0 -130px;
+                    width: 140px;
+                    background: #f8fafc url('../img/icons/icon_clock.png') 100% 50% no-repeat;
+                    @include prefix($bgs, 22px 22px, webkit ms);
+
+                    span.num {
+                        font-size: 24px;
+                        color: #28313b;
+                    }
+                    span.eng {
+                        font-size: 16px;
+                        color: #28313b;
+                    }
+                }
+
                 ul {
                     margin-left: -108px;
+
+                    &.first-time-line {
+                        
+                    }
 
                     li {
                         padding: 10px 0;

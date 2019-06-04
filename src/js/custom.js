@@ -140,6 +140,12 @@ let PJT = {
     inventoryFilterClear: function() {
         $('.inventory-filter li.add-filters').remove();
     },
+    eventDataDetail: function() {
+        $('#eventMonitoringForce').fadeIn();
+    },
+    eventDataToolTip: function(e) {
+        
+    },
 
     utilsAliveLinks: function() {
         // document click

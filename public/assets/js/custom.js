@@ -136,6 +136,10 @@ var PJT = {
     inventoryFilterClear: function inventoryFilterClear() {
         $('.inventory-filter li.add-filters').remove();
     },
+    eventDataDetail: function eventDataDetail() {
+        $('#eventMonitoringForce').fadeIn();
+    },
+    eventDataToolTip: function eventDataToolTip(e) {},
 
     utilsAliveLinks: function utilsAliveLinks() {
         // document click
