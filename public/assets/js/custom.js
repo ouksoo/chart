@@ -183,11 +183,10 @@ var PJT = {
     },
     // event content fix title
     eventFixTitle: function eventFixTitle() {
-        console.log('scrolled');
-        $('section.affix').each(function () {
+        $('div.affix-layout').each(function () {
             var $this = $(this);
             var offset = $this.offset().top;
-            var scrollTop = $(window).scrollTop();
+            var scrollTop = $(window).scrollTop() + 200;
 
             if (scrollTop > offset) {
                 $this.addClass('fixed');

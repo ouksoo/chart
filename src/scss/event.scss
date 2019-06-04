@@ -15,6 +15,9 @@ div.event-list-wrap {
             color: #fff;
             border-bottom: 1px solid #c8d3df;
 
+            &:hover {
+                background: #28313b;
+            }
             span.txt {
                 position: absolute;
                 font-size: 12px;
@@ -55,6 +58,18 @@ div.event-list-wrap {
                     width: 13%; height: 79px;
                     border-right: 1px solid #c8d3df;
 
+                    &:hover {
+                        background: #f2f4f5;
+                    }                    
+                    &:hover:before {
+                        position: absolute;
+                        content: '';
+                        bottom: 0; left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: #ff957c;
+                        z-index: 1;
+                    }
                     span.txt {
                         position: absolute;
                         font-size: 12px;
@@ -74,6 +89,13 @@ div.event-list-wrap {
                         width: 22%;
                         border-right: 0;
                         padding-top: 18px;
+
+                        &:hover {
+                            background: none;
+                        }
+                        &:hover:before {
+                            z-index: -1;
+                        }
                     }
                 }
             }
@@ -84,22 +106,140 @@ div.event-list-wrap {
         width: 100%;
         overflow-y: auto;
 
-        section.affix {
+        div.affix-layout {
             position: relative;
-            overflow: hidden;
-            padding: 0 20%;
+            border-bottom: 1px solid #e8eef4;
 
-            &h1 {
-                float: left;
-                width: 17%;
-            }
-            &div.summary {
-                float: right;
-                width: 70%;
-            }s
-            &.fixed h1:first-child {
+            &.fixed span.times {
                 position: fixed;
-                top: 0;
+                top: 150px;
+                left: 105px
+            }
+            span.times {
+                position: absolute;
+                left: 35px; top: 1px;
+                color: #28313b;
+                background: #fff;
+
+                span.time-hour {
+                    display: inline-block; 
+                    width: 62px;
+                    vertical-align: middle;
+                    font-family: $inter-m;
+                    font-size: 48px;
+                    letter-spacing: -0.5px;
+                }
+                span.hour {
+                    display: inline-block;
+                    font-family: $inter-m;
+                    font-size: 16px;
+                    letter-spacing: -0.3px;
+                    color: #28313b;
+                    vertical-align: middle;
+                    margin-left: 10px;
+                }
+            }
+            div.time-lists {
+                margin-left: 410px;
+                border-left: 1px solid #bccad7;
+
+                ul {
+                    margin-left: -108px;
+
+                    li {
+                        padding: 10px 0;
+
+                        span.min-ago {
+                            display: inline-block;
+                            width: 65px;
+                            text-align: right;
+                            font-size: 14px;
+                            color: #28313b;
+                            margin-right: 13px;
+                            vertical-align: middle;
+                        }
+                        div.time-bar {
+                            position: relative;
+                            display: inline-block;
+                            padding-right: 90px;
+                            height: 46px;
+                            border-radius: 23px;
+                            vertical-align: middle;
+                            line-height: 42px;
+                            background-color: #ffffff;
+
+                            &.green {
+                                border: solid 1px #41cee2;
+                            }
+                            &.red {
+                                border: solid 1px #ff957c;
+                            }
+                            &.purple {
+                                border: solid 1px #9678ff;
+                            }
+
+                            span.first-circle {
+                                position: absolute;
+                                top: 5px; left: 6px;
+                                width: 34px;
+                                height: 34px;
+                                border-radius: 50%;
+
+                                &.green {
+                                    border: solid 2px #41cee2;
+                                }
+                                &.red-play {
+                                    border: solid 2px #ff957c;
+                                    background: #ff957c url('../img/icons/icon_play.png') 65% 50% no-repeat;
+                                    @include prefix($bgs, 18px 18px, webkit ms);
+                                }
+                                &.purple-check {
+                                    border: solid 2px #9678ff;
+                                    background: #9678ff url('../img/icons/icon_play_check.png') 65% 50% no-repeat;
+                                    @include prefix($bgs, 18px 18px, webkit ms);
+                                }
+                            }
+                            span.last-circle {
+                                position: absolute;
+                                top: 5px; right: 6px;
+                                font-family: $inter-m;
+                                font-size: 16px;
+                                color: #28313b;
+
+                                span.circle {
+                                    display: inline-block;
+                                    width: 34px;
+                                    height: 34px;
+                                    border: solid 1px rgba(0, 0, 0, 0.1);
+                                    background-color: #e8eef4;
+                                    font-size: 16px;
+                                    text-align: center;
+                                    font-family: $inter-m;
+                                    border-radius: 50%;
+                                    margin-left: 5px;
+                                    vertical-align: top; 
+                                    line-height: 33px;
+                                    letter-spacing: -1px;
+
+                                    &.file-minus {
+                                        background: #e8eef4 url('../img/icons/icon_file_minus.png') 65% 50% no-repeat;
+                                        @include prefix($bgs, 18px 18px, webkit ms); 
+                                    }
+                                }
+                            }
+                            span.server-name {
+                                font-family: $inter-m;
+                                font-size: 16px;
+                                color: #28313b;
+                                margin: 0 20px 0 55px;
+                            }
+                            span.server-status {
+                                font-size: 16px;
+                                color: #28313b;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

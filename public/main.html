@@ -13,7 +13,7 @@
 
 <div id="app" class="wrapper">
     <!-- header -->
-    <header class="clearfix">
+    <header class="clearfix" style="display: none">
         
         <a href="#" class="monitor header-monitor" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">Monitoring Graph</a>
         <div class="product-btn clearfix" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">
@@ -118,7 +118,7 @@
     <!-- section -->
     <section>
         <!--left navigation bar-->
-        <div class="lnb-wrap">
+        <div class="lnb-wrap" style="display: none">
             <ul class="lnb-nav clearfix">
                 <li data-name="Monitoring" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="on">monitoring</a></li>
                 <li data-name="Event" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#">event</a></li>
@@ -237,41 +237,155 @@
                 </div>
 
                 <div class="event-date-list">
-                    
-                        <section class="affix clearfix">
-                            <h1>Title 1</h1>
-                            <div class="summary">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in justo lectus. Praesent suscipit lacus malesuada, lacinia libero sit amet, placerat justo. Praesent aliquam dignissim tellus quis feugiat. Aenean ac varius nulla. Suspendisse nec mauris ac ligula tempor pharetra ut ac massa. Aenean lacinia consectetur facilisis. Proin eget velit mi. Duis metus risus, viverra ac lacus eu, vestibulum condimentum diam. Fusce molestie nulla felis, sit amet volutpat enim elementum vel. Praesent libero augue, scelerisque in lacus eget, malesuada vestibulum tellus. Curabitur vel nisi enim. In congue, urna vel rhoncus accumsan, velit neque ultrices diam, at dapibus erat ante et augue. Etiam enim tellus, accumsan a velit id, mollis tincidunt augue. Morbi ullamcorper ipsum feugiat vestibulum egestas. Proin porta lacus id sollicitudin vulputate. Nullam tristique neque ac velit lacinia, ut suscipit ligula accumsan.</p>
-                                <p>Aliquam porttitor id erat et tempus. Aliquam interdum quis lacus ac mollis. Nullam sit amet rutrum leo, vitae fringilla quam. Praesent at lacus et est cursus dictum sed ut elit. Suspendisse sed hendrerit arcu, vel consequat tellus. Cras in tellus commodo, ultricies velit ac, euismod dolor. Donec sollicitudin nisi sit amet augue porta interdum. Vestibulum pulvinar, nisl vel condimentum auctor, nisl dolor laoreet lorem, eget laoreet nunc eros a velit. Cras fermentum ipsum id posuere dignissim.</p>
-                                <p>Donec vehicula justo sit amet dui euismod dapibus. Sed nulla lacus, lacinia id placerat at, eleifend id libero. Nam gravida neque eu tellus euismod, a consectetur ante interdum. In hac habitasse platea dictumst. In hac habitasse platea dictumst. Sed ut felis at orci tristique mollis. Donec quis tristique urna. Nunc vitae tristique quam. Cras non urna molestie, aliquam nunc sit amet, venenatis dolor.</p>
-                                <p>Donec nisi enim, lacinia id molestie non, pharetra vel sapien. Duis egestas fringilla ipsum eget iaculis. Integer ultrices accumsan nunc, eget viverra lectus congue eget. Etiam pharetra dolor eget neque accumsan, vel vestibulum ante condimentum. Duis a risus ac turpis mattis mollis vel vitae libero. Proin viverra lectus ut interdum elementum. Nulla ornare ante lobortis purus faucibus iaculis. Duis tempus pharetra tristique.</p>
-                                <p>In imperdiet ligula eget ligula interdum, eget dictum felis porta. Quisque eu tellus non mi dignissim aliquet. Suspendisse mollis lobortis quam, eu ultrices lectus bibendum eu. Sed at urna nec arcu vulputate lobortis. Sed quis semper ante. Morbi tincidunt felis risus, sed venenatis massa pharetra id. Praesent aliquam scelerisque interdum. Proin libero mi, accumsan lobortis semper vel, tincidunt at nisl. Aliquam erat volutpat.</p>
-                            </div>
-                        </section>
-                        <section class="affix clearfix">
-                            <h1>Title 2</h1>
-                    
-                            <div class="summary">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in justo lectus. Praesent suscipit lacus malesuada, lacinia libero sit amet, placerat justo. Praesent aliquam dignissim tellus quis feugiat. Aenean ac varius nulla. Suspendisse nec mauris ac ligula tempor pharetra ut ac massa. Aenean lacinia consectetur facilisis. Proin eget velit mi. Duis metus risus, viverra ac lacus eu, vestibulum condimentum diam. Fusce molestie nulla felis, sit amet volutpat enim elementum vel. Praesent libero augue, scelerisque in lacus eget, malesuada vestibulum tellus. Curabitur vel nisi enim. In congue, urna vel rhoncus accumsan, velit neque ultrices diam, at dapibus erat ante et augue. Etiam enim tellus, accumsan a velit id, mollis tincidunt augue. Morbi ullamcorper ipsum feugiat vestibulum egestas. Proin porta lacus id sollicitudin vulputate. Nullam tristique neque ac velit lacinia, ut suscipit ligula accumsan.</p>
-                                <p>Aliquam porttitor id erat et tempus. Aliquam interdum quis lacus ac mollis. Nullam sit amet rutrum leo, vitae fringilla quam. Praesent at lacus et est cursus dictum sed ut elit. Suspendisse sed hendrerit arcu, vel consequat tellus. Cras in tellus commodo, ultricies velit ac, euismod dolor. Donec sollicitudin nisi sit amet augue porta interdum. Vestibulum pulvinar, nisl vel condimentum auctor, nisl dolor laoreet lorem, eget laoreet nunc eros a velit. Cras fermentum ipsum id posuere dignissim.</p>
-                                <p>Donec vehicula justo sit amet dui euismod dapibus. Sed nulla lacus, lacinia id placerat at, eleifend id libero. Nam gravida neque eu tellus euismod, a consectetur ante interdum. In hac habitasse platea dictumst. In hac habitasse platea dictumst. Sed ut felis at orci tristique mollis. Donec quis tristique urna. Nunc vitae tristique quam. Cras non urna molestie, aliquam nunc sit amet, venenatis dolor.</p>
-                                <p>Donec nisi enim, lacinia id molestie non, pharetra vel sapien. Duis egestas fringilla ipsum eget iaculis. Integer ultrices accumsan nunc, eget viverra lectus congue eget. Etiam pharetra dolor eget neque accumsan, vel vestibulum ante condimentum. Duis a risus ac turpis mattis mollis vel vitae libero. Proin viverra lectus ut interdum elementum. Nulla ornare ante lobortis purus faucibus iaculis. Duis tempus pharetra tristique.</p>
-                                <p>In imperdiet ligula eget ligula interdum, eget dictum felis porta. Quisque eu tellus non mi dignissim aliquet. Suspendisse mollis lobortis quam, eu ultrices lectus bibendum eu. Sed at urna nec arcu vulputate lobortis. Sed quis semper ante. Morbi tincidunt felis risus, sed venenatis massa pharetra id. Praesent aliquam scelerisque interdum. Proin libero mi, accumsan lobortis semper vel, tincidunt at nisl. Aliquam erat volutpat.</p>
-                            </div>
-                        </section>
-                        <section class="affix clearfix">
-                            <h1>Title 3</h1>
-                    
-                            <div class="summary">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in justo lectus. Praesent suscipit lacus malesuada, lacinia libero sit amet, placerat justo. Praesent aliquam dignissim tellus quis feugiat. Aenean ac varius nulla. Suspendisse nec mauris ac ligula tempor pharetra ut ac massa. Aenean lacinia consectetur facilisis. Proin eget velit mi. Duis metus risus, viverra ac lacus eu, vestibulum condimentum diam. Fusce molestie nulla felis, sit amet volutpat enim elementum vel. Praesent libero augue, scelerisque in lacus eget, malesuada vestibulum tellus. Curabitur vel nisi enim. In congue, urna vel rhoncus accumsan, velit neque ultrices diam, at dapibus erat ante et augue. Etiam enim tellus, accumsan a velit id, mollis tincidunt augue. Morbi ullamcorper ipsum feugiat vestibulum egestas. Proin porta lacus id sollicitudin vulputate. Nullam tristique neque ac velit lacinia, ut suscipit ligula accumsan.</p>
-                                <p>Aliquam porttitor id erat et tempus. Aliquam interdum quis lacus ac mollis. Nullam sit amet rutrum leo, vitae fringilla quam. Praesent at lacus et est cursus dictum sed ut elit. Suspendisse sed hendrerit arcu, vel consequat tellus. Cras in tellus commodo, ultricies velit ac, euismod dolor. Donec sollicitudin nisi sit amet augue porta interdum. Vestibulum pulvinar, nisl vel condimentum auctor, nisl dolor laoreet lorem, eget laoreet nunc eros a velit. Cras fermentum ipsum id posuere dignissim.</p>
-                                <p>Donec vehicula justo sit amet dui euismod dapibus. Sed nulla lacus, lacinia id placerat at, eleifend id libero. Nam gravida neque eu tellus euismod, a consectetur ante interdum. In hac habitasse platea dictumst. In hac habitasse platea dictumst. Sed ut felis at orci tristique mollis. Donec quis tristique urna. Nunc vitae tristique quam. Cras non urna molestie, aliquam nunc sit amet, venenatis dolor.</p>
-                                <p>Donec nisi enim, lacinia id molestie non, pharetra vel sapien. Duis egestas fringilla ipsum eget iaculis. Integer ultrices accumsan nunc, eget viverra lectus congue eget. Etiam pharetra dolor eget neque accumsan, vel vestibulum ante condimentum. Duis a risus ac turpis mattis mollis vel vitae libero. Proin viverra lectus ut interdum elementum. Nulla ornare ante lobortis purus faucibus iaculis. Duis tempus pharetra tristique.</p>
-                                <p>In imperdiet ligula eget ligula interdum, eget dictum felis porta. Quisque eu tellus non mi dignissim aliquet. Suspendisse mollis lobortis quam, eu ultrices lectus bibendum eu. Sed at urna nec arcu vulputate lobortis. Sed quis semper ante. Morbi tincidunt felis risus, sed venenatis massa pharetra id. Praesent aliquam scelerisque interdum. Proin libero mi, accumsan lobortis semper vel, tincidunt at nisl. Aliquam erat volutpat.</p>
-                            </div>
-                        </section>
+                        <div class="affix-layout">
+                            <span class="times"><span class="time-hour">03</span><span class="hour">hour</span></span>
+                            <div class="time-lists">
+                                <ul>
+                                    <li>
+                                        <span class="min-ago">3m ago</span>
+                                        <div class="time-bar green">
+                                            <!-- left circle-->
+                                            <span class="first-circle green"></span>
+                                            <!-- right circle-->
+                                            <span class="last-circle">
+                                                <span class="circle">02</span>
+                                            </span>
 
+                                            <span class="server-name">Cloud Server</span>
+                                            <span class="server-status">Steps In Installing Rack Mount Lcd Monitors</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="min-ago">12m ago</span>
+                                        <div class="time-bar red">
+                                            <!-- left circle-->
+                                            <span class="first-circle red-play"></span>
+                                            <!-- right circle-->
+                                            <span class="last-circle">
+                                                <span class="circle">02</span>
+                                            </span>
+
+                                            <span class="server-name">Cloud Server</span>
+                                            <span class="server-status">Choosing The Best Audio Player Software For Your Computer</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="min-ago">12m ago</span>
+                                        <div class="time-bar purple">
+                                            <!-- left circle-->
+                                            <span class="first-circle purple-check"></span>
+                                            <!-- right circle-->
+                                            <span class="last-circle">
+                                                <span class="circle">03</span><span class="circle file-minus"></span>
+                                            </span>
+
+                                            <span class="server-name">Cloud Server</span>
+                                            <span class="server-status">Choosing The Best Audio Player Software For Your Computer</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="affix-layout">
+                            <span class="times"><span class="time-hour">02</span><span class="hour">hour</span></span>
+                            <div class="time-lists">
+                                <ul>
+                                    <li>
+                                        <span class="min-ago">3m ago</span>
+                                        <div class="time-bar green">
+                                            <!-- left circle-->
+                                            <span class="first-circle green"></span>
+                                            <!-- right circle-->
+                                            <span class="last-circle">
+                                                <span class="circle">02</span>
+                                            </span>
+
+                                            <span class="server-name">Cloud Server</span>
+                                            <span class="server-status">Steps In Installing Rack Mount Lcd Monitors</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="min-ago">12m ago</span>
+                                        <div class="time-bar red">
+                                            <!-- left circle-->
+                                            <span class="first-circle red-play"></span>
+                                            <!-- right circle-->
+                                            <span class="last-circle">
+                                                <span class="circle">02</span>
+                                            </span>
+
+                                            <span class="server-name">Cloud Server</span>
+                                            <span class="server-status">Choosing The Best Audio Player Software For Your Computer</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="min-ago">12m ago</span>
+                                        <div class="time-bar purple">
+                                            <!-- left circle-->
+                                            <span class="first-circle purple-check"></span>
+                                            <!-- right circle-->
+                                            <span class="last-circle">
+                                                <span class="circle">03</span><span class="circle file-minus"></span>
+                                            </span>
+
+                                            <span class="server-name">Cloud Server</span>
+                                            <span class="server-status">Choosing The Best Audio Player Software For Your Computer</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="affix-layout">
+                            <span class="times"><span class="time-hour">01</span><span class="hour">hour</span></span>
+                            <div class="time-lists">
+                                <ul>
+                                    <li>
+                                        <span class="min-ago">3m ago</span>
+                                        <div class="time-bar green">
+                                            <!-- left circle-->
+                                            <span class="first-circle green"></span>
+                                            <!-- right circle-->
+                                            <span class="last-circle">
+                                                <span class="circle">02</span>
+                                            </span>
+
+                                            <span class="server-name">Cloud Server</span>
+                                            <span class="server-status">Steps In Installing Rack Mount Lcd Monitors</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="min-ago">12m ago</span>
+                                        <div class="time-bar red">
+                                            <!-- left circle-->
+                                            <span class="first-circle red-play"></span>
+                                            <!-- right circle-->
+                                            <span class="last-circle">
+                                                <span class="circle">02</span>
+                                            </span>
+
+                                            <span class="server-name">Cloud Server</span>
+                                            <span class="server-status">Choosing The Best Audio Player Software For Your Computer</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="min-ago">12m ago</span>
+                                        <div class="time-bar purple">
+                                            <!-- left circle-->
+                                            <span class="first-circle purple-check"></span>
+                                            <!-- right circle-->
+                                            <span class="last-circle">
+                                                <span class="circle">03</span><span class="circle file-minus"></span>
+                                            </span>
+
+                                            <span class="server-name">Cloud Server</span>
+                                            <span class="server-status">Choosing The Best Audio Player Software For Your Computer</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                 </div>
+
             </div>
             <!-- //event -->
 
@@ -535,7 +649,7 @@
             <!-- //device inventory list -->
 
             <!--device list-->
-            <div class="device-wrap">
+            <div class="device-wrap" style="display: none">
                 <div class="device-top clearfix">
                     <span class="f">DEVICES</span>
                     <span class="s">
@@ -1665,6 +1779,9 @@
                 </div>
             </div>
             <!-- //calendar popup date -->
+
+            <!-- 팝업 배경 -->
+            <div class="dimmed-film" style="display: none"></div>
 
             <!-- ************************************** popup ************************************************* -->
             <!--Thank you for applying-->

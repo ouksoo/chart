@@ -56,7 +56,9 @@ ul {
     border: 0;
     vertical-align: baseline
 }
-
+div.popup-link a {
+    margin: 0 50px; color: #000; font-weight: bold;
+}
 </style>
 </head>
 <body>
@@ -115,6 +117,34 @@ ul {
     <p class="form_some-copy smer error">Some info copy here</p>
     <br />
     <input type="text" class="formdata smer good" style="width: 100%;" value="Type text" />
+
+    <br /><br />
+    <strong>Input file</strong>
+    <div class="input-file-container">  
+        <input class="input-file" id="my-file" type="file">
+        <label tabindex="0" for="my-file" class="input-file-trigger">FIND</label>
+        <p class="file-return"></p>
+    </div>
+
+    <br />
+    <div class="input-file-container sm">  
+        <input class="input-file" id="my-file" type="file">
+        <label tabindex="0" for="my-file" class="input-file-trigger">FIND</label>
+        <p class="file-return"></p>
+    </div>
+
+    <br /><br />
+    <strong>Search</strong>
+    <div class="search-component">
+        <input type="text" class="formdata" style="width: 100%;" placeholder="Type text" />
+        <a href="#" class="search-button">search</a>
+    </div>
+
+    <br />
+    <div class="search-component sm">
+        <input type="text" class="formdata sm" style="width: 100%;" placeholder="Type text" />
+        <a href="#" class="search-button">search</a>
+    </div>
 
 </div>
 
@@ -195,6 +225,40 @@ ul {
             </cologroup>
             <thead>
             <tr>
+                <th>DATA TITLE</th>
+                <th>DATA TITLE</th>
+                <th>DATA TITLE</th>
+                <th>DATA TITLE</th>
+                <th>DATA TITLE</th>
+                <th>DATA TITLE</th>
+                <th>DATA TITLE</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>TBODY</td>
+                <td>TBODY</td>
+                <td>TBODY</td>
+                <td>TBODY</td>
+                <td>TBODY</td>
+                <td>TBODY</td>
+                <td>TBODY</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- //grid table -->
+    <br /><br />
+    <!-- grid table -->
+    <div class="custom_table-grid">
+        <table class="notable">
+            <cologroup>
+                <col width="*" />
+                <col width="*" />
+                <col width="*" />
+            </cologroup>
+            <thead>
+            <tr>
                 <th><span class="n">THEAD</span><span class="m"><a href="#" class="sort-up" title="Ascend">Ascend</a><a href="#" class="sort-down" title="Descend">Descend</a></span></th>
                 <th>
                     <span class="n">THEAD</span><span class="s">
@@ -228,9 +292,111 @@ ul {
 
 <h2>POPUP</h2>
 <div class="cnt">
-    <!-- popup -->
-    
-    <!-- //popup -->
+    <div class="popup-link">
+        <a href="#" class="show-open-pop" data-num="1">Thank you for applying</a>
+        <a href="#" class="show-open-pop" data-num="2">Do you want to delete?</a>
+        <a href="#" class="show-open-pop" data-num="3">Something Wrong Number</a>
+        <a href="#" class="show-open-pop" data-num="4">Created the Weekly Report</a>
+        <a href="#" class="show-open-pop" data-num="5">only text popup</a><br /><br />
+
+        <a href="#" class="show-open-tiny" data-num="1">tiny wifi</a>
+        <a href="#" class="show-open-tiny" data-num="2">tiny alert</a>
+    </div>
+
+    <!-- 팝업 배경 -->
+    <div class="dimmed-film" style="display: none"></div>
+
+    <!-- ************************************** popup ************************************************* -->
+    <!--Thank you for applying-->
+    <div id="popup-1" class="tiny-popup-wrap" style="display: none">
+        <a href="#" class="close-btn">close</a>
+        <span class="popup-img check"></span>
+        <p class="paragraph">
+            <strong class="normal">Thank you for applying</strong>
+            <span class="normal">Dealing With Technical Support 10 Useful Tips</span>
+        </p>
+        <div class="popup-btn-center">
+            <a href="#" class="cs-btn green">BUTTON</a>
+        </div>
+    </div>
+    <!--//Thank you for applying-->
+    <!--Do you want to delete?-->
+    <div id="popup-2" class="tiny-popup-wrap" style="display: none">
+        <a href="#" class="close-btn">close</a>
+        <span class="popup-img delete"></span>
+        <p class="paragraph">
+            <strong class="normal">Do you want to delete?</strong>
+            <span class="normal">Dealing With Technical Support 10 Useful Tips</span>
+        </p>
+        <div class="popup-btn-center">
+            <a href="#" class="cs-btn green">BUTTON</a>
+        </div>
+    </div>
+    <!--//Do you want to delete?-->
+    <!--Something Wrong Number-->
+    <div id="popup-3" class="tiny-popup-wrap" style="display: none">
+        <a href="#" class="close-btn">close</a>
+        <span class="popup-img warn"></span>
+        <p class="paragraph">
+            <strong class="normal">Something Wrong Number</strong>
+            <span class="normal">Can you try to login with right your ID and Password?</span>
+        </p>
+        <div class="popup-btn-center">
+            <a href="#" class="cs-btn green">BUTTON</a>
+        </div>
+    </div>
+    <!--//Something Wrong Number-->
+    <!--Created the Weekly Report-->
+    <div id="popup-4" class="tiny-popup-wrap" style="display: none">
+        <a href="#" class="close-btn">close</a>
+        <span class="popup-img info"></span>
+        <p class="paragraph">
+            <strong class="normal">Created the Weekly Report</strong>
+            <span class="normal">WordPress Version 2 0 3 Review</span>
+        </p>
+        <div class="popup-btn-center">
+            <a href="#" class="cs-btn green">BUTTON</a>
+        </div>
+    </div>
+    <!--//Created the Weekly Report-->
+
+    <!--only text-->
+    <div id="popup-5" class="tiny-popup-wrap" style="display: none">
+        <a href="#" class="close-btn">close</a>
+        <p class="paragraph-only">
+            Get The Boot A Birds Eye Look Into Mcse Boot Camps
+        </p>
+        <div class="popup-btn-center">
+            <a href="#" class="cs-btn green">BUTTON</a>
+        </div>
+    </div>
+    <!--only text-->
+
+    <!--tiny wifi-->
+    <div id="tiny-1" class="tiny-side-tooltip"><!--보여질때, 없어질때 class "on" 토글-->
+        <a href="#" class="close-btn">close</a>
+        <p class="paragraph-tiny wifi">
+            Dvd Replication For Dummies 4 Easy Steps To Professional Dvd Replication
+        </p>
+    </div>
+    <!--//tiny wifi-->
+
+    <!--tiny wifi-->
+    <div id="tiny-2" class="tiny-side-tooltip"><!--보여질때, 없어질때 class "on" 토글-->
+        <a href="#" class="close-btn">close</a>
+        <p class="paragraph-tiny some-alert">
+            Dvd Replication For Dummies 4 Easy Steps To Professional Dvd Replication
+        </p>
+    </div>
+    <!--//tiny wifi-->
+    <!-- //************************************** popup ************************************************* -->    
+</div>
+
+<h2>Useful components</h2>
+<div class="cnt">
+
+
+
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -255,11 +421,43 @@ $(document).ready(function (){
         $('select').parent().children('span').text($(this).text());
         $('select').children().removeAttr('selected');
         $('select').children('[value="'+cur+'"]').attr('selected','selected');					
-        console.log($('select').children('[value="'+cur+'"]').text());
     });
     $('select').parent().on('click', function (){
         $(this).find('ul').slideToggle('fast');
     });
+
+    $('.show-open-pop').on('click', function(e) {   
+        var number = $(this).data('num');
+        $('div.dimmed-film, #popup-' + number).fadeIn();
+        e.preventDefault();
+    });
+
+    $('.show-open-tiny').on('click', function(e) {   
+        var number = $(this).data('num');
+        $('#tiny-' + number).addClass('on');
+        e.preventDefault();
+    });
+
+    // input file
+    var inputFileInput  = document.querySelector( ".input-file" );  
+    var inputFilebutton = document.querySelector( ".input-file-trigger" );
+    var inputFileReturn = document.querySelector(".file-return");
+
+    inputFilebutton.addEventListener( "keydown", function(event) {  
+        if ( event.keyCode == 13 || event.keyCode == 32 ) {  
+            fileInput.focus();  
+            return false;
+        }  
+    });
+    inputFilebutton.addEventListener( "click", function(event) {
+        inputFileInput.focus();
+        return false;
+    });  
+    inputFileInput.addEventListener( "change", function(event) {  
+        alert(this.value)
+        inputFileReturn.innerHTML = this.value;  
+    });
+
 });
 </script>
 </body>
