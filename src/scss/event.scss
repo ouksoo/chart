@@ -42,7 +42,7 @@ div.event-list-wrap {
                     color: #fff;
                     background: transparent;
                     border: 0;
-                    margin: 0 15px;
+                    margin: 0 11px;
                 }
             }
         }
@@ -337,6 +337,7 @@ div.event-list-wrap {
                                 width: 34px;
                                 height: 34px;
                                 border-radius: 50%;
+                                cursor: pointer;
 
                                 &.green {
                                     border: solid 2px #41cee2;
@@ -385,10 +386,12 @@ div.event-list-wrap {
                                 font-size: 16px;
                                 color: #28313b;
                                 margin: 0 20px 0 55px;
+                                cursor: pointer;
                             }
                             span.server-status {
                                 font-size: 16px;
                                 color: #28313b;
+                                cursor: pointer;
                             }
                         }
                     }

@@ -4,21 +4,7 @@ var GLOBAL = {
     state: {
         filter: false
     },
-    utilsAliveLinks: function utilsAliveLinks() {
-        // default full popup close
-        $('.default_full-popup a.close').on('click', function () {
-            $('.default_full-popup').fadeOut('fast');
-        });
-
-        // 바탕화면 클릭 시, 열려있는 팝업등에 대한 닫기 처리
-        $(document).on('click', function () {
-            $('.lnb-content_popup, .select-wrap div.options, .grid_select-option').fadeOut('fast');
-            $('.device-list div.device-inner').removeClass('on');
-        });
-        $('.lnb-wrap li, .lnb-content_popup, .select-wrap, .select-wrap div.options, .device-wrap a.device-remove, .device-wrap a.remove').on('click', function (e) {
-            e.stopPropagation();
-        });
-    },
+    utilsAliveLinks: function utilsAliveLinks() {},
 
     // selectBox option show (셀렉트 박스가 변경된다면 필요 없음)
     selectOptionsForm: function selectOptionsForm() {
@@ -75,4 +61,14 @@ var GLOBAL = {
             }
         });
     }
-};
+
+    // 바탕화면 클릭 시, 열려있는 팝업등에 대한 닫기 처리 (팝업을 열때마다 호출)
+};function openPopCloseEvent() {
+    $(document).on('click', function () {
+        $('.lnb-content_popup, .select-wrap div.options, .grid_select-option').fadeOut('fast');
+        $('.device-list div.device-inner').removeClass('on');
+    });
+    $('.lnb-wrap li, .lnb-content_popup, .select-wrap, .select-wrap div.options, .device-wrap a.device-remove, .device-wrap a.remove').on('click', function (e) {
+        e.stopPropagation();
+    });
+}

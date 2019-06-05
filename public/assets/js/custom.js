@@ -73,9 +73,11 @@ var PJT = {
     },
     lnbCalendarShow: function lnbCalendarShow() {
         $('.lnb-tools-wrap.calendar').fadeIn('fast');
+        openPopCloseEvent();
     },
     lnbCreateReportShow: function lnbCreateReportShow() {
         $('.lnb-tools-wrap.create-report').fadeIn('fast');
+        openPopCloseEvent();
     },
     lnbCreateReportEmail: function lnbCreateReportEmail() {
         if ($('#reportEmail').val() !== '') {
@@ -85,12 +87,15 @@ var PJT = {
             $('div.lnb-tools-wrap.create-report a.b').css('display', 'inline-block');
             $('div.lnb-tools-wrap.create-report a.c').css('display', 'none');
         }
+        openPopCloseEvent();
     },
     lnbSnapShot: function lnbSnapShot() {
         $('.lnb-tools-wrap.snap-shot').fadeIn('fast');
+        openPopCloseEvent();
     },
     lnbAddChart: function lnbAddChart() {
         $('.lnb-tools-wrap.add-charts').fadeIn('fast');
+        openPopCloseEvent();
     },
     lnbMouseEnter: function lnbMouseEnter(obj) {
         var thisName = $(obj).data('name');
@@ -140,17 +145,6 @@ var PJT = {
         $('#eventMonitoringForce').fadeIn();
     },
     eventDataToolTip: function eventDataToolTip(e) {},
-
-    utilsAliveLinks: function utilsAliveLinks() {
-        // document click
-        $(document).on('click', function () {
-            $('.lnb-content_popup, .select-wrap div.options, .grid_select-option').fadeOut('fast');
-            $('.device-list div.device-inner').removeClass('on');
-        });
-        $('.lnb-wrap li, .lnb-content_popup, .select-wrap, .select-wrap div.options, .device-wrap a.device-remove, .device-wrap a.remove').on('click', function (e) {
-            e.stopPropagation();
-        });
-    },
     // selectBox option show (협의후 변경되면 삭제)
     selectOptionsForm: function selectOptionsForm() {
         $('.select_data-options').on('click', function (e) {
@@ -236,8 +230,19 @@ var PJT = {
         });
     }
 
-    // after loaded execute
-};window.onload = function () {
+    // 바탕화면 클릭 시, 열려있는 팝업등에 대한 닫기 처리 (팝업을 열때마다 호출)
+};function openPopCloseEvent() {
+    $(document).on('click', function () {
+        $('.lnb-content_popup, .select-wrap div.options, .grid_select-option').fadeOut('fast');
+        $('.device-list div.device-inner').removeClass('on');
+    });
+    $('.lnb-wrap li, .lnb-content_popup, .select-wrap, .select-wrap div.options, .device-wrap a.device-remove, .device-wrap a.remove').on('click', function (e) {
+        e.stopPropagation();
+    });
+}
+
+// after loaded execute
+window.onload = function () {
     PJT.loginInit();
     PJT.siteResizeResponse();
     PJT.utilsAliveLinks();

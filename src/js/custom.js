@@ -75,9 +75,11 @@ let PJT = {
     },
     lnbCalendarShow: function() {
         $('.lnb-tools-wrap.calendar').fadeIn('fast');
+        openPopCloseEvent();
     },
     lnbCreateReportShow: function() {
         $('.lnb-tools-wrap.create-report').fadeIn('fast');
+        openPopCloseEvent();
     },
     lnbCreateReportEmail: function() {
         if($('#reportEmail').val() !== '') {
@@ -88,12 +90,15 @@ let PJT = {
             $('div.lnb-tools-wrap.create-report a.b').css('display','inline-block');
             $('div.lnb-tools-wrap.create-report a.c').css('display','none');
         }
+        openPopCloseEvent();
     },
     lnbSnapShot: function() {
         $('.lnb-tools-wrap.snap-shot').fadeIn('fast');
+        openPopCloseEvent();
     },
     lnbAddChart: function() {
         $('.lnb-tools-wrap.add-charts').fadeIn('fast');
+        openPopCloseEvent();
     },
     lnbMouseEnter: function(obj) {
         var thisName = $(obj).data('name');
@@ -145,17 +150,6 @@ let PJT = {
     },
     eventDataToolTip: function(e) {
         
-    },
-
-    utilsAliveLinks: function() {
-        // document click
-        $(document).on('click', function() {
-            $('.lnb-content_popup, .select-wrap div.options, .grid_select-option').fadeOut('fast');
-            $('.device-list div.device-inner').removeClass('on');
-        });
-        $('.lnb-wrap li, .lnb-content_popup, .select-wrap, .select-wrap div.options, .device-wrap a.device-remove, .device-wrap a.remove').on('click', function(e) {
-            e.stopPropagation();
-        });
     },
     // selectBox option show (협의후 변경되면 삭제)
     selectOptionsForm: function() {
@@ -241,7 +235,18 @@ let PJT = {
             }            
         });
     },
+}
 
+
+// 바탕화면 클릭 시, 열려있는 팝업등에 대한 닫기 처리 (팝업을 열때마다 호출)
+function openPopCloseEvent() {
+    $(document).on('click', function() {
+        $('.lnb-content_popup, .select-wrap div.options, .grid_select-option').fadeOut('fast');
+        $('.device-list div.device-inner').removeClass('on');
+    });
+    $('.lnb-wrap li, .lnb-content_popup, .select-wrap, .select-wrap div.options, .device-wrap a.device-remove, .device-wrap a.remove').on('click', function(e) {
+        e.stopPropagation();
+    });
 }
 
 // after loaded execute
