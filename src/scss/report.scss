@@ -1,0 +1,166 @@
+/********************** 
+* report
+***********************/
+div.report-list-wrap {
+
+    div.report-lists {
+        float: left;
+        width: 345px;
+        border-right: solid 1px rgba(0, 0, 0, 0.1);
+
+        ul.report-tabs {
+
+            li {
+                position: relative;
+                float: left;
+                width: 33.3%;
+                background: #e8eef4;
+
+                &:hover {
+                    background-color: #f2f4f5;
+                }
+                &:hover:before {
+                    position: absolute;
+                    content: '';
+                    bottom: 0; left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: #63DBC1;
+                    z-index: 1;
+                }
+
+                a {
+                    display: block;
+                    text-align: center;
+                    height: 69px;                    
+                    color: #28313b;
+                    padding-top: 22px;
+                    border-right: solid 1px rgba(0, 0, 0, 0.1);
+                    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+                }
+                &:last-child {
+                    a {
+                        border-right: 0;
+                    }
+                }
+            }
+        }
+        ul.report-list {
+            overflow-y: auto;
+            overflow-x: hidden;
+            @include prefix(transition, height 0.5s, webkit ms);
+        
+            li {
+                position: relative;
+                height: 62px;
+                border-bottom: 1px solid #c8d3df;
+                padding: 11px 0 0 15px;
+                // overflow: hidden;
+        
+                &:hover::before {
+                    content: ' ';
+                    position: absolute;
+                    left: 0; top: 0;
+                    width: 4px; height: 100%;
+                    background: #9678ff;
+                }
+                
+                div.report-inner {
+
+                    div.re {
+                        float: left;
+                        width: 40px; height: 38px;
+
+                        &.m {
+                            background: url('../img/icons/icon_report_m.png') 20% 50% no-repeat;
+                            @include prefix($bgs, 20px 25px, webkit ms);
+                        }
+                        &.e {
+                            background: url('../img/icons/icon_report_e.png') 20% 50% no-repeat;
+                            @include prefix($bgs, 20px 25px, webkit ms);
+                        }
+                    }
+                    div.inner {
+                        float: left;
+        
+                        p.f {
+                            font-family: $inter-m;
+                            font-size: 16px;
+                            color: #28313b;
+                            line-height: 20px;
+                        }
+                        p.s {   
+                            font-size: 13px;
+                            color: #97a4b1;
+                            line-height: 20px;
+        
+                            strong {
+                                font-family: $inter-b;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    div.report-detail {
+        float: left;
+
+        div.detail-header {
+            height: 69px;
+            border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+
+            div.f {
+                float: left;
+                width: 70%;
+                padding: 22px 20px 20px 30px;
+
+                span.tt {
+                    display: inline-block;
+                    font-family: $inter-m;
+                    font-size: 16px;
+                    color: #28313b;
+                    border-right: 1px solid #97a4b1;
+                    padding-right: 15px;
+                    line-height: 15px;
+                }
+                span.ts {
+                    display: inline-block;
+                    font-size: 14px;
+                    color: #97a4b1;
+                    padding-left: 15px;
+                }
+            }
+            div.s {
+                float: right;
+                width: 30%;
+                text-align: right;
+                padding: 26px;
+
+                a {
+                    display: inline-block;
+                    width: 18px; height: 18px;
+                    text-indent: 9999px;
+                    overflow: hidden;
+                    margin-left: 18px;
+
+                    &.print {
+                        background: url('../img/icons/icon_report_print.png') 0 0 no-repeat;
+                        @include prefix($bgs, 18px 18px, webkit ms);
+                    }
+                    &.download {
+                        background: url('../img/icons/icon_report_down.png') 0 0 no-repeat;
+                        @include prefix($bgs, 18px 18px, webkit ms);
+                    }
+                    &.email {
+                        background: url('../img/icons/icon_report_mail.png') 0 0 no-repeat;
+                        @include prefix($bgs, 18px 18px, webkit ms);
+                    }
+                }
+            }
+        }
+        div.detail-wrap {
+
+        }
+    }
+}

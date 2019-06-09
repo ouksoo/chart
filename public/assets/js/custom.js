@@ -208,6 +208,14 @@ var PJT = {
 
         $('.content-wrap').css('width', winWidth - 375);
         $('.device-list').css('height', winHeight - 169);
+        $('.report-list').css('height', winHeight - 140);
+        $('.report-detail').css({
+            'width': winWidth - 720
+        });
+        $('.report-detail .detail-wrap').css({
+            'width': winWidth - 720,
+            'height': winHeight - 140
+        });
         $('.event-date-list').css('height', winHeight - headerEventHeader);
         $('div.full-popup-wrap div.inner h2').css('width', winWidth - 40);
 
@@ -227,6 +235,11 @@ var PJT = {
             } else {
                 $('.device-list').css('height', winHeight - 290);
             }
+            $('.report-list').css('height', winHeight - 140);
+            $('.report-detail .detail-wrap').css({
+                'width': winWidth - 720,
+                'height': winHeight - 140
+            });
         });
     }
 
