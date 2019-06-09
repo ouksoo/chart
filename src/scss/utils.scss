@@ -276,7 +276,8 @@ span.double--line {
     &:disabled {
         border: solid 1px #e4eaf1;
         background-color: #f7f9fb;
-        color: #dae3ea;
+        // color: #dae3ea;
+        color: #97a4b1;
     }
     &.sm {
         padding: 8px 13px;
@@ -541,6 +542,9 @@ span.radiobox-default {
 /*
 * button
 */
+a.cs-btn:not([href]):not([tabindex]) {
+    color: #fff;
+}
 .cs-btn {
     display: inline-block;
     height: 42px;
@@ -620,6 +624,9 @@ span.radiobox-default {
         height: 28px;
         padding: 4px 20px;
     }
+}
+a.cb-btn:not([href]):not([tabindex]) {
+    color: #63dbc1;
 }
 .btn-center {
     text-align: center;

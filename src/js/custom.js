@@ -251,8 +251,8 @@ function openPopCloseEvent() {
 
 // after loaded execute
 window.onload = function() {
-    PJT.loginInit();
+    // PJT.loginInit();
     PJT.siteResizeResponse();
-    PJT.utilsAliveLinks();
+    // PJT.utilsAliveLinks();
     PJT.selectOptionsForm();
 };
