@@ -136,7 +136,7 @@
     left: 0; top: 0;
     width: 100%; height: 100%;
     background: #000;
-    opacity: .8;
+    background: rgba(0, 0, 0, 0.8);
 }
 span.double--line {
     display: block;
@@ -778,7 +778,7 @@ div.modal-wrap {
 
     div.modal-content {
         background-color: transparent;
-        background-clip: none;
+        // background-clip: none;
         border: 0;
     }
 }

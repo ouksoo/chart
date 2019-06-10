@@ -6,6 +6,7 @@ div.lnb-wrap-large {
     width: 250px; height: 100%;
     padding-left: 47px;
     background: #fff;
+    z-index: 1;
     
     h1 {
         margin: 75px 0;
@@ -79,6 +80,7 @@ div.lnb-wrap-large {
 
 div.light-content {
     position: absolute;
+    width: 100%;
     padding: 0px 110px 0 230px;
 
     h2 {

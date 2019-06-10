@@ -160,7 +160,41 @@ div.report-list-wrap {
             }
         }
         div.detail-wrap {
+            overflow-y: auto;
 
+            div.report-start {
+                width: 920px;
+                // height: 899px;
+                padding: 40px 35px;
+                border-radius: 8px;
+                margin: 40px auto;
+                border: solid 1px rgba(0, 0, 0, 0.1);
+                background-color: #ffffff;
+
+                div.header {
+                    position: relative;
+                    font-family: $inter-m;
+                    font-size: 13px;
+                    color: #97a4b1;
+
+                    span.f {
+                        float: left;
+                    }
+                    span.s {
+                        position: absolute;
+                        width: 400px; 
+                        left: 50%; top: -6px;
+                        margin-left: -200px;
+                        font-size: 21px;
+                        letter-spacing: -0.3px;
+                        text-align: center;
+                        color: #28313b;
+                    }
+                    span.t {
+                        float: right;
+                    }
+                }
+            }
         }
     }
 }

@@ -13,7 +13,7 @@
 
 <div id="app" class="wrapper">
     <!-- header -->
-    <header class="clearfix">
+    <header class="clearfix" style="display: none">
         
         <a href="#" class="monitor header-monitor" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">Monitoring Graph</a>
         <div class="product-btn clearfix" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">
@@ -118,7 +118,7 @@
     <!-- section -->
     <section>
         <!--left navigation bar-->
-        <div class="lnb-wrap">
+        <div class="lnb-wrap" style="display: none">
             <ul class="lnb-nav clearfix">
                 <li data-name="Monitoring" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="on">monitoring</a></li>
                 <li data-name="Event" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#">event</a></li>
@@ -183,7 +183,7 @@
             <!-- report -->
             <div class="report-list-wrap">
                 <div class="report-lists">
-                    <div class="report-list-scroll">
+                    <div class="report-list-scroll" style="display: none">
                         <ul class="report-tabs clearfix">
                             <li><a href="#">All Report</a></li>
                             <li><a href="#">Monthly</a></li>
@@ -230,6 +230,14 @@
                         </div>
                     </div>
                     <div class="detail-wrap">
+                        
+                        <div class="report-start">
+                            <div class="header clearfix">
+                                <span class="f">30 Apr 2019</span>
+                                <span class="s">Monthly Report  -  April 2019</span>
+                                <span class="t">Create by System</span>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -660,7 +668,7 @@
             <!-- //device inventory list -->
 
             <!--device list-->
-            <div class="device-wrap">
+            <div class="device-wrap" style="display: none">
                 <div class="device-top clearfix">
                     <span class="f">DEVICES</span>
                     <span class="s">
