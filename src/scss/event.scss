@@ -311,93 +311,102 @@ div.event-list-wrap {
                             margin-right: 13px;
                             vertical-align: middle;
                         }
-                        div.time-bar {
-                            position: relative;
-                            display: inline-block;
-                            padding-right: 90px;
-                            height: 46px;
-                            border-radius: 23px;
-                            vertical-align: middle;
-                            line-height: 42px;
-                            background-color: #ffffff;
-
-                            &.green {
-                                border: solid 1px #41cee2;
-                            }
-                            &.red {
-                                border: solid 1px #ff957c;
-                            }
-                            &.purple {
-                                border: solid 1px #9678ff;
-                            }
-
-                            span.first-circle {
-                                position: absolute;
-                                top: 5px; left: 6px;
-                                width: 34px;
-                                height: 34px;
-                                border-radius: 50%;
-                                cursor: pointer;
-
-                                &.green {
-                                    border: solid 2px #41cee2;
-                                }
-                                &.red-play {
-                                    border: solid 2px #ff957c;
-                                    background: #ff957c url('../img/icons/icon_play.png') 65% 50% no-repeat;
-                                    @include prefix($bgs, 18px 18px, webkit ms);
-                                }
-                                &.purple-check {
-                                    border: solid 2px #9678ff;
-                                    background: #9678ff url('../img/icons/icon_play_check.png') 65% 50% no-repeat;
-                                    @include prefix($bgs, 18px 18px, webkit ms);
-                                }
-                            }
-                            span.last-circle {
-                                position: absolute;
-                                top: 5px; right: 6px;
-                                font-family: $inter-m;
-                                font-size: 16px;
-                                color: #28313b;
-
-                                span.circle {
-                                    display: inline-block;
-                                    width: 34px;
-                                    height: 34px;
-                                    border: solid 1px rgba(0, 0, 0, 0.1);
-                                    background-color: #e8eef4;
-                                    font-size: 16px;
-                                    text-align: center;
-                                    font-family: $inter-m;
-                                    border-radius: 50%;
-                                    margin-left: 5px;
-                                    vertical-align: top; 
-                                    line-height: 33px;
-                                    letter-spacing: -1px;
-
-                                    &.file-minus {
-                                        background: #e8eef4 url('../img/icons/icon_file_minus.png') 65% 50% no-repeat;
-                                        @include prefix($bgs, 18px 18px, webkit ms); 
-                                    }
-                                }
-                            }
-                            span.server-name {
-                                font-family: $inter-m;
-                                font-size: 16px;
-                                color: #28313b;
-                                margin: 0 20px 0 55px;
-                                cursor: pointer;
-                            }
-                            span.server-status {
-                                font-size: 16px;
-                                color: #28313b;
-                                cursor: pointer;
-                            }
-                        }
                     }
                 }
             }
         }
+    }
+}
+
+// time bar
+div.time-bar {
+    position: relative;
+    display: inline-block;
+    padding-right: 90px;
+    height: 46px;
+    border-radius: 23px;
+    vertical-align: middle;
+    line-height: 42px;
+    background-color: #ffffff;
+
+    &.green {
+        border: solid 1px #41cee2;
+    }
+    &.red {
+        border: solid 1px #ff957c;
+    }
+    &.purple {
+        border: solid 1px #9678ff;
+    }
+
+    span.first-circle {
+        position: absolute;
+        top: 5px; left: 6px;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &.green {
+            border: solid 2px #41cee2;
+        }
+        &.red-play {
+            border: solid 2px #ff957c;
+            background: #ff957c url('../img/icons/icon_play.png') 65% 50% no-repeat;
+            @include prefix($bgs, 18px 18px, webkit ms);
+        }
+        &.purple-check {
+            border: solid 2px #9678ff;
+            background: #9678ff url('../img/icons/icon_play_check.png') 65% 50% no-repeat;
+            @include prefix($bgs, 18px 18px, webkit ms);
+        }
+    }
+    span.last-circle {
+        position: absolute;
+        top: 5px; right: 6px;
+        font-family: $inter-m;
+        font-size: 16px;
+        color: #28313b;
+
+        span.circle {
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            border: solid 1px rgba(0, 0, 0, 0.1);
+            background-color: #e8eef4;
+            font-size: 16px;
+            text-align: center;
+            font-family: $inter-m;
+            border-radius: 50%;
+            margin-left: 5px;
+            vertical-align: top; 
+            line-height: 33px;
+            letter-spacing: -1px;
+
+            &.file-minus {
+                background: #e8eef4 url('../img/icons/icon_file_minus.png') 65% 50% no-repeat;
+                @include prefix($bgs, 18px 18px, webkit ms); 
+            }
+        }
+    }
+    span.server-name {
+        display: inline-block;
+        vertical-align: top;
+        font-family: $inter-m;
+        font-size: 16px;
+        color: #28313b;
+        margin: 0 20px 0 55px;
+        cursor: pointer;
+    }
+    span.server-status {
+        display: inline-block;
+        font-size: 16px;
+        color: #28313b;
+        cursor: pointer;
+        max-width: 400px;
+        text-overflow: ellipsis; 
+        white-space: nowrap; 
+        overflow: hidden;
     }
 }
 
