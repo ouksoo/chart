@@ -2429,7 +2429,7 @@
                     <h2>ADD A DEVICE</h2>
                     <a href="#" class="close">close</a>
                     <!-- step 1-->
-                    <div class="add-device-wrap">
+                    <div class="add-device-wrap" style="display: none">
                         <div class="process">
                             <span class="r on">01</span>
                             <span class="f on">Device Type</span>
@@ -2515,7 +2515,7 @@
                     <!-- //step 1-->
 
                     <!-- step 2-->
-                    <div class="add-device-wrap" style="display: none">
+                    <div class="add-device-wrap">
                         <div class="process">
                             <span class="r">01</span>
                             <span class="f">Device Type</span>
@@ -2530,7 +2530,7 @@
                             <div class="inner-box-left">    
                                 <p class="para">Fill out below fields<br />for basic infromation of device</p>
                                 <div class="form-comp">
-                                    <span class="tit">Device Name</span>
+                                    <span class="tit">Device Name <span class="require-mark">*</span></span>
                                     <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
                                 </div>
                                 <div class="form-comp">
@@ -2538,7 +2538,7 @@
                                     <input type="text" class="formdata" style="width: 100%;" placeholder="Description" />
                                 </div>
                                 <div class="form-comp">
-                                    <span class="tit">Organization</span>
+                                    <span class="tit">Organization <span class="require-mark">*</span></span>
                                     <div class="select-wrap" style="width: 100%">
                                         <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
                                         <div class="options">
@@ -2567,7 +2567,7 @@
                                     </div>
                                 </div>
                                 <div class="form-comp">
-                                    <span class="tit">Service</span>
+                                    <span class="tit">Service <span class="require-mark">*</span></span>
                                     <div class="select-wrap" style="width: 100%">
                                         <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
                                         <div class="options">
@@ -2578,7 +2578,7 @@
                                     </div>
                                 </div>
                                 <div class="form-comp">
-                                    <span class="tit">Datasource</span>
+                                    <span class="tit">Datasource <span class="require-mark">*</span></span>
                                     <input type="text" class="formdata" style="width: 100%;" placeholder="Data source" />
                                 </div>
                                 <div class="form-comp">
@@ -3181,6 +3181,21 @@
             <div class="dimmed-film" style="display: none"></div>
 
             <!-- ************************************** popup ************************************************* -->
+            <!-- search data -->
+            <div class="search-data-popup" style="display: none">
+                <input type="input" class="search-input" placeholder="Search Data" /><a href="#" class="search">search</a>
+                <ul>
+                    <li><a href="#">O'Hare International Airport</a></li>
+                    <li><a href="#">Soekarno–Hatta International Airport</a></li>
+                    <li><a href="#">Charlotte Douglas International Airport</a></li>
+                    <li><a href="#">O'Hare International Airport</a></li>
+                    <li><a href="#">O'Hare International Airport</a></li>
+                    <li><a href="#">Soekarno–Hatta International Airport</a></li>
+                    <li><a href="#">Charlotte Douglas International Airport</a></li>
+                    <li><a href="#">O'Hare International Airport</a></li>
+                </ul>
+            </div>
+            <!-- //search data-->
             <!--Thank you for applying-->
             <div class="tiny-popup-wrap" style="display: none">
                 <a href="#" class="close-btn">close</a>

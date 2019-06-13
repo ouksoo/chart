@@ -144,6 +144,14 @@ span.double--line {
     background: #d5e0ea;
     border-bottom: 1px solid #fff;
 }
+span.require-mark {
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 5px;
+    color: $red;
+    line-height: 17px;
+    vertical-align: middle;
+}
 
 .select-wrap {
     display: inline-block;
@@ -208,6 +216,54 @@ span.double--line {
 
         .select-data {
             padding: 8px 13px;
+            font-size: 13px;
+            background: url('../img/icons/icon_select_down.png') 96% 50% no-repeat;
+            @include prefix($bgs, 16px 16px, webkit ms);
+
+            &:hover {
+                background: url('../img/icons/icon_select_down_on.png') 96% 50% no-repeat;
+                @include prefix($bgs, 16px 16px, webkit ms);
+            }
+            &:disabled {
+                background: url('../img/icons/icon_select_down_disabled.png') 96% 50% no-repeat;
+                @include prefix($bgs, 16px 16px, webkit ms);
+            }
+        }
+        div.options {
+            display: none;
+            position: absolute;
+            left: 0; top: 50%;
+            margin-top: -80px;
+            width: 100%;
+            height: 160px;
+            padding: 15px 17px;
+            border-radius: 4px;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+            border: 1px solid #97A4B1;
+            background-image: linear-gradient(to bottom, #fbfdfe, #f2f4f5);
+    
+            ul {
+                display: block;
+                height: 130px;
+                overflow-y: auto;
+    
+                li {
+                    a {
+                        display: block;
+                        font-family: $inter-r;
+                        font-size: 13px;
+                        color: #97a4b1;
+                        line-height: 27px;
+                    }
+                }
+            }
+        }
+    }
+    &.smer {
+        font-size: 13px;
+
+        .select-data {
+            padding: 5px 13px 4px 13px;
             font-size: 13px;
             background: url('../img/icons/icon_select_down.png') 96% 50% no-repeat;
             @include prefix($bgs, 16px 16px, webkit ms);
