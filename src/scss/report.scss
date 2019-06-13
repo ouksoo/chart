@@ -32,7 +32,7 @@ div.report-list-wrap {
                 a {
                     display: block;
                     text-align: center;
-                    height: 69px;                    
+                    height: 70px;                    
                     color: #28313b;
                     padding-top: 22px;
                     border-right: solid 1px rgba(0, 0, 0, 0.1);
@@ -107,7 +107,7 @@ div.report-list-wrap {
         float: left;
 
         div.detail-header {
-            height: 69px;
+            height: 70px;
             border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 
             div.f {
@@ -135,7 +135,7 @@ div.report-list-wrap {
                 float: right;
                 width: 30%;
                 text-align: right;
-                padding: 26px;
+                padding: 23px 26px 23px 26px;
 
                 a {
                     display: inline-block;
@@ -171,6 +171,63 @@ div.report-list-wrap {
                 margin: 40px auto;
                 border: solid 1px rgba(0, 0, 0, 0.1);
                 background-color: #ffffff;
+
+                &.front {
+                    position: relative;
+
+                    span.logo {
+                        position: absolute;
+                        top: 56px; left: 56px;
+                        width: 60px; height: 53px;
+                        background: url('../img/icons/logo_simple.png') 0 0 no-repeat;
+                        @include prefix($bgs, 60px 53px, webkit ms);
+                    }
+                    p.title {
+                        position: absolute;
+                        top: 325px; left: 47px;
+                        font-family: $raleway;
+                        font-size: 140px;
+                        line-height: 130px;
+                        color: $dark;
+                        font-weight: 700;
+                        letter-spacing: -2px;
+                    }
+                    p.sub-tit {
+                        position: absolute;
+                        left: 56px; top: 599px;
+                        font-family: $raleway;
+                        font-weight: 400;
+                        font-size: 50px;
+                        line-height: 126px;
+                        color: $dark;
+                        letter-spacing: -1px;
+                    }
+                    p.bottom-tit {
+                        position: absolute;
+                        left: 58px; bottom: 64px;
+                        font-family: $inter-m;
+                        font-size: 24px;
+                        color: $dark;
+                        letter-spacing: -0.5px;
+                    }
+                    span.date {
+                        position: absolute;
+                        right: 0px; top: 115px;
+                        font-family: $inter-m;
+                        font-size: 26px;
+                        color: $dark;
+                        letter-spacing: -0.5px;
+                        transform: rotate(90deg);
+                    }
+                    span.purple-line {
+                        position: absolute;
+                        right: 70px; top: 270px;
+                        width: 15px;
+                        height: 950px;
+                        border-radius: 7.5px;
+                        background-color: #9678ff;
+                    }
+                }
 
                 div.header {
                     position: relative;
@@ -372,6 +429,7 @@ div.report-list-wrap {
 
             div.six-months {
                 padding-top: 35px;
+                padding-bottom: 20px;
 
                 span.resource {
                     float: left;
@@ -386,7 +444,7 @@ div.report-list-wrap {
                     position: relative;
                     float: left;
                     width: 87%;
-                    height: 100px;
+                    height: 90px;
 
                     div.line {
                         position: absolute;
@@ -453,7 +511,7 @@ div.report-list-wrap {
 
             div.by-month-day {
                 position: relative;
-                padding-top: 30px;
+                padding-top: 20px;
 
                 span.tit {
                     position: absolute;

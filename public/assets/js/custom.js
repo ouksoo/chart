@@ -236,6 +236,9 @@ var PJT = {
                 $('.device-list').css('height', winHeight - 290);
             }
             $('.report-list').css('height', winHeight - 140);
+            $('.report-detail').css({
+                'width': winWidth - 720
+            });
             $('.report-detail .detail-wrap').css({
                 'width': winWidth - 720,
                 'height': winHeight - 140
