@@ -14,8 +14,8 @@ var PJT = {
         var sequenceStart = 1;
         var position = 0;
         var interval = 25;
-        var diff = 181;
-        var sequencesize = 26600;
+        var diff = 176;
+        var sequencesize = 24640;
         if (sequenceStart == 1) {
             sequenceStart = setInterval(function () {
                 document.getElementById('sequenceArea').style.backgroundPosition = '0px -' + position + 'px';

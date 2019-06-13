@@ -12,8 +12,8 @@ let PJT = {
         let sequenceStart = 1;
         let position = 0;
         const interval = 25;
-        const diff = 181;
-        const sequencesize = 26600;
+        const diff = 176;
+        const sequencesize = 24640;
         if(sequenceStart == 1) {
             sequenceStart = setInterval(() => {
                 document.getElementById('sequenceArea').style.backgroundPosition = `0px -${position}px`;

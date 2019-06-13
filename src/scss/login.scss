@@ -162,14 +162,14 @@ div.wrapper {
                 div.intro-image {
                     cursor: pointer;
                     position: absolute;
-                    width: 540px; height: 181px;
+                    width: 520px; height: 175px;
                     overflow: hidden;
                     left: 50%; top: 50%;
-                    margin: -130px 0 0 -270px;
+                    margin: -130px 0 0 -260px;
                     z-index: 5;
                     // background: #edeff1;
                     background:url('../img/login/intro_seq.png') 0 0 no-repeat;
-                    @include prefix($bgs, 540px auto, webkit ms);
+                    @include prefix($bgs, 520px auto, webkit ms);
                 }
             }
             div.image-dimmed  {

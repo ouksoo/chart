@@ -927,7 +927,7 @@ div.modal-wrap {
 
     div.modal-content {
         background-color: transparent;
-        // background-clip: none;
+        background-clip: border-box;
         border: 0;
     }
 }
