@@ -76,6 +76,7 @@ var PJT = {
         openPopCloseEvent();
     },
     lnbCreateReportShow: function lnbCreateReportShow() {
+        openPopCloseEvent();
         $('.lnb-tools-wrap.create-report').fadeIn('fast');
         openPopCloseEvent();
     },
