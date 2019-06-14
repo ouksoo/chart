@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title></title>
+<meta name=”viewport” content=”width=device-width, initial-scale=1.0" />
+<meta name="description" content="">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<link href="assets/css/common.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="app" class="wrapper">
+    <!-- header -->
+    <header class="clearfix">
+        
+        <a href="#" class="monitor header-monitor" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">Monitoring Graph</a>
+        <div class="product-btn clearfix" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">
+            <span class="refresh"></span>
+            <div class="texts">
+                <p class="f">Ticket.Force</p>
+                <p class="s">Communcation Product</p>
+            </div>
+        </div>
+
+        <h1 class="logo">Monitoring.Force</h1>
+        <span class="loading">Loading</span><!-- loading bar ( class 'on' toggle ) -->
+        <div class="header-info">
+            <ul class="clearfix">
+                <li><a href="#" class="a" v-b-modal.modalTempSearch>search</a></li>
+                <li><a href="#" class="b"></a></li>
+                <li><a href="#" class="c notice-show-hide" onmouseover="PJT.headerNoticeShow();" onmouseout="PJT.headerNoticeHide()">notice<span class="alram-round"></span></a></li>
+                <li><a href="#" class="d">control</a></li>
+                <li><a href="#" class="profile-show-hide" onmouseover="PJT.headerProfileShow();" onmouseout="PJT.headerProfileHide()"><img src="assets/img/temp/picture.png" width="100%" /></a></li>
+            </ul>
+        </div>
+
+        <!--user information-->
+        <div class="personal-list-wrap" style="display: none" onmouseover="PJT.headerProfileShow();" onmouseout="PJT.headerProfileHide()">
+            <div class="personal-information">
+                <span class="f">@brianpark</span>
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Tip - Icon & Short Cut</a></li>
+                    <li><a href="#">Get Started</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--notification list-->
+        <div class="notice-list-wrap" style="display: none" onmouseover="PJT.headerNoticeShow();" onmouseout="PJT.headerNoticeHide()">
+            <div class="notice-list">
+                <div class="f clearfix">
+                    <span>NOTIFICATION</span>
+                    <a href="#">Make all as read</a>
+                </div>
+                <ul>
+                    <li>
+                        <p class="f">
+                            <span class="box disk">
+                                <svg width="17" height="17.262">
+                                    <defs>
+                                        <path id="speaker-path" d="M8.498 10.675a2.125 2.125 0 1 1 0-4.25 2.125 2.125 0 0 1 0 4.25zm2.503-4.628a.708.708 0 1 1 1.001-1.002 4.958 4.958 0 0 1 0 7.016.708.708 0 1 1-1-1.002 3.542 3.542 0 0 0 0-5.012zm-5.005 5.005a.708.708 0 0 1-1.001 1.002 4.958 4.958 0 0 1 0-7.016.708.708 0 0 1 1 1.002 3.542 3.542 0 0 0 0 5.012zm7.01-7.01a.708.708 0 1 1 1.001-1.001 7.792 7.792 0 0 1 0 11.017.708.708 0 0 1-1.002-1.001 6.375 6.375 0 0 0 0-9.015zm-9.014 9.015a.708.708 0 0 1-1.002 1.001 7.792 7.792 0 0 1 0-11.017.708.708 0 1 1 1.002 1.001 6.375 6.375 0 0 0 0 9.015zm4.506-3.8a.708.708 0 1 0 0-1.416.708.708 0 0 0 0 1.417z"/>
+                                    </defs>
+                                    <g fill="none">
+                                        <mask id="speaker" fill="#fff"><use xlink:href="#speaker-path"/></mask>
+                                        <g fill="#63DBC1" mask="url(#speaker)"><path d="M0 0h17v17H0V0z"/></g><!--fill color-->
+                                    </g>
+                                </svg>
+                            </span><span class="dvc">Entire Devices</span>
+                        </p>
+                        <p class="s"><strong>Operator - 15m</strong> ago - Unread</p>
+                        <span class="status stat-1"></span>
+                    </li>
+                    <li class="on">
+                        <p class="f">
+                            <span class="box disk">                   
+                                <svg width="17" height="17.262">
+                                    <defs>
+                                        <path id="person-path" d="M14.875 14.875a.708.708 0 1 1-1.417 0v-1.417a2.125 2.125 0 0 0-2.125-2.125H5.667a2.125 2.125 0 0 0-2.125 2.125v1.417a.708.708 0 0 1-1.417 0v-1.417a3.542 3.542 0 0 1 3.542-3.541h5.666a3.542 3.542 0 0 1 3.542 3.541v1.417zM8.5 8.5a3.542 3.542 0 1 1 0-7.083 3.542 3.542 0 0 1 0 7.083zm0-1.417a2.125 2.125 0 1 0 0-4.25 2.125 2.125 0 0 0 0 4.25z"/>
+                                    </defs>
+                                    <g fill="none">
+                                        <mask id="persons" fill="#fff"><use xlink:href="#person-path"/></mask>
+                                        <g fill="#9678FF" mask="url(#persons)"><path d="M0 0h17v17H0V0z"/></g><!--fill color-->
+                                    </g>
+                                </svg>
+                            </span><span class="dvc">Entire Devices</span>
+                        </p>
+                        <p class="s"><strong>Operator - 15m</strong> ago - Unread</p>
+                        <span class="status stat-1"></span>
+                    </li>
+                    <li>
+                        <p class="f">
+                            <span class="box disk">
+                                <svg width="17" height="17.262" viewBox="0 0 17 17.2615385">
+                                    <defs>
+                                        <path id="warning-path" d="M5.567.708h5.865c.188 0 .369.075.501.208l4.151 4.15a.708.708 0 0 1 .208.502v5.864a.708.708 0 0 1-.208.501l-4.15 4.151a.708.708 0 0 1-.502.208H5.567a.708.708 0 0 1-.5-.208l-4.151-4.15a.708.708 0 0 1-.208-.502V5.567c0-.187.075-.368.208-.5L5.066.916a.708.708 0 0 1 .502-.208zm.294 1.417L2.125 5.861v5.278l3.736 3.736h5.278l3.736-3.736V5.861l-3.736-3.736H5.861zm1.93 3.542a.708.708 0 1 1 1.417 0V8.5a.708.708 0 1 1-1.416 0V5.667zM8 11.126a.708.708 0 1 1 1.002-1.002.708.708 0 0 1-1.002 1.002z"/>
+                                    </defs>
+                                    <g fill="none" fill-rule="evenodd">
+                                        <mask id="warning" fill="#fff"><use xlink:href="#warning-path"/></mask>
+                                        <g fill="#EA5858" mask="url(#warning)"><path d="M0 0h17v17H0V0z"/></g><!--fill color-->
+                                    </g>
+                                </svg>
+                            </span><span class="dvc">Entire Devices</span>
+                        </p>
+                        <p class="s"><strong>Operator - 15m</strong> ago - Unread</p>
+                        <span class="status stat-1"></span>
+                    </li>
+                </ul>
+                <a href="#" class="show-more"></a>
+            </div>
+        </div>
+        <div class="header-shadow"></div>
+    </header>
+
+    <!-- section -->
+    <section>
+        <!--left navigation bar-->
+        <div class="lnb-wrap" style="display: none">
+            <ul class="lnb-nav clearfix">
+                <li data-name="Monitoring" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="on">monitoring</a></li>
+                <li data-name="Event" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#">event</a></li>
+                <li data-name="Report" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#">report</a></li>
+                <li data-name="Calendar" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-calendar" onclick="PJT.lnbCalendarShow()">calendar</a></li>
+                <li data-name="Create a report" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-createreport" onclick="PJT.lnbCreateReportShow()">create a report</a></li>
+                <li data-name="Snapshot" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-snapshot" onclick="PJT.lnbSnapShot()">snapshot</a></li>
+                <li data-name="Add charts" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-addcharts" onclick="PJT.lnbAddChart()">add charts</a></li>
+                <li data-name="Information" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#">information</a></li>
+            </ul>
+        </div>
+
+        <!-- content wrap -->
+        <div class="content-wrap wide-wrapper"><!-- 좌,우측이 없는 경우에는 wide-wrapper 클레스 추가 -->
+            
+            <!-- gate -->
+            <div class="gate-wrapper" style="display: none">
+                <!-- gate header -->
+                <div class="login-header clearfix">
+                    <h1></h1>
+                    <span class="f"></span>
+                </div>
+                <!-- gate section -->
+                <div class="login-section">
+                    <div class="line-login-left"></div>
+                    <div class="line-login-right"></div>
+                    <div class="login-wrap">
+                        <span class="login-center-txt"></span>
+                        <p class="login-text">
+                            Sony laptops are among the most well known laptops on today's<br />
+                            market. Sony is a name that over time has established itself<br />
+                            creating a solid product with a stellar reputation. In addition to all the good<br />
+                            press that Sony has, Sony is known for making the best 'small' laptops. 
+                        </p> 
+                        <div class="form-wrap">
+                            <input type="text" id="userId" class="form-nude" placeholder="ID" onkeyUp="PJT.loginKeyCheck()" />
+                            <input type="password" id="passWd" class="form-nude" placeholder="Password" onkeyUp="PJT.loginKeyCheck()" />
+                        </div>
+                        <a href="#" class="login-button" onclick="PJT.loginButtonSubmit()">LOGIN</a>
+                    </div>
+                    <div class="intro-bg">
+                        <div id="sequenceArea" class="intro-image" onclick="PJT.skipIntroAnimation()">
+                            <!-- <video width="540" height="181" autoplay id="playintro">
+                                <source src="assets/img/login/intro.mp4" type="video/mp4">
+                                <source src="assets/img/login/intro.ogg" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video> -->
+                        </div>
+                    </div>
+                    <div class="image-dimmed"></div>
+                    <div class="image-bg"></div>
+                </div>
+                <!-- gate footer -->
+                <div class="login-footer">
+                    <span class="f"><a href="#">episode v2.0</a></span>
+                    <span class="s"><a href="#">Apply ID</a><span>|</span><a href="#">Find ID / Password</a></span>
+                    <span class="t"><a href="#">Inquiry</a></span>
+                </div>
+            </div>
+            <!-- //gate -->
+
+            <!-- device inventory list -->
+            <div class="device-inventory-wrap">
+                <div class="head">
+                    <p class="title">Device Inventory</p>
+                    <p class="middle">All Devices are<span>1480</span>in the inventory</p>
+                    <div class="search clearfix">
+                        <a href="#" class="cs-btn purple floatr">ADD DEVICE </a>
+                        <div class="search-input">
+                            <input type="text" class="inventory-search" placeholder="Search Device" />
+                            <a href="#" class="search" onclick="PJT.inventorySearch()">search</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <nav>
+                        <a href="#" class="v on">All Devices</a>
+                        <a href="#">Physical Server</a>
+                        <a href="#">Virtual Server</a>
+                        <a href="#" class="v">Cloud Server</a>
+                        <a href="#">Router</a>
+                        <a href="#">Switch</a>
+                        <a href="#">Bridge</a>
+                        <a href="#">Storage</a>
+                        <a href="#">Application</a>
+                    </nav>
+                </div>
+
+                <div class="inventory-filter clearfix" style="display: none">
+                    <span class="tit">FILTER</span>
+                    <div class="filter-list">
+                        <ul class="clearfix">
+                            <li><span class="cs-btn clear-all" onclick="PJT.inventoryFilterClear()">Clear All</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inventory-table-wrap">
+                    <!-- grid table -->
+                    <div class="custom_table-grid">
+                        <table class="notable">
+                            <cologroup>
+                                <col width="70" />
+                                <col width="120" />
+                                <col width="180" />
+                                <col width="110" />
+                                <col width="150" />
+                                <col width="270" />
+                                <col width="100" />
+                                <col width="100" />
+                                <col width="*" />
+                            </cologroup>
+                            <thead>
+                            <tr>
+                                <th><span class="n">No.</span><span class="m"><a href="#" class="sort-up" title="Ascend">Ascend</a><a href="#" class="sort-down" title="Descend">Descend</a></span></th>
+                                <th>
+                                    <span class="n">TYPE</span><span class="s">
+                                        <a href="#" class="select-up grid_select-options" title="options">선택</a>
+                                        <div class="options grid_select-option" style="display: none">
+                                            <span class="tit">TYPE</span>
+                                            <ul>
+                                                <li>
+                                                    <span class="checkbox-default sm">
+                                                        <!-- test event --><input type="checkbox" id="c1" name="c1" checked  onclick="PJT.deviceInventoryFilter()" /><label for="c1"><span></span>Cloud Server</label>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </span>
+                                </th>
+                                <th><span class="n">NAME</span><span class="m"><a href="#" class="sort-up" title="Ascend">Ascend</a><a href="#" class="sort-down" title="Descend">Descend</a></span></th>
+                                <th><span class="n">ID</span></th>
+                                <th>
+                                    <span class="n">LOCATION</span><span class="s">
+                                        <a href="#" class="select-up grid_select-options" title="options">선택</a>
+                                        <div class="options grid_select-option" style="display: none">
+                                            <span class="tit">LOCATION</span>
+                                            <ul>
+                                                <li>
+                                                    <span class="checkbox-default sm">
+                                                        <input type="checkbox" id="c1" name="c1" checked /><label for="c1"><span></span>Seoul</label>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </span>
+                                </th>
+                                <th><span class="n">DESCRIPTION</span></th>
+                                <th><span class="n">DATE</span><span class="m"><a href="#" class="sort-up" title="Ascend">Ascend</a><a href="#" class="sort-down" title="Descend">Descend</a></span></th>
+                                <th>
+                                    <span class="n">STATE</span><span class="s">
+                                        <a href="#" class="select-up grid_select-options" title="options">선택</a>
+                                        <div class="options grid_select-option" style="display: none">
+                                            <span class="tit">STATE</span>
+                                            <ul>
+                                                <li>
+                                                    <span class="checkbox-default sm">
+                                                        <input type="checkbox" id="c1" name="c1" checked /><label for="c1"><span></span>Active</label>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </span>
+                                </th>
+                                <th><span class="n">FUNCTION</span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>129</td>
+                                <td>Cloud Server</td>
+                                <td>Compatible Inkjet Cartridge</td>
+                                <td>654-9596-778</td>
+                                <td>Seoul</td>
+                                <td>Advertizing/Marketing Plan</td>
+                                <td>2019/05/22</td>
+                                <td>Active</td>
+                                <td>
+                                    <a href="#" class="info">information</a><a href="#" class="edit">edit</a><a href="#" class="delete">delete</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //grid table -->
+                </div>
+            </div>
+            <!-- //device inventory list -->
+
+            <!--device list-->
+            <div class="device-wrap" style="display: none">
+                <div class="device-top clearfix">
+                    <span class="f">DEVICES</span>
+                    <span class="s">
+                        <a href="#" class="plus device-add" onclick="PJT.deviceAddList()">plus</a><a href="#" class="minus device-remove" onclick="PJT.deviceRemoveList()">minus</a>
+                    </span>
+                </div>
+                <div class="filter-options">
+                    <div class="option">
+                        <ul class="clearfix">
+                            <li><a href="#" class="opt-btn on">Server</a></li>
+                            <li><a href="#" class="opt-btn">Network</a></li>
+                            <li><a href="#" class="opt-btn">Application</a></li>
+                            <li><a href="#" class="opt-btn">DB Server</a></li>
+                            <li><a href="#" class="opt-btn">Cloud</a></li>
+                            <li><a href="#" class="opt-btn clear-all">Clear All</a></li>
+                        </ul>
+                    </div>
+                    <div class="order">
+                        <ul class="clearfix">
+                            <li>ORDER</li>
+                            <li>
+                                <span class="radiobox-default sm">
+                                    <input type="radio" id="m1" name="m1" checked /><label for="m1"><span></span>Device</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="radiobox-default sm">
+                                    <input type="radio" id="m2" name="m1" /><label for="m2"><span></span>State</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="radiobox-default sm">
+                                    <input type="radio" id="m3" name="m1" /><label for="m3"><span></span>ABC</label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="device-filter">
+                    <a href="#" onclick="PJT.deviceFilterShow()">Filter - 02</a>
+                </div>
+                <div class="device-list-scroll">
+                    <ul class="device-list">
+                        <li>
+                            <div class="device-inner clearfix">
+                                <div class="re"><a href="#" class="remove"></a></div>
+                                <div class="inner">
+                                    <p class="f">
+                                        <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Entire Devices</span>
+                                    </p>
+                                    <p class="s"><strong>Great - 02</strong> event - Suwon</p>
+                                    <span class="status stat-1"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="device-inner clearfix">
+                                <div class="re"><a href="#" class="remove"></a></div>
+                                <div class="inner">
+                                    <p class="f">
+                                        <span class="box cloud"></span><span class="box os-linux"></span><span class="dvc">Entire Devices</span>
+                                    </p>
+                                    <p class="s"><strong>Great - 02</strong> event - Suwon</p>
+                                    <span class="status stat-2"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>   
+                            <div class="device-inner clearfix">
+                                <div class="re"><a href="#" class="remove"></a></div>
+                                <div class="inner">
+                                    <p class="f">
+                                        <span class="box copy"></span><span class="box os-mark"></span><span class="dvc">Entire Devices</span>
+                                    </p>
+                                    <p class="s"><strong>Great - 02</strong> event - Suwon</p>
+                                    <span class="status stat-1"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="device-inner clearfix">
+                                <div class="re"><a href="#" class="remove"></a></div>
+                                <div class="inner">
+                                    <p class="f">
+                                        <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Entire Devices</span>
+                                    </p>
+                                    <p class="s"><strong>Great - 02</strong> event - Suwon</p>
+                                    <span class="status stat-2"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="device-inner clearfix">
+                                <div class="re"><a href="#" class="remove"></a></div>
+                                <div class="inner">
+                                    <p class="f">
+                                        <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Entire Devices</span>
+                                    </p>
+                                    <p class="s"><strong>Great - 02</strong> event - Suwon</p>
+                                    <span class="status stat-1"></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //device list -->
+
+            <!-- Carlendar (popup) -->
+            <div class="lnb-tools-wrap calendar lnb-content_popup" style="display: none">
+                <div class="tools-container">
+                    <div class="tools-content">
+                        <p class="title">CALENDAR</p>
+                        <div class="period">
+                            <p class="progress"><span></span></p>
+                            <div class="p-time">
+                                <span>Present</span>
+                                <span>30m</span>
+                                <span class="on">1h</span>
+                                <span>3h</span>
+                                <span>6h</span>
+                                <span>12h</span>
+                                <span>1D</span>
+                                <span>1W</span>
+                                <span>1M</span>
+                                <span>3M</span>
+                                <span>6M</span>
+                            </div>
+                        </div>
+                        <span class="double--line"></span>
+                        <div class="from-to clearfix">
+                            <div class="from-date">
+                                <span class="tt">From</span>
+                                <p class="date-time a"><span class="dates">YYYY <span>/</span> MM <span>/</span> DD</span></p>
+                                <p class="date-time b"><span class="time">00 <span>:</span> 00</span></p>
+                            </div>
+                            <div class="to-date">
+                                <span class="tt">To</span>
+                                <p class="date-time a"><span class="dates">YYYY <span>/</span> MM <span>/</span> DD</span></p>
+                                <p class="date-time b"><span class="time">00 <span>:</span> 00</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tools-tip"></div>
+                </div>
+            </div>
+            <!-- //Carlendar -->
+
+            <!-- Create a report (popup) -->
+            <div class="lnb-tools-wrap create-report lnb-content_popup" style="display: none">
+                <div class="tools-container">
+                    <div class="tools-content">
+                        <p class="title">CREATE A REPORT</p>
+                        <div class="type-comment">
+                            <textarea class="formdata" maxlength="100" placeholder="Type your comment for this report"></textarea>
+                            <p>You can put your comment in the report document<br />when it’s created.</p>
+                        </div>
+                        <span class="double--line"></span>
+                        <div class="email clearfix">
+                            <span>E-mail</span>
+                            <input type="text" id="reportEmail" class="formdata create-report-email" onkeyUp="PJT.lnbCreateReportEmail()" />
+                        </div>
+                        <span class="double--line"></span>
+                        <div class="btns">
+                            <a href="#" class="cs-btn purple a">CREATE</a><a href="#" class="cs-btn purple b">CREATE & DOWNLOAD</a><a href="#" class="cs-btn purple c" style="display: none">CREATE & SENT EMAIL</a>
+                        </div>
+                    </div>
+                    <div class="tools-tip"></div>
+                </div>
+            </div>
+            <!-- //Create a report -->
+
+            <!-- Snapshot (popup) -->
+            <div class="lnb-tools-wrap snap-shot lnb-content_popup" style="display: none">
+                <div class="tools-container">
+                    <div class="tools-content">
+                        <p class="title">SNAPSHOT</p>
+                        <ul class="snapshot-list">
+                            <li class="clearfix">
+                                <span class="ico trend">trending up</span>
+                                <p>Realtime Monitoring Chart</p>
+                                <span class="checkbox-default">
+                                    <input type="checkbox" id="a1" name="a1" /><label for="a1"><span></span></label>
+                                </span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="ico bar">trending up</span>
+                                <p>Memory Perfomance Chart</p>
+                                <span class="checkbox-default">
+                                    <input type="checkbox" id="a2" name="a2" checked /><label for="a2"><span></span></label>
+                                </span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="ico pie">trending up</span>
+                                <p>CPU Performace Chart</p>
+                                <span class="checkbox-default">
+                                    <input type="checkbox" id="a3" name="a3" /><label for="a3"><span></span></label>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="btns">
+                            <a href="#" class="cs-btn purple save-chart">DOWNLOAD SNAPSHOT</a>
+                        </div>
+                    </div>
+                    <div class="tools-tip"></div>
+                </div>
+            </div>
+            <!-- //Snapshot -->
+
+            <!-- Add Charts (popup) -->
+            <div class="lnb-tools-wrap add-charts lnb-content_popup" style="display: none">
+                <div class="tools-container">
+                    <div class="tools-content">
+                        <p class="title">ADD CHARTS</p>
+                        <ul class="charts-list">
+                            <li class="clearfix">
+                                <span class="ico trend">trending up</span>
+                                <p>Realtime Monitoring Chart</p>
+                                <span class="radio-wrap">
+                                    <label class="checkbox-switch">
+                                        <input type="checkbox" />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="ico bar">trending up</span>
+                                <p>Memory Perfomance Chart</p>
+                                <span class="radio-wrap">
+                                    <label class="checkbox-switch">
+                                        <input type="checkbox" checked />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                            </li>
+                            <li class="clearfix">
+                                <span class="ico pie">trending up</span>
+                                <p>CPU Performace Chart</p>
+                                <span class="radio-wrap">
+                                    <label class="checkbox-switch">
+                                        <input type="checkbox" />
+                                        <span class="slider round"></span>
+                                    </label>
+                                </span>
+                            </li>
+                        </ul>
+                        <div class="btns">
+                            <a href="#" class="cs-btn purple save-chart">SAVE CHARTS</a>
+                        </div>
+                    </div>
+                    <div class="tools-tip"></div>
+                </div>
+            </div>
+            <!-- //Add Charts -->
+
+            <!-- SEARCH (modal popup)-->
+            <b-modal id="modalTempSearch" hide-header="true" hide-footer="true" dialog-class="modal-search-wrap" style="display: none">
+                <div class="modal-wrap modal-search modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="search-header clearfix">
+                            <span class="zoom"></span>
+                            <input type="text" class="s" id="deviceSearchInput" placeholder="Use tab to switch or type devices, events, reports" /></p>
+                            <p class="f">
+                                <a href="#" class="left">preview</a><span>ALL</span><a href="#" class="right">next</a>
+                            </p>
+                        </div>
+                        <div class="search-typeword">
+                                <p>Use <strong>Tab Key</strong> to switch categories <span>|</span> Type words - device name & type, event title&type, report title, date, user name etc.</p>
+                        </div>
+                        <ul class="search-list">
+                            <li>
+                                <p class="f">
+                                    <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Web Server - Dream</span>
+                                </p>
+                                <span class="etcs">
+                                    <a href="#" class="add">add device</a><a href="#" class="warn">information</a>
+                                </span>
+                            </li>
+                            <li>
+                                <p class="f">
+                                    <span class="box cloud"></span><span class="box os-linux"></span><span class="dvc">Cloud Server - Stone</span>
+                                </p>
+                                <span class="etcs">
+                                    <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                                </span>
+                            </li>
+                            <li>
+                                <p class="f">
+                                    <span class="box copy"></span><span class="box os-mark"></span><span class="dvc">Oracle DB Server</span>
+                                </p>
+                                <span class="etcs">
+                                    <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                                </span>
+                            </li>
+                            <li>
+                                <div class="clearfix">
+                                    <span class="icon zap"></span>
+                                    <p class="paragraph">
+                                        <span class="up"><strong>Cloud Server</strong> CPU performance is getting up to 70%</span>
+                                        <span class="down">From <strong>Dream</strong>&nbsp; - &nbsp;20 Mar 2019</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="clearfix">
+                                    <span class="icon minus"></span>
+                                    <p class="paragraph">
+                                        <span class="up"><strong>Day Report</strong> Daily report of web server - dream</span>
+                                        <span class="down">Create by <strong>System</strong>&nbsp; - &nbsp;20 Mar 2019</span>
+                                    </p>
+                                </div>
+                                <span class="etcs">
+                                    <a href="#" class="down on">download</a><a href="#" class="email">email</a>
+                                </span>
+                            </li>
+                            <li>
+                                <div class="clearfix">
+                                    <span class="icon minus"></span>
+                                    <p class="paragraph">
+                                        <span class="up"><strong>User Report</strong> Web Server - Sky (20 Mar 2019 - 29 Mar 2019)</span>
+                                        <span class="down">Create by <strong>BrianPark</strong>&nbsp; - &nbsp;20 Mar 2019</span>
+                                    </p>
+                                </div>
+                                <span class="etcs">    
+                                    <a href="#" class="down on">download</a><a href="#" class="email">email</a>
+                                </span>
+                            </li>
+                            <li>
+                                <div class="clearfix">
+                                    <span class="icon minus"></span>
+                                    <p class="paragraph">
+                                        <span class="up"><strong>Day Report</strong> Daily report of web server - dream</span>
+                                        <span class="down">Create by <strong>System</strong>&nbsp; - &nbsp;20 Mar 2019</span>
+                                    </p>
+                                </div>
+                                <span class="etcs">
+                                    <a href="#" class="down on">download</a><a href="#" class="email">email</a>
+                                </span>
+                            </li>
+                            <li>
+                                <p class="f">
+                                    <span class="box cloud"></span><span class="box os-linux"></span><span class="dvc">Cloud Server - Stone</span>
+                                </p>
+                                <span class="etcs">
+                                    <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                                </span>
+                            </li>
+                            <li>
+                                <p class="f">
+                                    <span class="box copy"></span><span class="box os-mark"></span><span class="dvc">Oracle DB Server</span>
+                                </p>
+                                <span class="etcs">
+                                    <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                                </span>
+                            </li>
+                            <li>
+                                <div class="clearfix">
+                                    <span class="icon zap"></span>
+                                    <p class="paragraph">
+                                        <span class="up"><strong>Cloud Server</strong> CPU performance is getting up to 70%</span>
+                                        <span class="down">From <strong>Dream</strong>&nbsp; - &nbsp;20 Mar 2019</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="search-result">
+                            <p>
+                                <strong>Search Result</strong><span>120 devices</span><span>24 events</span><span>38 reports</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </b-modal>
+            <!-- //SEARCH -->
+
+            <!-- add device list -->
+            <div id="addDeviceList" class="full-popup-wrap default_full-popup" style="display: none">
+                <div class="film"></div>
+                <div class="inner">
+                    <h2>ADD A DEVICE</h2>
+                    <a href="#" class="close">close</a>
+                    <!-- step 1-->
+                    <div class="add-device-wrap" style="display: none">
+                        <div class="process">
+                            <span class="r on">01</span>
+                            <span class="f on">Device Type</span>
+                            <span class="line"></span>
+                            <span class="r">02</span>
+                            <span class="f">Basic Information</span>
+                            <span class="line"></span>
+                            <span class="r">03</span>
+                            <span class="f">Device Details</span>
+                        </div>
+                        <div class="select-adding">
+                            <p class="para">Select a adding device type of below list</p>
+                            <div class="inner-box clearfix">
+                                <div class="options">
+                                    <span class="tit">Server</span>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <span class="f"><span class="box disk"></span> Physical Server</span>
+                                            <span class="radiobox-default sm">
+                                                <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                            </span>
+                                        </li>
+                                        <li class="clearfix">
+                                            <span class="f"><span class="box copy"></span> Virtual Server</span>
+                                            <span class="radiobox-default sm">
+                                                <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                            </span>
+                                        </li>
+                                        <li class="clearfix">
+                                            <span class="f"><span class="box cloud"></span> Cloud Server</span>
+                                            <span class="radiobox-default sm">
+                                                <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="options">
+                                    <span class="tit">Network</span>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <span class="f"><span class="box switch"></span> Switch</span>
+                                            <span class="radiobox-default sm">
+                                                <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                            </span>
+                                        </li>
+                                        <li class="clearfix">
+                                            <span class="f"><span class="box router"></span> Router</span>
+                                            <span class="radiobox-default sm">
+                                                <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                            </span>
+                                        </li>
+                                        <li class="clearfix">
+                                            <span class="f"><span class="box bridge"></span> Bridge</span>
+                                            <span class="radiobox-default sm">
+                                                <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="options">
+                                    <span class="tit">Etc.</span>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <span class="f"><span class="box storage"></span> Storage</span>
+                                            <span class="radiobox-default sm">
+                                                <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                            </span>
+                                        </li>
+                                        <li class="clearfix">
+                                            <span class="f"><span class="box application"></span> Application</span>
+                                            <span class="radiobox-default sm">
+                                                <input type="radio" id="d1" name="d1" /><label for="d1"><span></span></label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-center">
+                            <a href="#" class="cs-btn purple">CANCEL</a><a href="#" class="cs-btn purple">NEXT</a>
+                        </div>
+                    </div>
+                    <!-- //step 1-->
+
+                    <!-- step 2-->
+                    <div class="add-device-wrap">
+                        <div class="process">
+                            <span class="r">01</span>
+                            <span class="f">Device Type</span>
+                            <span class="line"></span>
+                            <span class="r on">02</span>
+                            <span class="f on">Basic Information</span>
+                            <span class="line"></span>
+                            <span class="r">03</span>
+                            <span class="f">Device Details</span>
+                        </div>
+                        <div class="select-adding clearfix nopd">
+                            <div class="inner-box-left">    
+                                <p class="para">Fill out below fields<br />for basic infromation of device</p>
+                                <div class="form-comp">
+                                    <span class="tit">Device Name <span class="require-mark">*</span></span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Description of Device</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Description" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Organization <span class="require-mark">*</span></span>
+                                    <div class="select-wrap" style="width: 100%">
+                                        <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                        <div class="options">
+                                            <ul>
+                                                <li><a href="#" data-value="1">New Nadia</a></li>
+                                                <li><a href="#" data-value="2">North Eviemouth</a></li>
+                                                <li><a href="#" data-value="3">Robeltown</a></li>
+                                                <li><a href="#" data-value="4">Framiville</a></li>
+                                                <li><a href="#" data-value="5">South Virgil</a></li>
+                                                <li><a href="#" data-value="6">Robeltown</a></li>
+                                                <li><a href="#" data-value="7">Framiville</a></li>
+                                                <li><a href="#" data-value="8">South Virgil</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Biz.</span>
+                                    <div class="select-wrap" style="width: 100%">
+                                        <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                        <div class="options">
+                                            <ul>
+                                                <li><a href="#" data-value="1">New Nadia</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Service <span class="require-mark">*</span></span>
+                                    <div class="select-wrap" style="width: 100%">
+                                        <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                        <div class="options">
+                                            <ul>
+                                                <li><a href="#" data-value="1">New Nadia</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Datasource <span class="require-mark">*</span></span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Data source" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Create Time</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="YYYY/MM/DD" />
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <span class="tit">Update Time</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                                    </div>
+                                    <div class="s">
+                                        <span class="tit">Delete Time</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                                    </div>
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <span class="tit">Status</span>
+                                        <div class="select-wrap" style="width: 100%">
+                                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                            <div class="options">
+                                                <ul>
+                                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="s">
+                                        <span class="tit">Usage</span>
+                                        <div class="select-wrap" style="width: 100%">
+                                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                            <div class="options">
+                                                <ul>
+                                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Location</span>
+                                    <div class="select-wrap" style="width: 100%">
+                                        <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                        <div class="options">
+                                            <ul>
+                                                <li><a href="#" data-value="1">New Nadia</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <div class="inner-float">
+                                            <span class="radio">Inventory - On / Off</span>
+                                            <span class="radio-wrap floatr">
+                                                <label class="checkbox-switch">
+                                                    <input type="checkbox" />
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner-box-right" style="padding-top: 84px">
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <span class="tit">Owner (M)</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                                    </div>
+                                    <div class="s">
+                                        <span class="tit">Owner (S)</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                                    </div>
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Owner Group</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Group Name" />
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <span class="tit">Manager (M)</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                                    </div>
+                                    <div class="s">
+                                        <span class="tit">Manager (S)</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                                    </div>
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <span class="tit">Operator (M)</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                                    </div>
+                                    <div class="s">
+                                        <span class="tit">Operator (S)</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                                    </div>
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <span class="tit">Service Manager (M)</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                                    </div>
+                                    <div class="s">
+                                        <span class="tit">Service Manager (S)</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                                    </div>
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <span class="tit">Maint. Manager (M)</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                                    </div>
+                                    <div class="s">
+                                        <span class="tit">Maint. Manager (S)</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="Name" />
+                                    </div>
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Update User</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Group Name" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Description</span>
+                                    <textarea class="formdata" style="width: 100%;" placeholder="Type Description About This Device"></textarea>
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Comment</span>
+                                    <textarea class="formdata" style="width: 100%;" placeholder="Type Comment"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-center">
+                            <a href="#" class="cs-btn purple">CANCEL</a><a href="#" class="cs-btn purple">PREV</a><a href="#" class="cs-btn purple">NEXT</a>
+                        </div>
+                    </div>
+                    <!-- //step 2-->
+
+                    <!-- step 3-->
+                    <div class="add-device-wrap" style="display: none">
+                        <div class="process">
+                            <span class="r">01</span>
+                            <span class="f">Device Type</span>
+                            <span class="line"></span>
+                            <span class="r">02</span>
+                            <span class="f">Basic Information</span>
+                            <span class="line"></span>
+                            <span class="r on">03</span>
+                            <span class="f on">Device Details</span>
+                        </div>
+                        <div class="select-adding clearfix nopd">
+                            <div class="inner-box-left">    
+                                <p class="para">Fill out below fields<br />for basic infromation of device</p>
+                                <div class="form-comp">
+                                    <span class="tit">Serial No.</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Serial Number" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Manufacturer</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Manufacturer" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Model</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Model Name" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Hostname</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Host Name" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Hostname Alias</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Alias" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">DNS Name</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="DNS" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">IP Address (V4)</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="255.255.255.255" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">IP Address (V6)</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="2001:02030:abcd" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">MAC Address</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="MAC Address" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">MAC Address</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="MAC Address" />
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <span class="tit">OS</span>
+                                        <div class="select-wrap" style="width: 100%">
+                                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                            <div class="options">
+                                                <ul>
+                                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="s">
+                                        <span class="tit">OS Version</span>
+                                        <div class="select-wrap" style="width: 100%">
+                                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                            <div class="options">
+                                                <ul>
+                                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">OS Detail</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Group Name" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">OS Description</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Type Description" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Firmware Version</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Version" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Network Interface Info.</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Interface Info." />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Network Interface Num.</span>
+                                    <div class="select-wrap" style="width: 100%">
+                                        <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                        <div class="options">
+                                            <ul>
+                                                <li><a href="#" data-value="1">New Nadia</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner-box-right" style="padding-top: 84px">
+                                <div class="form-comp">
+                                    <span class="tit">CPU Type</span>
+                                    <div class="select-wrap" style="width: 100%">
+                                        <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                        <div class="options">
+                                            <ul>
+                                                <li><a href="#" data-value="1">New Nadia</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">CPU Speed</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Speed" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">CPU Description</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Description" />
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <span class="tit">Thread Type</span>
+                                        <div class="select-wrap" style="width: 100%">
+                                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                            <div class="options">
+                                                <ul>
+                                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="s">
+                                        <span class="tit">Processor Num.</span>
+                                        <div class="select-wrap" style="width: 100%">
+                                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                            <div class="options">
+                                                <ul>
+                                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <div class="inner-float">
+                                            <span class="radio">Hyperthreading</span>
+                                            <span class="radio-wrap floatr">
+                                                <label class="checkbox-switch">
+                                                    <input type="checkbox" />
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Cores per CPU</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Number of Cores" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Total Cores</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Number of Cores" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Total Logical Processor Num.</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Number of Cores" />
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <span class="tit">Memory Type</span>
+                                        <div class="select-wrap" style="width: 100%">
+                                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                            <div class="options">
+                                                <ul>
+                                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="s">
+                                        <span class="tit">Memory Num.</span>
+                                        <div class="select-wrap" style="width: 100%">
+                                            <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                            <div class="options">
+                                                <ul>
+                                                    <li><a href="#" data-value="1">New Nadia</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <span class="tit">Total Memory (GB)</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="GB" />
+                                    </div>
+                                    <div class="s">
+                                        <span class="tit">Total Swap (GB)</span>
+                                        <input type="text" class="formdata" style="width: 100%;" placeholder="GB" />
+                                    </div>
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Internal Disk Info.</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Disk Info." />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Internal Disk Num.</span>
+                                    <div class="select-wrap" style="width: 100%">
+                                        <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                        <div class="options">
+                                            <ul>
+                                                <li><a href="#" data-value="1">New Nadia</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Total Internal Disk (GB)</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="GB" />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">External Storage Info.</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Storage Info." />
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">External Storage Num.</span>
+                                    <div class="select-wrap" style="width: 100%">
+                                        <input type="text" class="select-data select_data-options" style="width: 100%;" value="Select" readonly />
+                                        <div class="options">
+                                            <ul>
+                                                <li><a href="#" data-value="1">New Nadia</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-comp">
+                                    <span class="tit">Total External Storage (GB)</span>
+                                    <input type="text" class="formdata" style="width: 100%;" placeholder="Storage Info." />
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <div class="inner-float">
+                                            <span class="radio">DR</span>
+                                            <span class="radio-wrap floatr">
+                                                <label class="checkbox-switch">
+                                                    <input type="checkbox" />
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="s">
+                                        <div class="inner-float">
+                                            <span class="radio">HA</span>
+                                            <span class="radio-wrap floatr">
+                                                <label class="checkbox-switch">
+                                                    <input type="checkbox" />
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-comp clearfix">
+                                    <div class="f">
+                                        <div class="inner-float">
+                                            <span class="radio">Manage</span>
+                                            <span class="radio-wrap floatr">
+                                                <label class="checkbox-switch">
+                                                    <input type="checkbox" />
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="s">
+                                        <div class="inner-float">
+                                            <span class="radio">Delete</span>
+                                            <span class="radio-wrap floatr">
+                                                <label class="checkbox-switch">
+                                                    <input type="checkbox" />
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-center">
+                            <a href="#" class="cs-btn purple">CANCEL</a><a href="#" class="cs-btn purple">PREV</a><a href="#" class="cs-btn purple">SAVE</a>
+                        </div>
+                    </div>
+                    <!-- //step 3-->
+                </div>
+            </div>
+            <!-- //add device list -->
+
+            <!-- calendar popup date (popup) -->
+            <div class="calendar-popup-date default_full-popup" style="display: none">
+                <div class="film"></div>
+                <div class="inner">
+                    <h2>CALENDAR</h2>
+                    <a href="#" class="close">close</a>
+                    <div class="select-wrap clearfix">
+                        <div class="selected-date">
+                            <span class="from">From</span>
+                            <p class="date"><span class="year">2019</span>/<span class="month">05</span>/<span class="date">10</span></p>
+                            <p class="time"><span class="hour">00</span>:<span class="minute">00</span></p>
+                            <span class="v-bar"></span>
+                            <span class="to">To</span>
+                            <p class="present">Present</p>
+                            <span class="h-bar"></span>
+                            <div class="btns">
+                                <a href="#" class="cs-btn purple save-chart" style="width: 370px">SAVE DATE & TIME</a>
+                            </div>
+                        </div>
+                        <div class="select-area">
+                            <span class="set-date">Set Date — From</span>
+                            <table class="notable" width="100%">
+                            <colgroup><col width="80" /><col width="*" /></colgroup>
+                            <tr>
+                                <td class="t">Year</td>
+                                <td>
+                                    <div class="years">
+                                        <a href="#" data-year="2019" class="on">2019</a>
+                                        <a href="#" data-year="2018">2018</a>
+                                        <a href="#" data-year="2017">2017</a>
+                                        <a href="#" data-year="2016">2016</a>
+                                        <a href="#" data-year="2015">2015</a>
+                                        <a href="#" data-year="2014">2014</a>
+                                        <a href="#" data-year="2013">2013</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t">Month</td>
+                                <td>
+                                    <div class="months">
+                                        <a href="#" data-month="01" class="on">Jan</a>
+                                        <a href="#" data-month="02">Feb</a>
+                                        <a href="#" data-month="03">Mar</a>
+                                        <a href="#" data-month="04">Apr</a>
+                                        <a href="#" data-month="05">May</a>
+                                        <a href="#" data-month="06">Jun</a>
+                                        <a href="#" data-month="07">Jul</a>
+                                        <a href="#" data-month="08">Aug</a>
+                                        <a href="#" data-month="09">Sep</a>
+                                        <a href="#" data-month="10">Oct</a>
+                                        <a href="#" data-month="11">Nov</a>
+                                        <a href="#" data-month="12">Dec</a>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t">Day</td>
+                                <td class="dates">
+                                    <div class="dates">
+                                        <a href="#" data-date="01" class="on">01</a>
+                                        <a href="#" data-date="02">02</a>
+                                        <a href="#" data-date="03">03</a>
+                                        <a href="#" data-date="04">04</a>
+                                        <a href="#" data-date="05">05</a>
+                                        <a href="#" data-date="06">06</a>
+                                        <a href="#" data-date="07">07</a>
+                                        <a href="#" data-date="08">08</a>
+                                        <a href="#" data-date="09">09</a>
+                                        <a href="#" data-date="10">10</a>
+                                        <a href="#" data-date="11">11</a>
+                                        <a href="#" data-date="12">12</a>
+                                        <a href="#" data-date="13">13</a>
+                                        <a href="#" data-date="14">14</a>
+                                        <a href="#" data-date="15">15</a>
+                                        <a href="#" data-date="16">16</a>
+                                        <a href="#" data-date="17">17</a>
+                                        <a href="#" data-date="18">18</a>
+                                        <a href="#" data-date="19">19</a>
+                                        <a href="#" data-date="20">20</a>
+                                        <a href="#" data-date="21">21</a>
+                                        <a href="#" data-date="22">22</a>
+                                        <a href="#" data-date="23">23</a>
+                                        <a href="#" data-date="24">24</a>
+                                        <a href="#" data-date="25">25</a>
+                                        <a href="#" data-date="26">26</a>
+                                        <a href="#" data-date="27">27</a>
+                                        <a href="#" data-date="28">28</a>
+                                        <a href="#" data-date="29">29</a>
+                                        <a href="#" data-date="30">30</a>
+                                        <a href="#" data-date="31">31</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </table>
+                            <span class="set-time">Set Time</span>
+                            <table class="notable">
+                            <colgroup><col width="80" /><col width="*" /></colgroup>
+                            <tr>
+                                <td class="t">Hour</td>
+                                <td class="dates">
+                                    <div class="hours">
+                                        <a href="#" data-hour="00" class="on">00</a>
+                                        <a href="#" data-hour="01">01</a>
+                                        <a href="#" data-hour="02">02</a>
+                                        <a href="#" data-hour="03">03</a>
+                                        <a href="#" data-hour="04">04</a>
+                                        <a href="#" data-hour="05">05</a>
+                                        <a href="#" data-hour="06">06</a>
+                                        <a href="#" data-hour="07">07</a>
+                                        <a href="#" data-hour="08">08</a>
+                                        <a href="#" data-hour="09">09</a>
+                                        <a href="#" data-hour="10">10</a>
+                                        <a href="#" data-hour="11">11</a>
+                                        <a href="#" data-hour="12">12</a>
+                                        <a href="#" data-hour="13">13</a>
+                                        <a href="#" data-hour="14">14</a>
+                                        <a href="#" data-hour="15">15</a>
+                                        <a href="#" data-hour="16">16</a>
+                                        <a href="#" data-hour="17">17</a>
+                                        <a href="#" data-hour="18">18</a>
+                                        <a href="#" data-hour="19">19</a>
+                                        <a href="#" data-hour="20">20</a>
+                                        <a href="#" data-hour="21">21</a>
+                                        <a href="#" data-hour="22">22</a>
+                                        <a href="#" data-hour="03">23</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="t">Minute</td>
+                                <td>
+                                    <div class="minutes">
+                                        <a href="#" data-minute="00" class="on">00</a>
+                                        <a href="#" data-minute="10">10</a>
+                                        <a href="#" data-minute="20">20</a>
+                                        <a href="#" data-minute="30">30</a>
+                                        <a href="#" data-minute="40">40</a>
+                                        <a href="#" data-minute="50">50</a>
+                                        <a href="#" data-minute="60">60</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //calendar popup date -->
+
+            <!-- 팝업 배경 -->
+            <div class="dimmed-film" style="display: none"></div>
+
+            <!-- ************************************** popup ************************************************* -->
+            <!-- search data -->
+            <div class="search-data-popup" style="display: none">
+                <input type="input" class="search-input" placeholder="Search Data" /><a href="#" class="search">search</a>
+                <ul>
+                    <li><a href="#">O'Hare International Airport</a></li>
+                    <li><a href="#">Soekarno–Hatta International Airport</a></li>
+                    <li><a href="#">Charlotte Douglas International Airport</a></li>
+                    <li><a href="#">O'Hare International Airport</a></li>
+                    <li><a href="#">O'Hare International Airport</a></li>
+                    <li><a href="#">Soekarno–Hatta International Airport</a></li>
+                    <li><a href="#">Charlotte Douglas International Airport</a></li>
+                    <li><a href="#">O'Hare International Airport</a></li>
+                </ul>
+            </div>
+            <!-- //search data-->
+            <!--Thank you for applying-->
+            <div class="tiny-popup-wrap" style="display: none">
+                <a href="#" class="close-btn">close</a>
+                <span class="popup-img check"></span>
+                <p class="paragraph">
+                    <strong class="normal">Thank you for applying</strong>
+                    <span class="normal">Dealing With Technical Support 10 Useful Tips</span>
+                </p>
+                <div class="popup-btn-center">
+                    <a href="#" class="cs-btn green">BUTTON</a>
+                </div>
+            </div>
+            <!--//Thank you for applying-->
+            <!--Do you want to delete?-->
+            <div class="tiny-popup-wrap" style="display: none">
+                <a href="#" class="close-btn">close</a>
+                <span class="popup-img delete"></span>
+                <p class="paragraph">
+                    <strong class="normal">Do you want to delete?</strong>
+                    <span class="normal">Dealing With Technical Support 10 Useful Tips</span>
+                </p>
+                <div class="popup-btn-center">
+                    <a href="#" class="cs-btn green">BUTTON</a>
+                </div>
+            </div>
+            <!--//Do you want to delete?-->
+            <!--Something Wrong Number-->
+            <div class="tiny-popup-wrap" style="display: none">
+                <a href="#" class="close-btn">close</a>
+                <span class="popup-img warn"></span>
+                <p class="paragraph">
+                    <strong class="normal">Something Wrong Number</strong>
+                    <span class="normal">Can you try to login with right your ID and Password?</span>
+                </p>
+                <div class="popup-btn-center">
+                    <a href="#" class="cs-btn green">BUTTON</a>
+                </div>
+            </div>
+            <!--//Something Wrong Number-->
+            <!--Created the Weekly Report-->
+            <div class="tiny-popup-wrap" style="display: none">
+                <a href="#" class="close-btn">close</a>
+                <span class="popup-img info"></span>
+                <p class="paragraph">
+                    <strong class="normal">Created the Weekly Report</strong>
+                    <span class="normal">WordPress Version 2 0 3 Review</span>
+                </p>
+                <div class="popup-btn-center">
+                    <a href="#" class="cs-btn green">BUTTON</a>
+                </div>
+            </div>
+            <!--//Created the Weekly Report-->
+
+            <!--only text-->
+            <div class="tiny-popup-wrap" style="display: none">
+                <a href="#" class="close-btn">close</a>
+                <p class="paragraph-only">
+                    Get The Boot A Birds Eye Look Into Mcse Boot Camps
+                </p>
+                <div class="popup-btn-center">
+                    <a href="#" class="cs-btn green">BUTTON</a>
+                </div>
+            </div>
+            <!--only text-->
+
+            <!--tiny wifi-->
+            <div class="tiny-side-tooltip"><!--보여질때, 없어질때 class "on" 토글-->
+                <a href="#" class="close-btn">close</a>
+                <p class="paragraph-tiny wifi">
+                    Dvd Replication For Dummies 4 Easy Steps To Professional Dvd Replication
+                </p>
+            </div>
+            <!--//tiny wifi-->
+
+            <!--tiny wifi-->
+            <div class="tiny-side-tooltip"><!--보여질때, 없어질때 class "on" 토글-->
+                <a href="#" class="close-btn">close</a>
+                <p class="paragraph-tiny some-alert">
+                    Dvd Replication For Dummies 4 Easy Steps To Professional Dvd Replication
+                </p>
+            </div>
+            <!--//tiny wifi-->
+            <!-- //************************************** popup ************************************************* -->
+
+        </div>
+        <!-- //content wrap -->
+    </section>
+    <!-- //section -->
+
+    <!-- footer -->
+    <footer>
+
+    </footer>
+    <!-- //footer -->
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="assets/js/custom.js"></script>
+
+</body>
+</html>

@@ -1,5 +1,29 @@
- <!-- gate -->
- <div class="gate-wrapper" style="display: none">
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title></title>
+<meta name=”viewport” content=”width=device-width, initial-scale=1.0" />
+<meta name="description" content="">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<link href="../assets/css/common.css" rel="stylesheet">
+</head>
+<body>
+<div id="app" class="wrapper">
+
+
+
+
+
+
+
+
+
+
+
+<!-- gate -->
+<div class="gate-wrapper"><!-- style="display: none"-->
     <!-- gate header -->
     <div class="login-header clearfix">
         <h1></h1>
@@ -18,18 +42,18 @@
                 press that Sony has, Sony is known for making the best 'small' laptops. 
             </p> 
             <div class="form-wrap">
-                <input type="text" id="userId" class="form-nude" placeholder="ID" onkeyUp="GATE.loginKeyCheck()" />
-                <input type="password" id="passWd" class="form-nude" placeholder="Password" onkeyUp="GATE.loginKeyCheck()" />
+                <input type="text" id="userId" class="form-nude" placeholder="ID" onkeyUp="PJT.loginKeyCheck()" />
+                <input type="password" id="passWd" class="form-nude" placeholder="Password" onkeyUp="PJT.loginKeyCheck()" />
             </div>
-            <a href="#" class="login-button" onclick="GATE.loginButtonSubmit()">LOGIN</a>
+            <a href="#" class="login-button" onclick="PJT.loginButtonSubmit()">LOGIN</a>
         </div>
         <div class="intro-bg">
-            <div id="sequenceArea" class="intro-image" onclick="GATE.skipIntroAnimation()">
-                <video width="540" height="181" autoplay id="playintro">
+            <div id="sequenceArea" class="intro-image" onclick="PJT.skipIntroAnimation()">
+                <!-- <video width="540" height="181" autoplay id="playintro">
                     <source src="assets/img/login/intro.mp4" type="video/mp4">
                     <source src="assets/img/login/intro.ogg" type="video/ogg">
                     Your browser does not support the video tag.
-                </video>
+                </video> -->
             </div>
         </div>
         <div class="image-dimmed"></div>
@@ -50,19 +74,19 @@
 <script>
 let GATE = {
     introAnimationStart: function() {
-        let sequenceStart;
-        let position = 250;
+        let sequenceStart = 1;
+        let position = 0;
         const interval = 25;
-        const diff = 250;
-        const sequencesize = 2500;
+        const diff = 176;
+        const sequencesize = 24640;
         if(sequenceStart == 1) {
             sequenceStart = setInterval(() => {
-                document.getElementById('sequenceArea').style.backgroundPosition = `-${position}px 0px`;
+                document.getElementById('sequenceArea').style.backgroundPosition = `0px -${position}px`;
                 if(position < sequencesize) {
                     position = position + diff;
                 }
                 else {
-                    position = 250;
+                    position = 0;
                     clearInterval(sequenceStart);
                 }
             }, interval);
@@ -98,3 +122,19 @@ let GATE = {
     },
 }
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

@@ -9,46 +9,10 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
 <link href="assets/css/common.css" rel="stylesheet">
 <style>
-body {padding: 40px; color: #28313B; font-family: 'Raleway'}
+body {padding: 40px; color: #28313B;}
 h2 {font-size: 22px; border-top: 2px dashed #28313B; border-bottom: 2px solid #28313B; padding: 20px; background: #e8eef4;}
 div.cnt {padding: 30px 0 80px 0;}
 
-.select_wrapper {
-    position: relative;
-    background: #ccc;
-    line-height: 36px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.select_wrapper:hover { 
-    background: #eee
-}
-.select_wrapper span {
-    display: block;
-    margin: 0 30px 0 15px;
-}
-.select_wrapper .select_inner {
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    color: #687278;
-    display: none;
-    position: absolute;
-    left: 0;
-    top: -100%;
-    width: 100%;
-    z-index: 3;
-}
-.select_wrapper .select_inner li {
-    border-bottom: 1px solid #eee;
-    padding: 0 15px;
-}
-.select_wrapper .select_inner li:hover { background: #eee; }
-.select_wrapper .select_inner li:last-child {
-    border: none;
-    border-radius: 0 0 5px 5px;
-}
-.select_wrapper .select_inner li:first-child { border-radius: 5px 5px 0 0; }
 ul {
     list-style: none;
     margin: 0;
@@ -226,6 +190,38 @@ div.popup-link a {
             </ul>
         </div>
     </div>
+
+    <p style="padding: 20px 0 0 0">Standard select (use select DOM)</p>
+    <div class="select-standard-wrap" style="width: 200px;">
+        <select>
+            <option value="member1" selected>member1</option>
+            <option value="member2">member2</option>
+            <option value="member3">member3</option>
+            <option value="member4">member4</option>
+            <option value="member5">member5</option>
+        </select>
+    </div>
+
+    <div class="select-standard-wrap sm" style="width: 200px;">
+        <select>
+            <option value="member1" selected>member1</option>
+            <option value="member2">member2</option>
+            <option value="member3">member3</option>
+            <option value="member4">member4</option>
+            <option value="member5">member5</option>
+        </select>
+    </div>
+
+    <div class="select-standard-wrap smer" style="width: 200px;">
+        <select>
+            <option value="member1" selected>member1</option>
+            <option value="member2">member2</option>
+            <option value="member3">member3</option>
+            <option value="member4">member4</option>
+            <option value="member5">member5</option>
+        </select>
+    </div>
+          
 </div>
 
 
@@ -427,43 +423,58 @@ div.popup-link a {
 <h2>Useful components</h2>
 <div class="cnt">
 
-
+    <div class="form-comp">
+        <span class="tit">Sample title</span><span class="require-mark">*</span>
+        <input type="text" class="formdata" style="width: 100%;" placeholder="필수항목 표시는 위와 같이 해당 타이틀의 안과 밖에 넣어주면 됩니다." />
+    </div>
+    <div class="form-comp">
+        <span class="tit">Sample title<span class="require-mark">*</span></span>
+        <input type="text" class="formdata" style="width: 100%;" placeholder="필수항목 표시는 위와 같이 해당 타이틀의 안과 밖에 넣어주면 됩니다." />
+    </div>
 
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 <script src="assets/js/custom.js"></script>
 <script>
 $(document).ready(function (){
-    $('select').wrap('<div class="select_wrapper"></div>')
-    $('select').parent().prepend('<span>'+ $(this).find(':selected').text() +'</span>');
-    $('select').parent().children('span').width($('select').width());	
-    $('select').css('display', 'none');					
-    $('select').parent().append('<ul class="select_inner"></ul>');
-    $('select').children().each(function(){
-        var opttext = $(this).text();
-        var optval = $(this).val();
-        $('select').parent().children('.select_inner').append('<li id="' + optval + '">' + opttext + '</li>');
-    });
 
-    $('select').parent().find('li').on('click', function (){
-        var cur = $(this).attr('id');
-        $('select').parent().children('span').text($(this).text());
-        $('select').children().removeAttr('selected');
-        $('select').children('[value="'+cur+'"]').attr('selected','selected');					
-    });
-    $('select').parent().on('click', function (){
-        $(this).find('ul').slideToggle('fast');
-    });
+    function selectBoxInit() {
+        $('select').each(function() {
+            $(this).wrap('<div class="select_wrapper"></div>')
+            $(this).parent().prepend('<span>'+ $(this).find(':selected').text() +'</span>');
+            $(this).parent().children('span').width($(this).width());	
+            $(this).css('display', 'none');					
+            $(this).parent().append('<ul class="select_inner"></ul>');
+            $(this).children().each(function(){
+                var opttext = $(this).text();
+                var optval = $(this).val();
+                $(this).parent().siblings('.select_inner').append('<li id="' + optval + '">' + opttext + '</li>');
+            });
 
+            $(this).parent().find('li').on('click', function (){
+                var cur = $(this).attr('id');
+                $(this).parent().siblings('span').text($(this).text());
+                $(this).parent().siblings('select').children().removeAttr('selected');
+                $(this).parent().siblings('select').children('[value="'+cur+'"]').attr('selected','selected');					
+            });
+            $(this).parent().on('click', function (){
+                $(this).find('ul').slideToggle('fast');
+            });
+        });
+    }
+    
+    selectBoxInit();
+
+    // 팝업테스트용
     $('.show-open-pop').on('click', function(e) {   
         var number = $(this).data('num');
         $('div.dimmed-film, #popup-' + number).fadeIn();
         e.preventDefault();
     });
 
+    // 우측 팝업테스트용
     $('.show-open-tiny').on('click', function(e) {   
         var number = $(this).data('num');
         $('#tiny-' + number).addClass('on');
@@ -489,6 +500,29 @@ $(document).ready(function (){
         alert(this.value)
         inputFileReturn.innerHTML = this.value;  
     });
+
+    //compose test dummy
+    // $('select').wrap('<div class="select_wrapper"></div>')
+    // $('select').parent().prepend('<span>'+ $(this).find(':selected').text() +'</span>');
+    // $('select').parent().children('span').width($('select').width());	
+    // $('select').css('display', 'none');					
+    // $('select').parent().append('<ul class="select_inner"></ul>');
+    // $('select').children().each(function(){
+    //     var opttext = $(this).text();
+    //     var optval = $(this).val();
+    //     $('select').parent().children('.select_inner').append('<li id="' + optval + '">' + opttext + '</li>');
+    // });
+
+    // $('select').parent().find('li').on('click', function (){
+    //     var cur = $(this).attr('id');
+    //     $('select').parent().children('span').text($(this).text());
+    //     $('select').children().removeAttr('selected');
+    //     console.log($('select').children());
+    //     $('select').children('[value="'+cur+'"]').attr('selected','selected');					
+    // });
+    // $('select').parent().on('click', function (){
+    //     $(this).find('ul').slideToggle('fast');
+    // });
 
 });
 </script>

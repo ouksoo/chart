@@ -72,15 +72,15 @@ var PJT = {
         $('div.notice-list-wrap').stop().fadeOut(300);
     },
     lnbCalendarShow: function lnbCalendarShow() {
-        $('.lnb-tools-wrap.calendar').fadeIn('fast');
         openPopCloseEvent();
+        $('.lnb-tools-wrap.calendar').fadeIn('fast');
     },
     lnbCreateReportShow: function lnbCreateReportShow() {
         openPopCloseEvent();
         $('.lnb-tools-wrap.create-report').fadeIn('fast');
-        openPopCloseEvent();
     },
     lnbCreateReportEmail: function lnbCreateReportEmail() {
+        openPopCloseEvent();
         if ($('#reportEmail').val() !== '') {
             $('div.lnb-tools-wrap.create-report a.b').css('display', 'none');
             $('div.lnb-tools-wrap.create-report a.c').css('display', 'inline-block');
@@ -88,15 +88,14 @@ var PJT = {
             $('div.lnb-tools-wrap.create-report a.b').css('display', 'inline-block');
             $('div.lnb-tools-wrap.create-report a.c').css('display', 'none');
         }
-        openPopCloseEvent();
     },
     lnbSnapShot: function lnbSnapShot() {
-        $('.lnb-tools-wrap.snap-shot').fadeIn('fast');
         openPopCloseEvent();
+        $('.lnb-tools-wrap.snap-shot').fadeIn('fast');
     },
     lnbAddChart: function lnbAddChart() {
-        $('.lnb-tools-wrap.add-charts').fadeIn('fast');
         openPopCloseEvent();
+        $('.lnb-tools-wrap.add-charts').fadeIn('fast');
     },
     lnbMouseEnter: function lnbMouseEnter(obj) {
         var thisName = $(obj).data('name');
