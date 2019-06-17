@@ -449,21 +449,23 @@ function cpuUsageServerChart() {
             borderColor: '#63dbc1',
             lineTension: 0,
             borderWidth: 2,
-            pointRadius: 0,
+            pointRadius: 2,
+            pointHoverRadius: 2,
             fill: false,
             data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
         }, 'fill', false), {
             borderColor: '#41cee2',
             lineTension: 0,
             borderWidth: 2,
-            pointRadius: 0,
+            pointRadius: 2,
+            pointHoverRadius: 2,
             fill: false,
             data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
         }, {
             borderColor: '#ea5858',
             lineTension: 0,
-            borderWidth: 2,
-            pointRadius: 0,
+            pointRadius: 2,
+            pointHoverRadius: 2,
             fill: false,
             data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
         }]
