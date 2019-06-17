@@ -1,5 +1,7 @@
 'use strict';
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var PJT = {
     state: {
         filter: false
@@ -264,3 +266,252 @@ window.onload = function () {
     // PJT.utilsAliveLinks();
     PJT.selectOptionsForm();
 };
+
+// report Chart
+function issueStackChart() {
+    var barChartDataStack1 = {
+        labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+        datasets: [{
+            backgroundColor: '#ff957c',
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }, {
+            backgroundColor: '#ea5858',
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }, {
+            backgroundColor: '#9678ff',
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }, {
+            backgroundColor: '#41cee2',
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }, {
+            backgroundColor: '#63dbc1',
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }]
+
+    };
+
+    var ctxstacked = document.getElementById('issueStackChart').getContext('2d');
+    var myBarStacked1 = new Chart(ctxstacked, {
+        type: 'bar',
+        data: barChartDataStack1,
+        options: {
+            maintainAspectRatio: false,
+            legend: false,
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                    barPercentage: 0.9,
+                    barThickness: 10,
+                    maxBarThickness: 20,
+                    minBarLength: 20,
+                    gridLines: {
+                        display: false,
+                        zeroLineWidth: 0
+
+                    },
+                    ticks: {
+                        fontFamily: 'inter-re',
+                        fontColor: '#97a4b1'
+                    }
+                }],
+                yAxes: [{
+                    stacked: true,
+                    gridLines: {
+                        display: true,
+                        tickMarkLength: 0
+                    },
+                    ticks: {
+                        fontFamily: 'inter-re',
+                        fontColor: '#97a4b1',
+                        padding: 10
+                    }
+                }]
+            }
+        }
+    });
+}
+
+function severityLevelChart() {
+    var barChartDataStack2 = {
+        labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
+        datasets: [{
+            backgroundColor: '#ff957c',
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }, {
+            backgroundColor: '#ea5858',
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }, {
+            backgroundColor: '#9678ff',
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }, {
+            backgroundColor: '#41cee2',
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }, {
+            backgroundColor: '#63dbc1',
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }]
+
+    };
+
+    var ctxstacked2 = document.getElementById('severityLevelChart').getContext('2d');
+    var myBarStacked2 = new Chart(ctxstacked2, {
+        type: 'bar',
+        data: barChartDataStack2,
+        options: {
+            maintainAspectRatio: false,
+            legend: false,
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                    barPercentage: 0.9,
+                    barThickness: 10,
+                    maxBarThickness: 20,
+                    minBarLength: 20,
+                    gridLines: {
+                        display: false,
+                        zeroLineWidth: 0
+
+                    },
+                    ticks: {
+                        fontFamily: 'inter-re',
+                        fontColor: '#97a4b1'
+                    }
+                }],
+                yAxes: [{
+                    stacked: true,
+                    gridLines: {
+                        display: true,
+                        tickMarkLength: 0
+                    },
+                    ticks: {
+                        fontFamily: 'inter-re',
+                        fontColor: '#97a4b1',
+                        padding: 10
+                    }
+                }]
+            }
+        }
+    });
+}
+
+function quantityTime() {
+    var barChartData = {
+        labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May'],
+        datasets: [{
+            backgroundColor: '#63dbc1',
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }]
+    };
+
+    var ctxquantity = document.getElementById('quantityTimeChart').getContext('2d');
+    var quantityTime = new Chart(ctxquantity, {
+        type: 'bar',
+        data: barChartData,
+        options: {
+            maintainAspectRatio: false,
+            legend: false,
+            scales: {
+                xAxes: [{
+                    barPercentage: 0.9,
+                    barThickness: 10,
+                    maxBarThickness: 20,
+                    minBarLength: 20,
+                    gridLines: {
+                        display: false,
+                        zeroLineWidth: 0
+
+                    },
+                    ticks: {
+                        fontFamily: 'inter-re',
+                        fontColor: '#97a4b1'
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: true,
+                        tickMarkLength: 0
+                    },
+                    ticks: {
+                        fontFamily: 'inter-re',
+                        fontColor: '#97a4b1',
+                        padding: 10
+                    }
+                }]
+            }
+        }
+    });
+}
+
+function cpuUsageServerChart() {
+    var cpuUsageServerData = {
+        labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+        datasets: [_defineProperty({
+            borderColor: '#63dbc1',
+            lineTension: 0,
+            borderWidth: 2,
+            pointRadius: 0,
+            fill: false,
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }, 'fill', false), {
+            borderColor: '#41cee2',
+            lineTension: 0,
+            borderWidth: 2,
+            pointRadius: 0,
+            fill: false,
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }, {
+            borderColor: '#ea5858',
+            lineTension: 0,
+            borderWidth: 2,
+            pointRadius: 0,
+            fill: false,
+            data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
+        }]
+    };
+
+    var ctxmultiLine = document.getElementById('cpuUsageServerChart').getContext('2d');
+    var cpuUsageLine = Chart.Line(ctxmultiLine, {
+        data: cpuUsageServerData,
+        options: {
+            maintainAspectRatio: false,
+            legend: false,
+            stacked: false,
+            scales: {
+                xAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false
+                    },
+                    gridLines: {
+                        display: false,
+                        zeroLineWidth: 0
+                    },
+                    ticks: {
+                        fontFamily: 'dotum',
+                        fontColor: '#97a4b1'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    scaleLabel: {
+                        display: false
+                    },
+                    gridLines: {
+                        display: true,
+                        tickMarkLength: 0
+                    },
+                    ticks: {
+                        fontFamily: 'dotum',
+                        fontColor: '#97a4b1',
+                        padding: 10
+                    }
+                }]
+            }
+        }
+    });
+}
+
+issueStackChart();
+severityLevelChart();
+quantityTime();
+cpuUsageServerChart();

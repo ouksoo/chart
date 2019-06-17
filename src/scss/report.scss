@@ -341,6 +341,13 @@ div.report-list-wrap {
                     margin-top: 50px;
                     margin-bottom: 15px;
                 }
+                div.issue-chart {
+                    padding: 10px 0;
+
+                    &.cpu {
+                        height:  250px;
+                    }
+                }
                 div.comment-view {
                     font-size: 16px;
                     line-height: 24px;

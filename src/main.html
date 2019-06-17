@@ -181,7 +181,7 @@
             <!-- //gate -->
 
             <!-- report -->
-            <div class="report-list-wrap" style="display: none">
+            <div class="report-list-wrap">
 
                 <!-- report left list -->
                 <div class="report-lists">
@@ -236,7 +236,7 @@
                     <div class="detail-wrap">
 
                         <!-- report/frontpage -->
-                        <div class="report-start front">
+                        <div class="report-start front" style="display: none">
                             <span class="logo"></span>
                             <p class="title">Monthly<br />Report</p>
                             <p class="sub-tit">by monitoring.force</p>
@@ -1008,7 +1008,7 @@
                         <!-- //report/monthly -->
 
                         <!-- report/monthly1 -->
-                        <div class="report-start" style="display: none">
+                        <div class="report-start">
                             <div class="header clearfix">
                                 <span class="f">30 Apr 2019</span>
                                 <span class="s">Monthly Report  -  April 2019</span>
@@ -1016,6 +1016,9 @@
                             </div>
 
                             <p class="line-title">Issues for Recent 6 Month</p>
+                            <div class="issue-chart">
+                                <canvas id="issueStackChart"></canvas>
+                            </div>
                             <div class="custom_table-grid-sm">
                                 <table class="notable">
                                     <cologroup>
@@ -1062,6 +1065,9 @@
                             </div>
 
                             <p class="line-title">Severity Level for Recent 6 Month</p>
+                            <div class="issue-chart">
+                                <canvas id="severityLevelChart"></canvas>
+                            </div>
                             <div class="custom_table-grid-sm">
                                 <table class="notable">
                                     <cologroup>
@@ -1108,6 +1114,9 @@
                             </div>
 
                             <p class="line-title">Quantity & Time for Issues</p>
+                            <div class="issue-chart">
+                                <canvas id="quantityTimeChart"></canvas>
+                            </div>
                             <div class="custom_table-grid-sm">
                                 <table class="notable">
                                     <cologroup>
@@ -1181,7 +1190,7 @@
                         <!-- //report/monthly1 -->
 
                         <!-- report/monthly2 -->
-                        <div class="report-start" style="display: none">
+                        <div class="report-start">
                             <div class="header clearfix">
                                 <span class="f">30 Apr 2019</span>
                                 <span class="s">Monthly Report  -  April 2019</span>
@@ -1189,6 +1198,9 @@
                             </div>
 
                             <p class="line-title">CPU Usage for Server</p>
+                            <div class="issue-chart cpu">
+                                <canvas id="cpuUsageServerChart"></canvas>
+                            </div>
                             <div class="custom_table-grid-sm">
                                 <table class="notable">
                                     <cologroup>
@@ -3295,6 +3307,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+<script src="assets/js/util.js"></script>
 <script src="assets/js/custom.js"></script>
 
 </body>
