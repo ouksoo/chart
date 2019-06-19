@@ -440,7 +440,7 @@ a.loading-start {
     <br /><br />
 
     <!-- loading -->
-    <div class="loading-round">
+    <div class="loading-round" style="display: none">
         <div></div>
         <div></div>
         <div></div>
@@ -501,7 +501,7 @@ $(document).ready(function (){
 
     // loading start
     $('.loading-start').on('click', function() {
-        $('div.dimmed-film').fadeIn();
+        $('div.dimmed-film, div.loading-round').fadeIn();
     });
 
     // input file
