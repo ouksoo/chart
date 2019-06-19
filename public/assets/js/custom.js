@@ -268,7 +268,7 @@ window.onload = function () {
 };
 
 // report Chart
-function issueStackChart() {
+function issuesStackChart() {
     var barChartDataStack1 = {
         labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov'],
         datasets: [{
@@ -326,6 +326,65 @@ function issueStackChart() {
                         padding: 10
                     }
                 }]
+            },
+            tooltips: {
+                enabled: false,
+                custom: function custom(tooltipModel) {
+                    var tooltipEl = document.getElementById('chartjs-tooltip-custom');
+
+                    if (!tooltipEl) {
+                        tooltipEl = document.createElement('div');
+                        tooltipEl.id = 'chartjs-tooltip-custom';
+                        tooltipEl.innerHTML = '<div class="tooltip-wrap"></div>';
+                        document.body.appendChild(tooltipEl);
+                    }
+
+                    if (tooltipModel.opacity === 0) {
+                        tooltipEl.style.opacity = 0;
+                        return;
+                    }
+
+                    tooltipEl.classList.remove('above', 'below', 'no-transform');
+                    if (tooltipModel.yAlign) {
+                        tooltipEl.classList.add(tooltipModel.yAlign);
+                    } else {
+                        tooltipEl.classList.add('no-transform');
+                    }
+
+                    function getBody(bodyItem) {
+                        return bodyItem.lines;
+                    }
+
+                    if (tooltipModel.body) {
+                        var titleLines = tooltipModel.title || [];
+                        var bodyLines = tooltipModel.body.map(getBody);
+
+                        var innerHtml = '';
+
+                        titleLines.forEach(function (title) {
+                            innerHtml += '<span class="dp-b tit">' + title + '</span>';
+                        });
+
+                        bodyLines.forEach(function (body, i) {
+                            var colors = tooltipModel.labelColors[i];
+                            innerHtml += '<span class="dp-b body"><span class="round"></span>Server-01 : ' + body + '</span>';
+                        });
+
+                        var tableRoot = tooltipEl.querySelector('div.tooltip-wrap');
+                        tableRoot.innerHTML = innerHtml;
+                    }
+
+                    var position = this._chart.canvas.getBoundingClientRect();
+                    tooltipEl.style.opacity = 1;
+                    tooltipEl.style.position = 'absolute';
+                    tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+                    tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+                    tooltipEl.style.fontFamily = tooltipModel._bodyFontFamily;
+                    tooltipEl.style.fontSize = tooltipModel.bodyFontSize + 'px';
+                    tooltipEl.style.fontStyle = tooltipModel._bodyFontStyle;
+                    tooltipEl.style.padding = tooltipModel.yPadding + 'px ' + tooltipModel.xPadding + 'px';
+                    tooltipEl.style.pointerEvents = 'none';
+                }
             }
         }
     });
@@ -389,6 +448,65 @@ function severityLevelChart() {
                         padding: 10
                     }
                 }]
+            },
+            tooltips: {
+                enabled: false,
+                custom: function custom(tooltipModel) {
+                    var tooltipEl = document.getElementById('chartjs-tooltip-custom');
+
+                    if (!tooltipEl) {
+                        tooltipEl = document.createElement('div');
+                        tooltipEl.id = 'chartjs-tooltip-custom';
+                        tooltipEl.innerHTML = '<div class="tooltip-wrap"></div>';
+                        document.body.appendChild(tooltipEl);
+                    }
+
+                    if (tooltipModel.opacity === 0) {
+                        tooltipEl.style.opacity = 0;
+                        return;
+                    }
+
+                    tooltipEl.classList.remove('above', 'below', 'no-transform');
+                    if (tooltipModel.yAlign) {
+                        tooltipEl.classList.add(tooltipModel.yAlign);
+                    } else {
+                        tooltipEl.classList.add('no-transform');
+                    }
+
+                    function getBody(bodyItem) {
+                        return bodyItem.lines;
+                    }
+
+                    if (tooltipModel.body) {
+                        var titleLines = tooltipModel.title || [];
+                        var bodyLines = tooltipModel.body.map(getBody);
+
+                        var innerHtml = '';
+
+                        titleLines.forEach(function (title) {
+                            innerHtml += '<span class="dp-b tit">' + title + '</span>';
+                        });
+
+                        bodyLines.forEach(function (body, i) {
+                            var colors = tooltipModel.labelColors[i];
+                            innerHtml += '<span class="dp-b body"><span class="round"></span>Server-01 : ' + body + '</span>';
+                        });
+
+                        var tableRoot = tooltipEl.querySelector('div.tooltip-wrap');
+                        tableRoot.innerHTML = innerHtml;
+                    }
+
+                    var position = this._chart.canvas.getBoundingClientRect();
+                    tooltipEl.style.opacity = 1;
+                    tooltipEl.style.position = 'absolute';
+                    tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+                    tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+                    tooltipEl.style.fontFamily = tooltipModel._bodyFontFamily;
+                    tooltipEl.style.fontSize = tooltipModel.bodyFontSize + 'px';
+                    tooltipEl.style.fontStyle = tooltipModel._bodyFontStyle;
+                    tooltipEl.style.padding = tooltipModel.yPadding + 'px ' + tooltipModel.xPadding + 'px';
+                    tooltipEl.style.pointerEvents = 'none';
+                }
             }
         }
     });
@@ -437,6 +555,65 @@ function quantityTime() {
                         padding: 10
                     }
                 }]
+            },
+            tooltips: {
+                enabled: false,
+                custom: function custom(tooltipModel) {
+                    var tooltipEl = document.getElementById('chartjs-tooltip-custom');
+
+                    if (!tooltipEl) {
+                        tooltipEl = document.createElement('div');
+                        tooltipEl.id = 'chartjs-tooltip-custom';
+                        tooltipEl.innerHTML = '<div class="tooltip-wrap"></div>';
+                        document.body.appendChild(tooltipEl);
+                    }
+
+                    if (tooltipModel.opacity === 0) {
+                        tooltipEl.style.opacity = 0;
+                        return;
+                    }
+
+                    tooltipEl.classList.remove('above', 'below', 'no-transform');
+                    if (tooltipModel.yAlign) {
+                        tooltipEl.classList.add(tooltipModel.yAlign);
+                    } else {
+                        tooltipEl.classList.add('no-transform');
+                    }
+
+                    function getBody(bodyItem) {
+                        return bodyItem.lines;
+                    }
+
+                    if (tooltipModel.body) {
+                        var titleLines = tooltipModel.title || [];
+                        var bodyLines = tooltipModel.body.map(getBody);
+
+                        var innerHtml = '';
+
+                        titleLines.forEach(function (title) {
+                            innerHtml += '<span class="dp-b tit">' + title + '</span>';
+                        });
+
+                        bodyLines.forEach(function (body, i) {
+                            var colors = tooltipModel.labelColors[i];
+                            innerHtml += '<span class="dp-b body"><span class="round"></span>Server-01 : ' + body + '</span>';
+                        });
+
+                        var tableRoot = tooltipEl.querySelector('div.tooltip-wrap');
+                        tableRoot.innerHTML = innerHtml;
+                    }
+
+                    var position = this._chart.canvas.getBoundingClientRect();
+                    tooltipEl.style.opacity = 1;
+                    tooltipEl.style.position = 'absolute';
+                    tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+                    tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+                    tooltipEl.style.fontFamily = tooltipModel._bodyFontFamily;
+                    tooltipEl.style.fontSize = tooltipModel.bodyFontSize + 'px';
+                    tooltipEl.style.fontStyle = tooltipModel._bodyFontStyle;
+                    tooltipEl.style.padding = tooltipModel.yPadding + 'px ' + tooltipModel.xPadding + 'px';
+                    tooltipEl.style.pointerEvents = 'none';
+                }
             }
         }
     });
@@ -449,23 +626,24 @@ function cpuUsageServerChart() {
             borderColor: '#63dbc1',
             lineTension: 0,
             borderWidth: 2,
-            pointRadius: 2,
-            pointHoverRadius: 2,
+            pointRadius: 0,
+            pointHoverRadius: 0,
             fill: false,
             data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
         }, 'fill', false), {
             borderColor: '#41cee2',
             lineTension: 0,
             borderWidth: 2,
-            pointRadius: 2,
-            pointHoverRadius: 2,
+            pointRadius: 0,
+            pointHoverRadius: 0,
             fill: false,
             data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
         }, {
             borderColor: '#ea5858',
             lineTension: 0,
-            pointRadius: 2,
-            pointHoverRadius: 2,
+            borderWidth: 2,
+            pointRadius: 0,
+            pointHoverRadius: 0,
             fill: false,
             data: [randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger(), randomScalingFactorInteger()]
         }]
@@ -508,12 +686,8 @@ function cpuUsageServerChart() {
                         padding: 10
                     }
                 }]
-            }
+            },
+            tooltips: false
         }
     });
 }
-
-issueStackChart();
-severityLevelChart();
-quantityTime();
-cpuUsageServerChart();

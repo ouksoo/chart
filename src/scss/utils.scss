@@ -1082,3 +1082,39 @@ div.modal-wrap {
 .modal-body {
     padding: 0;
 }
+
+/* charts */
+div.tooltip-wrap {
+	font-size: 11px;
+	padding: 6px 8px;
+	background: #28313b;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+    margin-left: 5px;
+    
+    &:after {
+        content: '';
+        position: absolute;
+        left: 8px; top: 15px;
+        width: 5px; height: 5px;
+        background: #28313b;
+        transform: rotate(45deg);
+    }
+    span.dp-b {
+        display: block;
+        padding: 1px 0;
+        color: #fff;
+        font-weight: normal;
+    }
+    span.round {
+        display: inline-block;
+        width: 8px; height: 8px;
+        border-radius: 50%;
+        background: #63dbc1;
+        margin-right: 5px;
+    }
+    span.tit {
+        font-weight: bold;
+	    padding-bottom: 3px;
+    }
+}
