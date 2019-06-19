@@ -23,6 +23,9 @@ ul {
 div.popup-link a {
     margin: 0 50px; color: #000; font-weight: bold;
 }
+a.loading-start {
+    font-size: 22px; font-weight: bold; color: #000;
+}
 </style>
 </head>
 <body>
@@ -423,6 +426,7 @@ div.popup-link a {
 <h2>Useful components</h2>
 <div class="cnt">
 
+    <!-- require  mark -->
     <div class="form-comp">
         <span class="tit">Sample title</span><span class="require-mark">*</span>
         <input type="text" class="formdata" style="width: 100%;" placeholder="필수항목 표시는 위와 같이 해당 타이틀의 안과 밖에 넣어주면 됩니다." />
@@ -431,6 +435,20 @@ div.popup-link a {
         <span class="tit">Sample title<span class="require-mark">*</span></span>
         <input type="text" class="formdata" style="width: 100%;" placeholder="필수항목 표시는 위와 같이 해당 타이틀의 안과 밖에 넣어주면 됩니다." />
     </div>
+    <!-- //require  mark -->
+
+    <br /><br />
+
+    <!-- loading -->
+    <div class="loading-round">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- //loading -->
+
+    <a href="#" class="loading-start">Loading Play</a>
 
 </div>
 
@@ -479,6 +497,11 @@ $(document).ready(function (){
         var number = $(this).data('num');
         $('#tiny-' + number).addClass('on');
         e.preventDefault();
+    });
+
+    // loading start
+    $('.loading-start').on('click', function() {
+        $('div.dimmed-film').fadeIn();
     });
 
     // input file
