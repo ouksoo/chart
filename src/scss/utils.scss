@@ -425,6 +425,18 @@ span.require-mark {
         @include prefix($bgs, 15px 15px, webkit ms);
     }
 }
+
+div.form-comp {
+    
+    span.tit {
+        display: block;
+        padding-bottom: 7px;
+        font-family: $inter-m;
+        font-size: 13px;
+        color: #28313b;
+    }
+}
+
 .input-file-container {
     position: relative;
     width: 415px;

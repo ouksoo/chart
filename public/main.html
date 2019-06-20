@@ -13,7 +13,7 @@
 
 <div id="app" class="wrapper">
     <!-- header -->
-    <header class="clearfix">
+    <header class="clearfix" style="display: none">
         
         <a href="#" class="monitor header-monitor" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">Monitoring Graph</a>
         <div class="product-btn clearfix" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">
@@ -118,7 +118,7 @@
     <!-- section -->
     <section>
         <!--left navigation bar-->
-        <div class="lnb-wrap">
+        <div class="lnb-wrap" style="display: none">
             <ul class="lnb-nav clearfix">
                 <li data-name="Monitoring" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="on">monitoring</a></li>
                 <li data-name="Event" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#">event</a></li>
@@ -2058,7 +2058,7 @@
             <!-- //device inventory list -->
 
             <!--device list-->
-            <div class="device-wrap">
+            <div class="device-wrap" style="display: none">
                 <div class="device-top clearfix">
                     <span class="f">DEVICES</span>
                     <span class="s">
@@ -3193,6 +3193,39 @@
             <div class="dimmed-film" style="display: none"></div>
 
             <!-- ************************************** popup ************************************************* -->
+            <!-- find ID / Password -->
+            <div class="find-idpw-popup">
+                <a href="#" class="close-btn">close</a>
+                <div class="title">
+                    <span>Find ID / Password</span>
+                    <p>You can find ID and reset Password.</p>
+                </div>
+                <div class="input-wrap clearfix">
+                    <div class="f">
+                        <p class="tit">Find Your ID</p>
+                        <div class="form-comp">
+                            <span class="tit">Name</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="ex) 홍길동" />
+                        </div>
+                        <div class="form-comp mgt-20">
+                            <span class="tit">Company Email</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="abc@company.com" />
+                        </div>
+                        <div class="btn-area"><a class="cs-btn purple">FIND ID</a></div>
+                    </div>  
+                    <div class="s">
+                        <p class="tit">Reset Your Password</p>
+                        <div class="form-comp">
+                            <span class="tit">ID</span>
+                            <input type="text" class="formdata" style="width: 100%;" placeholder="Episode ID" />
+                        </div>
+                        <p class="para mgt-20">We will send an email inclouded a link for<br />reseting your new password.</p>
+                        <div class="btn-area"><a class="cs-btn purple">APPLY</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- //find ID / Password -->
+
             <!-- search data -->
             <div class="search-data-popup" style="display: none">
                 <input type="input" class="search-input" placeholder="Search Data" /><a href="#" class="search">search</a>
@@ -3214,7 +3247,7 @@
                 <span class="popup-img check"></span>
                 <p class="paragraph">
                     <strong class="normal">Thank you for applying</strong>
-                    <span class="normal">Dealing With Technical Support 10 Useful Tips</span>
+                    <span class="normal">Your ID applying has been successfully completed.</span>
                 </p>
                 <div class="popup-btn-center">
                     <a href="#" class="cs-btn green">BUTTON</a>
