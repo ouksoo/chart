@@ -240,3 +240,66 @@ div.find-idpw-popup {
 
     }
 }
+
+div.reset-pw-popup {
+    position: absolute;
+    z-index: 6;
+    width: 378px;
+    height: 453px;
+    left: 50%; top: 50%;
+    margin: -226px 0 0 -189px;
+    padding: 17px 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px 0 rgba(40, 49, 59, 0.15);
+    border: solid 1px #e8eef4;
+    background-color: #ffffff;      
+
+    a.close-btn {
+        position: absolute;
+        width: 20px; height: 20px;
+        right: 13px; top: 13px;
+        background: url('../img/popup/icon_close.png') 0 0 no-repeat;
+        @include prefix($bgs, 20px 20px, webkit ms);
+        text-indent: -9999px;
+    }
+    div.title {
+        padding: 0 0 50px 0;
+
+        span {
+            font-family: $inter-b;
+            font-size: 20px;
+            font-weight: 600;
+            color: #29323b;
+        }
+        p {
+            height: 16px;
+            font-size: 13px;
+            color: #97a4b1;
+        }
+    }
+    div.input-wrap {
+
+        div.btn-area {
+            text-align: center;
+        }
+        div.reset-pw {
+            position: relative;
+            float: left;
+            padding-right: 30px;
+            border-right: 1px solid #e8eef4;
+
+            div.btn-area {
+                padding-top: 65px;
+            }
+            p.details {
+                width: 317px;
+                height: 40px;
+                font-size: 14px;
+                line-height: 1.43;
+                letter-spacing: -0.5px;
+                color: #28313b;
+                padding-top: 20px;
+            }
+        }
+    }
+}
