@@ -73,6 +73,25 @@ let PJT = {
     headerNoticeHide: function() {
         $('div.notice-list-wrap').stop().fadeOut(300);
     },
+    lnbMonitoringShow: function() {
+        openPopCloseEvent();
+        $('div.event-list-wrap, div.report-list-wrap').fadeOut('fast');
+        $('div.device-inventory-wrap').fadeIn('fast');
+        $('div.content-wrap').addClass('wide-wrapper');
+        $('div.lnb-wrap, div.device-wrap').css('display', 'none');
+    },
+    lnbEventShow: function() {
+        openPopCloseEvent();
+        $('div.device-inventory-wrap, div.report-list-wrap').fadeOut('fast');
+        $('div.event-list-wrap').fadeIn('fast');
+        $('div.lnb-wrap, div.device-wrap').css('display', 'block');
+    },
+    lnbReportShow: function() {
+        openPopCloseEvent();
+        $('div.device-inventory-wrap, div.event-list-wrap').fadeOut('fast');
+        $('div.report-list-wrap').fadeIn('fast');
+        $('div.lnb-wrap, div.device-wrap').css('display', 'block');
+    },
     lnbCalendarShow: function() {
         openPopCloseEvent();
         $('.lnb-tools-wrap.calendar').fadeIn('fast');

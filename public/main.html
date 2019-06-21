@@ -120,9 +120,9 @@
         <!--left navigation bar-->
         <div class="lnb-wrap" style="display: none">
             <ul class="lnb-nav clearfix">
-                <li data-name="Monitoring" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="on">monitoring</a></li>
-                <li data-name="Event" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#">event</a></li>
-                <li data-name="Report" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#">report</a></li>
+                <li data-name="Monitoring" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="on" onclick="PJT.lnbMonitoringShow()">monitoring</a></li>
+                <li data-name="Event" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" onclick="PJT.lnbEventShow()">event</a></li>
+                <li data-name="Report" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" onclick="PJT.lnbReportShow()">report</a></li>
                 <li data-name="Calendar" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-calendar" onclick="PJT.lnbCalendarShow()">calendar</a></li>
                 <li data-name="Create a report" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-createreport" onclick="PJT.lnbCreateReportShow()">create a report</a></li>
                 <li data-name="Snapshot" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-snapshot" onclick="PJT.lnbSnapShot()">snapshot</a></li>
@@ -180,11 +180,143 @@
             </div>
             <!-- //gate -->
 
+            <!-- main (data board) -->
+            <div class="data-board-wrap">
+                <!-- area1 -->
+                <div class="area1 clearfix">
+                    <div class="inner-1">
+                        <p class="titles clearfix">
+                            <span class="tit physical">Physical Server</span>
+                            <span class="ea">485<span>ea</span></span>
+                        </p>
+                        <div class="stacked-wrap">
+                            <span class="risk-color-5" style="width: 50%"></span>
+                            <span class="risk-color-4" style="width: 15%"></span>
+                            <span class="risk-color-3" style="width: 5%"></span>
+                            <span class="risk-color-2" style="width: 10%"></span>
+                            <span class="risk-color-1" style="width: 20%"></span>
+                        </div>
+                        <p class="titles clearfix mgt-25">
+                            <span class="tit switch">Switch</span>
+                            <span class="ea">62<span>ea</span></span>
+                        </p>
+                        <div class="stacked-wrap">
+                            <span class="risk-color-5" style="width: 15%"></span>
+                            <span class="risk-color-4" style="width: 20%"></span>
+                            <span class="risk-color-3" style="width: 5%"></span>
+                            <span class="risk-color-2" style="width: 50%"></span>
+                            <span class="risk-color-1" style="width: 10%"></span>
+                        </div>
+                    </div>
+                    <div class="inner-2">
+                        <p class="titles clearfix">
+                            <span class="tit virtual">Virtual Server</span>
+                            <span class="ea">1656<span>ea</span></span>
+                        </p>
+                        <div class="stacked-wrap">
+                            <span class="risk-color-5" style="width: 25%"></span>
+                            <span class="risk-color-4" style="width: 15%"></span>
+                            <span class="risk-color-3" style="width: 10%"></span>
+                            <span class="risk-color-2" style="width: 30%"></span>
+                            <span class="risk-color-1" style="width: 20%"></span>
+                        </div>
+                        <p class="titles clearfix mgt-25">
+                            <span class="tit router">Router</span>
+                            <span class="ea">336<span>ea</span></span>
+                        </p>
+                        <div class="stacked-wrap">
+                            <span class="risk-color-5" style="width: 5%"></span>
+                            <span class="risk-color-4" style="width: 15%"></span>
+                            <span class="risk-color-3" style="width: 40%"></span>
+                            <span class="risk-color-2" style="width: 10%"></span>
+                            <span class="risk-color-1" style="width: 30%"></span>
+                        </div>
+                    </div>
+                    <div class="inner-3">
+                        <p class="titles clearfix">
+                            <span class="tit cloud">Cloud Server</span>
+                            <span class="ea">112<span>ea</span></span>
+                        </p>
+                        <div class="stacked-wrap">
+                            <span class="risk-color-5" style="width: 10%"></span>
+                            <span class="risk-color-4" style="width: 15%"></span>
+                            <span class="risk-color-3" style="width: 45%"></span>
+                            <span class="risk-color-2" style="width: 10%"></span>
+                            <span class="risk-color-1" style="width: 20%"></span>
+                        </div>
+                        <p class="titles clearfix mgt-25">
+                            <span class="tit bridge">Bridge</span>
+                            <span class="ea">5<span>ea</span></span>
+                        </p>
+                        <div class="stacked-wrap">
+                            <span class="risk-color-5" style="width: 80%"></span>
+                            <span class="risk-color-4" style="width: 10%"></span>
+                            <span class="risk-color-3" style="width: 2%"></span>
+                            <span class="risk-color-2" style="width: 3%"></span>
+                            <span class="risk-color-1" style="width: 5%"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //area1 -->
+
+                <!-- area2 -->
+                <div class="area2">
+                    <p class="title-bold">Service Response Time</p>
+                    <ul class="services clearfix">
+                        <li>
+                            <span class="service-round risk-color-5"></span>
+                            <span class="info">Google / <span>35</span> ms</span>
+                        </li>
+                        <li>
+                            <span class="service-round risk-color-5"></span>
+                            <span class="info">Intel / <span>84</span> ms</span>
+                        </li>
+                        <li>
+                            <span class="service-round risk-color-5"></span>
+                            <span class="info">Dell / <span>302</span> ms</span>
+                        </li>
+                        <li>
+                            <span class="service-round risk-color-5"></span>
+                            <span class="info">IBM / <span>137</span> ms</span>
+                        </li>
+                        <li>
+                            <span class="service-round risk-color-5"></span>
+                            <span class="info">Avenger / <span>22</span> ms</span>
+                        </li>
+                        <li>
+                            <span class="service-round risk-color-5"></span>
+                            <span class="info">Adidas / <span>70</span> ms</span>
+                        </li>
+                        <li>
+                            <span class="service-round risk-color-5"></span>
+                            <span class="info">Apple / <span>39</span> ms</span>
+                        </li>
+                        <li>
+                            <span class="service-round risk-color-5"></span>
+                            <span class="info">Mcdonald / <span>84</span> ms</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //area2 -->
+
+                <!-- area3 -->
+                <div class="area2 clearfix">
+                    <div class="left-area">
+                        <p class="title-bold">CPU Resource Map</p>
+                    </div>
+                    <div class="right-area">
+                        <p class="title-bold">Perfomace - CPU, Memory, Disk, I/O</p>
+                    </div>
+                </div>
+                <!-- //area3 -->
+            </div>
+            <!-- //main (data board) -->
+
             <!-- report -->
             <div class="report-list-wrap" style="display: none">
 
                 <!-- report left list -->
-                <div class="report-lists" style="display: none">
+                <div class="report-lists">
                     <div class="report-list-scroll">
                         <ul class="report-tabs clearfix">
                             <li><a href="#">All Report</a></li>
@@ -224,7 +356,7 @@
                 <!-- //report left list -->
 
                 <!-- report detail -->
-                <div class="report-detail" style="display: none">
+                <div class="report-detail">
                     <div class="detail-header clearfix">
                         <div class="f">
                             <span class="tt">Monthly Report  -  April 2019</span><span class="ts">Create by System</span>
@@ -236,7 +368,7 @@
                     <div class="detail-wrap">
 
                         <!-- report/frontpage -->
-                        <div class="report-start front" style="display: none">
+                        <div class="report-start front">
                             <span class="logo"></span>
                             <p class="title">Monthly<br />Report</p>
                             <p class="sub-tit">by monitoring.force</p>
@@ -3037,6 +3169,263 @@
                 </div>
             </div>
             <!-- //add device list -->
+
+            <!-- device detail (popup) -->
+            <div id="deviceDetailPopup" class="full-popup-wrap default_full-popup" style="display: none">
+                <div class="film"></div>
+                <div class="inner">
+                    <h2>DEVICE DETAIL</h2>
+                    <a href="#" class="close">close</a>
+                    <div class="monitoring-event mgb-30">
+                        <p class="title">
+                            <span class="box disk"></span><span class="box os-win"></span> Cloud Server - Dream
+                            <span class="right-button">
+                                <a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="etcs">etcs</a>
+                            </span>
+                        </p>
+                        <!--Basic Information-->
+                        <p class="table-title">Basic Information</p>
+                        <!-- 테이블로 구획으로 추가 삭제 (column 모양이 상이해도 변경이 쉽게)-->
+                        <table class="notable monitoring-table three" width="100%">
+                            <colgroup>
+                            <col width="100" />
+                            <col width="200" />
+                            <col width="100" />
+                            <col width="200" />
+                            <col width="100" />
+                            <col width="*" />
+                            </colgroup>
+                            <tr>
+                                <th>Type</th>
+                                <td>Cloud Server</td>
+                                <th>Organization</th>
+                                <td>Cloud Server</td>
+                                <th>Biz.</th>
+                                <td>Episode</td>
+                            </tr>
+                            <tr>
+                                <th>Service</th>
+                                <td>Episode Platform</td>
+                                <th>Datasource</th>
+                                <td colspan="3">Data source code detail</td>
+                            </tr>
+                        </table>
+                        <table class="notable monitoring-table one" width="100%">
+                            <colgroup>
+                            <col width="110" />
+                            <col width="*" />
+                            </colgroup>
+                            <tr>
+                                <th>Description</th>
+                                <td>Get The Boot A Birds Eye Look Into Mcse Boot Camps</td>
+                            </tr>
+                        </table>
+                        <table class="notable monitoring-table three" width="100%">
+                            <colgroup>
+                            <col width="100" />
+                            <col width="200" />
+                            <col width="100" />
+                            <col width="200" />
+                            <col width="100" />
+                            <col width="*" />
+                            </colgroup>
+                            <tr>
+                                <th>Owner (M)</th>
+                                <td>June Smith</td>
+                                <th>Owner (S)</th>
+                                <td>Brian Choi</td>
+                                <th>Ower Group</th>
+                                <td>Operating Team</td>
+                            </tr>
+                        </table>
+                        <table class="notable monitoring-table two" width="100%">
+                            <colgroup>
+                            <col width="170" />
+                            <col width="250" />
+                            <col width="170" />
+                            <col width="*" />
+                            </colgroup>
+                            <tr>
+                                <th>Manager (M)</th>
+                                <td>Dai Jiang</td>
+                                <th>Manager (S)</th>
+                                <td>Diana Campos</td>
+                            </tr>
+                            <tr>
+                                <th>Operatior (M)</th>
+                                <td>Dusya Sigachyova</td>
+                                <th>Operatior (S)</th>
+                                <td>Diana Campos</td>
+                            </tr>
+                            <tr>
+                                <th>Service Manager (M)</th>
+                                <td>Higashi Mako</td>
+                                <th>Service Manager (S)</th>
+                                <td>Homayoun Shakibaii</td>
+                            </tr>
+                            <tr>
+                                <th>Maint. Manager (M)</th>
+                                <td>Yong Tonghyon</td>
+                                <th>Maint. Manager (S)</th>
+                                <td>Zeng Wen</td>
+                            </tr>
+                        </table>
+
+
+                        <!--Device Details-->
+                        <p class="table-title pdt-40">Device Details</p>
+                        <table class="notable monitoring-table" width="100%">
+                            <colgroup>
+                            <col width="100" />
+                            <col width="200" />
+                            <col width="100" />
+                            <col width="200" />
+                            <col width="100" />
+                            <col width="*" />
+                            </colgroup>
+                            <tr>
+                                <th>Serial No.</th>
+                                <td>Cloud Server</td>
+                                <th>Manufacturer</th>
+                                <td>Cloud Server</td>
+                                <th>Model</th>
+                                <td>Cloud Server</td>
+                            </tr>
+                        </table>
+                        <table class="notable monitoring-table two" width="100%">
+                            <colgroup>
+                            <col width="140" />
+                            <col width="350" />
+                            <col width="140" />
+                            <col width="*" />
+                            </colgroup>
+                            <tr>
+                                <th>Host Name</th>
+                                <td>Cloud Server</td>
+                                <th>Hostname Alias</th>
+                                <td>Cloud Server</td>
+                            </tr>
+                            <tr>
+                                <th>IP Address (V6)</th>
+                                <td>2001:0230:abcd:ffff:0000:0000:ffff:1111</td>
+                                <th>MAC Address</th>
+                                <td>00-14-22-01-23-45</td>
+                            </tr>
+                            <tr>
+                                <th>OS</th>
+                                <td>Windows</td>
+                                <th>OS Version</th>
+                                <td>Server 2012</td>
+                            </tr>
+                        </table>
+                        <table class="notable monitoring-table one" width="100%">
+                            <colgroup>
+                            <col width="140" />
+                            <col width="*" />
+                            </colgroup>
+                            <tr>
+                                <th>OS Detail</th>
+                                <td>Zachys - Auction Catalog (2015)</td>
+                            </tr>
+                            <tr>
+                                <th>OS Description</th>
+                                <td>Glanton meets with Karpman</td>
+                            </tr>
+                        </table>
+                        <table class="notable monitoring-table two" width="100%">
+                            <colgroup>
+                            <col width="200" />
+                            <col width="280" />
+                            <col width="240" />
+                            <col width="*" />
+                            </colgroup>
+                            <tr>
+                                <th>Firmware Version</th>
+                                <td>v2.1</td>
+                                <th>Network Interface Info.</th>
+                                <td>Public</td>
+                            </tr>
+                            <tr>
+                                <th>Network Interface Num.</th>
+                                <td>8ea</td>
+                                <th>CPU Type</th>
+                                <td>Intel</td>
+                            </tr>
+                            <tr>
+                                <th>CPU Speed</th>
+                                <td>3.8 Ghz</td>
+                                <th>CPU Description</th>
+                                <td>Cloud Server</td>
+                            </tr>
+                            <tr>
+                                <th>Thread Type</th>
+                                <td>Hyper</td>
+                                <th>Processr Num.</th>
+                                <td>8ea</td>
+                            </tr>
+                            <tr>
+                                <th>Hyperthreading</th>
+                                <td>ON</td>
+                                <th>Cores per CPU</th>
+                                <td>Quad</td>
+                            </tr>
+                            <tr>
+                                <th>Total Cores</th>
+                                <td>Quad</td>
+                                <th>Total Logical Processor Num.</th>
+                                <td>8ea</td>
+                            </tr>
+                            <tr>
+                                <th>Memory Type</th>
+                                <td>DRAM</td>
+                                <th>Memory Num.</th>
+                                <td>8ea</td>
+                            </tr>
+                            <tr>
+                                <th>Total Memory (GB)</th>
+                                <td>256GB</td>
+                                <th>Total Swap (GB)</th>
+                                <td>64GB</td>
+                            </tr>
+                            <tr>
+                                <th>Internal Disk Info.</th>
+                                <td>Raid</td>
+                                <th>Internal Disk Num.</th>
+                                <td>No.112</td>
+                            </tr>
+                            <tr>
+                                <th>Total Internal Disk (GB)</th>
+                                <td>1.2TB</td>
+                                <th>External Storage Info.</th>
+                                <td>Raid</td>
+                            </tr>
+                            <tr>
+                                <th>External Storage Num.</th>
+                                <td>No. 189</td>
+                                <th>Total External Storage (GB)</th>
+                                <td>128GB</td>
+                            </tr>
+                            <tr>
+                                <th>DR</th>
+                                <td>Off</td>
+                                <th>HA</th>
+                                <td>Off</td>
+                            </tr>
+                            <tr>
+                                <th>Manage</th>
+                                <td>On</td>
+                                <th>Delete</th>
+                                <td>Off</td>
+                            </tr>
+                        </table>
+                        
+                        <!--User Comment-->
+                        <p class="table-title pdt-40 nobd">User Comment</p>
+                        <textarea class="formdata" style="width: 100%;" placeholder="Type your comment"></textarea>
+                    </div>
+                </div>
+            </div>
+            <!-- //device detail -->
 
             <!-- calendar popup date (popup) -->
             <div class="calendar-popup-date default_full-popup" style="display: none">
