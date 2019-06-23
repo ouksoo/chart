@@ -234,6 +234,7 @@ let PJT = {
         $('.content-wrap').css('width', winWidth-375);
         $('.device-list').css('height', winHeight-169);
         $('.report-list').css('height', winHeight-140);
+        $('.data-board-wrap').css('height', winHeight-70);
         $('.report-detail').css({
             'width': winWidth - 720
         });
@@ -268,6 +269,7 @@ let PJT = {
                 'width': winWidth - 720,
                 'height': winHeight-140
             });
+            $('.data-board-wrap').css('height', winHeight-70);
         });
     },
 }
@@ -283,6 +285,34 @@ function openPopCloseEvent() {
         e.stopPropagation();
     });
 }
+
+// selectbox initial
+function selectBoxInit() {
+    $('select').each(function() {
+        $(this).wrap('<div class="select_wrapper"></div>')
+        $(this).parent().prepend('<span>'+ $(this).find(':selected').text() +'</span>');
+        $(this).parent().children('span').width($(this).width());	
+        $(this).css('display', 'none');					
+        $(this).parent().append('<ul class="select_inner"></ul>');
+        $(this).children().each(function(){
+            var opttext = $(this).text();
+            var optval = $(this).val();
+            $(this).parent().siblings('.select_inner').append('<li id="' + optval + '">' + opttext + '</li>');
+        });
+
+        $(this).parent().find('li').on('click', function (){
+            var cur = $(this).attr('id');
+            $(this).parent().siblings('span').text($(this).text());
+            $(this).parent().siblings('select').children().removeAttr('selected');
+            $(this).parent().siblings('select').children('[value="'+cur+'"]').attr('selected','selected');					
+        });
+        $(this).parent().on('click', function (){
+            $(this).find('ul').slideToggle('fast');
+        });
+    });
+}
+
+selectBoxInit();
 
 // after loaded execute
 window.onload = function() {

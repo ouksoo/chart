@@ -13,7 +13,7 @@
 
 <div id="app" class="wrapper">
     <!-- header -->
-    <header class="clearfix" style="display: none">
+    <header class="clearfix">
         
         <a href="#" class="monitor header-monitor" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">Monitoring Graph</a>
         <div class="product-btn clearfix" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">
@@ -118,7 +118,7 @@
     <!-- section -->
     <section>
         <!--left navigation bar-->
-        <div class="lnb-wrap" style="display: none">
+        <div class="lnb-wrap">
             <ul class="lnb-nav clearfix">
                 <li data-name="Monitoring" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="on" onclick="PJT.lnbMonitoringShow()">monitoring</a></li>
                 <li data-name="Event" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" onclick="PJT.lnbEventShow()">event</a></li>
@@ -180,7 +180,7 @@
             </div>
             <!-- //gate -->
 
-            <!-- main (data board) -->
+            <!-- main (data board content-1) -->
             <div class="data-board-wrap" style="display: none">
                 <!-- area1 -->
                 <div class="area1 clearfix">
@@ -268,19 +268,19 @@
                             <span class="info">Google / <span>35</span> ms</span>
                         </li>
                         <li>
-                            <span class="service-round risk-color-5"></span>
+                            <span class="service-round risk-color-4"></span>
                             <span class="info">Intel / <span>84</span> ms</span>
                         </li>
                         <li>
-                            <span class="service-round risk-color-5"></span>
+                            <span class="service-round risk-color-3"></span>
                             <span class="info">Dell / <span>302</span> ms</span>
                         </li>
                         <li>
-                            <span class="service-round risk-color-5"></span>
+                            <span class="service-round risk-color-2"></span>
                             <span class="info">IBM / <span>137</span> ms</span>
                         </li>
                         <li>
-                            <span class="service-round risk-color-5"></span>
+                            <span class="service-round risk-color-1"></span>
                             <span class="info">Avenger / <span>22</span> ms</span>
                         </li>
                         <li>
@@ -288,11 +288,11 @@
                             <span class="info">Adidas / <span>70</span> ms</span>
                         </li>
                         <li>
-                            <span class="service-round risk-color-5"></span>
+                            <span class="service-round risk-color-4"></span>
                             <span class="info">Apple / <span>39</span> ms</span>
                         </li>
                         <li>
-                            <span class="service-round risk-color-5"></span>
+                            <span class="service-round risk-color-3"></span>
                             <span class="info">Mcdonald / <span>84</span> ms</span>
                         </li>
                     </ul>
@@ -300,17 +300,397 @@
                 <!-- //area2 -->
 
                 <!-- area3 -->
-                <div class="area2 clearfix">
+                <div class="area3 clearfix">
                     <div class="left-area">
-                        <p class="title-bold">CPU Resource Map</p>
+                        <!-- CPU resource map -->
+                        <div class="tit-area">
+                            <p class="title-bold">CPU Resource Map</p>
+                            <a href="#" class="etcs">more</a>
+                        </div>
+                        <div class="real-time border">
+                            <img src="assets/img/temp/cpu.png" alt="" width="100%" />
+                        </div>
+                        <!-- //CPU resource map -->
                     </div>
                     <div class="right-area">
-                        <p class="title-bold">Perfomace - CPU, Memory, Disk, I/O</p>
+                        <!-- Performance -->
+                        <div class="tit-area">
+                            <p class="title-bold">Perfomace - CPU, Memory, Disk, I/O</p>
+                            <a href="#" class="etcs">more</a>
+                        </div>
+                        <div class="perfomance clearfix">
+                            <div class="charts-1 border">
+a
+                            </div>
+                            <div class="charts-2 border">
+b
+                            </div>
+                        </div>
+                        <div class="perfomance mgt-25 clearfix">
+                            <div class="charts-3 border">
+c
+                            </div>
+                            <div class="charts-4 border">
+d
+                            </div> 
+                        </div>
+                        <!-- //Performance -->
                     </div>
                 </div>
                 <!-- //area3 -->
+
+                <!-- area4 -->
+                <div class="area4 clearfix">
+                    <div class="left-area">
+                        <!-- Topology map -->
+                        <div class="tit-area">
+                            <p class="title-bold">Topology Map</p>
+                            <a href="#" class="etcs">more</a>
+                        </div>
+                        <div class="topology-map border">
+                            <div class="map-search">
+                                <div class="select-standard-wrap topo" style="width: 105px;">
+                                    <select>
+                                        <option value="member1" selected>Seoul</option>
+                                        <option value="member2">Seoul2</option>
+                                        <option value="member3">Seoul3S</option>
+                                    </select>
+                                </div>
+                                <div class="select-standard-wrap topo" style="width: 105px;">
+                                    <select>
+                                        <option value="member1" selected>Server1</option>
+                                        <option value="member2">Server2</option>
+                                        <option value="member3">Server3</option>
+                                    </select>
+                                </div>
+                                <div class="select-standard-wrap topo" style="width: 105px;">
+                                    <select>
+                                        <option value="member1" selected>Cloud1</option>
+                                        <option value="member2">Cloud2</option>
+                                        <option value="member3">Cloud3</option>
+                                    </select>
+                                </div>
+                                <div class="select-standard-wrap topo" style="width: 140px;">
+                                    <select>
+                                        <option value="member1" selected>SRC-A9817</option>
+                                        <option value="member2">SRC-A9817</option>
+                                        <option value="member3">SRC-A9817</option>
+                                        <option value="member4">SRC-A9817</option>
+                                        <option value="member5">SRC-A9817</option>
+                                    </select>
+                                </div>
+                                <p class="net-line">Network 03  /  Application 05  /  DB 02</p>
+                            </div>
+
+                            <div class="topology-chart">
+                                <img src="assets/img/temp/topology.png" alt="" width="100%" />
+                            </div>
+                        </div>
+                        <!-- //Topology map -->
+                    </div>
+                    <div class="right-area">
+                        <!-- DB load -->
+                        <div class="tit-area">
+                            <p class="title-bold">DB Load</p>
+                            <a href="#" class="etcs">more</a>
+                        </div>
+                        <div class="db-load border">
+                            <ul class="clearfix">
+                                <li><a href="#" class="on">Server</a></li>
+                                <li><a href="#">DB</a></li>
+                                <li><a href="#">Cloud</a></li>
+                                <li><a href="#">Application</a></li>
+                            </ul>
+
+                            <div class="dbload-chart">
+                                <img src="assets/img/temp/dbload.png" alt="" width="100%" />
+                            </div>
+                        </div>
+                        <!-- //DB load -->
+                    </div>
+                </div>
+                <!-- //area4 -->
             </div>
-            <!-- //main (data board) -->
+            <!-- //main (data board content-1) -->
+
+            <!-- main (data board content-2) -->
+            <div class="data-board-wrap">
+                <!-- area5 -->
+                <div class="area5 clearfix">
+                    <div class="cloud-server border">
+                        <p class="cloud-tit">Cloud Server <span>SRC-A9827</span></p>
+                        <table class="notable" width="100%">
+                        <colgroup>
+                            <col width="" />
+                            <col width="" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>Hostname</th>
+                                <td>Cloud Server SRC-A9827</td>
+                            </tr>
+                            <tr>
+                                <th>IP Address</th>
+                                <td>23.11.34.244</td>
+                            </tr>
+                            <tr>
+                                <th>OS</th>
+                                <td>Windows - MS Windows Server 2012 (64bit)</td>
+                            </tr>
+                            <tr>
+                                <th>MAC Address</th>
+                                <td>12-34-56-78-90-AB</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <div class="event border">
+                        <p class="sub-tit">Event</p>
+                        <div class="event-wrap clearfix border">
+                            <div class="event-chart">
+a
+                            </div>
+                            <div class="event-info">
+                                <table class="notable" width="100%">
+                                <tbody>
+                                    <tr>
+                                        <td>Critical</td>
+                                        <td class="s">00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Major</td>
+                                        <td class="s">09</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Minor</td>
+                                        <td class="s">07</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Warning</td>
+                                        <td class="s">06</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Info</td>
+                                        <td class="s">05</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="storage border">
+                        <p class="sub-tit">Storage</p>
+                        <div class="storage-chart">
+                                
+                        </div>
+                    </div>
+                    <div class="average border">
+                        <p class="sub-tit">Average</p>
+                        <div class="avg-wrap border">
+                            <div class="info clearfix">
+                                <span class="f">CPU Avg.</span>
+                                <span class="s">55<span>%</span> / <span>Max</span> 78<span>%</span></span>
+                            </div>          
+                            <div class="avg-line-wrap">
+                                <span class="graph" style="width: 55%"></span>
+                            </div>
+                        </div>
+                        <div class="avg-wrap">
+                            <div class="info clearfix">
+                                <span class="f">Memory Avg.</span>
+                                <span class="s">24<span>%</span> / <span>Max</span> 90<span>%</span></span>
+                            </div>          
+                            <div class="avg-line-wrap">
+                                <span class="graph" style="width: 24%;"></span>
+                            </div>
+                        </div>
+                        <div class="avg-wrap">
+                            <div class="info clearfix">
+                                <span class="f">Disk Avg.</span>
+                                <span class="s">44<span>%</span> / <span>Max</span> 100<span>%</span></span>
+                            </div>          
+                            <div class="avg-line-wrap">
+                                <span class="graph" style="width: 44%"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //area5 -->
+
+                <!-- area6 -->
+                <div class="area6">
+                    <div class="left-area">
+                        <!-- process view -->
+                        <div class="tit-area">
+                            <p class="title-bold">Process View</p>
+                        </div>
+                        <div class="process-view border">
+                            <table class="notable process-table" width="100%">
+                            <colgroup>
+                                <col width=""  />
+                                <col width=""  />
+                                <col width=""  />
+                                <col width=""  />
+                                <col width=""  />
+                                <col width=""  />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Hostname</th>
+                                    <th>IP</th>
+                                    <th>OS</th>
+                                    <th>Memory</th>
+                                    <th>Storage</th>
+                                    <th>State</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="l">Angu Tamba</td>
+                                    <td>81.229.228.205</td>
+                                    <td>Windows</td>
+                                    <td>32GB</td>
+                                    <td>1.2TB</td>
+                                    <td>Normal</td>
+                                </tr>
+                                <tr>
+                                    <td class="l">Athar Malakooti</td>
+                                    <td>165.178.33.13</td>
+                                    <td>Linux</td>
+                                    <td>32GB</td>
+                                    <td>1.6TB</td>
+                                    <td>Critical</td>
+                                </tr>
+                                <tr>
+                                    <td class="l">Leonardo</td>
+                                    <td>250.84.249.25</td>
+                                    <td>Windows</td>
+                                    <td>32GB</td>
+                                    <td>1.2TB</td>
+                                    <td>Normal</td>
+                                </tr>
+                                <tr>
+                                    <td class="l">Erin Green</td>
+                                    <td>30.202.234.0</td>
+                                    <td>Windows</td>
+                                    <td>32GB</td>
+                                    <td>1.2TB</td>
+                                    <td>Normal</td>
+                                </tr>
+                                <tr>
+                                    <td class="l">Lacara Jones</td>
+                                    <td>161.30.143.120</td>
+                                    <td>Linux</td>
+                                    <td>32GB</td>
+                                    <td>1.2TB</td>
+                                    <td>Major</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <!-- //process view -->
+                        <!-- disk I/O -->
+                        <div class="tit-area">
+                            <p class="title-bold">Disk I/O</p>
+                            <a href="#" class="etcs">more</a>
+                        </div>
+                        <div class="disk-io border">
+                            
+                        </div>
+                        <!-- //disk I/O -->
+                        <!-- Relation view -->
+                        <div class="tit-area">
+                            <p class="title-bold">Relation View</p>
+                            <a href="#" class="etcs">more</a>
+                        </div>
+                        <div class="topology-map border">
+                            <div class="map-search">
+                                <div class="select-standard-wrap topo" style="width: 105px;">
+                                    <select>
+                                        <option value="member1" selected>Seoul</option>
+                                        <option value="member2">Seoul2</option>
+                                        <option value="member3">Seoul3S</option>
+                                    </select>
+                                </div>
+                                <div class="select-standard-wrap topo" style="width: 105px;">
+                                    <select>
+                                        <option value="member1" selected>Server1</option>
+                                        <option value="member2">Server2</option>
+                                        <option value="member3">Server3</option>
+                                    </select>
+                                </div>
+                                <div class="select-standard-wrap topo" style="width: 105px;">
+                                    <select>
+                                        <option value="member1" selected>Cloud1</option>
+                                        <option value="member2">Cloud2</option>
+                                        <option value="member3">Cloud3</option>
+                                    </select>
+                                </div>
+                                <div class="select-standard-wrap topo" style="width: 140px;">
+                                    <select>
+                                        <option value="member1" selected>SRC-A9817</option>
+                                        <option value="member2">SRC-A9817</option>
+                                        <option value="member3">SRC-A9817</option>
+                                        <option value="member4">SRC-A9817</option>
+                                        <option value="member5">SRC-A9817</option>
+                                    </select>
+                                </div>
+                                <p class="net-line">Network 03  /  Application 05  /  DB 02</p>
+                            </div>
+
+                            <div class="topology-chart">
+                                <img src="assets/img/temp/topology.png" alt="" width="100%" />
+                            </div>
+                        </div>
+                        <!-- //Relation view -->
+                    </div>
+                    <div class="right-area">
+                        <div class="tit-area">
+                            <p class="title-bold">Key Performance Indicator</p>
+                        </div>
+                        <div class="indicator-charts border">
+                            <!-- CPU Performance -->
+                            <div class="tit-area">
+                                <p class="title-bold sub pdt-15">Relation View</p>
+                                <a href="#" class="etcs">more</a>
+                            </div>
+                            <div class="perform-chart">
+
+                            </div>
+                            <!-- //CPU Performance -->
+                            <!-- Memory Performance -->
+                            <div class="tit-area">
+                                <p class="title-bold sub">Memory Performance</p>
+                                <a href="#" class="etcs">more</a>
+                            </div>
+                            <div class="perform-chart">
+
+                            </div>
+                            <!-- //Memory Performance -->
+                            <!-- Disk1 Performance -->
+                            <div class="tit-area">
+                                <p class="title-bold sub">Disk1 Performance</p>
+                                <a href="#" class="etcs">more</a>
+                            </div>
+                            <div class="perform-chart">
+
+                            </div>
+                            <!-- //Disk1 Performance -->
+                            <!-- Disk2 Performance -->
+                            <div class="tit-area">
+                                <p class="title-bold sub">Disk2 Performance</p>
+                                <a href="#" class="etcs">more</a>
+                            </div>
+                            <div class="perform-chart">
+
+                            </div>
+                            <!-- //Disk2 Performance -->
+                        </div>
+                    </div>
+                </div>
+                <!-- //area6 -->
+            </div>
+            <!-- //main (data board content-2) -->
 
             <!-- report -->
             <div class="report-list-wrap" style="display: none">
@@ -2190,7 +2570,7 @@
             <!-- //device inventory list -->
 
             <!--device list-->
-            <div class="device-wrap" style="display: none">
+            <div class="device-wrap">
                 <div class="device-top clearfix">
                     <span class="f">DEVICES</span>
                     <span class="s">
@@ -3642,22 +4022,176 @@
             </div>
             <!-- Reset new Password -->
 
-            <!-- profile > tip -->
-            <div class="profile-tip">
+            <!-- profile > tip (popup) -->
+            <div class="profile-tip" style="display: none">
                 <a href="#" class="close-btn">close</a>
                 <div class="title">
                     <span>Reset New Password</span>
                 </div>
                 <div class="inner-wrap clearfix">
                     <div class="left">
-a
+                        <span class="tit">Icons</span>
+                        <ul>
+                            <li>
+                                <span class="icon server"></span>
+                                Physical Server
+                            </li>
+                            <li>
+                                <span class="icon copy"></span>
+                                Virtual Server
+                            </li>
+                            <li>
+                                <span class="icon cloud"></span>
+                                Cloud Server
+                            </li>
+                            <li>
+                                <span class="icon switch"></span>
+                                Switch
+                            </li>
+                            <li>
+                                <span class="icon router"></span>
+                                Router
+                            </li>
+                            <li>
+                                <span class="icon bridge"></span>
+                                Bridge
+                            </li>
+                            <li>
+                                <span class="icon storage"></span>
+                                storage
+                            </li>
+                            <li>
+                                <span class="icon app"></span>
+                                Application
+                            </li>
+                            <li>
+                                <span class="icon windows"></span>
+                                OS - Windows
+                            </li>
+                            <li>
+                                <span class="icon linux"></span>
+                                OS - Linux
+                            </li>
+                            <li>
+                                <span class="icon oracle"></span>
+                                Oracle DB
+                            </li>
+                        </ul>
                     </div>
                     <div class="right">
-b
+                        <span class="tit">Keyboard Shortcuts</span>
+                        <div class="in-tit clearfix">
+                            <span class="a1">Close Menu / Cancel Editing</span>
+                            <span class="btn">esc</span>
+                        </div>
+                        <p class="para">Pressing “esc” will close an open dialog window or pop-over or cancel edits and comments you are composing.</p>
+                        <div class="in-tit clearfix">
+                            <span class="a1">Clear All Filters</span>
+                            <span class="btn">x</span>
+                        </div>
+                        <p class="para">Use “x” to clear all filters.</p>
+                        <div class="in-tit clearfix">
+                            <span class="a1">Close Menu / Cancel Editing</span>
+                            <span class="btn">esc</span>
+                        </div>
+                        <p class="para">Pressing “esc” will close an open dialog window or pop-over or cancel edits and comments you are composing.</p>
+                        <div class="in-tit clearfix">
+                            <span class="a1">Clear All Filters</span>
+                            <span class="btn">x</span>
+                        </div>
+                        <p class="para">Use “x” to clear all filters.</p>
+                        <div class="in-tit clearfix">
+                            <span class="a1">Open Smart Search</span>
+                            <span class="btn">E</span> <span class="btn">Ctrl</span>
+                        </div>
+                        <p class="para">Pressing “esc” will close an open dialog window or pop-over or cancel edits and comments you are composing.</p>
                     </div>
                 </div>
             </div>
-            <!-- //profile > tip -->
+            <!-- //profile > tip (popup) -->
+
+            <!-- user search (popup) -->
+            <div class="user-search-wrap" style="display: none">
+                <a href="#" class="close-btn">close</a>
+                <div class="title">
+                    <span>User Search</span>
+                    <p>Find users who you want to input</p>
+                </div>
+                <div class="find-select-wrap clearfix">
+                    <div class="find">
+                        <p class="tit">Find User</p>
+                        <div class="inner">
+                            <div class="tp">
+                                <input type="input" class="search-input" placeholder="Search Data" /><a href="#" class="search">search</a>
+                            </div>
+                            <div class="list-wrap">
+                                <ul>
+                                    <li class="clearfix">
+                                        <span class="picture"><img src="assets/img/temp/picture.png" alt="" /></span>
+                                        <p class="info">
+                                            <span class="name">James April</span>
+                                            <span class="jobs">Historian</span>
+                                        </p>
+                                    </li>
+                                    <li class="clearfix on">
+                                        <span class="picture"><img src="assets/img/temp/picture2.png" alt="" /></span>
+                                        <p class="info">
+                                            <span class="name">James Base</span>
+                                            <span class="jobs">Computer Support Specialist</span>
+                                        </p>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="picture"><img src="assets/img/temp/picture3.png" alt="" /></span>
+                                        <p class="info">
+                                            <span class="name">James Tailor</span>
+                                            <span class="jobs">Compliance Officer</span>
+                                        </p>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="picture"><img src="assets/img/temp/picture4.png" alt="" /></span>
+                                        <p class="info">
+                                            <span class="name">Jonadan Smith</span>
+                                            <span class="jobs">Epidemiologist</span>
+                                        </p>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="picture"><img src="assets/img/temp/picture5.png" alt="" /></span>
+                                        <p class="info">
+                                            <span class="name">June Mary</span>
+                                            <span class="jobs">Architect</span>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="both-trans">
+                        <a href="#" class="trans-right">select</a><br /><a href="#" class="trans-left">remove</a>
+                    </div>
+                    <div class="find">
+                        <div class="inner">
+                            <div class="tp">
+                                <input type="input" class="search-input" placeholder="Search Data" /><a href="#" class="search">search</a>
+                            </div>
+                            <div class="list-wrap">
+                                <ul>
+                                    <li class="clearfix">
+                                        <span class="picture"><img src="assets/img/temp/picture2.png" alt="" /></span>
+                                        <p class="info">
+                                            <span class="name">James April</span>
+                                            <span class="jobs">Historian</span>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-center pdt-35">
+                    <a class="cs-btn purple">SAVE</a>
+                </div>
+            </div>
+            <!-- //user search (popup) -->
 
             <!-- search data -->
             <div class="search-data-popup" style="display: none">

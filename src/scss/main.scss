@@ -3,6 +3,7 @@
 ***********************/
 div.data-board-wrap {
     padding: 40px 60px;
+    overflow-y: auto;
 
     div.area1 {
 
@@ -95,7 +96,41 @@ div.data-board-wrap {
         font-size: 24px;
         letter-spacing: -1px;
         color: $dark;
-        padding: 40px 0 25px 0;
+        padding: 44px 0 22px 0;
+
+        &.sub {
+            font-size: 16px;
+            letter-spacing: -0.6px;
+            padding: 40px 0 20px 0;
+        }
+    }
+    div.tit-area {
+        position: relative;
+
+        a.etcs {
+            position: absolute;
+            width: 30px;
+            height: 26px;
+            top: 42px; right: 0; 
+            border-radius: 4px;
+            text-indent: -9999px;
+            background: #e8eef4 url('../img/icons/icon_invalid.png') 50% 50% no-repeat;
+            @include prefix($bgs, 13px 3px, webkit ms);
+        }
+    }
+    div.subtit-area {
+        position: relative;
+
+        a.etcs {
+            position: absolute;
+            width: 30px;
+            height: 26px;
+            top: 42px; right: 0; 
+            border-radius: 4px;
+            text-indent: -9999px;
+            background: #e8eef4 url('../img/icons/icon_invalid.png') 50% 50% no-repeat;
+            @include prefix($bgs, 13px 3px, webkit ms);
+        }
     }
 
     div.area2 {
@@ -135,6 +170,354 @@ div.data-board-wrap {
                         font-family: $inter-b;
                         color: #28313b;
                     }
+                }
+            }
+        }
+    }
+
+    div.area3 {
+
+        div.left-area {
+            float: left;
+            width: 49.1%;
+        }
+        div.right-area {
+            float: right;
+            width: 49.1%;
+        }
+
+        div.real-time {
+            width: 100%; height: 390px;
+            background: #fff;
+            text-align: center;
+        }
+        div.perfomance {
+
+            div.charts-1 {
+                float: left;
+                width: 48%; height: 183px;
+            }
+            div.charts-2 {
+                float: right;
+                width: 48%; height: 183px;
+            }
+            div.charts-3 {
+                float: left;
+                width: 48%; height: 183px;
+            }
+            div.charts-4 {
+                float: right;
+                width: 48%; height: 183px;
+            }
+        }
+    }
+
+    div.area4 {
+
+        div.left-area {
+            float: left;
+            width: 49.1%;
+        }
+        div.right-area {
+            float: right;
+            width: 49.1%;
+        }
+
+        div.topology-map {
+            width: 100%; height: 340px;
+            background: #fff;
+
+            div.map-search {
+                text-align: center;
+                padding-top: 25px;
+
+                span {
+                    text-align: left;
+                }
+                div.select-standard-wrap {
+                    margin: 0 5px;
+                }
+                p.net-line {
+                    font-size: 14px;
+                    color: #28313b;
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    padding-top: 20px;
+                }
+            }
+            div.topology-chart {
+                background: #fff;
+                text-align: center;
+            }
+        }
+        div.db-load {
+            width: 100%; height: 340px;
+            background: #fff;
+
+            ul {
+                width: 100%;
+                border-bottom: 2px solid #f8fafc;
+
+                li {
+                    float: left;
+
+                    a {
+                        display: inline-block;
+                        padding: 12px 5px;
+                        margin: 0 15px -2px 15px;
+                        border-bottom: 2px solid #f8fafc;
+                        font-family: $inter-m;
+                        font-size: 14px;
+                        color: #97a4b1;
+                        letter-spacing: -0.5px;
+
+                        &.on {
+                            border-bottom: 2px solid #28313b;
+                            color: $dark;
+                        }
+                    }
+                }
+            }
+            div.topology-chart {
+                background: #fff;
+                text-align: center;
+            }
+        }
+    }
+
+    div.area5  {
+
+        div.cloud-server {
+            float: left;
+            width: 36%; height: 240px;
+
+            p.cloud-tit {
+                font-family: $inter-b;
+                font-size: 24px;
+                letter-spacing: -1px;
+                color: $dark;
+                background: url('../img/icons/icon_cloud.png') 0 0 no-repeat;
+                @include prefix($bgs, 26px 26px, webkit ms);
+                padding-left: 33px;
+                padding-bottom: 23px;
+                line-height: 26px;
+                border-bottom: 2px solid #28313b;
+
+                span {
+                    font-family: $inter-m;
+                }
+            }
+            table {
+
+                th {
+                    font-family: $inter-m;
+                    font-size: 13px;
+                    color: #97a4b1;    
+                    letter-spacing: -0.31px;
+                    padding: 0 0 0 5px;
+                    height: 46px;
+                    border-bottom: 1px solid #bccad7;
+                    font-weight: normal;
+                }
+                td {
+                    font-size: 15px;
+                    color: $dark;
+                    letter-spacing: -0.38px;
+                    padding-left: 20px;
+                    border-bottom: 1px solid #bccad7;
+                }
+            }
+        }
+        p.sub-tit {
+            padding-bottom: 23px;
+            font-size: 20px;
+            font-family: $inter-b;
+            color: $dark;
+        }
+        div.event {
+            float: left;
+            width: 23%;
+            margin: 0 2.3%;
+
+            div.event-wrap {
+                height: 190px;
+                background: #fff;
+
+                div.event-chart {
+                    float: left;
+                }
+                div.event-info {
+                    float: right;
+                    width: 97px;
+
+                    table {
+
+                        td {
+                            font-size: 12px;
+                            color: #97a4b1;
+                            letter-spacing: -0.5px;
+                            padding-left: 5px;
+                            border-bottom: 1px solid #bccad7;
+                            height: 37px;
+
+                            &.s {
+                                color: #000;
+                                font-size: 16px;
+                                font-family: $inter-b;
+                                letter-spacing: -0.57px;
+                                text-align: right;
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        div.storage {
+            float: left;
+            width: 13%; height: 240px;
+            margin-right: 2.3%;
+
+            div.storage {
+                height: 190px;
+                background: #fff;
+            }
+        }
+        div.average {
+            float: left;
+            width: 21%; height: 240px;
+
+            div.avg-wrap {
+                background: #fff;
+                margin-bottom: 12px;
+                padding-top: 6px;
+
+                div.info {
+                    padding: 0 11px 5px 11px;
+
+                    span.f {
+                        float: left;
+                        font-size: 16px;
+                        font-family: $inter-m;
+                        letter-spacing: -0.4px;
+                        color: $dark;
+                        line-height: 34px;
+                    }
+                    span.s {
+                        float: right;
+                        font-size: 24px;
+                        font-family: $inter-b;
+                        letter-spacing: -0.5px;
+
+                        span {
+                            font-size: 16px;
+                            font-family: $inter-m;
+                        }
+                    }
+                }
+                div.avg-line-wrap {
+                    position: relative;
+                    border-radius: 3px;
+                    overflow: hidden;
+                    height: 6px;
+                    background: #e8eef4;
+
+                    span.graph {
+                        position: absolute;
+                        top: 0; left: 0;
+                        border-radius: 3px;
+                        display: inline-block;
+                        height: 6px;
+                        background: #9678ff;
+                    }
+                }
+            }
+        }
+    }
+
+    div.area6 {
+
+        div.left-area {
+            float: left;
+            width: 49.1%;
+
+            div.process-view {
+                width: 100%;
+                background: #fff;
+
+                table.process-table {
+
+                    th {
+                        height: 46px;
+                        background: #bccad7;
+                        font-family: $inter-m;
+                        font-size: 14px;
+                        color: #fff;
+                        letter-spacing: -0.5px;
+                        text-align: center;
+                        border-bottom: 2px solid #f2f4f5;
+                    }
+                    td {
+                        height: 46px;
+                        border-bottom: 2px solid #f2f4f5;
+                        letter-spacing: -0.5px;
+                        font-size: 16px;
+                        color: $dark;
+                        text-align: center;
+                        padding: 0 15px;
+
+                        &.l {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
+            div.disk-io {
+                width: 100%; height: 310px;
+                background: #fff;
+            }
+
+            div.topology-map {
+                width: 100%; height: 340px;
+                background: #fff;
+    
+                div.map-search {
+                    text-align: center;
+                    padding-top: 25px;
+    
+                    span {
+                        text-align: left;
+                    }
+                    div.select-standard-wrap {
+                        margin: 0 5px;
+                    }
+                    p.net-line {
+                        font-size: 14px;
+                        color: #28313b;
+                        letter-spacing: -0.5px;
+                        text-align: center;
+                        padding-top: 20px;
+                    }
+                }
+                div.topology-chart {
+                    background: #fff;
+                    text-align: center;
+                }
+            }
+        }
+        div.right-area {
+            float: right;
+            width: 49.1%;
+
+            div.indicator-charts {
+                background: #fff;
+                padding: 0 32px 25px 32px;
+
+                div.perform-chart {
+                    width: 100%; height: 260px;
+                    background: #fff;
+                    border: 1px solid red;
                 }
             }
         }

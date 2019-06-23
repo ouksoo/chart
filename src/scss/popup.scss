@@ -339,18 +339,265 @@ div.profile-tip {
     div.inner-wrap {
         height: 622px;
 
+        span.tit {
+            display: block;
+            padding-bottom: 22px;
+            font-size: 18px;
+            font-family: $inter-b;
+            color: $dark;
+        }
         div.left {
             float: left;
             width: 278px;
             border-right: 1px solid #e8eef4;
             padding-left: 35px;
             height: 100%;
+
+            ul {
+
+                li {
+                    padding: 13px 8px;
+
+                    span.icon {
+                        display: inline-block;
+                        width: 24px; height:24px;
+                        vertical-align: middle;
+                        margin-right: 15px;
+
+                        &.server {
+                            background: url('../img/icons/icon_server.png') 0 0 no-repeat;
+                            @include prefix($bgs, 24px 24px, webkit ms);
+                        }
+                        &.copy {
+                            background: url('../img/icons/icon_copy.png') 0 0 no-repeat;
+                            @include prefix($bgs, 24px 24px, webkit ms);
+                        }
+                        &.cloud {
+                            background: url('../img/icons/icon_cloud.png') 0 0 no-repeat;
+                            @include prefix($bgs, 24px 24px, webkit ms);
+                        }
+                        &.switch {
+                            background: url('../img/icons/icon_switch.png') 0 0 no-repeat;
+                            @include prefix($bgs, 24px 24px, webkit ms);
+                        }
+                        &.router {
+                            background: url('../img/icons/icon_router.png') 0 0 no-repeat;
+                            @include prefix($bgs, 24px 24px, webkit ms);
+                        }
+                        &.bridge {
+                            background: url('../img/icons/icon_bridge.png') 0 0 no-repeat;
+                            @include prefix($bgs, 24px 24px, webkit ms);
+                        }
+                        &.storage {
+                            background: url('../img/icons/icon_cube.png') 0 0 no-repeat;
+                            @include prefix($bgs, 24px 24px, webkit ms);
+                        }
+                        &.app {
+                            background: url('../img/icons/icon_app.png') 0 0 no-repeat;
+                            @include prefix($bgs, 24px 24px, webkit ms);
+                        }
+                        &.windows {
+                            background: url('../img/icons/icon_os_window.png') 0 0 no-repeat;
+                            @include prefix($bgs, 24px 24px, webkit ms);
+                        }
+                        &.linux {
+                            background: url('../img/icons/icon_os_linux.png') 0 0 no-repeat;
+                            @include prefix($bgs, 24px 24px, webkit ms);
+                        }
+                        &.oracle {
+                            background: url('../img/icons/icon_os_mark.png') 0 0 no-repeat;
+                            @include prefix($bgs, 24px 24px, webkit ms);
+                        }
+                    }
+
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
         }
         div.right {
             float: right;
             width: 478px;
-            padding-right: 35px;
+            padding: 0 35px 0 30px;
             height: 100%;
+
+            div.in-tit {
+
+                span.a1 {
+                    float: left;
+                    font-size: 16px; line-height: 20px; letter-spacing: -0.3px;
+                    line-height: 30px;
+                    color: $dark;
+                    font-family: $inter-m;
+                }
+                span.btn {
+                    float: right;
+                    vertical-align: middle;
+                    font-size: 18px; color: #fff;
+                    height: 32px;
+                    padding: 0 15px 0 15px;
+                    text-align: center;
+                    background: #9678ff;
+                    margin-left: 7px;
+                }
+            }
+            p.para {
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.26px;
+                color: $dark;
+                padding: 12px 0 37px 0;
+            }
+        }
+    }
+}
+
+div.user-search-wrap {
+    position: absolute;
+    z-index: 6;
+    width: 760px;
+    height: 616px;
+    left: 50%; top: 50%;
+    margin: -312px 0 0 -380px;
+    padding: 17px 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px 0 rgba(40, 49, 59, 0.15);
+    border: solid 1px #e8eef4;
+    background-color: #ffffff;      
+
+    a.close-btn {
+        position: absolute;
+        width: 20px; height: 20px;
+        right: 13px; top: 13px;
+        background: url('../img/popup/icon_close.png') 0 0 no-repeat;
+        @include prefix($bgs, 20px 20px, webkit ms);
+        text-indent: -9999px;
+    }
+    div.title {
+        padding: 0 0 40px 0;
+
+        span {
+            font-family: $inter-b;
+            font-size: 20px;
+            font-weight: 600;
+            color: #29323b;
+        }
+        p {
+            height: 16px;
+            font-size: 13px;
+            color: #97a4b1;
+        }
+    }
+    div.find-select-wrap {
+
+        div.find {
+            p.tit {
+                font-family: $inter-b;
+                font-size: 16px;
+                color: $dark;
+                padding-bottom: 12px;
+            }
+            div.inner {
+                float: left;
+                width: 325px;
+                height: 353px;
+                border-radius: 4px;
+                border: solid 1px #bccad7;
+                background-color: #ffffff;
+
+                div.tp {
+                    position: relative;
+                    width: 296px;
+                    margin: 10px auto;
+
+                    input.search-input {
+                        width: 296px;
+                        height: 36px;
+                        border-radius: 23px;
+                        padding: 5px 35px 5px 15px;
+                        background-color: #e8eef4;
+                        color: #97a4b1;
+                        font-size: 14px;
+                        border: 0;
+                    }
+                    a.search {
+                        position: absolute;
+                        width: 20px; height: 20px;
+                        background: url('../img/icons/icon_search.png') 50% 50% no-repeat;
+                        @include prefix($bgs, 20px 20px, webkit ms);
+                        text-indent: -9999px;
+                        right: 15px; top: 8px;
+                    }
+                }
+                div.list-wrap {
+                    height:284px;
+                    overflow-y: auto;
+                    margin: 0 auto;
+
+                    ul {
+
+                        li {
+                            padding: 10px 0 10px 25px;
+
+                            &.on {
+                                background: #f2f4f5;
+                            }
+                            span.picture {
+                                float: left;
+                                width: 36px; height: 36px;
+                                overflow: hidden;
+                                border-radius: 50%;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            p.info {
+                                float: left;
+                                margin-left: 10px;
+
+                                span.name {
+                                    display: block;
+                                    font-size: 14px;
+                                    color: $dark;
+                                    line-height: 18px;
+                                }
+                                span.jobs {
+                                    display: block;
+                                    font-size: 12px;
+                                    color: #97a4b1;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        div.both-trans {
+            float: left;
+            width: 48px;
+            text-align: center;
+            padding-top: 133px;
+
+            a {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                text-indent: -9999px;
+
+                &.trans-right {
+                    background: #9678ff url('../img/icons/icon_right_arrow.png') 50% 50% no-repeat;
+                    @include prefix($bgs, 16px 16px, webkit ms);
+                    margin-bottom: 6px;
+                }
+                &.trans-left {
+                    background: #9678ff url('../img/icons/icon_left_arrow.png') 50% 50% no-repeat;
+                    @include prefix($bgs, 16px 16px, webkit ms);
+                }
+            }
         }
     }
 }

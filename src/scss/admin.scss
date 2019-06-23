@@ -359,6 +359,41 @@ div.light-content {
         }
     }
 
+    div.tab-btn-wrap {
+        position: relative;
+
+        ul {
+            width: 100%; 
+            border-bottom: 2px solid #e8eef4;
+
+            li {
+                float: left;
+                margin-bottom: -2px;
+
+                a {
+                    display: inline-block;
+                    font-family: $inter-m;
+                    font-size: 21px;
+                    line-height: 26px;
+                    padding: 11px 25px;
+                    color: $dark;
+
+                    &.on {
+                        border-bottom: 2px solid #9678ff;
+                    }
+                }
+            }
+        }
+        div.tab-btn-right {
+            position: absolute;
+            top: 3px; right: 0;
+
+            a {
+                margin-left: 12px;
+            }
+        }
+    }
+
     div.btn-left {
         text-align: left;
         padding: 50px 0;
