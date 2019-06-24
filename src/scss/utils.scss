@@ -1148,6 +1148,103 @@ div.tooltip-wrap {
     }
 }
 
+div.input-user-wrap {
+    display: inline-block;
+    position: relative;
+
+    input.formdata {
+        width: 100%;
+    }
+    ul.user-list {
+        width: 100%;
+        height: 278px;
+        overflow-y: auto;
+        border-radius: 6px;
+        box-shadow: 0 5px 15px 0 rgba(40, 49, 59, 0.15);
+        border: solid 1px #e8eef4;
+        background-color: #ffffff;
+        margin-top: 7px;
+
+        li {
+            padding: 10px 0 10px 25px;
+
+            &:hover {
+                background: #f2f4f5;
+            }
+            span.picture {
+                float: left;
+                width: 36px; height: 36px;
+                overflow: hidden;
+                border-radius: 50%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            p.info {
+                float: left;
+                margin-left: 10px;
+
+                span.name {
+                    display: block;
+                    font-size: 14px;
+                    color: $dark;
+                    line-height: 18px;
+                }
+                span.jobs {
+                    display: block;
+                    font-size: 12px;
+                    color: #97a4b1;
+                }
+            }
+        }
+    }
+    ul.selected-user {
+        position: absolute;
+        top: 6px; left: 8px;
+
+        li {
+            float: left;
+            height: 34px;
+            border-radius: 18px;
+            background-color: #9678ff;
+            margin-right: 8px;
+
+            span.f {
+                display: inline-block;
+                width: 30px; height: 30px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin: 2px;
+                vertical-align: middle;
+
+                img {
+                    width: 30px; height: 30px;
+                }
+            }
+            span.s {
+                display: inline-block;
+                font-family: $inter-m;
+                font-size: 16px;
+                letter-spacing: -0.56px;
+                color: #fff;
+                line-height: 30px;
+                vertical-align: middle;
+            }
+            a.remove {
+                display: inline-block;
+                width: 16px; height: 16px;
+                vertical-align: middle;
+                margin: 0 10px;
+                text-indent: -9999px;
+                background: url('../img/icons/icon_user_remove.png') 0 0 no-repeat;
+                @include prefix($bgs, 16px 16px, webkit ms);
+            }
+        }
+    }
+}
+
 /* risk color */
 span.risk-color-1 {
     background: #EB5858;

@@ -13,7 +13,7 @@
 
 <div id="app" class="wrapper">
     <!-- header -->
-    <header class="clearfix">
+    <header class="clearfix" style="display: none">
         
         <a href="#" class="monitor header-monitor" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">Monitoring Graph</a>
         <div class="product-btn clearfix" onmouseover="PJT.headerMonitoryShow();" onmouseout="PJT.headerMonitoryHide()">
@@ -118,7 +118,7 @@
     <!-- section -->
     <section>
         <!--left navigation bar-->
-        <div class="lnb-wrap">
+        <div class="lnb-wrap" style="display: none">
             <ul class="lnb-nav clearfix">
                 <li data-name="Monitoring" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="on" onclick="PJT.lnbMonitoringShow()">monitoring</a></li>
                 <li data-name="Event" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" onclick="PJT.lnbEventShow()">event</a></li>
@@ -264,35 +264,51 @@
                     <p class="title-bold">Service Response Time</p>
                     <ul class="services clearfix">
                         <li>
-                            <span class="service-round risk-color-5"></span>
+                            <span class="service-round risk-color-5">
+                                <span class="company-logo intel"></span>
+                            </span>
                             <span class="info">Google / <span>35</span> ms</span>
                         </li>
                         <li>
-                            <span class="service-round risk-color-4"></span>
+                            <span class="service-round risk-color-4">
+                                <span class="company-logo ibm"></span>
+                            </span>
                             <span class="info">Intel / <span>84</span> ms</span>
                         </li>
                         <li>
-                            <span class="service-round risk-color-3"></span>
+                            <span class="service-round risk-color-3">
+                                <span class="company-logo intel"></span>
+                            </span>
                             <span class="info">Dell / <span>302</span> ms</span>
                         </li>
                         <li>
-                            <span class="service-round risk-color-2"></span>
+                            <span class="service-round risk-color-2">
+                                <span class="company-logo ibm"></span>
+                            </span>
                             <span class="info">IBM / <span>137</span> ms</span>
                         </li>
                         <li>
-                            <span class="service-round risk-color-1"></span>
+                            <span class="service-round risk-color-1">
+                                <span class="company-logo intel"></span>
+                            </span>
                             <span class="info">Avenger / <span>22</span> ms</span>
                         </li>
                         <li>
-                            <span class="service-round risk-color-5"></span>
+                            <span class="service-round risk-color-5">
+                                <span class="company-logo ibm"></span>
+                            </span>
                             <span class="info">Adidas / <span>70</span> ms</span>
                         </li>
                         <li>
-                            <span class="service-round risk-color-4"></span>
+                            <span class="service-round risk-color-4">
+                                <span class="company-logo intel"></span>
+                            </span>
                             <span class="info">Apple / <span>39</span> ms</span>
                         </li>
                         <li>
-                            <span class="service-round risk-color-3"></span>
+                            <span class="service-round risk-color-3">
+                                <span class="company-logo ibm"></span>
+                            </span>
                             <span class="info">Mcdonald / <span>84</span> ms</span>
                         </li>
                     </ul>
@@ -307,7 +323,7 @@
                             <p class="title-bold">CPU Resource Map</p>
                             <a href="#" class="etcs">more</a>
                         </div>
-                        <div class="real-time border">
+                        <div class="real-time">
                             <img src="assets/img/temp/cpu.png" alt="" width="100%" />
                         </div>
                         <!-- //CPU resource map -->
@@ -319,19 +335,31 @@
                             <a href="#" class="etcs">more</a>
                         </div>
                         <div class="perfomance clearfix">
-                            <div class="charts-1 border">
-a
+                            <div class="charts-1">
+                                <span class="title">CPU - Top5</span>
+                                <div class="chart">
+                                    <canvas id="performanceCpuChart"></canvas>
+                                </div>
                             </div>
-                            <div class="charts-2 border">
-b
+                            <div class="charts-2">
+                                <span class="title">Memory - Top5</span>
+                                <div class="chart">
+                                    <canvas id="performanceMemoryChart"></canvas>
+                                </div>
                             </div>
                         </div>
                         <div class="perfomance mgt-25 clearfix">
-                            <div class="charts-3 border">
-c
+                            <div class="charts-3">
+                                <span class="title">DISK - Top5</span>
+                                <div class="chart">
+                                    <canvas id="performanceDiskChart"></canvas>
+                                </div>
                             </div>
-                            <div class="charts-4 border">
-d
+                            <div class="charts-4">
+                                <span class="title">I/O - Top5</span>
+                                <div class="chart">
+                                    <canvas id="performanceIoChart"></canvas>
+                                </div>
                             </div> 
                         </div>
                         <!-- //Performance -->
@@ -347,7 +375,7 @@ d
                             <p class="title-bold">Topology Map</p>
                             <a href="#" class="etcs">more</a>
                         </div>
-                        <div class="topology-map border">
+                        <div class="topology-map">
                             <div class="map-search">
                                 <div class="select-standard-wrap topo" style="width: 105px;">
                                     <select>
@@ -394,7 +422,7 @@ d
                             <p class="title-bold">DB Load</p>
                             <a href="#" class="etcs">more</a>
                         </div>
-                        <div class="db-load border">
+                        <div class="db-load">
                             <ul class="clearfix">
                                 <li><a href="#" class="on">Server</a></li>
                                 <li><a href="#">DB</a></li>
@@ -414,10 +442,10 @@ d
             <!-- //main (data board content-1) -->
 
             <!-- main (data board content-2) -->
-            <div class="data-board-wrap">
+            <div class="data-board-wrap" style="display: none">
                 <!-- area5 -->
                 <div class="area5 clearfix">
-                    <div class="cloud-server border">
+                    <div class="cloud-server">
                         <p class="cloud-tit">Cloud Server <span>SRC-A9827</span></p>
                         <table class="notable" width="100%">
                         <colgroup>
@@ -444,11 +472,17 @@ d
                         </tbody>
                         </table>
                     </div>
-                    <div class="event border">
+                    <div class="event">
                         <p class="sub-tit">Event</p>
-                        <div class="event-wrap clearfix border">
+                        <div class="event-wrap clearfix">
                             <div class="event-chart">
-a
+                                <div style="width: 160px; height: 160px; margin: 0 auto">
+                                    <p class="values">
+                                        <span class="pdt-10">72</span>
+                                        <span class="t">Total Event</span>
+                                    </p>
+                                    <canvas id="eventStateChart" style="width: 160px; height: 160px"></canvas>
+                                </div>
                             </div>
                             <div class="event-info">
                                 <table class="notable" width="100%">
@@ -478,15 +512,21 @@ a
                             </div>
                         </div>  
                     </div>
-                    <div class="storage border">
+                    <div class="storage">
                         <p class="sub-tit">Storage</p>
                         <div class="storage-chart">
-                                
+                            <div style="width: 160px; height: 160px; margin: 0 auto">
+                                <p class="values">
+                                    <span class="pdt-10">75<span class="per">%</span></span>
+                                    <span class="t">0.7 / 1.21 TB</span>
+                                </p>
+                                <canvas id="storageStateChart" style="width: 160px; height: 160px"></canvas>
+                            </div>
                         </div>
                     </div>
-                    <div class="average border">
+                    <div class="average">
                         <p class="sub-tit">Average</p>
-                        <div class="avg-wrap border">
+                        <div class="avg-wrap">
                             <div class="info clearfix">
                                 <span class="f">CPU Avg.</span>
                                 <span class="s">55<span>%</span> / <span>Max</span> 78<span>%</span></span>
@@ -524,7 +564,7 @@ a
                         <div class="tit-area">
                             <p class="title-bold">Process View</p>
                         </div>
-                        <div class="process-view border">
+                        <div class="process-view">
                             <table class="notable process-table" width="100%">
                             <colgroup>
                                 <col width=""  />
@@ -594,8 +634,8 @@ a
                             <p class="title-bold">Disk I/O</p>
                             <a href="#" class="etcs">more</a>
                         </div>
-                        <div class="disk-io border">
-                            
+                        <div class="disk-io">
+                            <canvas id="diskIoChart"></canvas>
                         </div>
                         <!-- //disk I/O -->
                         <!-- Relation view -->
@@ -603,7 +643,7 @@ a
                             <p class="title-bold">Relation View</p>
                             <a href="#" class="etcs">more</a>
                         </div>
-                        <div class="topology-map border">
+                        <div class="topology-map">
                             <div class="map-search">
                                 <div class="select-standard-wrap topo" style="width: 105px;">
                                     <select>
@@ -648,14 +688,14 @@ a
                         <div class="tit-area">
                             <p class="title-bold">Key Performance Indicator</p>
                         </div>
-                        <div class="indicator-charts border">
+                        <div class="indicator-charts">
                             <!-- CPU Performance -->
                             <div class="tit-area">
                                 <p class="title-bold sub pdt-15">Relation View</p>
                                 <a href="#" class="etcs">more</a>
                             </div>
                             <div class="perform-chart">
-
+                                <canvas id="cpuPerformanceChart"></canvas>
                             </div>
                             <!-- //CPU Performance -->
                             <!-- Memory Performance -->
@@ -664,7 +704,7 @@ a
                                 <a href="#" class="etcs">more</a>
                             </div>
                             <div class="perform-chart">
-
+                                <canvas id="memoryPerformanceChart"></canvas>
                             </div>
                             <!-- //Memory Performance -->
                             <!-- Disk1 Performance -->
@@ -672,8 +712,8 @@ a
                                 <p class="title-bold sub">Disk1 Performance</p>
                                 <a href="#" class="etcs">more</a>
                             </div>
-                            <div class="perform-chart">
-
+                            <div class="perform-chart sm">
+                                <canvas id="disk1PerformanceChart"></canvas>
                             </div>
                             <!-- //Disk1 Performance -->
                             <!-- Disk2 Performance -->
@@ -681,8 +721,8 @@ a
                                 <p class="title-bold sub">Disk2 Performance</p>
                                 <a href="#" class="etcs">more</a>
                             </div>
-                            <div class="perform-chart">
-
+                            <div class="perform-chart sm">
+                                <canvas id="disk2PerformanceChart"></canvas>
                             </div>
                             <!-- //Disk2 Performance -->
                         </div>
@@ -2570,7 +2610,7 @@ a
             <!-- //device inventory list -->
 
             <!--device list-->
-            <div class="device-wrap">
+            <div class="device-wrap" style="display: none">
                 <div class="device-top clearfix">
                     <span class="f">DEVICES</span>
                     <span class="s">

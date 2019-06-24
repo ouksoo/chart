@@ -4,6 +4,7 @@
 div.data-board-wrap {
     padding: 40px 60px;
     overflow-y: auto;
+    background: #f8fafc;
 
     div.area1 {
 
@@ -157,6 +158,20 @@ div.data-board-wrap {
                     border-radius: 50%;
                     margin: 22px 0;
                     vertical-align: top;
+
+                    span.company-logo {
+                        display: inline-block;
+                        width: 80px; height: 80px;
+
+                        &.intel {
+                            background: url('../img/temp/logo_intel.png') 50% 50% no-repeat;
+                            @include prefix($bgs, 55px 55px, webkit ms);
+                        }
+                        &.ibm {
+                            background: url('../img/temp/logo_ibm.png') 50% 50% no-repeat;
+                            @include prefix($bgs, 55px 55px, webkit ms);
+                        }
+                    }
                 }
                 span.info {
                     display: block;
@@ -192,22 +207,32 @@ div.data-board-wrap {
             text-align: center;
         }
         div.perfomance {
-
+            span.title {
+                display: block;
+                font-family: $inter-b;
+                font-size: 14px;
+                letter-spacing: -.058px;
+                padding-bottom: 15px;
+            }
             div.charts-1 {
                 float: left;
                 width: 48%; height: 183px;
+                background: #fff;
             }
             div.charts-2 {
                 float: right;
                 width: 48%; height: 183px;
+                background: #fff;
             }
             div.charts-3 {
                 float: left;
                 width: 48%; height: 183px;
+                background: #fff;
             }
             div.charts-4 {
                 float: right;
                 width: 48%; height: 183px;
+                background: #fff;
             }
         }
     }
@@ -315,7 +340,7 @@ div.data-board-wrap {
                     color: #97a4b1;    
                     letter-spacing: -0.31px;
                     padding: 0 0 0 5px;
-                    height: 46px;
+                    height: 47px;
                     border-bottom: 1px solid #bccad7;
                     font-weight: normal;
                 }
@@ -340,11 +365,41 @@ div.data-board-wrap {
             margin: 0 2.3%;
 
             div.event-wrap {
-                height: 190px;
+                height: 185px;
                 background: #fff;
 
                 div.event-chart {
                     float: left;
+                    width: 200px;
+                    padding-top: 13px;
+
+                    & > div {
+                        position: relative;
+
+                        p.values {
+                            position: absolute;
+                            width: 80px; height: 80px;
+                            left: 50%; top: 50%;
+                            margin: -40px 0 0 -40px;
+                            text-align: center;
+
+                            span {
+                                display: block;
+                                font-family: $inter-b;
+                                font-size: 44px;
+                                letter-spacing: -1.57px;
+                                line-height: 44px;
+
+                                &.t {
+                                    font-family: $inter-m;
+                                    font-size: 13px;
+                                    color: #97a4b1;
+                                    letter-spacing: -0.5px;
+                                    line-height: 18px;
+                                }   
+                            }
+                        }
+                    }
                 }
                 div.event-info {
                     float: right;
@@ -366,7 +421,7 @@ div.data-board-wrap {
                                 font-family: $inter-b;
                                 letter-spacing: -0.57px;
                                 text-align: right;
-                                padding-right: 5px;
+                                padding-right: 8px;
                             }
                         }
                     }
@@ -378,9 +433,44 @@ div.data-board-wrap {
             width: 13%; height: 240px;
             margin-right: 2.3%;
 
-            div.storage {
-                height: 190px;
+            div.storage-chart {
+                height: 185px;
                 background: #fff;
+                padding-top: 13px;
+
+                & > div {
+                    position: relative;
+
+                    p.values {
+                        position: absolute;
+                        width: 80px; height: 80px;
+                        left: 50%; top: 50%;
+                        margin: -40px 0 0 -40px;
+                        text-align: center;
+
+                        span {
+                            display: block;
+                            font-family: $inter-b;
+                            font-size: 44px;
+                            letter-spacing: -1.57px;
+                            line-height: 44px;
+                            
+                            span.per {
+                                display: inline;
+                                font-family: $inter-m;
+                                font-size: 20px;
+                                line-height: 20px;
+                            }
+                            &.t {
+                                font-family: $inter-m;
+                                font-size: 13px;
+                                color: #97a4b1;
+                                letter-spacing: -0.5px;
+                                line-height: 18px;
+                            }   
+                        }
+                    }
+                }
             }
         }
         div.average {
@@ -393,7 +483,7 @@ div.data-board-wrap {
                 padding-top: 6px;
 
                 div.info {
-                    padding: 0 11px 5px 11px;
+                    padding: 0 8px 5px 8px;
 
                     span.f {
                         float: left;
@@ -515,9 +605,12 @@ div.data-board-wrap {
                 padding: 0 32px 25px 32px;
 
                 div.perform-chart {
-                    width: 100%; height: 260px;
+                    width: 100%; height: 240px;
                     background: #fff;
-                    border: 1px solid red;
+
+                    &.sm {
+                        height: 140px;
+                    }
                 }
             }
         }
