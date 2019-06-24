@@ -1790,17 +1790,3 @@ function storageStateChart() {
     var ctxStorageState = document.getElementById('storageStateChart').getContext('2d');
     var myDoughnut = new Chart(ctxStorageState, doughnutConfig);
 }
-
-performanceCpuChart();
-performanceMemoryChart();
-performanceDiskChart();
-performanceIoChart();
-
-diskIoChart();
-memoryPerformanceChart();
-cpuPerformanceChart();
-disk1PerformanceChart();
-disk2PerformanceChart();
-
-eventStateChart();
-storageStateChart();
