@@ -42,7 +42,7 @@
                 <span class="f">@brianpark</span>
                 <ul>
                     <li><a href="#">Profile</a></li>
-                    <li><a href="#">Tip - Icon & Short Cut</a></li>
+                    <li><a href="#" onclick="PJT.headerProfileTip()">Tip - Icon & Short Cut</a></li>
                     <li><a href="#">Get Started</a></li>
                     <li><a href="#">Logout</a></li>
                 </ul>
@@ -324,7 +324,7 @@
                             <a href="#" class="etcs">more</a>
                         </div>
                         <div class="real-time">
-                            <img src="assets/img/temp/cpu.png" alt="" width="100%" />
+                            <img src="assets/img/temp/cpu.png" alt="" height="390px" />
                         </div>
                         <!-- //CPU resource map -->
                     </div>
@@ -338,13 +338,17 @@
                             <div class="charts-1">
                                 <span class="title">CPU - Top5</span>
                                 <div class="chart">
-                                    <canvas id="performanceCpuChart"></canvas>
+                                    <div class="inner">
+                                        <canvas id="performanceCpuChart"></canvas>
+                                    </div>
                                 </div>
                             </div>
                             <div class="charts-2">
                                 <span class="title">Memory - Top5</span>
                                 <div class="chart">
-                                    <canvas id="performanceMemoryChart"></canvas>
+                                    <div class="inner">
+                                        <canvas id="performanceMemoryChart"></canvas>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -352,13 +356,17 @@
                             <div class="charts-3">
                                 <span class="title">DISK - Top5</span>
                                 <div class="chart">
-                                    <canvas id="performanceDiskChart"></canvas>
+                                    <div class="inner">
+                                        <canvas id="performanceDiskChart"></canvas>
+                                    </div>
                                 </div>
                             </div>
                             <div class="charts-4">
                                 <span class="title">I/O - Top5</span>
                                 <div class="chart">
-                                    <canvas id="performanceIoChart"></canvas>
+                                    <div class="inner">
+                                        <canvas id="performanceIoChart"></canvas>
+                                    </div>
                                 </div>
                             </div> 
                         </div>
@@ -635,7 +643,9 @@
                             <a href="#" class="etcs">more</a>
                         </div>
                         <div class="disk-io">
-                            <canvas id="diskIoChart"></canvas>
+                            <div class="chart-wrap">
+                                <canvas id="diskIoChart"></canvas>
+                            </div>
                         </div>
                         <!-- //disk I/O -->
                         <!-- Relation view -->
@@ -679,7 +689,7 @@
                             </div>
 
                             <div class="topology-chart">
-                                <img src="assets/img/temp/topology.png" alt="" width="100%" />
+                                <img src="assets/img/temp/topology.png" alt="" width="100%" height="245" />
                             </div>
                         </div>
                         <!-- //Relation view -->
@@ -2614,7 +2624,7 @@
                 <div class="device-top clearfix">
                     <span class="f">DEVICES</span>
                     <span class="s">
-                        <a href="#" class="plus device-add" onclick="PJT.deviceAddList()">plus</a><a href="#" class="minus device-remove" onclick="PJT.deviceRemoveList()">minus</a>
+                        <a href="#" class="plus device-add">plus</a><a href="#" class="minus device-remove" onclick="PJT.deviceRemoveList()">minus</a>
                     </span>
                 </div>
                 <div class="filter-options">

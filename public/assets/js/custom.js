@@ -73,22 +73,25 @@ var PJT = {
     headerNoticeHide: function headerNoticeHide() {
         $('div.notice-list-wrap').stop().fadeOut(300);
     },
+    headerProfileTip: function headerProfileTip() {
+        $('div.profile-tip, div.dimmed-film').fadeIn(300);
+    },
     lnbMonitoringShow: function lnbMonitoringShow() {
         openPopCloseEvent();
-        $('div.event-list-wrap, div.report-list-wrap').fadeOut('fast');
+        $('div.event-list-wrap, div.report-list-wrap, div.data-board-wrap').fadeOut('fast');
         $('div.device-inventory-wrap').fadeIn('fast');
         $('div.content-wrap').addClass('wide-wrapper');
         $('div.lnb-wrap, div.device-wrap').css('display', 'none');
     },
     lnbEventShow: function lnbEventShow() {
         openPopCloseEvent();
-        $('div.device-inventory-wrap, div.report-list-wrap').fadeOut('fast');
+        $('div.device-inventory-wrap, div.report-list-wrap, div.data-board-wrap').fadeOut('fast');
         $('div.event-list-wrap').fadeIn('fast');
         $('div.lnb-wrap, div.device-wrap').css('display', 'block');
     },
     lnbReportShow: function lnbReportShow() {
         openPopCloseEvent();
-        $('div.device-inventory-wrap, div.event-list-wrap').fadeOut('fast');
+        $('div.device-inventory-wrap, div.event-list-wrap, div.data-board-wrap').fadeOut('fast');
         $('div.report-list-wrap').fadeIn('fast');
         $('div.lnb-wrap, div.device-wrap').css('display', 'block');
     },

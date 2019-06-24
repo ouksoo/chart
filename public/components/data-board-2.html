@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title></title>
+<meta name=”viewport” content=”width=device-width, initial-scale=1.0" />
+<meta name="description" content="">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<link href="../assets/css/common.css" rel="stylesheet">
+</head>
+<body>
+<div id="app" class="wrapper">
+    <section>
+        <div class="content-wrap">
+
+
+
+
+
+
+
+
+
+
+<!-- main (data board content-2) -->
+<div class="data-board-wrap"><!-- style="display: none" -->
+    <!-- area5 -->
+    <div class="area5 clearfix">
+        <div class="cloud-server">
+            <p class="cloud-tit">Cloud Server <span>SRC-A9827</span></p>
+            <table class="notable" width="100%">
+            <colgroup>
+                <col width="" />
+                <col width="" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>Hostname</th>
+                    <td>Cloud Server SRC-A9827</td>
+                </tr>
+                <tr>
+                    <th>IP Address</th>
+                    <td>23.11.34.244</td>
+                </tr>
+                <tr>
+                    <th>OS</th>
+                    <td>Windows - MS Windows Server 2012 (64bit)</td>
+                </tr>
+                <tr>
+                    <th>MAC Address</th>
+                    <td>12-34-56-78-90-AB</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        <div class="event">
+            <p class="sub-tit">Event</p>
+            <div class="event-wrap clearfix">
+                <div class="event-chart">
+                    <div style="width: 160px; height: 160px; margin: 0 auto">
+                        <p class="values">
+                            <span class="pdt-10">72</span>
+                            <span class="t">Total Event</span>
+                        </p>
+                        <canvas id="eventStateChart" style="width: 160px; height: 160px"></canvas>
+                    </div>
+                </div>
+                <div class="event-info">
+                    <table class="notable" width="100%">
+                    <tbody>
+                        <tr>
+                            <td>Critical</td>
+                            <td class="s">00</td>
+                        </tr>
+                        <tr>
+                            <td>Major</td>
+                            <td class="s">09</td>
+                        </tr>
+                        <tr>
+                            <td>Minor</td>
+                            <td class="s">07</td>
+                        </tr>
+                        <tr>
+                            <td>Warning</td>
+                            <td class="s">06</td>
+                        </tr>
+                        <tr>
+                            <td>Info</td>
+                            <td class="s">05</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>  
+        </div>
+        <div class="storage">
+            <p class="sub-tit">Storage</p>
+            <div class="storage-chart">
+                <div style="width: 160px; height: 160px; margin: 0 auto">
+                    <p class="values">
+                        <span class="pdt-10">75<span class="per">%</span></span>
+                        <span class="t">0.7 / 1.21 TB</span>
+                    </p>
+                    <canvas id="storageStateChart" style="width: 160px; height: 160px"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="average">
+            <p class="sub-tit">Average</p>
+            <div class="avg-wrap">
+                <div class="info clearfix">
+                    <span class="f">CPU Avg.</span>
+                    <span class="s">55<span>%</span> / <span>Max</span> 78<span>%</span></span>
+                </div>          
+                <div class="avg-line-wrap">
+                    <span class="graph" style="width: 55%"></span>
+                </div>
+            </div>
+            <div class="avg-wrap">
+                <div class="info clearfix">
+                    <span class="f">Memory Avg.</span>
+                    <span class="s">24<span>%</span> / <span>Max</span> 90<span>%</span></span>
+                </div>          
+                <div class="avg-line-wrap">
+                    <span class="graph" style="width: 24%;"></span>
+                </div>
+            </div>
+            <div class="avg-wrap">
+                <div class="info clearfix">
+                    <span class="f">Disk Avg.</span>
+                    <span class="s">44<span>%</span> / <span>Max</span> 100<span>%</span></span>
+                </div>          
+                <div class="avg-line-wrap">
+                    <span class="graph" style="width: 44%"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //area5 -->
+
+    <!-- area6 -->
+    <div class="area6">
+        <div class="left-area">
+            <!-- process view -->
+            <div class="tit-area">
+                <p class="title-bold">Process View</p>
+            </div>
+            <div class="process-view">
+                <table class="notable process-table" width="100%">
+                <colgroup>
+                    <col width=""  />
+                    <col width=""  />
+                    <col width=""  />
+                    <col width=""  />
+                    <col width=""  />
+                    <col width=""  />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Hostname</th>
+                        <th>IP</th>
+                        <th>OS</th>
+                        <th>Memory</th>
+                        <th>Storage</th>
+                        <th>State</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="l">Angu Tamba</td>
+                        <td>81.229.228.205</td>
+                        <td>Windows</td>
+                        <td>32GB</td>
+                        <td>1.2TB</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr>
+                        <td class="l">Athar Malakooti</td>
+                        <td>165.178.33.13</td>
+                        <td>Linux</td>
+                        <td>32GB</td>
+                        <td>1.6TB</td>
+                        <td>Critical</td>
+                    </tr>
+                    <tr>
+                        <td class="l">Leonardo</td>
+                        <td>250.84.249.25</td>
+                        <td>Windows</td>
+                        <td>32GB</td>
+                        <td>1.2TB</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr>
+                        <td class="l">Erin Green</td>
+                        <td>30.202.234.0</td>
+                        <td>Windows</td>
+                        <td>32GB</td>
+                        <td>1.2TB</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr>
+                        <td class="l">Lacara Jones</td>
+                        <td>161.30.143.120</td>
+                        <td>Linux</td>
+                        <td>32GB</td>
+                        <td>1.2TB</td>
+                        <td>Major</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <!-- //process view -->
+            <!-- disk I/O -->
+            <div class="tit-area">
+                <p class="title-bold">Disk I/O</p>
+                <a href="#" class="etcs">more</a>
+            </div>
+            <div class="disk-io">
+                <div class="chart-wrap">
+                    <canvas id="diskIoChart"></canvas>
+                </div>
+            </div>
+            <!-- //disk I/O -->
+            <!-- Relation view -->
+            <div class="tit-area">
+                <p class="title-bold">Relation View</p>
+                <a href="#" class="etcs">more</a>
+            </div>
+            <div class="topology-map">
+                <div class="map-search">
+                    <div class="select-standard-wrap topo" style="width: 105px;">
+                        <select>
+                            <option value="member1" selected>Seoul</option>
+                            <option value="member2">Seoul2</option>
+                            <option value="member3">Seoul3S</option>
+                        </select>
+                    </div>
+                    <div class="select-standard-wrap topo" style="width: 105px;">
+                        <select>
+                            <option value="member1" selected>Server1</option>
+                            <option value="member2">Server2</option>
+                            <option value="member3">Server3</option>
+                        </select>
+                    </div>
+                    <div class="select-standard-wrap topo" style="width: 105px;">
+                        <select>
+                            <option value="member1" selected>Cloud1</option>
+                            <option value="member2">Cloud2</option>
+                            <option value="member3">Cloud3</option>
+                        </select>
+                    </div>
+                    <div class="select-standard-wrap topo" style="width: 140px;">
+                        <select>
+                            <option value="member1" selected>SRC-A9817</option>
+                            <option value="member2">SRC-A9817</option>
+                            <option value="member3">SRC-A9817</option>
+                            <option value="member4">SRC-A9817</option>
+                            <option value="member5">SRC-A9817</option>
+                        </select>
+                    </div>
+                    <p class="net-line">Network 03  /  Application 05  /  DB 02</p>
+                </div>
+
+                <div class="topology-chart">
+                    <img src="assets/img/temp/topology.png" alt="" width="100%" height="245" />
+                </div>
+            </div>
+            <!-- //Relation view -->
+        </div>
+        <div class="right-area">
+            <div class="tit-area">
+                <p class="title-bold">Key Performance Indicator</p>
+            </div>
+            <div class="indicator-charts">
+                <!-- CPU Performance -->
+                <div class="tit-area">
+                    <p class="title-bold sub pdt-15">Relation View</p>
+                    <a href="#" class="etcs">more</a>
+                </div>
+                <div class="perform-chart">
+                    <canvas id="cpuPerformanceChart"></canvas>
+                </div>
+                <!-- //CPU Performance -->
+                <!-- Memory Performance -->
+                <div class="tit-area">
+                    <p class="title-bold sub">Memory Performance</p>
+                    <a href="#" class="etcs">more</a>
+                </div>
+                <div class="perform-chart">
+                    <canvas id="memoryPerformanceChart"></canvas>
+                </div>
+                <!-- //Memory Performance -->
+                <!-- Disk1 Performance -->
+                <div class="tit-area">
+                    <p class="title-bold sub">Disk1 Performance</p>
+                    <a href="#" class="etcs">more</a>
+                </div>
+                <div class="perform-chart sm">
+                    <canvas id="disk1PerformanceChart"></canvas>
+                </div>
+                <!-- //Disk1 Performance -->
+                <!-- Disk2 Performance -->
+                <div class="tit-area">
+                    <p class="title-bold sub">Disk2 Performance</p>
+                    <a href="#" class="etcs">more</a>
+                </div>
+                <div class="perform-chart sm">
+                    <canvas id="disk2PerformanceChart"></canvas>
+                </div>
+                <!-- //Disk2 Performance -->
+            </div>
+        </div>
+    </div>
+    <!-- //area6 -->
+</div>
+<!-- //main (data board content-2) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</section>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/custom.js"></script>
+</body>
+</html>
