@@ -5,7 +5,7 @@ div.wrapper {
     position: relative;
     margin: 0 auto;
     min-height: 100%;
-    // background: #f8fafc; 어드민으로 인하여 일단 삭제
+    background: #f8fafc;// 어드민으로 인하여 일단 삭제
 
     @include breakpointmax(max) {
         width: 1600px !important;
@@ -78,7 +78,10 @@ div.wrapper {
             font-family: $raleway;
             font-weight: 500;
             font-size: 20px;
-            color: #000;
+            
+            a {
+                color: #28313b;
+            }
         }
         span.loading {
             position: absolute;

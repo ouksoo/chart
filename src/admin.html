@@ -592,6 +592,7 @@
     <!-- //footer -->
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 // left menu sub show/hide
 function menuShowHide(e) {
@@ -612,6 +613,10 @@ function menuShowHide(e) {
         e.classList.remove('on');
         thisNext.style.display = 'none';
     }  
+}
+
+if($('.light-content')) {
+    $('.light-content').parents('div.wrapper').css('background', '#fff')
 }
 </script>
 

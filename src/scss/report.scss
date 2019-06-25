@@ -48,6 +48,7 @@ div.report-list-wrap {
         ul.report-list {
             overflow-y: auto;
             overflow-x: hidden;
+            background: #fff;
             @include prefix(transition, height 0.5s, webkit ms);
         
             li {
