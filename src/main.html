@@ -28,7 +28,8 @@
         <span class="loading">Loading</span><!-- loading bar ( class 'on' toggle ) -->
         <div class="header-info">
             <ul class="clearfix">
-                <li><a href="#" class="a" v-b-modal.modalTempSearch>search</a></li>
+                <!--<li><a href="#" class="a" v-b-modal.modalTempSearch>search</a></li> vuejs 인하여 적용불가 확인용으로 임시로 아래것으로 대체-->
+                <li><a href="#" class="a" onclick="PJT.globalSearch()">search</a></li>
                 <li><a href="#" class="b"></a></li>
                 <li><a href="#" class="c notice-show-hide" onmouseover="PJT.headerNoticeShow();" onmouseout="PJT.headerNoticeHide()">notice<span class="alram-round"></span></a></li>
                 <li><a href="#" class="d">control</a></li>
@@ -120,7 +121,7 @@
         <!--left navigation bar-->
         <div class="lnb-wrap">
             <ul class="lnb-nav clearfix">
-                <li data-name="Monitoring" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="on" onclick="PJT.lnbMonitoringShow()">monitoring</a></li>
+                <li data-name="Monitoring" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="main.html" class="on">monitoring</a></li>
                 <li data-name="Event" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" onclick="PJT.lnbEventShow()">event</a></li>
                 <li data-name="Report" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" onclick="PJT.lnbReportShow()">report</a></li>
                 <li data-name="Calendar" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-calendar" onclick="PJT.lnbCalendarShow()">calendar</a></li>
@@ -2624,7 +2625,7 @@
                 <div class="device-top clearfix">
                     <span class="f">DEVICES</span>
                     <span class="s">
-                        <a href="#" class="plus device-add">plus</a><a href="#" class="minus device-remove" onclick="PJT.deviceRemoveList()">minus</a>
+                        <a href="#" class="plus device-add" onclick="PJT.globalSearch()">plus</a><a href="#" class="minus device-remove" onclick="PJT.deviceRemoveList()">minus</a>
                     </span>
                 </div>
                 <div class="filter-options">
@@ -2877,7 +2878,8 @@
             <!-- //Add Charts -->
 
             <!-- SEARCH (modal popup)-->
-            <b-modal id="modalTempSearch" hide-header="true" hide-footer="true" dialog-class="modal-search-wrap" style="display: none">
+            <!--<b-modal id="modalTempSearch" hide-header="true" hide-footer="true" dialog-class="modal-search-wrap" style="display: none;">  vuejs boostrap 으로 인하여 적용불가하며, 확인용으로만 아래의 소스로 대체-->
+            <b-modal id="modalTempSearch" hide-header="true" hide-footer="true" dialog-class="modal-search-wrap" style="display: none; position: absolute; left: 50%; top: 50%; margin: -307px 0 0 -485px; z-index: 10;">
                 <div class="modal-wrap modal-search modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="search-header clearfix">

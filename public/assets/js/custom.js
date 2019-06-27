@@ -139,6 +139,9 @@ var PJT = {
     lnbMouseLeave: function lnbMouseLeave() {
         $('div.tiny-tooltip').remove();
     },
+    globalSearch: function globalSearch() {
+        $('#modalTempSearch, div.dimmed-film').fadeIn('fast');
+    },
     deviceFilterShow: function deviceFilterShow() {
         var deviceListHeight = $('.device-list').height();
         $('.device-wrap div.filter-options').addClass('on');

@@ -140,6 +140,9 @@ let PJT = {
     lnbMouseLeave: function() {
         $('div.tiny-tooltip').remove();
     },
+    globalSearch: function() {
+        $('#modalTempSearch, div.dimmed-film').fadeIn('fast');
+    },
     deviceFilterShow: function() {
         var deviceListHeight = $('.device-list').height();
         $('.device-wrap div.filter-options').addClass('on');
