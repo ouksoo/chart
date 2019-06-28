@@ -3,7 +3,7 @@
 ***********************/
 div.tiny-popup-wrap {
     position: absolute;
-    z-index: 6;
+    z-index: 11;
     right: 50%; top: 50%;
     transform: translate(50%,-50%);
     padding: 35px 40px 25px 40px;
@@ -41,6 +41,10 @@ div.tiny-popup-wrap {
         }
         &.info {
             background: url('../img/popup/icon_info.png') 0 0 no-repeat;
+            @include prefix($bgs, 60px 60px, webkit ms);    
+        }
+        &.email {
+            background: url('../img/popup/icon_email.png') 0 0 no-repeat;
             @include prefix($bgs, 60px 60px, webkit ms);    
         }
     }

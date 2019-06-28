@@ -21,15 +21,16 @@
 
 
 
-<!--SEARCH-->
-<div id="modalTempSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"><!-- class="modal fade" -->
+<!-- SEARCH (modal popup)-->
+<!--<b-modal id="modalTempSearch" hide-header="true" hide-footer="true" dialog-class="modal-search-wrap" style="display: none;">  vuejs boostrap 으로 인하여 적용불가하며, 확인용으로만 아래의 소스로 대체-->
+<b-modal id="modalTempSearch" hide-header="true" hide-footer="true" dialog-class="modal-search-wrap" style="position: absolute; left: 50%; top: 50%; margin: -307px 0 0 -485px; z-index: 10;">
     <div class="modal-wrap modal-search modal-dialog" role="document">
         <div class="modal-content">
             <div class="search-header clearfix">
                 <span class="zoom"></span>
                 <input type="text" class="s" id="deviceSearchInput" placeholder="Use tab to switch or type devices, events, reports" /></p>
                 <p class="f">
-                    <a href="#" class="left">preview</a><span>ALL</span><a href="#" class="right">next</a>
+                    <a href="#" class="left">preview</a><span>ALL</span><a href="#" class="right">next</a><!-- All, Device, Event, Report -->
                 </p>
             </div>
             <div class="search-typeword">
@@ -41,7 +42,7 @@
                         <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Web Server - Dream</span>
                     </p>
                     <span class="etcs">
-                        <a href="#" class="add">add device</a><a href="#" class="warn">information</a>
+                        <a href="#" class="add">add device</a><a href="#" class="warn" onclick="PJT.lnbInformation()">information</a>
                     </span>
                 </li>
                 <li>
@@ -49,7 +50,7 @@
                         <span class="box cloud"></span><span class="box os-linux"></span><span class="dvc">Cloud Server - Stone</span>
                     </p>
                     <span class="etcs">
-                        <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                        <a href="#" class="add on">add device</a><a href="#" class="warn" onclick="PJT.lnbInformation()">information</a>
                     </span>
                 </li>
                 <li>
@@ -57,7 +58,7 @@
                         <span class="box copy"></span><span class="box os-mark"></span><span class="dvc">Oracle DB Server</span>
                     </p>
                     <span class="etcs">
-                        <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                        <a href="#" class="add on">add device</a><a href="#" class="warn" onclick="PJT.lnbInformation()">information</a>
                     </span>
                 </li>
                 <li>
@@ -78,7 +79,7 @@
                         </p>
                     </div>
                     <span class="etcs">
-                        <a href="#" class="down on">download</a><a href="#" class="email">email</a>
+                        <a href="#" class="down on">download</a><a href="#" class="email" onclick="PJT.sendEmailReport()">email</a>
                     </span>
                 </li>
                 <li>
@@ -90,7 +91,7 @@
                         </p>
                     </div>
                     <span class="etcs">    
-                        <a href="#" class="down on">download</a><a href="#" class="email">email</a>
+                        <a href="#" class="down on">download</a><a href="#" class="email" onclick="PJT.sendEmailReport()">email</a>
                     </span>
                 </li>
                 <li>
@@ -102,7 +103,7 @@
                         </p>
                     </div>
                     <span class="etcs">
-                        <a href="#" class="down on">download</a><a href="#" class="email">email</a>
+                        <a href="#" class="down on">download</a><a href="#" class="email" onclick="PJT.sendEmailReport()">email</a>
                     </span>
                 </li>
                 <li>
@@ -138,7 +139,8 @@
             </div>
         </div>
     </div>
-</div>
+</b-modal>
+<!-- //SEARCH -->
 
 
 

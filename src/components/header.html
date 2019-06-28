@@ -21,7 +21,6 @@
 <!-- header -->
 <header class="clearfix">
     <a href="#" class="monitor header-monitor" onmouseover="HEADER.headerMonitoryShow();" onmouseout="HEADER.headerMonitoryHide()">Monitoring Graph</a>
-
     <div class="product-btn clearfix" onmouseover="HEADER.headerMonitoryShow();" onmouseout="HEADER.headerMonitoryHide()">
         <span class="refresh"></span>
         <div class="texts">
@@ -30,14 +29,15 @@
         </div>
     </div>
 
-    <h1 class="logo">Monitoring.Force</h1>
-    <span class="loading"><img src="assets/img/layout/_loading.gif" alt="" height="70" /></span>
+    <h1 class="logo"><a href="main.html">Monitoring.Force</a></h1>
+    <span class="loading">Loading</span><!-- loading bar ( class 'on' toggle ) -->
     <div class="header-info">
         <ul class="clearfix">
-            <li><a href="#" class="a" v-b-modal.modalTempSearch>search</a></li>
-            <li><a href="#" class="b"></a></li>
-            <li><a href="#" class="c notice-show-hide">notice<span class="alram-round" onmouseover="HEADER.headerNoticeShow();" onmouseout="HEADER.headerNoticeHide()"></span></a></li>
-            <li><a href="#" class="d">control</a></li>
+            <!--<li><a href="#" class="a" v-b-modal.modalTempSearch>search</a></li> vuejs 인하여 적용불가 확인용으로 임시로 아래것으로 대체-->
+            <li><a href="#" class="a" onclick="HEADER.globalSearch()">search</a></li>
+            <li><a href="#" class="b" onclick="HEADER.lnbMonitoringShow()"></a></li>
+            <li><a href="#" class="c notice-show-hide" onmouseover="HEADER.headerNoticeShow();" onmouseout="HEADER.headerNoticeHide()">notice<span class="alram-round"></span></a></li>
+            <li><a href="admin.html" class="d">control</a></li>
             <li><a href="#" class="profile-show-hide" onmouseover="HEADER.headerProfileShow();" onmouseout="HEADER.headerProfileHide()"><img src="assets/img/temp/picture.png" width="100%" /></a></li>
         </ul>
     </div>
@@ -47,10 +47,9 @@
 
     <!--notification list-->
     
-
-
     <div class="header-shadow"></div>
 </header>
+    
 
 
 

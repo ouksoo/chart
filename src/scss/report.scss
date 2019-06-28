@@ -24,7 +24,7 @@ div.report-list-wrap {
                     content: '';
                     bottom: 0; left: 0;
                     width: 100%;
-                    height: 2px;
+                    height: 3px;
                     background: #63DBC1;
                     z-index: 1;
                 }
@@ -162,6 +162,30 @@ div.report-list-wrap {
         }
         div.detail-wrap {
             overflow-y: auto;
+
+            div.paging {
+                padding-bottom: 30px;
+                text-align: center;
+                
+                a {
+                    display: inline-block;
+                    width: 80px;
+                    height: 42px;
+                    text-indent: -9999px;
+                    overflow: hidden;
+
+                    &.prev {
+                        border-radius: 25px 0 0 25px;
+                        background: #9678ff url('../img/icons/icon_preview.png') 50% 50% no-repeat;
+                        @include prefix($bgs, 24px 24px, webkit ms);
+                    }
+                    &.next {
+                        border-radius: 0px 25px 25px 0px;
+                        background: #9678ff url('../img/icons/icon_next.png') 50% 50% no-repeat;
+                        @include prefix($bgs, 24px 24px, webkit ms);
+                    }
+                }
+            }
 
             div.report-start {
                 width: 920px;

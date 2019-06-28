@@ -23,7 +23,7 @@
             font-family: $inter-r;
             font-size: 22px;
             color: #fff;
-            opacity: .5;
+            /*opacity: .5;*/
             margin: 17px 0 0 15px;
             background: #97a4b1;
             border: 0;
@@ -31,6 +31,7 @@
 
             &::placeholder {
                 color: #fff; 
+                opacity: .5;
             }
         }
         p.f {
@@ -252,6 +253,7 @@ div.full-popup-wrap {
         background-color: #e8eef4;
     }
     div.inner {
+        border-top: 16px solid #e8eef4;
         position: absolute;
         width: 100%; height: 100%;
         top: 0; left: 0;
@@ -268,18 +270,20 @@ div.full-popup-wrap {
             left: 20px; top: 16px;
             padding-top: 15px;
             font-size: 16px; font-family: $inter-b; color: #fff;
+
+            a.close {
+                position: absolute;
+                z-index: 4;
+                top: 5px; right: 6px;
+                text-indent: -9999px;
+                width: 70px; height: 40px;
+                opacity: 0.4;
+                border-radius: 25px;
+                background: #f2f4f5 url('../img/icons/icon_calendar_x.png') 50% 50% no-repeat;
+                @include prefix($bgs, 24px 24px, webkit ms);
+            }
         }
-        a.close {
-            position: fixed;
-            z-index: 4;
-            top: 21px; right: 26px;
-            text-indent: -9999px;
-            width: 70px; height: 40px;
-            opacity: 0.4;
-            border-radius: 25px;
-            background: #f2f4f5 url('../img/icons/icon_calendar_x.png') 50% 50% no-repeat;
-            @include prefix($bgs, 24px 24px, webkit ms);
-        }
+        
         div.add-device-wrap {
             width: 920px;
             margin: 0 auto;

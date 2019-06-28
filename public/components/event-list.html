@@ -25,7 +25,7 @@
 
 
 <!-- event -->
-<div class="event-list-wrap">
+<div class="event-list-wrap" style="display: none">
     <div class="event-period-info clearfix">
         <div class="period">
             <span class="txt">Period</span>
@@ -61,7 +61,7 @@
                 </li>
                 <li class="l">
                     <div class="select-wrap" style="width: 90%; margin-left: 14px;">
-                        <input type="text" class="select-data select_data-options" style="width: 100%; background: #f7f9fb;" value="Select" readonly />
+                        <input type="text" class="select-data select_data-options" style="width: 100%; background-color: #f7f9fb;" value="Select" readonly />
                         <div class="options">
                             <ul>
                                 <li><a href="#" data-value="1">New Nadia</a></li>
@@ -92,14 +92,14 @@
                         <span class="min-ago">3m ago</span>
                         <div class="time-bar green">
                             <!-- left circle-->
-                            <span class="first-circle green" onclick="PJT.eventDataDetail();"></span>
+                            <span class="first-circle green" onclick="EVENTLIST.eventDataDetail();"></span>
                             <!-- right circle-->
-                            <span class="last-circle" onclick="PJT.eventDataToolTip();">
+                            <span class="last-circle" onclick="EVENTLIST.eventDataToolTip();">
                                 <span class="circle">02</span>
                             </span>
 
-                            <span class="server-name" onclick="PJT.eventDataDetail();">Cloud Server</span>
-                            <span class="server-status" onclick="PJT.eventDataDetail();">Steps In Installing Rack Mount Lcd Monitors</span>
+                            <span class="server-name" onclick="EVENTLIST.eventDataDetail();">Cloud Server</span>
+                            <span class="server-status" onclick="EVENTLIST.eventDataDetail();">Steps In Installing Rack Mount Lcd Monitors</span>
                         </div>
                     </li>
                     <li>
@@ -123,7 +123,7 @@
                             <span class="first-circle purple-check"></span>
                             <!-- right circle-->
                             <span class="last-circle">
-                                <span class="circle">03</span><span class="circle file-minus"></span>
+                                <span class="circle">03</span><span class="circle file-minus" onclick="EVENTLIST.lnbReportShow()"></span>
                             </span>
 
                             <span class="server-name">Cloud Server</span>
@@ -172,7 +172,7 @@
                             <span class="first-circle purple-check"></span>
                             <!-- right circle-->
                             <span class="last-circle">
-                                <span class="circle">03</span><span class="circle file-minus"></span>
+                                <span class="circle">03</span><span class="circle file-minus" onclick="EVENTLIST.lnbReportShow()"></span>
                             </span>
 
                             <span class="server-name">Cloud Server</span>
@@ -196,6 +196,12 @@ let EVENTLIST = {
     },
     eventDataToolTip: function(e) {
         
+    },
+    lnbReportShow: function() {
+        openPopCloseEvent();
+        $('div.device-inventory-wrap, div.event-list-wrap, div.data-board-wrap').fadeOut('fast');
+        $('div.report-list-wrap').fadeIn('fast');
+        $('div.lnb-wrap, div.device-wrap').css('display', 'block');
     },
 }
 </script>

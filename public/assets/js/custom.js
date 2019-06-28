@@ -121,6 +121,11 @@ var PJT = {
         openPopCloseEvent();
         $('.lnb-tools-wrap.add-charts').fadeIn('fast');
     },
+    lnbInformation: function lnbInformation() {
+        openPopCloseEvent();
+        // $('#modalTempSearch, div.dimmed-film').fadeOut('fast');
+        $('div#deviceDetailPopup').fadeIn('fast');
+    },
     lnbMouseEnter: function lnbMouseEnter(obj) {
         var thisName = $(obj).data('name');
         var toolTipDiv = '<div class="tiny-tooltip" style="display: none;">';
@@ -139,21 +144,30 @@ var PJT = {
     lnbMouseLeave: function lnbMouseLeave() {
         $('div.tiny-tooltip').remove();
     },
+    sendEmailReport: function sendEmailReport() {
+        $('div#sendEmailReport, div.dimmed-film').fadeIn('fast');
+    },
     globalSearch: function globalSearch() {
         $('#modalTempSearch, div.dimmed-film').fadeIn('fast');
     },
     deviceFilterShow: function deviceFilterShow() {
+        var isFilterShow = $('.filter-options').hasClass('on');
         var deviceListHeight = $('.device-list').height();
-        $('.device-wrap div.filter-options').addClass('on');
-        $('.device-list').css('height', deviceListHeight - 121);
-        PJT.state.filter = true;
-        $('.filter-options > .option a').on('click', function () {
-            if ($(this).hasClass('clear-all')) {
-                $('.filter-options > .option a').removeClass('on');
-            } else {
-                $(this).toggleClass('on');
-            }
-        });
+
+        if (!isFilterShow) {
+            $('.device-wrap div.filter-options').addClass('on');
+            $('.device-list').css('height', deviceListHeight - 121);
+            PJT.state.filter = true;
+            $('.filter-options > .option a').on('click', function () {
+                if ($(this).hasClass('clear-all')) {
+                    $('.filter-options > .option a').removeClass('on');
+                } else {
+                    $(this).toggleClass('on');
+                }
+            });
+        } else {
+            $('.device-wrap div.filter-options').removeClass('on');
+        }
     },
     deviceAddList: function deviceAddList() {
         $('#addDeviceList').fadeIn('fast');

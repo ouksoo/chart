@@ -89,12 +89,12 @@ div.wrapper {
             left: 50%; top: 0;
             margin: 0 0 0 -35px;
             text-align: center;
-            background: url('../img/icons/loading_default.png') 0 0 no-repeat;
-            @include prefix($bgs, 70px 70px, webkit ms);
+            background: url('../img/icons/loading_default.png') 50% 50% no-repeat;
+            @include prefix($bgs, 40px 34px, webkit ms);
             text-indent: -9999px;
 
             &.on {
-                background: url('../img/icons/loading_on.gif') 0 0 no-repeat;
+                background: url('../img/icons/loading_on.gif') 50% 50% no-repeat;
                 @include prefix($bgs, 70px 70px, webkit ms);
             }
         }

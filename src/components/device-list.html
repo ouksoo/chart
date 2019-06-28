@@ -31,7 +31,7 @@
     <div class="device-top clearfix">
         <span class="f">DEVICES</span>
         <span class="s">
-            <a href="#" class="plus device-add" onclick="DEVICE.deviceAddList()">plus</a><a href="#" class="minus device-remove" onclick="DEVICE.deviceRemoveList()">minus</a>
+            <a href="#" class="plus device-add" onclick="DEVICE.globalSearch()">plus</a><a href="#" class="minus device-remove" onclick="DEVICE.deviceRemoveList()">minus</a>
         </span>
     </div>
     <div class="filter-options">
@@ -141,24 +141,34 @@
 <script>
 let DEVICE = {
     deviceFilterShow: function() {
+        var isFilterShow = $('.filter-options').hasClass('on');
         var deviceListHeight = $('.device-list').height();
-        $('.device-wrap div.filter-options').addClass('on');
-        $('.device-list').css('height', deviceListHeight - 121);
-        PJT.state.filter = true;
-        $('.filter-options > .option a').on('click', function() {
-            if($(this).hasClass('clear-all')) {
-                $('.filter-options > .option a').removeClass('on');
-            }
-            else { 
-                $(this).toggleClass('on');
-            } 
-        });
+        
+        if(!isFilterShow) {
+            $('.device-wrap div.filter-options').addClass('on');
+            $('.device-list').css('height', deviceListHeight - 121);
+            PJT.state.filter = true;
+            $('.filter-options > .option a').on('click', function() {
+                if($(this).hasClass('clear-all')) {
+                    $('.filter-options > .option a').removeClass('on');
+                }
+                else { 
+                    $(this).toggleClass('on');
+                } 
+            });
+        }
+        else {
+            $('.device-wrap div.filter-options').removeClass('on');
+        }
     },
     deviceAddList: function() {
         $('#addDeviceList').fadeIn('fast');
     },
     deviceRemoveList: function() {
         $('.device-wrap div.device-inner').addClass('on');
+    },
+    globalSearch: function() {
+        $('#modalTempSearch, div.dimmed-film').fadeIn('fast');
     },
 }
 </script>

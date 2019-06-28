@@ -30,9 +30,9 @@
             <ul class="clearfix">
                 <!--<li><a href="#" class="a" v-b-modal.modalTempSearch>search</a></li> vuejs 인하여 적용불가 확인용으로 임시로 아래것으로 대체-->
                 <li><a href="#" class="a" onclick="PJT.globalSearch()">search</a></li>
-                <li><a href="#" class="b"></a></li>
+                <li><a href="#" class="b" onclick="PJT.lnbMonitoringShow()"></a></li>
                 <li><a href="#" class="c notice-show-hide" onmouseover="PJT.headerNoticeShow();" onmouseout="PJT.headerNoticeHide()">notice<span class="alram-round"></span></a></li>
-                <li><a href="#" class="d">control</a></li>
+                <li><a href="admin.html" class="d">control</a></li>
                 <li><a href="#" class="profile-show-hide" onmouseover="PJT.headerProfileShow();" onmouseout="PJT.headerProfileHide()"><img src="assets/img/temp/picture.png" width="100%" /></a></li>
             </ul>
         </div>
@@ -128,7 +128,7 @@
                 <li data-name="Create a report" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-createreport" onclick="PJT.lnbCreateReportShow()">create a report</a></li>
                 <li data-name="Snapshot" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-snapshot" onclick="PJT.lnbSnapShot()">snapshot</a></li>
                 <li data-name="Add charts" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" class="lnb-addcharts" onclick="PJT.lnbAddChart()">add charts</a></li>
-                <li data-name="Information" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#">information</a></li>
+                <li data-name="Information" onmouseover="PJT.lnbMouseEnter($(this))" onmouseout="PJT.lnbMouseLeave()"><a href="#" onclick="PJT.lnbInformation()">information</a></li>
             </ul>
         </div>
 
@@ -322,7 +322,9 @@
                         <!-- CPU resource map -->
                         <div class="tit-area">
                             <p class="title-bold">CPU Resource Map</p>
-                            <a href="#" class="etcs">more</a>
+                            <span class="right-button">
+                                <span class="show-hide-btn"><a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="etcs">etcs</a></span>
+                            </span>
                         </div>
                         <div class="real-time">
                             <img src="assets/img/temp/cpu.png" alt="" height="390px" width="100%" />
@@ -333,7 +335,9 @@
                         <!-- Performance -->
                         <div class="tit-area">
                             <p class="title-bold">Perfomace - CPU, Memory, Disk, I/O</p>
-                            <a href="#" class="etcs">more</a>
+                            <span class="right-button">
+                                <span class="show-hide-btn"><a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="etcs">etcs</a></span>
+                            </span>
                         </div>
                         <div class="perfomance clearfix">
                             <div class="charts-1">
@@ -382,7 +386,9 @@
                         <!-- Topology map -->
                         <div class="tit-area">
                             <p class="title-bold">Topology Map</p>
-                            <a href="#" class="etcs">more</a>
+                            <span class="right-button">
+                                <span class="show-hide-btn"><a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="etcs">etcs</a></span>
+                            </span>
                         </div>
                         <div class="topology-map">
                             <div class="map-search">
@@ -429,7 +435,9 @@
                         <!-- DB load -->
                         <div class="tit-area">
                             <p class="title-bold">DB Load</p>
-                            <a href="#" class="etcs">more</a>
+                            <span class="right-button">
+                                <span class="show-hide-btn"><a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="etcs">etcs</a></span>
+                            </span>
                         </div>
                         <div class="db-load">
                             <ul class="clearfix">
@@ -641,7 +649,9 @@
                         <!-- disk I/O -->
                         <div class="tit-area">
                             <p class="title-bold">Disk I/O</p>
-                            <a href="#" class="etcs">more</a>
+                            <span class="right-button">
+                                <span class="show-hide-btn"><a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="etcs">etcs</a></span>
+                            </span>
                         </div>
                         <div class="disk-io">
                             <div class="chart-wrap">
@@ -652,7 +662,9 @@
                         <!-- Relation view -->
                         <div class="tit-area">
                             <p class="title-bold">Relation View</p>
-                            <a href="#" class="etcs">more</a>
+                            <span class="right-button">
+                                <span class="show-hide-btn"><a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="etcs">etcs</a></span>
+                            </span>
                         </div>
                         <div class="topology-map">
                             <div class="map-search">
@@ -703,7 +715,9 @@
                             <!-- CPU Performance -->
                             <div class="tit-area">
                                 <p class="title-bold sub pdt-15">Relation View</p>
-                                <a href="#" class="etcs">more</a>
+                                <span class="right-button" style="top: 16px;">
+                                    <span class="show-hide-btn"><a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="etcs">etcs</a></span>
+                                </span>
                             </div>
                             <div class="perform-chart">
                                 <canvas id="cpuPerformanceChart"></canvas>
@@ -712,7 +726,9 @@
                             <!-- Memory Performance -->
                             <div class="tit-area">
                                 <p class="title-bold sub">Memory Performance</p>
-                                <a href="#" class="etcs">more</a>
+                                <span class="right-button">
+                                    <span class="show-hide-btn"><a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="etcs">etcs</a></span>
+                                </span>
                             </div>
                             <div class="perform-chart">
                                 <canvas id="memoryPerformanceChart"></canvas>
@@ -721,7 +737,9 @@
                             <!-- Disk1 Performance -->
                             <div class="tit-area">
                                 <p class="title-bold sub">Disk1 Performance</p>
-                                <a href="#" class="etcs">more</a>
+                                <span class="right-button">
+                                    <span class="show-hide-btn"><a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="etcs">etcs</a></span>
+                                </span>
                             </div>
                             <div class="perform-chart sm">
                                 <canvas id="disk1PerformanceChart"></canvas>
@@ -730,7 +748,9 @@
                             <!-- Disk2 Performance -->
                             <div class="tit-area">
                                 <p class="title-bold sub">Disk2 Performance</p>
-                                <a href="#" class="etcs">more</a>
+                                <span class="right-button">
+                                    <span class="show-hide-btn"><a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="etcs">etcs</a></span>
+                                </span>
                             </div>
                             <div class="perform-chart sm">
                                 <canvas id="disk2PerformanceChart"></canvas>
@@ -793,7 +813,7 @@
                             <span class="tt">Monthly Report  -  April 2019</span><span class="ts">Create by System</span>
                         </div>
                         <div class="s">
-                            <a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="email">e-mail</a>
+                            <a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="email" onclick="PJT.sendEmailReport()">e-mail</a>
                         </div>
                     </div>
                     <div class="detail-wrap">
@@ -2190,6 +2210,10 @@
                         </div>
                         <!-- //report/event2 -->
 
+                        <div class="paging">
+                            <a href="#" class="prev">preview</a><a href="#" class="next">next</a>
+                        </div>
+
                     </div>
                 </div>
                 <!-- //report detail -->
@@ -2234,7 +2258,7 @@
                             </li>
                             <li class="l">
                                 <div class="select-wrap" style="width: 90%; margin-left: 14px;">
-                                    <input type="text" class="select-data select_data-options" style="width: 100%; background: #f7f9fb;" value="Select" readonly />
+                                    <input type="text" class="select-data select_data-options" style="width: 100%; background-color: #f7f9fb;" value="Select" readonly />
                                     <div class="options">
                                         <ul>
                                             <li><a href="#" data-value="1">New Nadia</a></li>
@@ -2296,7 +2320,7 @@
                                         <span class="first-circle purple-check"></span>
                                         <!-- right circle-->
                                         <span class="last-circle">
-                                            <span class="circle">03</span><span class="circle file-minus"></span>
+                                            <span class="circle">03</span><span class="circle file-minus" onclick="PJT.lnbReportShow()"></span>
                                         </span>
 
                                         <span class="server-name">Cloud Server</span>
@@ -2345,7 +2369,7 @@
                                         <span class="first-circle purple-check"></span>
                                         <!-- right circle-->
                                         <span class="last-circle">
-                                            <span class="circle">03</span><span class="circle file-minus"></span>
+                                            <span class="circle">03</span><span class="circle file-minus" onclick="PJT.lnbReportShow()"></span>
                                         </span>
 
                                         <span class="server-name">Cloud Server</span>
@@ -2365,8 +2389,7 @@
             <div id="eventMonitoringForce" class="full-popup-wrap default_full-popup" style="display: none">
                 <div class="film"></div>
                 <div class="inner">
-                    <h2>EVENT - Cloud Server</h2>
-                    <a href="#" class="close">close</a>
+                    <h2>EVENT - Cloud Server <a href="#" class="close">close</a></h2>
                     <div class="monitoring-event">
                         <p class="title">Steps In Installing Rack Mount Lcd Monitors</p>
                         <p class="paragraph">
@@ -2499,7 +2522,7 @@
                     <p class="title">Device Inventory</p>
                     <p class="middle">All Devices are<span>1480</span>in the inventory</p>
                     <div class="search clearfix">
-                        <a href="#" class="cs-btn purple floatr">ADD DEVICE </a>
+                        <a href="#" class="cs-btn purple floatr" onclick="PJT.deviceAddList()">ADD DEVICE</a>
                         <div class="search-input">
                             <input type="text" class="inventory-search" placeholder="Search Device" />
                             <a href="#" class="search" onclick="PJT.inventorySearch()">search</a>
@@ -2886,7 +2909,7 @@
                             <span class="zoom"></span>
                             <input type="text" class="s" id="deviceSearchInput" placeholder="Use tab to switch or type devices, events, reports" /></p>
                             <p class="f">
-                                <a href="#" class="left">preview</a><span>ALL</span><a href="#" class="right">next</a>
+                                <a href="#" class="left">preview</a><span>ALL</span><a href="#" class="right">next</a><!-- All, Device, Event, Report -->
                             </p>
                         </div>
                         <div class="search-typeword">
@@ -2898,7 +2921,7 @@
                                     <span class="box disk"></span><span class="box os-win"></span><span class="dvc">Web Server - Dream</span>
                                 </p>
                                 <span class="etcs">
-                                    <a href="#" class="add">add device</a><a href="#" class="warn">information</a>
+                                    <a href="#" class="add">add device</a><a href="#" class="warn" onclick="PJT.lnbInformation()">information</a>
                                 </span>
                             </li>
                             <li>
@@ -2906,7 +2929,7 @@
                                     <span class="box cloud"></span><span class="box os-linux"></span><span class="dvc">Cloud Server - Stone</span>
                                 </p>
                                 <span class="etcs">
-                                    <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                                    <a href="#" class="add on">add device</a><a href="#" class="warn" onclick="PJT.lnbInformation()">information</a>
                                 </span>
                             </li>
                             <li>
@@ -2914,7 +2937,7 @@
                                     <span class="box copy"></span><span class="box os-mark"></span><span class="dvc">Oracle DB Server</span>
                                 </p>
                                 <span class="etcs">
-                                    <a href="#" class="add on">add device</a><a href="#" class="warn">information</a>
+                                    <a href="#" class="add on">add device</a><a href="#" class="warn" onclick="PJT.lnbInformation()">information</a>
                                 </span>
                             </li>
                             <li>
@@ -2935,7 +2958,7 @@
                                     </p>
                                 </div>
                                 <span class="etcs">
-                                    <a href="#" class="down on">download</a><a href="#" class="email">email</a>
+                                    <a href="#" class="down on">download</a><a href="#" class="email" onclick="PJT.sendEmailReport()">email</a>
                                 </span>
                             </li>
                             <li>
@@ -2947,7 +2970,7 @@
                                     </p>
                                 </div>
                                 <span class="etcs">    
-                                    <a href="#" class="down on">download</a><a href="#" class="email">email</a>
+                                    <a href="#" class="down on">download</a><a href="#" class="email" onclick="PJT.sendEmailReport()">email</a>
                                 </span>
                             </li>
                             <li>
@@ -2959,7 +2982,7 @@
                                     </p>
                                 </div>
                                 <span class="etcs">
-                                    <a href="#" class="down on">download</a><a href="#" class="email">email</a>
+                                    <a href="#" class="down on">download</a><a href="#" class="email" onclick="PJT.sendEmailReport()">email</a>
                                 </span>
                             </li>
                             <li>
@@ -3002,8 +3025,7 @@
             <div id="addDeviceList" class="full-popup-wrap default_full-popup" style="display: none">
                 <div class="film"></div>
                 <div class="inner">
-                    <h2>ADD A DEVICE</h2>
-                    <a href="#" class="close">close</a>
+                    <h2>ADD A DEVICE <a href="#" class="close">close</a></h2>
                     <!-- step 1-->
                     <div class="add-device-wrap" style="display: none">
                         <div class="process">
@@ -3606,13 +3628,12 @@
             <div id="deviceDetailPopup" class="full-popup-wrap default_full-popup" style="display: none">
                 <div class="film"></div>
                 <div class="inner">
-                    <h2>DEVICE DETAIL</h2>
-                    <a href="#" class="close">close</a>
+                    <h2>DEVICE DETAIL <a href="#" class="close">close</a></h2>
                     <div class="monitoring-event mgb-30">
                         <p class="title">
                             <span class="box disk"></span><span class="box os-win"></span> Cloud Server - Dream
                             <span class="right-button">
-                                <a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="etcs">etcs</a>
+                                <span class="show-hide-btn"><a href="#" class="print">print</a><a href="#" class="download">download</a><a href="#" class="etcs">etcs</a></span>
                             </span>
                         </p>
                         <!--Basic Information-->
@@ -4051,7 +4072,7 @@
             <div class="reset-pw-popup" style="display: none">
                 <a href="#" class="close-btn">close</a>
                 <div class="title">
-                    <span>Reset New Password</span>
+                    <span>Tip - Icon & Shortcut</span>
                     <p>Set your new password following below roles.</p>
                 </div>
                 <div class="input-wrap clearfix">
@@ -4260,6 +4281,19 @@
                 </ul>
             </div>
             <!-- //search data-->
+            <!--E-mail Popup-->
+            <div id="sendEmailReport" class="tiny-popup-wrap" style="display: none">
+                <a href="#" class="close-btn">close</a>
+                <span class="popup-img email"></span>
+                <p class="paragraph">
+                    <strong class="normal" style="padding-bottom: 14px">Send the report to below e-mail</strong>
+                    <input type="text" class="formdata" placeholder="E-mail" style="width: 100%;" />
+                </p>
+                <div class="popup-btn-center">
+                    <a href="#" class="cs-btn green">BUTTON</a>
+                </div>
+            </div>
+            <!--//E-mail Popup-->
             <!--Thank you for applying-->
             <div class="tiny-popup-wrap" style="display: none">
                 <a href="#" class="close-btn">close</a>
