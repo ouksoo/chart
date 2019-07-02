@@ -83,17 +83,25 @@ var PJT = {
         $('div.content-wrap').addClass('wide-wrapper');
         $('div.lnb-wrap, div.device-wrap').css('display', 'none');
     },
-    lnbEventShow: function lnbEventShow() {
+    lnbEventShow: function lnbEventShow(obj) {
         openPopCloseEvent();
         $('div.device-inventory-wrap, div.report-list-wrap, div.data-board-wrap').fadeOut('fast');
         $('div.event-list-wrap').fadeIn('fast');
         $('div.lnb-wrap, div.device-wrap').css('display', 'block');
+        $('div.lnb-wrap a').each(function () {
+            $(this).removeClass('on');
+        });
+        $(obj).addClass('on');
     },
-    lnbReportShow: function lnbReportShow() {
+    lnbReportShow: function lnbReportShow(obj) {
         openPopCloseEvent();
         $('div.device-inventory-wrap, div.event-list-wrap, div.data-board-wrap').fadeOut('fast');
         $('div.report-list-wrap').fadeIn('fast');
         $('div.lnb-wrap, div.device-wrap').css('display', 'block');
+        $('div.lnb-wrap a').each(function () {
+            $(this).removeClass('on');
+        });
+        $(obj).addClass('on');
     },
     lnbCalendarShow: function lnbCalendarShow() {
         openPopCloseEvent();
@@ -173,7 +181,15 @@ var PJT = {
         $('#addDeviceList').fadeIn('fast');
     },
     deviceRemoveList: function deviceRemoveList() {
-        $('.device-wrap div.device-inner').addClass('on');
+        var isRemoveDevice = $('ul.device-list').hasClass('remove');
+
+        if (!isRemoveDevice) {
+            $('.device-wrap div.device-inner').addClass('on');
+            $('ul.device-list').addClass('remove');
+        } else {
+            $('.device-wrap div.device-inner').removeClass('on');
+            $('ul.device-list').removeClass('remove');
+        }
     },
     inventorySearch: function inventorySearch() {
         $('.device-inventory-wrap .search-input').addClass('on');
@@ -295,6 +311,7 @@ var PJT = {
         $('.lnb-content_popup, .select-wrap div.options, .grid_select-option').fadeOut('fast');
         $('.device-list div.device-inner').removeClass('on');
     });
+    $('.lnb-content_popup, .select-wrap div.options, .grid_select-option').fadeOut('fast');
     $('.lnb-wrap li, .lnb-content_popup, .select-wrap, .select-wrap div.options, .device-wrap a.device-remove, .device-wrap a.remove').on('click', function (e) {
         e.stopPropagation();
     });

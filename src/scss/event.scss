@@ -328,6 +328,7 @@ div.time-bar {
     vertical-align: middle;
     line-height: 42px;
     background-color: #ffffff;
+    transition: box-shadow .3s ease-in-out;
 
     &.green {
         border: solid 1px #41cee2;
@@ -338,7 +339,10 @@ div.time-bar {
     &.purple {
         border: solid 1px #9678ff;
     }
-
+    
+    &:hover {
+        box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.1);
+    }
     span.first-circle {
         position: absolute;
         top: 5px; left: 6px;

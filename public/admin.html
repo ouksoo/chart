@@ -25,17 +25,17 @@
         <div class="lnb-wrap-large">
             <h1>ADMIN</h1>
             <ul class="navigation">
-                <li><a href="#">About Episode</a></li>
-                <li><a href="#">User Manage</a></li>
-                <li><a href="#" class="on">Group Manage</a></li>
-                <li><a href="#">Chart Organizing</a></li>
-                <li><a href="#">Code Editor</a></li>
+                <li><a href="#" onclick="showThisContent(1);">About Episode</a></li>
+                <li><a href="#" onclick="showThisContent(2);">User Manage</a></li>
+                <li><a href="#" onclick="showThisContent(3);">Group Manage</a></li>
+                <li><a href="#" onclick="showThisContent(4);">Chart Organizing</a></li>
+                <li><a href="#" onclick="showThisContent(5);">Code Editor</a></li>
             </ul>
             <div class="submenus">
                 <a href="#" class="submenu-btn" onclick="menuShowHide(this);">MONITORING.FORCE</a>
                 <div class="sub-show-hide" style="display: none">
-                    <a href="#">Group Manage</a>
-                    <a href="#">Chart Organizing</a>
+                    <a href="#" onclick="showThisContent(6);">Group Manage</a>
+                    <a href="#" onclick="showThisContent(7);">Chart Organizing</a>
                     <a href="#">Code Editor</a>
                 </div>
             </div>
@@ -53,7 +53,7 @@
 
             <div class="light-content">    
                 <!-- admin content 1 -->
-                <div class="light-content-type1" style="display: none">   
+                <div class="light-content-type1">
                     <h2>User Manage</h2>
                     <p class="paragraph">
                         Rack mount LCD monitors can save you a lot of space and help you form a convenient and efficient desktop for your work or home study. The rack mount is set up so that the keyboard and LCD monitor are on a sliding rack that lest you move them out from your desk or over it. Once you decide to invest in the rack mount LCD monitor, you will have to install the rack and the monitor. Here, then, are steps in installing rack mount LCD monitors.
@@ -482,7 +482,7 @@
                 <!-- //admin content 6 -->
 
                 <!-- admin content 7 -->
-                <div class="light-content-type7">
+                <div class="light-content-type7" style="display: none">
                     <h2>Application</h2>
                     <div class="tab-btn-wrap">
                         <ul class="clearfix">
@@ -613,6 +613,11 @@ function menuShowHide(e) {
         e.classList.remove('on');
         thisNext.style.display = 'none';
     }  
+}
+
+function showThisContent(num) {
+    $('div.light-content > div').fadeOut('fast');
+    $('div.light-content-type' + num).fadeIn('fast');
 }
 
 if($('.light-content')) {
